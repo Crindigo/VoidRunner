@@ -13,4 +13,3 @@ mods.gregtech.assembler.recipeBuilder()
     .duration(200)
     .EUt(120)
     .buildAndRegister()
-

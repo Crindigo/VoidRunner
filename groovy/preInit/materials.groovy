@@ -10,4 +10,12 @@ event_manager.listen { MaterialEvent event ->
         .flags("mortar_grindable")
         .toolStats(ToolProperty.Builder.of(4, 2, 64, 1).build())
         .build()*/
+
+    def stoneSolution = new Material.Builder(32001, new ResourceLocation("voidrunner:stone_solution"))
+        .fluid("liquid", true) // liquid, acid, gas, plasma
+        .color(0xCDCDCD)
+        .fluidTemp(293)
+        .components(material('water') * 1, material('stone') * 1)
+        .flags("decomposition_by_electrolyzing")
+        .build()
 }
