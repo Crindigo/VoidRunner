@@ -1,0 +1,104 @@
+{
+    "rules": [
+        {
+            "match": {
+                "blocks": {
+                    "blocks": [
+                        "minecraft:leaves:0",
+                        "minecraft:leaves:1",
+                        "minecraft:leaves:2",
+                        "minecraft:leaves:3",
+                        "minecraft:leaves2:0",
+                        "minecraft:leaves:1"
+                    ]
+                }
+            },
+            "replaceStrategy": "ADD",
+            "drops": [
+                {
+                    "selector": {
+                        "weight": {
+                            "value": 50
+                        }
+                    },
+                    "item": {
+                        "items": [
+                            "minecraft:stick",
+                            "pyrotech:material:12"
+                        ]
+                    }
+                },
+                {
+                    "selector": {
+                        "weight": {
+                            "value": 50
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "match": {
+                "blocks": {
+                    "blocks": [
+                        "minecraft:log:*",
+                        "minecraft:log2:*"
+                    ]
+                },
+                "harvester": {
+                    "type": "PLAYER",
+                    "heldItemMainHand": {
+                        "type": "BLACKLIST",
+                        "harvestLevel": "axe;0;-1"
+                    }
+                }
+            },
+            "drops": [
+                {
+                    "item": {
+                        "items": [
+                            "gregtech:meta_dust:1617"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "match": {
+                "blocks": {
+                    "blocks": [
+                        "minecraft:tallgrass:*"
+                    ]
+                }
+            },
+            "replaceStrategy": "ADD",
+            "drops": [
+                {
+                    "selector": {
+                        "weight": {
+                            "value": 85
+                        }
+                    }
+                },
+                {
+                    "selector": {
+                        "weight": {
+                            "value": 15
+                        }
+                    },
+                    "item": {
+                        "items": [
+                            "randomthings:grassseeds:0",
+                            "randomthings:lotusseeds",
+                            "minecraft:pumpkin_seeds",
+                            "minecraft:melon_seeds",
+                            "minecraft:beetroot_seeds",
+                            "minecraft:potato",
+                            "minecraft:carrot"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
