@@ -2,6 +2,7 @@ import mods.advancedmortars.Mortar;
 import mods.alchemistry.Dissolver;
 import mods.pyrotech.StoneCrucible;
 import mods.pyrotech.BrickCrucible;
+import mods.pyrotech.SoakingPot;
 
 
 // clay dust to clay in water
@@ -12,9 +13,9 @@ mods.inworldcrafting.FluidToFluid.transform(<liquid:stone_solution>, <liquid:wat
 
 // types, output, duration, inputs
 // or: types, output, duration, secondary, chance, inputs
-Mortar.addRecipe(['wood', 'stone'], <minecraft:gravel>, 20, [<minecraft:cobblestone>]);
-Mortar.addRecipe(['wood', 'stone'], <minecraft:flint>, 20, [<minecraft:gravel>]);
-Mortar.addRecipe(['wood', 'stone'], <gregtech:meta_item_1:1001>, 50, [<ore:sand>, <ore:dustWood>, <ore:dustBone>]);
+Mortar.addRecipe(['stone'], <minecraft:gravel>, 20, [<minecraft:cobblestone>]);
+Mortar.addRecipe(['stone'], <minecraft:flint>, 20, [<minecraft:gravel>]);
+Mortar.addRecipe(['stone'], <gregtech:meta_item_1:1001>, 50, [<ore:sand>, <ore:dustWood>, <ore:dustBone>]);
 
 StoneCrucible.removeAllRecipes();
 BrickCrucible.removeAllRecipes();
