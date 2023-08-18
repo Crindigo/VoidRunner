@@ -7,6 +7,8 @@
 mods.jei.yeet(item("extrautils2:machine").withNbt(["Type": "extrautils2:furnace"]));
 mods.jei.yeet(item("extrautils2:machine").withNbt(["Type": "extrautils2:crusher"]));
 
+mods.jei.yeet(item("thermalfoundation:tool.shears_wood"));
+
 mods.jei.yeet(item("advancedmortars:mortar", 0));
 mods.jei.yeet(item("advancedmortars:mortar", 2));
 mods.jei.yeet(item("advancedmortars:mortar", 3));

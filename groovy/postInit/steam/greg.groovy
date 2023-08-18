@@ -15,9 +15,9 @@ mods.gregtech.compressor.recipeBuilder()
     .EUt(2)
     .buildAndRegister()
 
-// compressor: 16x leaves -> plant ball
+// compressor: 8x leaves -> plant ball
 mods.gregtech.compressor.recipeBuilder()
-    .inputs(ore('treeLeaves') * 16)
+    .inputs(ore('treeLeaves') * 8)
     .outputs(metaitem('plant_ball'))
     .duration(300)
     .EUt(2)

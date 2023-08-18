@@ -84,13 +84,19 @@
               "Count:3": 1,
               "Damage:2": 1599,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust_tiny"
+              "id:8": "gregtech:meta_dust_small"
             },
             "1:10": {
               "Count:3": 1,
               "Damage:2": 2063,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_dust_tiny"
+              "id:8": "gregtech:meta_dust_small"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 258,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust_small"
             }
           },
           "taskID:8": "bq_standard:retrieval"

@@ -17,9 +17,9 @@
 				{"type": "swing_hand"}
 			],
 			"drops": [
-				{"name": "gregtech:meta_dust_small", "meta": 1599, "chance": 15},
-				{"name": "gregtech:meta_dust_small", "meta": 2063, "chance": 10},
-				{"name": "gregtech:meta_dust_small", "meta": 258, "chance": 7}
+				{"name": "gregtech:meta_dust_small", "meta": 1599, "chance": 30},
+				{"name": "gregtech:meta_dust_small", "meta": 2063, "chance": 20},
+				{"name": "gregtech:meta_dust_small", "meta": 258, "chance": 12}
 			]
 		}
     ]
