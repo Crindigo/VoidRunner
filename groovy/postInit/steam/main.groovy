@@ -27,16 +27,11 @@ crafting.addShaped("mortar_stone", item("advancedmortars:mortar", 1), [
     [null, ore('stone'), null]
 ]);
 
-crafting.shapedBuilder()
-    .name("masonry_brick")
-    .output(item('pyrotech:material', 16) * 4)
-    .row('CCC')
-    .row('SMS')
-    .row('SSS')
-    .key('C', ore('dustClay'))
-    .key('S', ore('dustStone'))
-    .key('M', metaitem('wooden_form.brick').reuse())
-    .register();
+crafting.addShaped("masonry_brick", item('pyrotech:material', 16) * 4, [
+    [ore('dustClay'), ore('dustClay'), ore('dustClay')],
+    [ore('dustStone'), metaitem('wooden_form.brick').reuse(), ore('dustStone')],
+    [ore('dustStone'), ore('dustStone'), ore('dustStone')]
+]);
 
 furnace.add(item('pyrotech:material', 12), item('pyrotech:material', 13))
 
@@ -46,30 +41,27 @@ furnace.add(metaitem('dustGlass'), item('minecraft:glass'));
 crafting.addShapeless("twine_to_string", item('minecraft:string'), 
     [item('pyrotech:material', 14), item('pyrotech:material', 14)]);
 
-crafting.shapedBuilder()
-    .name("refractory_brick")
-    .output(item('pyrotech:material', 9) * 4)
-    .row('CCC')
-    .row('FMF')
-    .row('SSS')
-    .key('C', ore('itemClay'))
-    .key('F', ore('dustFlint'))
-    .key('M', metaitem('wooden_form.brick').reuse())
-    .key('S', ore('sand'))
-    .register();
+crafting.addShaped("refractory_brick", item('pyrotech:material', 9) * 4, [
+    [ore('itemClay'), ore('itemClay'), ore('itemClay')],
+    [ore('dustFlint'), metaitem('wooden_form.brick').reuse(), ore('dustFlint')],
+    [ore('sand'), ore('sand'), ore('sand')]
+]);
 
 crafting.remove("randomthings:fertilizeddirt");
 crafting.addShapeless("fertilized_dirt", item("randomthings:fertilizeddirt"), [ore('dirt'), metaitem('fertilizer')]);
 
-//event_manager.listen { PlayerEvent.BreakSpeed event -> 
-//    log.info("break speed: {} {}", event.getState(), event.getOriginalSpeed())
-//}
+// Dissolver recipe
+crafting.remove('alchemistry:chemical_dissolver');
+crafting.addShaped("alc_dissolver", item('alchemistry:chemical_dissolver'), [
+    [ore('plateTin'), ore('wireGtSingleCopper'), ore('plateTin')],
+    [ore('plateTin'), ore('blockRedstone'), ore('plateTin')],
+    [ore('plateTin'), ore('wireGtSingleCopper'), ore('plateTin')],
+]);
 
-/*event_manager.listen { HarvestDropsEvent event ->
-    log.info('Harvest: {} {} {}', event.getState(), event.getDropChance(), event.getDrops())
-    if ( !event.isSilkTouching() ) {
-        event.getDrops().add(item("minecraft:sapling", 0))
-        event.getDrops().add(item("minecraft:stick"))
-        event.setDropChance(0.2)
-    }
-}*/
+// Survival gen recipe
+crafting.remove('extrautils2:generator_survivalist')
+crafting.addShaped("survival_gen", item('extrautils2:machine').withNbt(["Type": "extrautils2:generator_survival"]), [
+    [ore('plateIron'), ore('plateIron'), ore('plateIron')],
+    [ore('plateIron'), item('minecraft:furnace'), ore('plateIron')],
+    [ore('craftingPiston'), ore('wireGtSingleCopper'), ore('craftingPiston')],
+]);

@@ -12,12 +12,13 @@ mods.inworldcrafting.FluidToFluid.transform(<liquid:stone_solution>, <liquid:wat
 
 // types, output, duration, inputs
 // or: types, output, duration, secondary, chance, inputs
+// duration=20 is 5 seconds
 Mortar.addRecipe(['stone'], <minecraft:gravel>, 20, [<minecraft:cobblestone>]);
-Mortar.addRecipe(['stone'], <minecraft:flint>, 20, <minecraft:sand>, 0.5, [<minecraft:gravel>]);
-Mortar.addRecipe(['stone'], <gregtech:meta_item_1:1001>, 50, [<ore:sand>, <ore:dustWood>, <ore:dustBone>]);
+Mortar.addRecipe(['stone'], <minecraft:flint>, 20, <minecraft:sand>, 1.0, [<minecraft:gravel>]);
+Mortar.addRecipe(['stone'], <gregtech:meta_item_1:1001>, 20, [<ore:sand>, <ore:dustWood>, <ore:dustBone>]);
 
-Mortar.addRecipe(['stone'], <metaitem:dustTin>, 20, <metaitem:dustIron>, 0.5, [<voidrunner:shiny_stone_chunk>]);
-Mortar.addRecipe(['stone'], <metaitem:dustCopper>, 20, <metaitem:dustRedstone>, 0.5, [<voidrunner:shiny_magma_chunk>]);
+Mortar.addRecipe(['stone'], <metaitem:dustTin>, 20, <metaitem:dustIron>, 1.0, [<metaitem:voidrunner:shiny_stone_chunk>]);
+Mortar.addRecipe(['stone'], <metaitem:dustCopper>, 20, <minecraft:redstone>, 1.0, [<metaitem:voidrunner:shiny_magma_chunk>]);
 
 StoneCrucible.removeAllRecipes();
 BrickCrucible.removeAllRecipes();
@@ -27,10 +28,10 @@ StoneCrucible.addRecipe("water_from_leaves", <liquid:water> * 250, <ore:treeLeav
 BrickCrucible.addRecipe("lava_from_cobble", <liquid:lava> * 250, <ore:cobblestone>, 1200);
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
-mods.alchemistry.Evaporator.addRecipe(<voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 250);
+mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 250);
 // also replace the one for lava
 mods.alchemistry.Evaporator.removeRecipe(<liquid:lava>);
-mods.alchemistry.Evaporator.addRecipe(<voidrunner:shiny_magma_chunk>, <liquid:lava> * 250);
+mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, <liquid:lava> * 250);
 
 // fisher price method
 // mods.alchemistry.Combiner.removeRecipe(IItemStack output);
@@ -39,16 +40,17 @@ mods.alchemistry.Evaporator.addRecipe(<voidrunner:shiny_magma_chunk>, <liquid:la
 // Dissolver.addRecipe(output, weighted, rolls, [ [chance, item, ...], [chance2, item, ...] ])
 
 Dissolver.removeAllRecipes();
-// custom ore prefix for ore chunks probably better here. maybe research gregification
-Dissolver.addRecipe(<voidrunner:shiny_stone_chunk>, false, 1, [
-    [100, <metaitem:oreTin>],
-    [100, <metaitem:oreIron>],
+// custom ore prefix for ore chunks probably better here. maybe research gregification.
+// actually gregification is getting merged into ceu so just wait a bit and use ore for now.
+Dissolver.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, false, 1, [
+    [100, <gregtech:ore_tin_0>],
+    [100, <gregtech:ore_iron_0>],
     [50, <metaitem:dustStone>],
     [25, <metaitem:dustSilver>]
 ]);
-Dissolver.addRecipe(<voidrunner:shiny_magma_chunk>, false, 1, [
-    [100, <metaitem:oreCopper>],
-    [50, <metaitem:oreRedstone>],
+Dissolver.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, false, 1, [
+    [100, <gregtech:ore_copper_0>],
+    [100, <gregtech:ore_redstone_0>],
     [50, <metaitem:dustNetherrack>],
     [25, <metaitem:dustGold>]
 ]);
