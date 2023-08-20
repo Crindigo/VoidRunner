@@ -1,0 +1,21 @@
+crafting.remove('minecraft:clock');
+
+// Clock * 1
+mods.gregtech.assembler.removeByInput(4, [item('minecraft:redstone'), metaitem('plateGold') * 4], null);
+mods.gregtech.arc_furnace.removeByInput(30, [item('minecraft:clock')], [fluid('oxygen') * 784]);
+mods.gregtech.macerator.removeByInput(2, [item('minecraft:clock')], null);
+
+mods.gregtech.assembler.recipeBuilder()
+    .inputs(ore('dustRedstone'), ore('foilGold') * 4, ore('screwIron') * 4)
+    .outputs(item('minecraft:clock'))
+    .duration(100)
+    .EUt(4)
+    .buildAndRegister();
+
+crafting.remove('randomthings:timeinabottle');
+mods.gregtech.canner.recipeBuilder()
+    .inputs(item('minecraft:clock'), item('minecraft:glass_bottle'))
+    .outputs(item('randomthings:timeinabottle').withNbt(["timeData": ["storedTime": 0]]))
+    .duration(6000)
+    .EUt(4)
+    .buildAndRegister();

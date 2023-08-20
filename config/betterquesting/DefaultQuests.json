@@ -46,7 +46,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "Only have my bare hands to work with here. All the gear I took with me is gone.\n\nMight be able to get something useful out of this dirt.\n\n§7(Dig into the dirt by holding shift and right clicking with an empty hand.)",
+          "desc:8": "Only have my bare hands to work with here. All the gear I took with me is gone.\n\nMight be able to get something useful out of this dirt.\n\n§7(Dig into the dirt by holding shift and the right mouse button with an empty hand.)",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -112,14 +112,14 @@
         "betterquesting:10": {
           "bg_image:8": "",
           "bg_size:3": 256,
-          "desc:8": "Let\u0027s get you situated with your new living conditions.",
+          "desc:8": "Crossing through the void has brought you to an interesting place.",
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
             "id:8": "minecraft:book"
           },
-          "name:8": "Your New Life",
+          "name:8": "A New Dimension",
           "visibility:8": "NORMAL"
         }
       },

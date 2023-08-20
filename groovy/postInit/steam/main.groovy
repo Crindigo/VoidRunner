@@ -5,15 +5,20 @@ import net.minecraft.item.ItemStack
 
 println('Hello World!')
 
-crafting.addShapeless("early_cobble", item("minecraft:cobblestone"), [ore("dustStone"), ore("dustSmallClay")]);
-
-crafting.remove("advancedmortars:mortar_wood");
-crafting.remove("advancedmortars:mortar_stone");
-crafting.remove("advancedmortars:mortar_iron");
-crafting.remove("advancedmortars:mortar_diamond");
-crafting.remove("advancedmortars:mortar_gold");
-crafting.remove("advancedmortars:mortar_obsidian");
-crafting.remove("advancedmortars:mortar_emerald");
+def stoneTypes = [
+    "cobblestone": [item('minecraft:cobblestone'), ore('dustStone')],
+    "andesite": [item('minecraft:stone', 5), ore('dustAndesite')],
+    "diorite": [item('minecraft:stone', 3), ore('dustDiorite')],
+    "granite": [item('minecraft:stone', 1), ore('dustGranite')],
+    "marble": [item('gregtech:stone_cobble', 2), ore('dustMarble')],
+    "basalt": [item('gregtech:stone_cobble', 3), ore('dustBasalt')],
+    "redgranite": [item('gregtech:stone_cobble', 1), ore('dustGraniteRed')],
+    "blackgranite": [item('gregtech:stone_cobble'), ore('dustGraniteBlack')],
+    "netherrack": [item('minecraft:netherrack'), ore('dustNetherrack')],
+];
+for (stoneType in stoneTypes ) {
+    crafting.addShapeless("clay_${stoneType.key}", stoneType.value[0], [stoneType.value[1], ore("dustSmallClay")]);
+}
 
 crafting.remove("pyrotech:tool/crude_axe");
 crafting.addShaped("crude_axe", item('pyrotech:crude_axe'), [
@@ -21,6 +26,7 @@ crafting.addShaped("crude_axe", item('pyrotech:crude_axe'), [
     [null, ore('stickWood')]
 ]);
 
+crafting.remove("advancedmortars:mortar_stone");
 crafting.addShaped("mortar_stone", item("advancedmortars:mortar", 1), [
     [null, null, ore('stickWood')],
     [ore('stone'), ore('plankWood'), ore('stone')],
@@ -41,6 +47,7 @@ furnace.add(metaitem('dustGlass'), item('minecraft:glass'));
 crafting.addShapeless("twine_to_string", item('minecraft:string'), 
     [item('pyrotech:material', 14), item('pyrotech:material', 14)]);
 
+crafting.remove('pyrotech:refractory_brick_unfired');
 crafting.addShaped("refractory_brick", item('pyrotech:material', 9) * 4, [
     [ore('itemClay'), ore('itemClay'), ore('itemClay')],
     [ore('dustFlint'), metaitem('wooden_form.brick').reuse(), ore('dustFlint')],
@@ -52,16 +59,53 @@ crafting.addShapeless("fertilized_dirt", item("randomthings:fertilizeddirt"), [o
 
 // Dissolver recipe
 crafting.remove('alchemistry:chemical_dissolver');
-crafting.addShaped("alc_dissolver", item('alchemistry:chemical_dissolver'), [
-    [ore('plateTin'), ore('wireGtSingleCopper'), ore('plateTin')],
-    [ore('plateTin'), ore('blockRedstone'), ore('plateTin')],
-    [ore('plateTin'), ore('wireGtSingleCopper'), ore('plateTin')],
-]);
+crafting.shapedBuilder()
+    .name('alc_dissolver')
+    .output(item('alchemistry:chemical_dissolver'))
+    .shape('TTT',
+           'WRW',
+           'TTT')
+    .key('T', ore('plateTin'))
+    .key('W', ore('wireGtSingleCopper'))
+    .key('R', ore('blockRedstone'))
+    .register();
 
 // Survival gen recipe
 crafting.remove('extrautils2:generator_survivalist')
-crafting.addShaped("survival_gen", item('extrautils2:machine').withNbt(["Type": "extrautils2:generator_survival"]), [
-    [ore('plateIron'), ore('plateIron'), ore('plateIron')],
-    [ore('plateIron'), item('minecraft:furnace'), ore('plateIron')],
-    [ore('craftingPiston'), ore('wireGtSingleCopper'), ore('craftingPiston')],
-]);
+crafting.shapedBuilder()
+    .name('survival_gen')
+    .output(item('extrautils2:machine').withNbt(["Type": "extrautils2:generator_survival"]))
+    .shape('III',
+           'IFI',
+           'PWP')
+    .key('I', ore('plateIron'))
+    .key('F', item('minecraft:furnace'))
+    .key('P', ore('craftingPiston'))
+    .key('W', ore('wireGtSingleCopper'))
+    .register();
+
+// need to mold this w/ machines
+crafting.remove('minecraft:glass_bottle');
+
+crafting.shapelessBuilder()
+    .name('leaves_to_fiber')
+    .output(item('pyrotech:material', 12))
+    .input(ore('treeLeaves'))
+    .input(ore('toolKnife'))
+    .register();
+
+// pyrotech brick crucible uses iron places
+crafting.remove('pyrotech:tech/machine/brick_crucible');
+crafting.shapedBuilder()
+    .name('brick_crucible')
+    .output(item('pyrotech:brick_crucible'))
+    .shape('PBP',
+           'BMB',
+           'PBP')
+    .key('P', ore('plateIron'))
+    .key('B', item('pyrotech:refractory_brick_block'))
+    .key('M', item('pyrotech:stone_crucible'))
+    .register();
+
+crafting.remove('thermalfoundation:clay_ball');
+crafting.remove('thermalfoundation:block_dirt');

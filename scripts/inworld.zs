@@ -28,9 +28,10 @@ StoneCrucible.addRecipe("water_from_leaves", <liquid:water> * 250, <ore:treeLeav
 BrickCrucible.addRecipe("lava_from_cobble", <liquid:lava> * 250, <ore:cobblestone>, 1200);
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
-mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 250);
+mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 500);
 // also replace the one for lava
 mods.alchemistry.Evaporator.removeRecipe(<liquid:lava>);
+// lava slower to make so give it 2x more
 mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, <liquid:lava> * 250);
 
 // fisher price method
@@ -39,18 +40,32 @@ mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, <
 // Dissolver.removeRecipe(output)
 // Dissolver.addRecipe(output, weighted, rolls, [ [chance, item, ...], [chance2, item, ...] ])
 
+mods.alchemistry.Combiner.removeAllRecipes();
+
 Dissolver.removeAllRecipes();
 // custom ore prefix for ore chunks probably better here. maybe research gregification.
 // actually gregification is getting merged into ceu so just wait a bit and use ore for now.
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, false, 1, [
-    [100, <gregtech:ore_tin_0>],
-    [100, <gregtech:ore_iron_0>],
-    [50, <metaitem:dustStone>],
-    [25, <metaitem:dustSilver>]
+    [100, <gregtech:ore_tin_0> * 2, <gregtech:ore_iron_0> * 2, <gregtech:ore_nickel_0>],
+    //[50, <metaitem:dustStone>], // remove stone dust here or else you loop that and don't need rockbreaker
+    [10, <metaitem:dustGranite>],
+    [10, <metaitem:dustDiorite>],
+    [10, <metaitem:dustAndesite>],
+    [10, <metaitem:dustMarble>],
 ]);
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, false, 1, [
-    [100, <gregtech:ore_copper_0>],
-    [100, <gregtech:ore_redstone_0>],
+    [100, <gregtech:ore_copper_0> * 2, <gregtech:ore_redstone_0>, <gregtech:ore_galena_0>],
     [50, <metaitem:dustNetherrack>],
-    [25, <metaitem:dustGold>]
+    [10, <metaitem:dustBasalt>],
+    [10, <metaitem:dustGraniteRed>],
+    [10, <metaitem:dustGraniteBlack>],
+]);
+
+// sapling casino
+Dissolver.addRecipe(<minecraft:sapling>, true, 1, [
+    [10, <minecraft:sapling:1>],
+    [10, <minecraft:sapling:2>],
+    [10, <minecraft:sapling:3>],
+    [10, <minecraft:sapling:4>],
+    [10, <minecraft:sapling:5>],
 ]);
