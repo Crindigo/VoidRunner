@@ -46,19 +46,21 @@ Dissolver.removeAllRecipes();
 // custom ore prefix for ore chunks probably better here. maybe research gregification.
 // actually gregification is getting merged into ceu so just wait a bit and use ore for now.
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, false, 1, [
-    [100, <gregtech:ore_tin_0> * 2, <gregtech:ore_iron_0> * 2, <gregtech:ore_nickel_0>],
-    //[50, <metaitem:dustStone>], // remove stone dust here or else you loop that and don't need rockbreaker
-    [10, <metaitem:dustGranite>],
-    [10, <metaitem:dustDiorite>],
-    [10, <metaitem:dustAndesite>],
-    [10, <metaitem:dustMarble>],
+    [100, <gregtech:ore_tin_0>, <gregtech:ore_iron_0>]
+    [50, <gregtech:ore_nickel_0>],
+    // no stone dust here or else you loop that and don't need rockbreaker
+    [15, <metaitem:dustGranite>],
+    [15, <metaitem:dustDiorite>],
+    [15, <metaitem:dustAndesite>],
+    [15, <metaitem:dustMarble>],
 ]);
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, false, 1, [
-    [100, <gregtech:ore_copper_0> * 2, <gregtech:ore_redstone_0>, <gregtech:ore_galena_0>],
-    [50, <metaitem:dustNetherrack>],
-    [10, <metaitem:dustBasalt>],
-    [10, <metaitem:dustGraniteRed>],
-    [10, <metaitem:dustGraniteBlack>],
+    [100, <gregtech:ore_copper_0>, <gregtech:ore_redstone_0>],
+    [50, <gregtech:ore_galena_0>],
+    [15, <metaitem:dustNetherrack>],
+    [15, <metaitem:dustBasalt>],
+    [15, <metaitem:dustGraniteRed>],
+    [15, <metaitem:dustGraniteBlack>],
 ]);
 
 // sapling casino

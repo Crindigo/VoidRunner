@@ -109,3 +109,5 @@ crafting.shapedBuilder()
 
 crafting.remove('thermalfoundation:clay_ball');
 crafting.remove('thermalfoundation:block_dirt');
+crafting.remove('pyrotech:clay');
+crafting.remove('pyrotech:clay_ball');
