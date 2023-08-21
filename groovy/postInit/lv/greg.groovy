@@ -19,3 +19,6 @@ mods.gregtech.canner.recipeBuilder()
     .duration(6000)
     .EUt(4)
     .buildAndRegister();
+
+// silver and gold can be acquired by processing crushed galena and copper in a chemical bath w/ mercury (from redstone).
+// thermal centrifuge also an option, no mercury but slower.

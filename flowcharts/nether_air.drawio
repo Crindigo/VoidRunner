@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-08-20T16:14:00.241Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="ZKLpgHQF0uoRFu3euMOT" version="21.6.8" type="device">
+<mxfile host="Electron" modified="2023-08-21T00:14:48.199Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="AeMcCwR1dBc3WgrFH8OW" version="21.6.8" type="device">
   <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
     <mxGraphModel dx="1098" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -31,13 +31,13 @@
         <mxCell id="rb23Qd6nBjwukMvG9wRu-19" value="1000mb Nether Sludge" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
           <mxGeometry y="30" width="250" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="rb23Qd6nBjwukMvG9wRu-23" value="10kb Air" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
+        <mxCell id="rb23Qd6nBjwukMvG9wRu-23" value="10b Air" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
           <mxGeometry y="60" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rb23Qd6nBjwukMvG9wRu-20" value="10s @ 64 EU/t" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
           <mxGeometry y="90" width="250" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="rb23Qd6nBjwukMvG9wRu-22" value="10kb Nether Air" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;spacingRight=4;fontColor=#ffffff;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
+        <mxCell id="rb23Qd6nBjwukMvG9wRu-22" value="10b Nether Air" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=4;spacingRight=4;fontColor=#ffffff;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="rb23Qd6nBjwukMvG9wRu-17">
           <mxGeometry y="120" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rb23Qd6nBjwukMvG9wRu-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RhfqdFK_2u-JBd3pKtDQ-7" target="rb23Qd6nBjwukMvG9wRu-19">

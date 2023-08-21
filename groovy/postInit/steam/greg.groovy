@@ -58,28 +58,92 @@ recipemap('crude_mixer').recipeBuilder()
 mods.gregtech.sifter.recipeBuilder()
     .inputs(item('minecraft:dirt'))
     .outputs(item('minecraft:clay_ball') * 2) // clay, grass seeds, bone
-    .chancedOutput(item('minecraft:bone'), 5000, 500)
-    .chancedOutput(item('randomthings:grassseeds'), 1500, 500)
-    .chancedOutput(item('gregtech:rubber_sapling'), 1500, 500)
+    .outputs(metaitem('voidrunner:fine_dirt') * 2)
+    .chancedOutput(item('minecraft:bone'), 5000, 0)
+    .chancedOutput(item('randomthings:grassseeds'), 1500, 0)
+    .chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
     .duration(100)
     .EUt(7)
     .buildAndRegister();
 
 // update ulv conveyor to take carpet instead of rubber sheet
-
+crafting.remove('ulv_covers:conveyor_ulv_easy');
+crafting.addShaped('ulv_conveyor', metaitem('ulv_covers:conveyor.module.ulv'), [
+    [item('minecraft:carpet'), metaitem('wireGtSingleTin')],
+    [metaitem('ulv_covers:electric.motor.ulv'), item('minecraft:carpet')]
+]);
 
 // update ulv pump to take iron ring instead of rubber
-
+crafting.remove('ulv_covers:pump_ulv_easy');
+crafting.addShaped('ulv_pump', metaitem('ulv_covers:electric.pump.ulv'), [
+    [ore('pipeNormalFluidCopper'), ore('rotorBronze')],
+    [metaitem('ulv_covers:electric.motor.ulv'), ore('ringIron')]
+]);
 
 // allow for ulv and lv hatches and buses to have standard crafting recipes instead of assembler only
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 250])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 72])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 36])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 4])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 250])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 72])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 36])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 4])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 250])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 72])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 36])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 4])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 250])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 72])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 36])
+mods.gregtech.assembler.removeByInput(7, [metaitem('hull.ulv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 4])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:chest'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 500])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('plastic') * 144])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polytetrafluoroethylene') * 72])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('polybenzimidazole') * 9])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('glue') * 500])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('plastic') * 144])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polytetrafluoroethylene') * 72])
+mods.gregtech.assembler.removeByInput(30, [metaitem('hull.lv'), item('minecraft:glass'), metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('polybenzimidazole') * 9])
 
+
+def tierNames = ['ulv', 'lv'];
+for ( tierName in tierNames ) {
+    crafting.addShaped("${tierName}_import_hatch", metaitem("fluid_hatch.import.${tierName}"), [
+        [null, ore('blockGlass'), null],
+        [null, metaitem("hull.${tierName}"), null]
+    ]);
+    crafting.addShaped("${tierName}_export_hatch", metaitem("fluid_hatch.export.${tierName}"), [
+        [null, metaitem("hull.${tierName}"), null],
+        [null, ore('blockGlass'), null]
+    ]);
+    crafting.addShaped("${tierName}_import_bus", metaitem("item_bus.import.${tierName}"), [
+        [null, ore('chestWood'), null],
+        [null, metaitem("hull.${tierName}"), null]
+    ]);
+    crafting.addShaped("${tierName}_export_bus", metaitem("item_bus.export.${tierName}"), [
+        [null, metaitem("hull.${tierName}"), null],
+        [null, ore('chestWood'), null]
+    ]);
+}
 
 // wooden crate just 8 planks surrounding saw
-
-
-
-// add 2 fine dirt to dirt sifting
-
+crafting.remove('gregtech:wooden_crate');
+// Wooden Crate * 1
+mods.gregtech.assembler.removeByInput(16, [metaitem('plateWood') * 4, metaitem('screwIron') * 4, metaitem('circuit.integrated').withNbt(["Configuration": 5])], null)
+crafting.addShaped('wooden_crate', metaitem('crate.wood'), [
+    [ore('plankWood'), ore('plankWood'), ore('plankWood')],
+    [ore('plankWood'), ore('toolSaw'), ore('plankWood')],
+    [ore('plankWood'), ore('plankWood'), ore('plankWood')]
+]);
 
 
 // crude mix fine dirt and netherrack dust for 2 sulfur dust (or maybe 1 to line up with raw rubber)

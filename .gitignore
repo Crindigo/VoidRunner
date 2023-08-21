@@ -22,3 +22,5 @@ opframe_cache/
 /icon.png
 patchouli_data.json
 hei_bookmarks.ini
+flowcharts/*.bkp
+flowcharts/*.dtmp

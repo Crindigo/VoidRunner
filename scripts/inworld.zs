@@ -46,7 +46,7 @@ Dissolver.removeAllRecipes();
 // custom ore prefix for ore chunks probably better here. maybe research gregification.
 // actually gregification is getting merged into ceu so just wait a bit and use ore for now.
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, false, 1, [
-    [100, <gregtech:ore_tin_0>, <gregtech:ore_iron_0>]
+    [100, <gregtech:ore_tin_0>, <gregtech:ore_iron_0>],
     [50, <gregtech:ore_nickel_0>],
     // no stone dust here or else you loop that and don't need rockbreaker
     [15, <metaitem:dustGranite>],
