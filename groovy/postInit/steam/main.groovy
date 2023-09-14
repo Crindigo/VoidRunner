@@ -41,9 +41,6 @@ crafting.addShaped("masonry_brick", item('pyrotech:material', 16) * 4, [
 
 furnace.add(item('pyrotech:material', 12), item('pyrotech:material', 13))
 
-furnace.removeByInput(item('minecraft:sand'));
-furnace.add(metaitem('dustGlass'), item('minecraft:glass'));
-
 crafting.addShapeless("twine_to_string", item('minecraft:string'), 
     [item('pyrotech:material', 14), item('pyrotech:material', 14)]);
 
@@ -107,6 +104,7 @@ crafting.shapedBuilder()
     .key('M', item('pyrotech:stone_crucible'))
     .register();
 
+crafting.remove('thermalfoundation:storage_resource_1');
 crafting.remove('thermalfoundation:clay_ball');
 crafting.remove('thermalfoundation:block_dirt');
 crafting.remove('pyrotech:clay');

@@ -49,18 +49,27 @@ Dissolver.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, false, 1, [
     [100, <gregtech:ore_tin_0>, <gregtech:ore_iron_0>],
     [50, <gregtech:ore_nickel_0>],
     // no stone dust here or else you loop that and don't need rockbreaker
-    [15, <metaitem:dustGranite>],
-    [15, <metaitem:dustDiorite>],
-    [15, <metaitem:dustAndesite>],
-    [15, <metaitem:dustMarble>],
+    [20, <metaitem:dustGranite>],
+    [20, <metaitem:dustDiorite>],
+    [20, <metaitem:dustAndesite>],
+    [20, <metaitem:dustMarble>],
 ]);
+
+// idk about all these extra stone dusts maybe do them later with centrifuge when relevant
 Dissolver.addRecipe(<metaitem:voidrunner:shiny_magma_chunk>, false, 1, [
     [100, <gregtech:ore_copper_0>, <gregtech:ore_redstone_0>],
     [50, <gregtech:ore_galena_0>],
-    [15, <metaitem:dustNetherrack>],
-    [15, <metaitem:dustBasalt>],
-    [15, <metaitem:dustGraniteRed>],
-    [15, <metaitem:dustGraniteBlack>],
+    [50, <metaitem:dustSulfur>],
+    [20, <metaitem:dustNetherrack>],
+    [20, <metaitem:dustBasalt>],
+    [20, <metaitem:dustGraniteRed>],
+    [20, <metaitem:dustGraniteBlack>],
+]);
+
+Dissolver.addRecipe(<alchemistry:mineral_salt>, false, 1, [
+    [100, <gregtech:ore_salt_0>, <gregtech:ore_rock_salt_0>],
+    [50, <gregtech:ore_lepidolite_0>],
+    [25, <gregtech:ore_spodumene_0>],
 ]);
 
 // sapling casino
