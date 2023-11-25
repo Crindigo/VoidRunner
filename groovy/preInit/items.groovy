@@ -1,5 +1,6 @@
 import gregtech.api.unification.material.event.PostMaterialEvent;
 import gregtech.api.items.metaitem.StandardMetaItem;
+import com.bartz24.skyresources.alchemy.item.ItemOreAlchDust;
 
 eventManager.listen { PostMaterialEvent event ->
     
@@ -11,6 +12,7 @@ eventManager.listen { PostMaterialEvent event ->
     m.addItem(3, "fine_dirt");
 }
 
+//ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);
 
 //content.createItem("shiny_stone_chunk").register();
 //content.createItem("shiny_magma_chunk").register();
