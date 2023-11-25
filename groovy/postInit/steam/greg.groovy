@@ -38,7 +38,7 @@ crafting.shapedBuilder()
     .key('S', ore('craftingPiston'))
     .register();
 
-// need to come up with wrought iron method
+// need to come up with wrought iron method. maybe PBF for wrought, regular furnace for iron?
 // fuck it let's use granite
 recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustIron') * 4, ore('dustGranite'))

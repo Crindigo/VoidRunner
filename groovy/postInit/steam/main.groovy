@@ -1,8 +1,3 @@
-import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent
-import net.minecraftforge.event.entity.player.PlayerEvent
-
-import net.minecraft.item.ItemStack
-
 println('Hello World!')
 
 def stoneTypes = [
@@ -26,23 +21,15 @@ crafting.addShaped("crude_axe", item('pyrotech:crude_axe'), [
     [null, ore('stickWood')]
 ]);
 
-crafting.remove("advancedmortars:mortar_stone");
-crafting.addShaped("mortar_stone", item("advancedmortars:mortar", 1), [
-    [null, null, ore('stickWood')],
-    [ore('stone'), ore('plankWood'), ore('stone')],
-    [null, ore('stone'), null]
-]);
-
 crafting.addShaped("masonry_brick", item('pyrotech:material', 16) * 4, [
     [ore('dustClay'), ore('dustClay'), ore('dustClay')],
     [ore('dustStone'), metaitem('wooden_form.brick').reuse(), ore('dustStone')],
     [ore('dustStone'), ore('dustStone'), ore('dustStone')]
 ]);
 
+// plant fiber drying, smelt twine to string
 furnace.add(item('pyrotech:material', 12), item('pyrotech:material', 13))
-
-crafting.addShapeless("twine_to_string", item('minecraft:string'), 
-    [item('pyrotech:material', 14), item('pyrotech:material', 14)]);
+furnace.add(item('pyrotech:material', 14), item('minecraft:string'));
 
 crafting.remove('pyrotech:refractory_brick_unfired');
 crafting.addShaped("refractory_brick", item('pyrotech:material', 9) * 4, [
@@ -54,33 +41,6 @@ crafting.addShaped("refractory_brick", item('pyrotech:material', 9) * 4, [
 crafting.remove("randomthings:fertilizeddirt");
 crafting.addShapeless("fertilized_dirt", item("randomthings:fertilizeddirt"), [ore('dirt'), metaitem('fertilizer')]);
 
-// Dissolver recipe
-crafting.remove('alchemistry:chemical_dissolver');
-crafting.shapedBuilder()
-    .name('alc_dissolver')
-    .output(item('alchemistry:chemical_dissolver'))
-    .shape('TTT',
-           'WRW',
-           'TTT')
-    .key('T', ore('plateTin'))
-    .key('W', ore('wireGtSingleCopper'))
-    .key('R', ore('blockRedstone'))
-    .register();
-
-// Survival gen recipe
-crafting.remove('extrautils2:generator_survivalist')
-crafting.shapedBuilder()
-    .name('survival_gen')
-    .output(item('extrautils2:machine').withNbt(["Type": "extrautils2:generator_survival"]))
-    .shape('III',
-           'IFI',
-           'PWP')
-    .key('I', ore('plateIron'))
-    .key('F', item('minecraft:furnace'))
-    .key('P', ore('craftingPiston'))
-    .key('W', ore('wireGtSingleCopper'))
-    .register();
-
 // need to mold this w/ machines
 crafting.remove('minecraft:glass_bottle');
 
@@ -91,7 +51,7 @@ crafting.shapelessBuilder()
     .input(ore('toolKnife'))
     .register();
 
-// pyrotech brick crucible uses iron places
+// pyrotech brick crucible uses iron plates
 crafting.remove('pyrotech:tech/machine/brick_crucible');
 crafting.shapedBuilder()
     .name('brick_crucible')
@@ -109,3 +69,6 @@ crafting.remove('thermalfoundation:clay_ball');
 crafting.remove('thermalfoundation:block_dirt');
 crafting.remove('pyrotech:clay');
 crafting.remove('pyrotech:clay_ball');
+
+// we will need a primitive evaporator multi for making shiny chunks
+// and a steam/electric decomposer for getting stuff from chunks
