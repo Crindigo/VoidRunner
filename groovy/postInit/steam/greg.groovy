@@ -1,3 +1,5 @@
+import gregtech.api.GTValues;
+
 // Dirt * 1
 mods.gregtech.macerator.removeByInput(2, [metaitem('bio_chaff')], null)
 mods.gregtech.macerator.recipeBuilder()
@@ -6,6 +8,16 @@ mods.gregtech.macerator.recipeBuilder()
     .duration(300)
     .EUt(2)
     .buildAndRegister()
+
+/* just testing
+mods.gregtech.canner.recipeBuilder()
+    .inputs(item('botania:manatablet'))
+    .fluidInputs(fluid('mana') * 8000)
+    .outputs(item('botania:manatablet').withNbt(["mana": 500000i]))
+    .duration(1200)
+    .EUt(GTValues.VA[GTValues.UHV])
+    .buildAndRegister();
+*/
 
 // compressor: 8x plant fiber -> plant ball
 mods.gregtech.compressor.recipeBuilder()
@@ -40,20 +52,23 @@ crafting.shapedBuilder()
 
 // need to come up with wrought iron method. maybe PBF for wrought, regular furnace for iron?
 // fuck it let's use granite
-recipemap('crude_mixer').recipeBuilder()
+/*recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustIron') * 4, ore('dustGranite'))
     .outputs(metaitem('dustWroughtIron') * 4)
     .duration(100)
     .EUt(7)
     .buildAndRegister();
+*/
 
+/*
 recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustStone'))
     .fluidInputs(fluid('water') * 1000)
-    .fluidOutputs(fluid('stone_solution') * 1000)
+    .fluidOutputs(fluid('stone_extract') * 1000)
     .duration(40)
     .EUt(16)
     .buildAndRegister();
+*/
 
 mods.gregtech.sifter.recipeBuilder()
     .inputs(item('minecraft:dirt'))

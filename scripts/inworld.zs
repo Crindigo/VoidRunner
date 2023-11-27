@@ -2,14 +2,21 @@
 //import mods.alchemistry.Dissolver;
 import mods.pyrotech.StoneCrucible;
 import mods.pyrotech.BrickCrucible;
+import mods.pyrotech.Bloomery;
+import mods.pyrotech.CompactingBin;
+import mods.pyrotech.Burn;
+import mods.pyrotech.SoakingPot;
 import mods.appliedenergistics2.Grinder;
 
 
 // clay dust to clay in water
-mods.inworldcrafting.FluidToItem.transform(<minecraft:clay_ball>, <liquid:water>, [<ore:dustClay>], false);
+//mods.inworldcrafting.FluidToItem.transform(<minecraft:clay_ball>, <liquid:water>, [<ore:dustClay>], false);
 
 // stone dust in water makes stone solution
-mods.inworldcrafting.FluidToFluid.transform(<liquid:stone_solution>, <liquid:water>, [<ore:dustStone>]);
+//mods.inworldcrafting.FluidToFluid.transform(<liquid:stone_solution>, <liquid:water>, [<ore:dustStone>]);
+
+//mods.skyresources.waterextractor.extract.removeRecipe(20, null, <ore:treeLeaves>);
+//mods.skyresources.waterextractor.extract.addRecipe(250, null, <pyrotech:mud>);
 
 // types, output, duration, inputs
 // or: types, output, duration, secondary, chance, inputs
@@ -28,12 +35,76 @@ Grinder.addRecipe(<minecraft:flint>, <minecraft:gravel>, 5, <minecraft:sand>, 1.
 Grinder.addRecipe(<metaItem:dustTin>, <metaitem:voidrunner:shiny_stone_chunk>, 5, <metaitem:dustIron>, 1.0);
 Grinder.addRecipe(<metaItem:dustCopper>, <metaitem:voidrunner:shiny_magma_chunk>, 5, <minecraft:redstone>, 1.0);
 
-StoneCrucible.removeAllRecipes();
-BrickCrucible.removeAllRecipes();
+//StoneCrucible.removeAllRecipes();
+//BrickCrucible.removeAllRecipes();
+
+SoakingPot.addRecipe("string_from_durable_twine", 
+    <minecraft:string>, <liquid:water> * 125, <pyrotech:material:26>, 4 * 60 * 20);
+
+Burn.createBuilder("water_from_mud", <minecraft:dirt>, "pyrotech:mud:*")
+    .setBurnStages(1)
+    .setTotalBurnTimeTicks(2 * 60 * 20)
+    .setFluidProduced(<liquid:water> * 250)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:4>)
+    .addFailureItem(<pyrotech:rock:4> * 2)
+    .addFailureItem(<pyrotech:rock:4> * 4)
+    .setRequiresRefractoryBlocks(false)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
+Burn.createBuilder("extract_from_stone", <pyrotech:rock:0>, "minecraft:stone:0")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:stone_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:0>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
+Burn.createBuilder("extract_from_granite", <pyrotech:rock:1>, "minecraft:stone:1")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:granite_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:1>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
 
 // you can do 8 operations at once so this is 2 buckets per minute
-StoneCrucible.addRecipe("water_from_leaves", <liquid:water> * 250, <ore:treeLeaves>, 1200, true);
-BrickCrucible.addRecipe("lava_from_cobble", <liquid:lava> * 250, <ore:cobblestone>, 1200);
+// pyrotech already has a lava one apparently
+//StoneCrucible.addRecipe("water_from_leaves", <liquid:water> * 250, <ore:treeLeaves>, 1200, true);
+//BrickCrucible.addRecipe("lava_from_cobble", <liquid:lava> * 250, <ore:cobblestone>, 1200);
+
+CompactingBin.removeRecipes(<pyrotech:charcoal_block>);
+CompactingBin.addRecipe("gt_charcoal_block", <metaitem:blockCharcoal>, <minecraft:coal:1>, 9, true);
+
+// Give wrought iron directly
+Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);
+Bloomery.createBloomeryBuilder(
+        "bloom_from_iron_ore",   // recipe name
+        <metaitem:nuggetWroughtIron>, // output
+        <ore:oreIron>     // input
+    )
+    .setAnvilTiers(["granite", "ironclad"])
+    .setBurnTimeTicks(14400)
+    .setFailureChance(0.0)
+    .setBloomYield(9, 12)
+    .register();
+
+Bloomery.removeBloomeryRecipes(<metaitem:nuggetCopper>);
+Bloomery.createBloomeryBuilder(
+        "bloom_from_copper_ore",   // recipe name
+        <metaitem:nuggetCopper>, // output
+        <ore:oreCopper>     // input
+    )
+    .setAnvilTiers(["granite", "ironclad"])
+    .setBurnTimeTicks(14400)
+    .setFailureChance(0.0)
+    .setBloomYield(9, 12)
+    .register();
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
 //mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 500);

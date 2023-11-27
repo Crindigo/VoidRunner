@@ -17,9 +17,14 @@
 				{"type": "swing_hand"}
 			],
 			"drops": [
-				{"name": "gregtech:meta_dust_small", "meta": 1599, "chance": 30},
-				{"name": "gregtech:meta_dust_small", "meta": 2063, "chance": 20},
-				{"name": "gregtech:meta_dust_small", "meta": 258, "chance": 12}
+				{"name": "pyrotech:rock", "meta": 0, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 1, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 2, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 3, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 4, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 8, "chance": 30},
+				{"name": "pyrotech:rock", "meta": 11, "chance": 30},
+				{"name": "pyrotech:material", "meta": 17, "chance": 30}
 			]
 		}
     ]

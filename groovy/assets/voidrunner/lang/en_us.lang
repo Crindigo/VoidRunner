@@ -1,4 +1,5 @@
-voidrunner.material.stone_solution=Stone Slurry
+voidrunner.material.stone_extract=Stone Extract
+voidrunner.material.granite_extract=Granite Extract
 item.voidrunner.shiny_stone_chunk.name=Shiny Stone Chunk
 item.voidrunner.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.shiny_stone_chunk.name=Shiny Stone Chunk
