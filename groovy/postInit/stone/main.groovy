@@ -49,3 +49,19 @@ crafting.shapelessBuilder()
     .input(ore('treeLeaves'))
     .input(ore('toolKnife'))
     .register();
+
+crafting.remove('gregtech:tiny_dust_disassembling_ash');
+crafting.shapedBuilder()
+    .name('ash_tiny')
+    .output(metaitem('dustTinyAsh'))
+    .shape('D ', '  ')
+    .key('D', ore('dustAsh'))
+    .register();
+
+crafting.remove('gregtech:small_dust_disassembling_ash');
+crafting.shapedBuilder()
+    .name('ash_small')
+    .output(metaitem('dustSmallAsh'))
+    .shape(' D', '  ')
+    .key('D', ore('dustAsh'))
+    .register();

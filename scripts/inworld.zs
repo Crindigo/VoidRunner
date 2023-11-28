@@ -4,10 +4,15 @@ import mods.pyrotech.StoneCrucible;
 import mods.pyrotech.BrickCrucible;
 import mods.pyrotech.Bloomery;
 import mods.pyrotech.CompactingBin;
+import mods.pyrotech.MechanicalCompactor;
 import mods.pyrotech.Burn;
 import mods.pyrotech.SoakingPot;
+import mods.pyrotech.GraniteAnvil;
+import mods.pyrotech.IroncladAnvil;
 import mods.appliedenergistics2.Grinder;
 
+val oreDustAsh = <ore:dustAsh>;
+oreDustAsh.add(<pyrotech:material:0>);
 
 // clay dust to clay in water
 //mods.inworldcrafting.FluidToItem.transform(<minecraft:clay_ball>, <liquid:water>, [<ore:dustClay>], false);
@@ -41,6 +46,10 @@ Grinder.addRecipe(<metaItem:dustCopper>, <metaitem:voidrunner:shiny_magma_chunk>
 SoakingPot.addRecipe("string_from_durable_twine", 
     <minecraft:string>, <liquid:water> * 125, <pyrotech:material:26>, 4 * 60 * 20);
 
+// treated wood in soaking pot too
+SoakingPot.addRecipe("treated_planks",
+    <gregtech:planks:1>, <liquid:creosote> * 125, <ore:plankWood>, 4 * 60 * 20);
+
 Burn.createBuilder("water_from_mud", <minecraft:dirt>, "pyrotech:mud:*")
     .setBurnStages(1)
     .setTotalBurnTimeTicks(2 * 60 * 20)
@@ -73,13 +82,84 @@ Burn.createBuilder("extract_from_granite", <pyrotech:rock:1>, "minecraft:stone:1
     .setFluidLevelAffectsFailureChance(false)
     .register();
 
+Burn.createBuilder("extract_from_diorite", <pyrotech:rock:2>, "minecraft:stone:3")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:diorite_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:2>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
+Burn.createBuilder("extract_from_andesite", <pyrotech:rock:3>, "minecraft:stone:5")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:andesite_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:3>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
+Burn.createBuilder("extract_from_limestone", <pyrotech:rock:8>, "pyrotech:limestone")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:limestone_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:8>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
+Burn.createBuilder("charcoal_to_coal", <minecraft:coal:0>, "gregtech:meta_block_compressed_16:10")
+    .setBurnStages(10)
+    .setTotalBurnTimeTicks(8 * 60 * 20)
+    .setFluidProduced(<liquid:creosote> * 50)
+    .setFailureChance(0.15)
+    .addFailureItem(<pyrotech:material:15> * 4)
+    .addFailureItem(<pyrotech:material:15> * 6)
+    .addFailureItem(<pyrotech:material:15> * 8) // charcoal flakes
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(true)
+    .register();
+
+// change coke recipe in burn to make creosote
+Burn.removeRecipes(<pyrotech:material:1>);
+Burn.createBuilder("coal_to_coke", <metaitem:gemCoke>, "minecraft:coal_block")
+    .setBurnStages(10)
+    .setTotalBurnTimeTicks(8 * 60 * 20)
+    .setFluidProduced(<liquid:creosote> * 50)
+    .setFailureChance(0.15)
+    .addFailureItem(<pyrotech:material:21> * 4)
+    .addFailureItem(<pyrotech:material:21> * 6)
+    .addFailureItem(<pyrotech:material:21> * 8) // coal flakes
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(true)
+    .register();
+
 // you can do 8 operations at once so this is 2 buckets per minute
 // pyrotech already has a lava one apparently
 //StoneCrucible.addRecipe("water_from_leaves", <liquid:water> * 250, <ore:treeLeaves>, 1200, true);
 //BrickCrucible.addRecipe("lava_from_cobble", <liquid:lava> * 250, <ore:cobblestone>, 1200);
 
+CompactingBin.removeRecipes(<pyrotech:coal_coke_block>);
+MechanicalCompactor.removeRecipes(<pyrotech:coal_coke_block>);
+CompactingBin.addRecipe("gt_coke_block", <metaitem:blockCoke>, <ore:gemCoke>, 9, true);
+
 CompactingBin.removeRecipes(<pyrotech:charcoal_block>);
+MechanicalCompactor.removeRecipes(<pyrotech:charcoal_block>);
 CompactingBin.addRecipe("gt_charcoal_block", <metaitem:blockCharcoal>, <minecraft:coal:1>, 9, true);
+CompactingBin.addRecipe("gt_charcoal_block_flakes", <metaitem:blockCharcoal>, <pyrotech:material:15>, 72, true);
+
+// change coke recipe in anvil
+GraniteAnvil.removeRecipes(<pyrotech:material:1> * 9);
+IroncladAnvil.removeRecipes(<pyrotech:material:1> * 9);
+GraniteAnvil.addRecipe("coke_split", <metaitem:gemCoke> * 9, <ore:blockFuelCoke>, 8, "pickaxe", true);
+
+// ash in granite extract -> redstone?
+SoakingPot.addRecipe("ash_to_redstone",
+    <minecraft:redstone>, <liquid:granite_extract> * 50, <ore:dustTinyAsh>, true, 2 * 60 * 20);
 
 // Give wrought iron directly
 Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);
@@ -105,6 +185,8 @@ Bloomery.createBloomeryBuilder(
     .setFailureChance(0.0)
     .setBloomYield(9, 12)
     .register();
+
+mods.chisel.Carving.addVariation("limestone", <pyrotech:limestone>);
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
 //mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 500);
