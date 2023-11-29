@@ -9,6 +9,7 @@ import mods.pyrotech.Burn;
 import mods.pyrotech.SoakingPot;
 import mods.pyrotech.GraniteAnvil;
 import mods.pyrotech.IroncladAnvil;
+import mods.pyrotech.BrickKiln;
 import mods.appliedenergistics2.Grinder;
 
 val oreDustAsh = <ore:dustAsh>;
@@ -29,9 +30,6 @@ oreDustAsh.add(<pyrotech:material:0>);
 //Mortar.addRecipe(['stone'], <minecraft:gravel>, 20, [<minecraft:cobblestone>]);
 //Mortar.addRecipe(['stone'], <minecraft:flint>, 20, <minecraft:sand>, 1.0, [<minecraft:gravel>]);
 //Mortar.addRecipe(['stone'], <gregtech:meta_item_1:1001>, 20, [<ore:sand>, <ore:dustWood>, <ore:dustBone>]);
-
-//Mortar.addRecipe(['stone'], <metaitem:dustTin>, 20, <metaitem:dustIron>, 1.0, [<metaitem:voidrunner:shiny_stone_chunk>]);
-//Mortar.addRecipe(['stone'], <metaitem:dustCopper>, 20, <minecraft:redstone>, 1.0, [<metaitem:voidrunner:shiny_magma_chunk>]);
 
 // Grinder.addRecipe(IItemStack output, IItemStack input, int turns, @Optional IItemStack secondary1Output,
 //                   @Optional float secondary1Chance, @Optional IItemStack secondary2Output, @Optional float secondary2Chance);
@@ -156,10 +154,21 @@ CompactingBin.addRecipe("gt_charcoal_block_flakes", <metaitem:blockCharcoal>, <p
 GraniteAnvil.removeRecipes(<pyrotech:material:1> * 9);
 IroncladAnvil.removeRecipes(<pyrotech:material:1> * 9);
 GraniteAnvil.addRecipe("coke_split", <metaitem:gemCoke> * 9, <ore:blockFuelCoke>, 8, "pickaxe", true);
+GraniteAnvil.addRecipe("gravel_to_sand", <pyrotech:rock:5> * 8, <ore:gravel>, 4, "hammer", true);
+
+// remove pyrotech flint dust
+GraniteAnvil.removeRecipes(<pyrotech:material:31> * 3);
+IroncladAnvil.removeRecipes(<pyrotech:material:31> * 3);
+
+// add hammer anvil recipe for iron
+//GraniteAnvil.removeRecipes(<pyrotech:material:19> * 9);
+//IroncladAnvil.removeRecipes(<pyrotech:material:19> * 9);
+IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ingotIron>, 4, "hammer");
+
 
 // ash in granite extract -> redstone?
 SoakingPot.addRecipe("ash_to_redstone",
-    <minecraft:redstone>, <liquid:granite_extract> * 50, <ore:dustTinyAsh>, true, 2 * 60 * 20);
+    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, true, 2 * 60 * 20);
 
 // Give wrought iron directly
 Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);
@@ -187,6 +196,9 @@ Bloomery.createBloomeryBuilder(
     .register();
 
 mods.chisel.Carving.addVariation("limestone", <pyrotech:limestone>);
+
+// brick kiln wrought iron to iron. furnace can do this too in groovy.
+BrickKiln.addRecipe('wrought_iron_to_iron', <minecraft:iron_ingot>, <metaitem:ingotWroughtIron>, 4 * 60 * 20);
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
 //mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 500);
