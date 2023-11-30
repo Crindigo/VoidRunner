@@ -165,10 +165,25 @@ IroncladAnvil.removeRecipes(<pyrotech:material:31> * 3);
 //IroncladAnvil.removeRecipes(<pyrotech:material:19> * 9);
 IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ingotIron>, 4, "hammer");
 
+// for steam we need iron, copper, tin
+// for LV we need redstone, rubber, lead, antimony
 
-// ash in granite extract -> redstone?
+// sand pile in granite extract -> redstone
 SoakingPot.addRecipe("ash_to_redstone",
     <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, true, 2 * 60 * 20);
+
+// sand pile in limestone ext -> sulfur
+
+// gravel in stone ext -> iron
+
+// gravel in granite ext -> copper
+
+// gravel in diorite ext -> tin
+
+// gravel in andesite ext -> antimony
+
+// gravel in limestone ext -> lead
+
 
 // Give wrought iron directly
 Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);

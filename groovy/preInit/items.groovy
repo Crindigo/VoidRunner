@@ -9,7 +9,6 @@ eventManager.listen { PostMaterialEvent event ->
 
     m.addItem(1, "shiny_stone_chunk");
     m.addItem(2, "shiny_magma_chunk");
-    m.addItem(3, "fine_dirt");
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

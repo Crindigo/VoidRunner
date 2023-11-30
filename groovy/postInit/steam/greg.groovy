@@ -1,13 +1,10 @@
 import gregtech.api.GTValues;
+import gregtech.common.metatileentities.steam.boiler.SteamLavaBoiler
 
-// Dirt * 1
-mods.gregtech.macerator.removeByInput(2, [metaitem('bio_chaff')], null)
-mods.gregtech.macerator.recipeBuilder()
-    .inputs(metaitem('bio_chaff'))
-    .outputs(item('minecraft:dirt') * 2)
-    .duration(300)
-    .EUt(2)
-    .buildAndRegister()
+//SteamLavaBoiler.setBoilerFuelToConsumption(fluid('ethanol').getFluid(), 200);
+
+// use alloy smelter
+crafting.remove('gregtech:compressed_coke_clay');
 
 /* just testing
 mods.gregtech.canner.recipeBuilder()
@@ -50,16 +47,6 @@ crafting.shapedBuilder()
     .key('S', ore('craftingPiston'))
     .register();
 
-// need to come up with wrought iron method. maybe PBF for wrought, regular furnace for iron?
-// fuck it let's use granite
-/*recipemap('crude_mixer').recipeBuilder()
-    .inputs(ore('dustIron') * 4, ore('dustGranite'))
-    .outputs(metaitem('dustWroughtIron') * 4)
-    .duration(100)
-    .EUt(7)
-    .buildAndRegister();
-*/
-
 /*
 recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustStone'))
@@ -71,13 +58,17 @@ recipemap('crude_mixer').recipeBuilder()
 */
 
 mods.gregtech.sifter.recipeBuilder()
-    .inputs(item('minecraft:dirt'))
-    .outputs(item('minecraft:clay_ball') * 2) // clay, grass seeds, bone
-    //.outputs(metaitem('voidrunner:fine_dirt') * 2)
-    .chancedOutput(item('minecraft:bone'), 5000, 0)
-    .chancedOutput(item('randomthings:grassseeds'), 1500, 0)
-    .chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
-    .duration(100)
+    .notConsumable(item('minecraft:dirt'))
+    .outputs(item('pyrotech:material', 17)) // clay
+    .outputs(item('pyrotech:rock', 0)) // stone
+    .outputs(item('pyrotech:rock', 1)) // granite
+    .outputs(item('pyrotech:rock', 2)) // diorite
+    .outputs(item('pyrotech:rock', 3)) // andesite
+    .outputs(item('pyrotech:rock', 8)) // limestone
+    //.chancedOutput(item('minecraft:bone'), 5000, 0)
+    //.chancedOutput(item('randomthings:grassseeds'), 1500, 0)
+    //.chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
+    .duration(40)
     .EUt(7)
     .buildAndRegister();
 
