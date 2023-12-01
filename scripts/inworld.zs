@@ -169,35 +169,48 @@ IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ing
 // for LV we need redstone, rubber, lead, antimony
 
 // sand pile in granite extract -> redstone
-SoakingPot.addRecipe("ash_to_redstone",
-    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, true, 2 * 60 * 20);
+SoakingPot.addRecipe("sand_pile_to_redstone",
+    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 2 * 60 * 20);
 
 // sand pile in limestone ext -> sulfur
+SoakingPot.addRecipe("sand_pile_to_sulfur",
+    <metaitem:dustSulfur>, <liquid:limestone_extract> * 50, <pyrotech:rock:5>, true, 2 * 60 * 20);
 
-// gravel in stone ext -> iron
+// gravel in stone ext -> magnetite
+SoakingPot.addRecipe("gravel_to_iron",
+    <gregtech:ore_magnetite_0:0>, <liquid:stone_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
 // gravel in granite ext -> copper
+SoakingPot.addRecipe("gravel_to_copper",
+    <gregtech:ore_copper_0:0>, <liquid:granite_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
 // gravel in diorite ext -> tin
+SoakingPot.addRecipe("gravel_to_tin",
+    <gregtech:ore_tin_0:0>, <liquid:diorite_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
-// gravel in andesite ext -> antimony
+// gravel in andesite ext -> zinc
+SoakingPot.addRecipe("gravel_to_zinc",
+    <gregtech:ore_sphalerite_0:0>, <liquid:andesite_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
 // gravel in limestone ext -> lead
+SoakingPot.addRecipe("gravel_to_lead",
+    <gregtech:ore_galena_0:0>, <liquid:limestone_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
-
-// Give wrought iron directly
+// Give wrought iron directly, with a chance at gold nuggets
 Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_iron_ore",   // recipe name
         <metaitem:nuggetWroughtIron>, // output
-        <ore:oreIron>     // input
+        <ore:oreMagnetite>     // input
     )
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
-    .setFailureChance(0.0)
-    .setBloomYield(9, 12)
+    .setFailureChance(0.15)
+    .setBloomYield(10, 14)
+    .addFailureItem(<minecraft:gold_nugget>, 1)
     .register();
 
+// Copper
 Bloomery.removeBloomeryRecipes(<metaitem:nuggetCopper>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_copper_ore",   // recipe name
@@ -208,6 +221,46 @@ Bloomery.createBloomeryBuilder(
     .setBurnTimeTicks(14400)
     .setFailureChance(0.0)
     .setBloomYield(9, 12)
+    .register();
+
+// Tin
+Bloomery.removeBloomeryRecipes(<metaitem:nuggetTin>);
+Bloomery.createBloomeryBuilder(
+        "bloom_from_tin_ore",   // recipe name
+        <metaitem:nuggetTin>, // output
+        <ore:oreTin>     // input
+    )
+    .setAnvilTiers(["granite", "ironclad"])
+    .setBurnTimeTicks(14400)
+    .setFailureChance(0.0)
+    .setBloomYield(9, 12)
+    .register();
+
+// Zinc
+Bloomery.removeBloomeryRecipes(<metaitem:nuggetZinc>);
+Bloomery.createBloomeryBuilder(
+        "bloom_from_zinc_ore",   // recipe name
+        <metaitem:nuggetZinc>, // output
+        <ore:oreSphalerite>     // input
+    )
+    .setAnvilTiers(["granite", "ironclad"])
+    .setBurnTimeTicks(14400)
+    .setFailureChance(0.0)
+    .setBloomYield(9, 12)
+    .register();
+
+// Lead with chance of silver
+Bloomery.removeBloomeryRecipes(<metaitem:nuggetLead>);
+Bloomery.createBloomeryBuilder(
+        "bloom_from_galena_ore",   // recipe name
+        <metaitem:nuggetLead>, // output
+        <ore:oreGalena>     // input
+    )
+    .setAnvilTiers(["granite", "ironclad"])
+    .setBurnTimeTicks(14400)
+    .setFailureChance(0.15)
+    .setBloomYield(10, 14)
+    .addFailureItem(<metaitem:nuggetSilver>, 1)
     .register();
 
 mods.chisel.Carving.addVariation("limestone", <pyrotech:limestone>);
