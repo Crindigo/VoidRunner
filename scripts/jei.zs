@@ -1,7 +1,22 @@
 import mods.jei.JEI;
 
 JEI.removeAndHide(<thermalfoundation:tool.shears_wood>);
+JEI.removeAndHide(<thermalfoundation:tool.shears_stone>);
+JEI.removeAndHide(<thermalfoundation:tool.shears_diamond>);
+JEI.removeAndHide(<thermalfoundation:tool.shears_gold>);
+
 JEI.removeAndHide(<thermalfoundation:material:802>);
+JEI.removeAndHide(<pyrotech:tongs_obsidian>);
+JEI.removeAndHide(<pyrotech:tongs_gold>);
+JEI.removeAndHide(<pyrotech:tongs_diamond>);
+JEI.removeAndHide(<pyrotech:tongs_bone>);
+JEI.removeAndHide(<pyrotech:material:22>);
+
+JEI.removeAndHide(<pyrotech:cog_diamond>);
+JEI.removeAndHide(<pyrotech:cog_obsidian>);
+JEI.removeAndHide(<pyrotech:cog_gold>);
+JEI.removeAndHide(<pyrotech:cog_bone>);
+
 
 JEI.hideCategory("Imbuing");
 //JEI.hideCategory('pyrotech.stone.kiln');
@@ -25,6 +40,7 @@ JEI.hideCategory('pyrotech.anvil.obsidian');
 JEI.hideCategory('pyrotech.worktable');
 //JEI.hideCategory('pyrotech.compost.bin');
 //JEI.hideCategory('pyrotech.barrel');
+JEI.hideCategory('pyrotech.wither.forge');
 
 JEI.hideCategory('skyresources:rockgrinder');
 JEI.hideCategory('skyresources:infusion');

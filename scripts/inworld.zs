@@ -10,6 +10,7 @@ import mods.pyrotech.SoakingPot;
 import mods.pyrotech.GraniteAnvil;
 import mods.pyrotech.IroncladAnvil;
 import mods.pyrotech.BrickKiln;
+import mods.pyrotech.StoneKiln;
 import mods.appliedenergistics2.Grinder;
 
 val oreDustAsh = <ore:dustAsh>;
@@ -35,8 +36,8 @@ oreDustAsh.add(<pyrotech:material:0>);
 //                   @Optional float secondary1Chance, @Optional IItemStack secondary2Output, @Optional float secondary2Chance);
 Grinder.addRecipe(<minecraft:gravel>, <minecraft:cobblestone>, 5);
 Grinder.addRecipe(<minecraft:flint>, <minecraft:gravel>, 5, <minecraft:sand>, 1.0);
-Grinder.addRecipe(<metaItem:dustTin>, <metaitem:voidrunner:shiny_stone_chunk>, 5, <metaitem:dustIron>, 1.0);
-Grinder.addRecipe(<metaItem:dustCopper>, <metaitem:voidrunner:shiny_magma_chunk>, 5, <minecraft:redstone>, 1.0);
+//Grinder.addRecipe(<metaItem:dustTin>, <metaitem:voidrunner:shiny_stone_chunk>, 5, <metaitem:dustIron>, 1.0);
+//Grinder.addRecipe(<metaItem:dustCopper>, <metaitem:voidrunner:shiny_magma_chunk>, 5, <minecraft:redstone>, 1.0);
 
 //StoneCrucible.removeAllRecipes();
 //BrickCrucible.removeAllRecipes();
@@ -159,6 +160,12 @@ GraniteAnvil.addRecipe("gravel_to_sand", <pyrotech:rock:5> * 8, <ore:gravel>, 4,
 // remove pyrotech flint dust
 GraniteAnvil.removeRecipes(<pyrotech:material:31> * 3);
 IroncladAnvil.removeRecipes(<pyrotech:material:31> * 3);
+// replace with gregtech small flint dust
+GraniteAnvil.addRecipe("small_flint_dust", <metaitem:dustSmallFlint>, <pyrotech:material:10>, 3, "hammer", true);
+
+// remove pyrotech stone rod
+GraniteAnvil.removeRecipes(<pyrotech:material:27> * 4);
+IroncladAnvil.removeRecipes(<pyrotech:material:27> * 4);
 
 // add hammer anvil recipe for iron
 //GraniteAnvil.removeRecipes(<pyrotech:material:19> * 9);
@@ -196,13 +203,13 @@ SoakingPot.addRecipe("gravel_to_zinc",
 SoakingPot.addRecipe("gravel_to_lead",
     <gregtech:ore_galena_0:0>, <liquid:limestone_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
 
+Bloomery.removeAllBloomeryRecipes();
+
 // Give wrought iron directly, with a chance at gold nuggets
-Bloomery.removeBloomeryRecipes(<minecraft:iron_nugget>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_iron_ore",   // recipe name
         <metaitem:nuggetWroughtIron>, // output
-        <ore:oreMagnetite>     // input
-    )
+        <ore:oreMagnetite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
     .setFailureChance(0.15)
@@ -211,12 +218,10 @@ Bloomery.createBloomeryBuilder(
     .register();
 
 // Copper
-Bloomery.removeBloomeryRecipes(<metaitem:nuggetCopper>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_copper_ore",   // recipe name
         <metaitem:nuggetCopper>, // output
-        <ore:oreCopper>     // input
-    )
+        <ore:oreCopper>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
     .setFailureChance(0.0)
@@ -224,12 +229,10 @@ Bloomery.createBloomeryBuilder(
     .register();
 
 // Tin
-Bloomery.removeBloomeryRecipes(<metaitem:nuggetTin>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_tin_ore",   // recipe name
         <metaitem:nuggetTin>, // output
-        <ore:oreTin>     // input
-    )
+        <ore:oreTin>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
     .setFailureChance(0.0)
@@ -237,12 +240,10 @@ Bloomery.createBloomeryBuilder(
     .register();
 
 // Zinc
-Bloomery.removeBloomeryRecipes(<metaitem:nuggetZinc>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_zinc_ore",   // recipe name
         <metaitem:nuggetZinc>, // output
-        <ore:oreSphalerite>     // input
-    )
+        <ore:oreSphalerite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
     .setFailureChance(0.0)
@@ -250,12 +251,10 @@ Bloomery.createBloomeryBuilder(
     .register();
 
 // Lead with chance of silver
-Bloomery.removeBloomeryRecipes(<metaitem:nuggetLead>);
 Bloomery.createBloomeryBuilder(
         "bloom_from_galena_ore",   // recipe name
         <metaitem:nuggetLead>, // output
-        <ore:oreGalena>     // input
-    )
+        <ore:oreGalena>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
     .setFailureChance(0.15)
@@ -267,6 +266,14 @@ mods.chisel.Carving.addVariation("limestone", <pyrotech:limestone>);
 
 // brick kiln wrought iron to iron. furnace can do this too in groovy.
 BrickKiln.addRecipe('wrought_iron_to_iron', <minecraft:iron_ingot>, <metaitem:ingotWroughtIron>, 4 * 60 * 20);
+
+StoneKiln.removeRecipes(<pyrotech:material:22>);
+BrickKiln.removeRecipes(<pyrotech:material:22>);
+StoneKiln.addRecipe("quicklime", <metaitem:dustQuicklime>, <pyrotech:material:28>, 7 * 60 * 20,
+    0.05, [<pyrotech:material:0>], true);
+
+SoakingPot.addRecipe("slaked_lime",
+    <pyrotech:material:8>, <liquid:water> * 125, <metaitem:dustQuicklime>, false, 4 * 60 * 20);
 
 // placeholder rare earth. make some other material that dissolves into fun stuff.
 //mods.alchemistry.Evaporator.addRecipe(<metaitem:voidrunner:shiny_stone_chunk>, <liquid:stone_solution> * 500);

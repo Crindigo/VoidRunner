@@ -49,6 +49,18 @@
             "replaceStrategy": "ADD",
             "drops": [
                 {
+                    "selector": {
+                        "weight": {
+                            "value": 80
+                        }
+                    }
+                },
+                {
+                    "selector": {
+                        "weight": {
+                            "value": 20
+                        }
+                    },
                     "item": {
                         "items": [
                             "pyrotech:rock:7"

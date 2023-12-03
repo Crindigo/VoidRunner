@@ -69,7 +69,50 @@ mods.gregtech.sifter.recipeBuilder()
     //.chancedOutput(item('randomthings:grassseeds'), 1500, 0)
     //.chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
     .duration(40)
-    .EUt(7)
+    .EUt(4)
+    .buildAndRegister();
+
+// compress rocks for stone, andesite, diorite, granite, limestone cobble
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('minecraft:cobblestone'))
+    .inputs(item('pyrotech:rock', 0) * 8)
+    .duration(160)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('pyrotech:cobblestone', 0))
+    .inputs(item('pyrotech:rock', 3) * 8)
+    .duration(160)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('pyrotech:cobblestone', 1))
+    .inputs(item('pyrotech:rock', 2) * 8)
+    .duration(160)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('pyrotech:cobblestone', 2))
+    .inputs(item('pyrotech:rock', 1) * 8)
+    .duration(160)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('pyrotech:cobblestone', 3))
+    .inputs(item('pyrotech:rock', 8) * 8)
+    .duration(160)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.compressor.recipeBuilder()
+    .outputs(item('minecraft:clay_ball'))
+    .inputs(item('pyrotech:material', 17) * 4)
+    .duration(160)
+    .EUt(2)
     .buildAndRegister();
 
 // update ulv conveyor to take carpet instead of rubber sheet

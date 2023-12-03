@@ -1,6 +1,18 @@
 crafting.remove('pyrotech:clay');
 furnace.removeByInput(item('minecraft:clay_ball'));
 
+// clean this up so greg doesn't try to use these. breaks some pyro recipes but we don't care about em.
+oreDict.remove("toolHammer", item('pyrotech:crude_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:stone_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:bone_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:flint_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:iron_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:gold_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:diamond_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:obsidian_hammer'));
+oreDict.remove("toolHammer", item('pyrotech:bone_hammer_durable'));
+oreDict.remove("toolHammer", item('pyrotech:flint_hammer_durable'));
+
 crafting.remove('pyrotech:tech/basic/compacting_bin');
 crafting.shapedBuilder()
     .name('compacting_bin')
@@ -170,3 +182,98 @@ crafting.shapedBuilder()
     .key('g', item('minecraft:stone', 2))
     .key('s', ore('slabStone'))
     .register();
+
+// allow stickStone to be used for all pyrotech recipes
+crafting.remove('pyrotech:tool/flint_shears');
+crafting.shapedBuilder()
+    .name('pyro_flint_shears')
+    .output(item('pyrotech:flint_shears'))
+    .shape('ts', 'ff')
+    .key('t', ore('twine'))
+    .key('s', ore('stickStone'))
+    .key('f', item('pyrotech:material', 10))
+    .register();
+
+crafting.remove('pyrotech:tool/bone_shears');
+crafting.shapedBuilder()
+    .name('pyro_bone_shears')
+    .output(item('pyrotech:bone_shears'))
+    .shape('ts', 'bb')
+    .key('t', ore('twine'))
+    .key('s', ore('stickStone'))
+    .key('b', item('pyrotech:material', 11))
+    .register();
+
+crafting.remove('pyrotech:tech/machine/mechanical_hopper');
+crafting.shapedBuilder()
+    .name('pyro_mech_hopper')
+    .output(item('pyrotech:mechanical_hopper'))
+    .shape('b b', 'psp', ' b ')
+    .key('b', item('pyrotech:material', 16))
+    .key('p', item('pyrotech:planks_tarred'))
+    .key('s', ore('stickStone'))
+    .register();
+
+crafting.remove('pyrotech:tech/bloomery/tongs_stone');
+crafting.shapedBuilder()
+    .name('pyro_tongs_stone')
+    .output(item('pyrotech:tongs_stone'))
+    .shape(' m ', 'smm', ' s ')
+    .key('m', item('pyrotech:material', 16))
+    .key('s', ore('stickStone'))
+    .register();
+
+crafting.remove('pyrotech:tech/bloomery/tongs_flint');
+crafting.shapedBuilder()
+    .name('pyro_tongs_flint')
+    .output(item('pyrotech:tongs_flint'))
+    .shape(' m ', 'smm', ' s ')
+    .key('m', item('pyrotech:material', 10))
+    .key('s', ore('stickStone'))
+    .register();
+
+crafting.remove('pyrotech:tech/bloomery/tongs_iron');
+crafting.shapedBuilder()
+    .name('pyro_tongs_iron')
+    .output(item('pyrotech:tongs_iron'))
+    .shape(' m ', 'smm', ' s ')
+    .key('m', item('pyrotech:material', 19))
+    .key('s', ore('stickStone'))
+    .register();
+
+// idk, make an inefficient stone rod recipe, we'll get rid of the anvil one
+crafting.shapedBuilder()
+    .name('stone_rod')
+    .output(metaitem('stickStone'))
+    .shape('  s', ' s ', 's  ')
+    .key('s', ore('cobblestone'))
+    .register();
+
+// change pyro quicklime to GT
+furnace.removeByInput(item('pyrotech:material', 28));
+furnace.add(item('pyrotech:material', 28), metaitem('dustQuicklime'));
+
+// remove pyro crafting table recipe, keep its furnace one but change stone to cobble
+crafting.remove('pyrotech:crafting_table');
+crafting.remove('pyrotech:chest');
+crafting.remove('minecraft:furnace');
+crafting.remove('pyrotech:furnace');
+crafting.shapedBuilder()
+    .name('furnace')
+    .output(item('minecraft:furnace'))
+    .shape('sss', 'scs', 'sss')
+    .key('s', ore('cobblestone'))
+    .key('c', item('pyrotech:furnace_core'))
+    .register();
+
+crafting.remove('skyresources:dirtfurnace');
+
+crafting.remove('minecraft:andesite');
+crafting.remove('minecraft:diorite');
+crafting.remove('minecraft:granite');
+
+// convert other types of cobble to standard cobble
+crafting.addShapeless("andesite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 0)]);
+crafting.addShapeless("diorite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 1)]);
+crafting.addShapeless("granite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 2)]);
+crafting.addShapeless("limestone_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 3)]);
