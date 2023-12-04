@@ -1,7 +1,7 @@
 {
   "General": {
     "enableAutoRefill": true,
-    "refillDmgThreshold": 1,
+    "refillDmgThreshold": 0,
     "enableHotbarSwap": true,
     "sortSound": "minecraft:ui.button.click",
     "buttonColor": "#ffffffff",

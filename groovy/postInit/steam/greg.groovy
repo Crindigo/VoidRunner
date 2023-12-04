@@ -116,16 +116,22 @@ mods.gregtech.compressor.recipeBuilder()
     .buildAndRegister();
 
 // update ulv conveyor to take carpet instead of rubber sheet
-// might revert if it's not a big deal to delay automation
+// also make ULV motors, conveyors and pumps return 4 items
+crafting.remove('ulv_covers:motor_ulv_easy');
+crafting.addShaped('ulv_motor', metaitem('ulv_covers:electric.motor.ulv') * 4, [
+    [ore('wireGtSingleTin'), ore('stickBronze')],
+    [ore('stickIronMagnetic'), ore('wireGtSingleTin')]
+]);
+
 crafting.remove('ulv_covers:conveyor_ulv_easy');
-crafting.addShaped('ulv_conveyor', metaitem('ulv_covers:conveyor.module.ulv'), [
+crafting.addShaped('ulv_conveyor', metaitem('ulv_covers:conveyor.module.ulv') * 4, [
     [item('minecraft:carpet'), metaitem('wireGtSingleTin')],
     [metaitem('ulv_covers:electric.motor.ulv'), item('minecraft:carpet')]
 ]);
 
 // update ulv pump to take iron ring instead of rubber
 crafting.remove('ulv_covers:pump_ulv_easy');
-crafting.addShaped('ulv_pump', metaitem('ulv_covers:electric.pump.ulv'), [
+crafting.addShaped('ulv_pump', metaitem('ulv_covers:electric.pump.ulv') * 4, [
     [ore('pipeNormalFluidCopper'), ore('rotorBronze')],
     [metaitem('ulv_covers:electric.motor.ulv'), ore('ringIron')]
 ]);
@@ -217,6 +223,13 @@ mods.gregtech.coke_oven.recipeBuilder()
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
+    .inputs(item('pyrotech:log_pile'))
+    .outputs(metaitem('blockCharcoal'))
+    .fluidOutputs(fluid('wood_tar') * 900)
+    .duration(2700)
+    .buildAndRegister();
+
+mods.gregtech.coke_oven.recipeBuilder()
     .inputs(item('minecraft:coal', 1))
     .outputs(item('minecraft:coal'))
     .fluidOutputs(fluid('creosote') * 150)
@@ -278,6 +291,10 @@ mods.gregtech.coke_oven.recipeBuilder()
     .fluidOutputs(fluid('limestone_extract') * 500)
     .duration(600)
     .buildAndRegister();
+
+// rock breaker only for cobble until MV?
+// then we forge hammer that for gravel source.
+// sifter + compressor(s) for granite, diorite, andesite, limestone
 
 // 4 steel botany growers = 4 resin = 12 raw rubber pulp per minute
 // 8 leaves/minute = 1 dirt/minute

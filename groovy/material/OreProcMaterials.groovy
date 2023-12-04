@@ -1,7 +1,8 @@
 package material;
 import static material.VoidMaterials.*;
 import gregtech.api.unification.material.Material;
-
+import gregtech.api.unification.material.Materials.*;
+import gregtech.api.unification.material.info.MaterialFlags.*;
 
 class OreProcMaterials
 {

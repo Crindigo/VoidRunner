@@ -49,7 +49,7 @@ SoakingPot.addRecipe("string_from_durable_twine",
 SoakingPot.addRecipe("treated_planks",
     <gregtech:planks:1>, <liquid:creosote> * 125, <ore:plankWood>, 4 * 60 * 20);
 
-Burn.createBuilder("water_from_mud", <minecraft:dirt>, "pyrotech:mud:*")
+Burn.createBuilder("water_from_mud", <minecraft:clay>, "pyrotech:mud:*")
     .setBurnStages(1)
     .setTotalBurnTimeTicks(2 * 60 * 20)
     .setFluidProduced(<liquid:water> * 250)
@@ -155,13 +155,15 @@ CompactingBin.addRecipe("gt_charcoal_block_flakes", <metaitem:blockCharcoal>, <p
 GraniteAnvil.removeRecipes(<pyrotech:material:1> * 9);
 IroncladAnvil.removeRecipes(<pyrotech:material:1> * 9);
 GraniteAnvil.addRecipe("coke_split", <metaitem:gemCoke> * 9, <ore:blockFuelCoke>, 8, "pickaxe", true);
-GraniteAnvil.addRecipe("gravel_to_sand", <pyrotech:rock:5> * 8, <ore:gravel>, 4, "hammer", true);
+// make this return sand, then just craft sand into 8 piles
+GraniteAnvil.addRecipe("gravel_to_sand", <minecraft:sand>, <ore:gravel>, 4, "hammer", true);
 
 // remove pyrotech flint dust
 GraniteAnvil.removeRecipes(<pyrotech:material:31> * 3);
 IroncladAnvil.removeRecipes(<pyrotech:material:31> * 3);
 // replace with gregtech small flint dust
 GraniteAnvil.addRecipe("small_flint_dust", <metaitem:dustSmallFlint>, <pyrotech:material:10>, 3, "hammer", true);
+GraniteAnvil.addRecipe("flint_dust", <metaitem:dustFlint>, <minecraft:flint>, 4, "hammer", true);
 
 // remove pyrotech stone rod
 GraniteAnvil.removeRecipes(<pyrotech:material:27> * 4);
@@ -208,19 +210,19 @@ Bloomery.removeAllBloomeryRecipes();
 // Give wrought iron directly, with a chance at gold nuggets
 Bloomery.createBloomeryBuilder(
         "bloom_from_iron_ore",   // recipe name
-        <metaitem:nuggetWroughtIron>, // output
+        <metaitem:nuggetWroughtIron> * 3, // output
         <ore:oreMagnetite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
-    .setFailureChance(0.15)
-    .setBloomYield(10, 14)
-    .addFailureItem(<minecraft:gold_nugget>, 1)
+    .setFailureChance(0.2)
+    .setBloomYield(12, 15)
+    .addFailureItem(<minecraft:gold_nugget> * 3, 1)
     .register();
 
 // Copper
 Bloomery.createBloomeryBuilder(
         "bloom_from_copper_ore",   // recipe name
-        <metaitem:nuggetCopper>, // output
+        <metaitem:nuggetCopper> * 3, // output
         <ore:oreCopper>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
@@ -231,7 +233,7 @@ Bloomery.createBloomeryBuilder(
 // Tin
 Bloomery.createBloomeryBuilder(
         "bloom_from_tin_ore",   // recipe name
-        <metaitem:nuggetTin>, // output
+        <metaitem:nuggetTin> * 3, // output
         <ore:oreTin>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
@@ -242,7 +244,7 @@ Bloomery.createBloomeryBuilder(
 // Zinc
 Bloomery.createBloomeryBuilder(
         "bloom_from_zinc_ore",   // recipe name
-        <metaitem:nuggetZinc>, // output
+        <metaitem:nuggetZinc> * 3, // output
         <ore:oreSphalerite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
@@ -253,24 +255,30 @@ Bloomery.createBloomeryBuilder(
 // Lead with chance of silver
 Bloomery.createBloomeryBuilder(
         "bloom_from_galena_ore",   // recipe name
-        <metaitem:nuggetLead>, // output
+        <metaitem:nuggetLead> * 3, // output
         <ore:oreGalena>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(14400)
-    .setFailureChance(0.15)
-    .setBloomYield(10, 14)
-    .addFailureItem(<metaitem:nuggetSilver>, 1)
+    .setFailureChance(0.2)
+    .setBloomYield(9, 12)
+    .addFailureItem(<metaitem:nuggetSilver> * 3, 1)
     .register();
 
 mods.chisel.Carving.addVariation("limestone", <pyrotech:limestone>);
 
 // brick kiln wrought iron to iron. furnace can do this too in groovy.
-BrickKiln.addRecipe('wrought_iron_to_iron', <minecraft:iron_ingot>, <metaitem:ingotWroughtIron>, 4 * 60 * 20);
+BrickKiln.addRecipe('wrought_iron_to_iron', <minecraft:iron_ingot>, <metaitem:ingotWroughtIron>, 2 * 60 * 20);
 
 StoneKiln.removeRecipes(<pyrotech:material:22>);
 BrickKiln.removeRecipes(<pyrotech:material:22>);
-StoneKiln.addRecipe("quicklime", <metaitem:dustQuicklime>, <pyrotech:material:28>, 7 * 60 * 20,
+StoneKiln.addRecipe("quicklime", <metaitem:dustQuicklime>, <pyrotech:material:28>, 4 * 60 * 20,
     0.05, [<pyrotech:material:0>], true);
+
+// faster refractory bricks since you need so many
+StoneKiln.removeRecipes(<pyrotech:material:5>);
+BrickKiln.removeRecipes(<pyrotech:material:5>);
+StoneKiln.addRecipe("refractory_faster", <pyrotech:material:5>, <pyrotech:material:9>, 2 * 60 * 20,
+    0.05, [<pyrotech:material:6>, <pyrotech:material:7>], true);
 
 SoakingPot.addRecipe("slaked_lime",
     <pyrotech:material:8>, <liquid:water> * 125, <metaitem:dustQuicklime>, false, 4 * 60 * 20);

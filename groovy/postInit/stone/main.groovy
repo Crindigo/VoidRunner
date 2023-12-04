@@ -13,6 +13,18 @@ oreDict.remove("toolHammer", item('pyrotech:obsidian_hammer'));
 oreDict.remove("toolHammer", item('pyrotech:bone_hammer_durable'));
 oreDict.remove("toolHammer", item('pyrotech:flint_hammer_durable'));
 
+// remove crude drying rack and make the normal one only use fiber instead of twine
+mods.jei.yeet(item('pyrotech:drying_rack', 0));
+crafting.remove('pyrotech:tech/basic/drying_rack');
+crafting.shapedBuilder()
+    .name('drying_rack')
+    .output(item('pyrotech:drying_rack', 1))
+    .shape('sfs', 'flf', 'sfs')
+    .key('s', ore('stickWood'))
+    .key('f', item('pyrotech:material', 12))
+    .key('l', item('minecraft:ladder'))
+    .register();
+
 crafting.remove('pyrotech:tech/basic/compacting_bin');
 crafting.shapedBuilder()
     .name('compacting_bin')
@@ -47,7 +59,7 @@ crafting.shapedBuilder()
     .shape('PBP',
            'BMB',
            'PBP')
-    .key('P', ore('plateIron'))
+    .key('P', ore('plateWroughtIron'))
     .key('B', item('pyrotech:refractory_brick_block'))
     .key('M', item('pyrotech:stone_crucible'))
     .register();
@@ -59,7 +71,7 @@ crafting.shapedBuilder()
     .shape('PBP',
            'BMB',
            'PBP')
-    .key('P', ore('plateIron'))
+    .key('P', ore('plateWroughtIron'))
     .key('B', item('pyrotech:refractory_brick_block'))
     .key('M', item('pyrotech:stone_sawmill'))
     .register();
@@ -71,7 +83,7 @@ crafting.shapedBuilder()
     .shape('PBP',
            'BMB',
            'PBP')
-    .key('P', ore('plateIron'))
+    .key('P', ore('plateWroughtIron'))
     .key('B', item('pyrotech:refractory_brick_block'))
     .key('M', item('pyrotech:stone_oven'))
     .register();
@@ -113,6 +125,13 @@ crafting.shapedBuilder()
     .output(metaitem('dustSmallAsh'))
     .shape(' D', '  ')
     .key('D', ore('dustAsh'))
+    .register();
+
+crafting.shapedBuilder()
+    .name('wooden_form')
+    .output(metaitem('wooden_form.empty'))
+    .shape('bb', 'bb')
+    .key('b', item('pyrotech:material', 20))
     .register();
 
 // remove basic clay brick, use wooden form
@@ -272,8 +291,16 @@ crafting.remove('minecraft:andesite');
 crafting.remove('minecraft:diorite');
 crafting.remove('minecraft:granite');
 
+// bs charcoal
+crafting.remove('chisel:charcoal');
+crafting.remove('thermalfoundation:storage_resource');
+crafting.remove('thermalfoundation:material_7');
+crafting.remove('thermalfoundation:material_9');
+
 // convert other types of cobble to standard cobble
 crafting.addShapeless("andesite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 0)]);
 crafting.addShapeless("diorite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 1)]);
 crafting.addShapeless("granite_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 2)]);
 crafting.addShapeless("limestone_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 3)]);
+
+crafting.addShapeless("sand_to_piles", item('pyrotech:rock', 5) * 8, [item('minecraft:sand')]);
