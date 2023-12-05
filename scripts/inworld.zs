@@ -177,9 +177,10 @@ IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ing
 // for steam we need iron, copper, tin
 // for LV we need redstone, rubber, lead, antimony
 
-// sand pile in granite extract -> redstone
+// sand pile in granite extract -> redstone. 96s per 8 redstone makes it line up nicely 
+// (5/min and 250 granite/min). same consumption rate as copper, can rebalance how you want.
 SoakingPot.addRecipe("sand_pile_to_redstone",
-    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 2 * 60 * 20);
+    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
 
 // sand pile in limestone ext -> sulfur
 SoakingPot.addRecipe("sand_pile_to_sulfur",

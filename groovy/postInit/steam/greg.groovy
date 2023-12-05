@@ -259,35 +259,35 @@ mods.gregtech.coke_oven.recipeBuilder()
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stone'))
-    .outputs(item('pyrotech:rock', 0) * 4)
+    //.outputs(item('pyrotech:rock', 0) * 4)
     .fluidOutputs(fluid('stone_extract') * 500)
     .duration(600)
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stoneGranite'))
-    .outputs(item('pyrotech:rock', 1) * 4)
+    //.outputs(item('pyrotech:rock', 1) * 4)
     .fluidOutputs(fluid('granite_extract') * 500)
     .duration(600)
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stoneDiorite'))
-    .outputs(item('pyrotech:rock', 2) * 4)
+    //.outputs(item('pyrotech:rock', 2) * 4)
     .fluidOutputs(fluid('diorite_extract') * 500)
     .duration(600)
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stoneAndesite'))
-    .outputs(item('pyrotech:rock', 3) * 4)
+    //.outputs(item('pyrotech:rock', 3) * 4)
     .fluidOutputs(fluid('andesite_extract') * 500)
     .duration(600)
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stoneLimestone'))
-    .outputs(item('pyrotech:rock', 8) * 4)
+    //.outputs(item('pyrotech:rock', 8) * 4)
     .fluidOutputs(fluid('limestone_extract') * 500)
     .duration(600)
     .buildAndRegister();
@@ -295,6 +295,21 @@ mods.gregtech.coke_oven.recipeBuilder()
 // rock breaker only for cobble until MV?
 // then we forge hammer that for gravel source.
 // sifter + compressor(s) for granite, diorite, andesite, limestone
+
+
+// forge hammer sand -> 8x sand pile
+
+
+// Coke Oven Brick * 2
+furnace.removeByInput(metaitem('compressed.coke_clay'));
+mods.gregtech.alloy_smelter.removeByInput(7, [item('minecraft:sand'), item('minecraft:clay_ball')], null)
+mods.gregtech.alloy_smelter.recipeBuilder()
+    .inputs(ore('sand'))
+    .inputs(item('minecraft:clay_ball'))
+    .outputs(metaitem('brick.coke'))
+    .EUt(7)
+    .duration(100)
+    .buildAndRegister();
 
 // 4 steel botany growers = 4 resin = 12 raw rubber pulp per minute
 // 8 leaves/minute = 1 dirt/minute
