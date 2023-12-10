@@ -11,6 +11,8 @@ class VoidMaterials
     public static Material DioriteExtract;
     public static Material AndesiteExtract;
     public static Material LimestoneExtract;
+    public static Material DirtExtract;
+    public static Material NatureExtract;
     
     public static void init()
     {

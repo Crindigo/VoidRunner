@@ -1,17 +1,21 @@
 crafting.remove('pyrotech:clay');
+
+// remove extra hopper recipes, one with no ID, have to re-add GT one (unless it's just a JEI/GS bug)
+crafting.remove('enderio:tweak_wood_hopper');
+crafting.removeByOutput(item('minecraft:hopper'));
+crafting.shapedBuilder()
+    .name('hopper')
+    .output(item('minecraft:hopper'))
+    .shape('pcp', 'pgp', 'wph')
+    .key('p', ore('plateIron'))
+    .key('c', ore('chest'))
+    .key('g', ore('gearSmallIron'))
+    .key('w', ore('toolWrench'))
+    .key('h', ore('toolHammer'))
+    .register();
+
 furnace.removeByInput(item('minecraft:clay_ball'));
 
-// clean this up so greg doesn't try to use these. breaks some pyro recipes but we don't care about em.
-oreDict.remove("toolHammer", item('pyrotech:crude_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:stone_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:bone_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:flint_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:iron_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:gold_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:diamond_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:obsidian_hammer'));
-oreDict.remove("toolHammer", item('pyrotech:bone_hammer_durable'));
-oreDict.remove("toolHammer", item('pyrotech:flint_hammer_durable'));
 
 // remove crude drying rack and make the normal one only use fiber instead of twine
 mods.jei.yeet(item('pyrotech:drying_rack', 0));

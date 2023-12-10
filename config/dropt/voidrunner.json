@@ -82,24 +82,21 @@
                 {
                     "selector": {
                         "weight": {
-                            "value": 85
+                            "value": 95
                         }
                     }
                 },
                 {
                     "selector": {
                         "weight": {
-                            "value": 15
+                            "value": 5
                         }
                     },
                     "item": {
                         "items": [
                             "randomthings:lotusseeds",
-                            "minecraft:pumpkin_seeds",
-                            "minecraft:melon_seeds",
-                            "minecraft:beetroot_seeds",
-                            "minecraft:potato",
-                            "minecraft:carrot"
+                            "minecraft:cactus",
+                            "minecraft:reeds"
                         ]
                     }
                 }

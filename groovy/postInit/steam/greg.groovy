@@ -57,6 +57,28 @@ recipemap('crude_mixer').recipeBuilder()
     .buildAndRegister();
 */
 
+// rock breaker only for cobble until MV?
+// then we forge hammer that for gravel source.
+// sifter + compressor(s) for granite, diorite, andesite, limestone
+
+// Stone * 1
+mods.gregtech.rock_breaker.removeByInput(7, [item('minecraft:stone')], null);
+
+mods.gregtech.rock_breaker.recipeBuilder()
+    .notConsumable(item('pyrotech:limestone'))
+    .outputs(item('pyrotech:limestone'))
+    .duration(16)
+    .EUt(60)
+    .buildAndRegister();
+
+// sand to 8x sand pile
+mods.gregtech.forge_hammer.recipeBuilder()
+    .inputs(ore('sand'))
+    .outputs(item('pyrotech:rock', 5) * 8)
+    .duration(80)
+    .EUt(2)
+    .buildAndRegister();
+
 mods.gregtech.sifter.recipeBuilder()
     .notConsumable(item('minecraft:dirt'))
     .outputs(item('pyrotech:material', 17)) // clay
@@ -69,6 +91,30 @@ mods.gregtech.sifter.recipeBuilder()
     //.chancedOutput(item('randomthings:grassseeds'), 1500, 0)
     //.chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
     .duration(40)
+    .EUt(4)
+    .buildAndRegister();
+
+// coarse dirt sifting for... bonemeal and other things?
+mods.gregtech.sifter.recipeBuilder()
+    .inputs(item('minecraft:dirt', 1))
+    .chancedOutput(item('minecraft:dye', 15), 2500, 750)
+    .chancedOutput(metaitem('dustCalcite'), 2500, 750)
+    .chancedOutput(metaitem('dustPhosphate'), 2500, 750)
+    .chancedOutput(metaitem('dustApatite'), 2500, 750)
+    .duration(100)
+    .EUt(4)
+    .buildAndRegister();
+
+// podzol sifting for saplings
+mods.gregtech.sifter.recipeBuilder()
+    .inputs(item('minecraft:dirt', 2))
+    .chancedOutput(item('minecraft:sapling', 1), 2500, 750)
+    .chancedOutput(item('minecraft:sapling', 2), 2500, 750)
+    .chancedOutput(item('minecraft:sapling', 3), 2500, 750)
+    .chancedOutput(item('minecraft:sapling', 4), 2500, 750)
+    .chancedOutput(item('minecraft:sapling', 5), 2500, 750)
+    .chancedOutput(item('gregtech:rubber_sapling'), 2500, 750)
+    .duration(200)
     .EUt(4)
     .buildAndRegister();
 
@@ -135,6 +181,32 @@ crafting.addShaped('ulv_pump', metaitem('ulv_covers:electric.pump.ulv') * 4, [
     [ore('pipeNormalFluidCopper'), ore('rotorBronze')],
     [metaitem('ulv_covers:electric.motor.ulv'), ore('ringIron')]
 ]);
+
+// update basic item and fluid filters, make them output 2x and add an iron variant instead of steel,
+// and change lapis plate to copper.
+
+def addFilterRecipe(name, centerItem, output) {
+    def zf = ore('foilZinc');
+    crafting.addShaped(name, output, [[zf, zf, zf], [zf, centerItem, zf], [zf, zf, zf]]);
+}
+
+crafting.remove('gregtech:item_filter');
+crafting.remove('gregtech:fluid_filter_lapis');
+crafting.remove('gregtech:fluid_filter_lazurite');
+crafting.remove('gregtech:fluid_filter_sodalite');
+
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('item_filter')], [fluid('oxygen') * 186]);
+mods.gregtech.macerator.removeByInput(8, [metaitem('item_filter')], null)
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('fluid_filter')], [fluid('oxygen') * 130])
+mods.gregtech.macerator.removeByInput(2, [metaitem('fluid_filter')], null)
+
+addFilterRecipe('item_filter_steel', ore('plateSteel'), metaitem('item_filter') * 2);
+addFilterRecipe('item_filter_iron', ore('plateIron'), metaitem('item_filter') * 2);
+addFilterRecipe('fluid_filter_copper', ore('plateCopper'), metaitem('fluid_filter') * 2);
+addFilterRecipe('fluid_filter_lapis', ore('plateLapis'), metaitem('fluid_filter') * 2);
+addFilterRecipe('fluid_filter_lazurite', ore('plateLazurite'), metaitem('fluid_filter') * 2);
+addFilterRecipe('fluid_filter_sodalite', ore('plateSodalite'), metaitem('fluid_filter') * 2);
+
 
 // allow for ulv and lv hatches and buses to have standard crafting recipes instead of assembler only
 def removeULVHatchBus(chestOrGlass, configuration) {
@@ -292,13 +364,16 @@ mods.gregtech.coke_oven.recipeBuilder()
     .duration(600)
     .buildAndRegister();
 
-// rock breaker only for cobble until MV?
-// then we forge hammer that for gravel source.
-// sifter + compressor(s) for granite, diorite, andesite, limestone
+crafting.remove('minecraft:coarse_dirt');
 
+mods.gregtech.coke_oven.recipeBuilder()
+    .inputs(ore('dirt'))
+    .outputs(item('minecraft:dirt', 1)) // coarse dirt
+    .fluidOutputs(fluid('dirt_extract') * 500)
+    .duration(600)
+    .buildAndRegister();
 
-// forge hammer sand -> 8x sand pile
-
+// half the dirt extract can be mixed w/ gravel for more dirt - done in soaking pot until LV then chemical bath
 
 // Coke Oven Brick * 2
 furnace.removeByInput(metaitem('compressed.coke_clay'));

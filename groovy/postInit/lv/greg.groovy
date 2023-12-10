@@ -20,5 +20,22 @@ mods.gregtech.canner.recipeBuilder()
     .EUt(4)
     .buildAndRegister();
 
+
+mods.gregtech.chemical_bath.recipeBuilder()
+    .inputs(ore('gravel'))
+    .fluidInputs(fluid('dirt_extract') * 125)
+    .outputs(item('minecraft:dirt'))
+    .duration(200)
+    .EUt(4)
+    .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('treeLeaves'))
+    .fluidInputs(fluid('dirt_extract') * 250)
+    .fluidOutputs(fluid('nature_extract') * 250)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
 // silver and gold can be acquired by processing crushed galena and copper in a chemical bath w/ mercury (from redstone).
 // thermal centrifuge also an option, no mercury but slower.
