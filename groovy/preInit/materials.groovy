@@ -6,7 +6,8 @@ import gregtech.api.unification.material.properties.ToolProperty
 import material.VoidMaterials;
 
 event_manager.listen { MaterialRegistryEvent event ->
-    GregTechAPI.materialManager.createRegistry("voidrunner");
+    // created in core
+    //GregTechAPI.materialManager.createRegistry("voidrunner");
 }
 
 event_manager.listen { MaterialEvent event -> 

@@ -101,6 +101,7 @@ mods.gregtech.sifter.recipeBuilder()
     .chancedOutput(metaitem('dustCalcite'), 2500, 750)
     .chancedOutput(metaitem('dustPhosphate'), 2500, 750)
     .chancedOutput(metaitem('dustApatite'), 2500, 750)
+    .chancedOutput(metaitem('dustPotash'), 2500, 750)
     .duration(100)
     .EUt(4)
     .buildAndRegister();
@@ -173,6 +174,10 @@ crafting.remove('ulv_covers:conveyor_ulv_easy');
 crafting.addShaped('ulv_conveyor', metaitem('ulv_covers:conveyor.module.ulv') * 4, [
     [item('minecraft:carpet'), metaitem('wireGtSingleTin')],
     [metaitem('ulv_covers:electric.motor.ulv'), item('minecraft:carpet')]
+]);
+crafting.addShaped('ulv_conveyor_rubber', metaitem('ulv_covers:conveyor.module.ulv') * 4, [
+    [ore('plateRubber'), metaitem('wireGtSingleTin')],
+    [metaitem('ulv_covers:electric.motor.ulv'), ore('plateRubber')]
 ]);
 
 // update ulv pump to take iron ring instead of rubber
@@ -381,9 +386,65 @@ mods.gregtech.alloy_smelter.removeByInput(7, [item('minecraft:sand'), item('mine
 mods.gregtech.alloy_smelter.recipeBuilder()
     .inputs(ore('sand'))
     .inputs(item('minecraft:clay_ball'))
-    .outputs(metaitem('brick.coke'))
+    .outputs(metaitem('brick.coke') * 2)
     .EUt(7)
-    .duration(100)
+    .duration(40)
+    .buildAndRegister();
+
+
+// Compressed Fireclay * 1
+mods.gregtech.compressor.removeByInput(4, [metaitem('dustFireclay')], null);
+mods.gregtech.compressor.recipeBuilder()
+    .inputs(metaitem('dustFireclay'))
+    .outputs(metaitem('compressed.fireclay'))
+    .EUt(4)
+    .duration(40)
+    .buildAndRegister();
+
+def createBloom(integrity, recipeId) {
+    return item('pyrotech:bloom').withNbt([
+        "BlockEntityTag": [
+            "maxIntegrity": integrity, 
+            "integrity": integrity,
+            "experiencePerComplete": 0.0F, 
+            "recipeId": recipeId, 
+            "langKey": "tile.ore_block"
+        ]
+    ]);
+}
+
+def createBlastBlooming(oreKey, recipeId) {
+    def cokes = ['gemCoke', 'dustCoke'];
+    for ( coke in cokes ) {
+        mods.gregtech.primitive_blast_furnace.recipeBuilder()
+            .inputs(ore(oreKey) * 4)
+            .inputs(ore(coke) * 2)
+            .outputs(createBloom(20, recipeId))
+            .duration(600)
+            .buildAndRegister();
+    }
+
+    def coals = ['gemCoal', 'gemCharcoal', 'dustCoal', 'dustCharcoal'];
+    for (coal in coals) {
+        mods.gregtech.primitive_blast_furnace.recipeBuilder()
+            .inputs(ore(oreKey) * 4)
+            .inputs(ore(coal) * 4)
+            .outputs(createBloom(20, recipeId))
+            .duration(800)
+            .buildAndRegister();
+    }
+}
+
+createBlastBlooming('oreMagnetite', 'crafttweaker:bloom_from_iron_ore');
+createBlastBlooming('oreChalcopyrite', 'crafttweaker:bloom_from_copper_ore');
+createBlastBlooming('oreCassiterite', 'crafttweaker:bloom_from_tin_ore');
+createBlastBlooming('oreSphalerite', 'crafttweaker:bloom_from_zinc_ore');
+createBlastBlooming('oreGalena', 'crafttweaker:bloom_from_galena_ore');
+
+recipemap('evap_pool').recipeBuilder()
+    .fluidInputs(fluid('water') * 1000)
+    .outputs(metaitem('voidrunner:dustSaltEvaporate') * 8)
+    .duration(1200)
     .buildAndRegister();
 
 // 4 steel botany growers = 4 resin = 12 raw rubber pulp per minute

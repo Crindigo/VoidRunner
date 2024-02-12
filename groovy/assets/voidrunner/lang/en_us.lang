@@ -5,6 +5,8 @@ voidrunner.material.diorite_extract=Diorite Extract
 voidrunner.material.limestone_extract=Limestone Extract
 voidrunner.material.dirt_extract=Dirt Extract
 voidrunner.material.nature_extract=Nature Extract
+voidrunner.material.salt_evaporate=Salt Evaporate
+
 item.voidrunner.shiny_stone_chunk.name=Shiny Stone Chunk
 item.voidrunner.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.shiny_stone_chunk.name=Shiny Stone Chunk

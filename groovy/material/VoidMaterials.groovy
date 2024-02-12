@@ -13,6 +13,7 @@ class VoidMaterials
     public static Material LimestoneExtract;
     public static Material DirtExtract;
     public static Material NatureExtract;
+    public static Material SaltEvaporate;
     
     public static void init()
     {

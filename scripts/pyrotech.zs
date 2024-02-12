@@ -12,11 +12,11 @@ import mods.pyrotech.StoneKiln;
 import mods.pyrotech.Barrel;
 
 SoakingPot.addRecipe("string_from_durable_twine", 
-    <minecraft:string>, <liquid:water> * 125, <pyrotech:material:26>, 4 * 60 * 20);
+    <minecraft:string>, <liquid:water> * 125, <pyrotech:material:26>, 90 * 20);
 
 // treated wood in soaking pot too
 SoakingPot.addRecipe("treated_planks",
-    <gregtech:planks:1>, <liquid:creosote> * 125, <ore:plankWood>, 4 * 60 * 20);
+    <gregtech:planks:1>, <liquid:creosote> * 125, <ore:plankWood>, 2 * 60 * 20);
 
 Burn.createBuilder("water_from_mud", <minecraft:clay>, "pyrotech:mud:*")
     .setBurnStages(1)
@@ -143,17 +143,22 @@ IroncladAnvil.removeRecipes(<pyrotech:material:27> * 4);
 //IroncladAnvil.removeRecipes(<pyrotech:material:19> * 9);
 IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ingotIron>, 4, "hammer");
 
+// double masonry brick output
+GraniteAnvil.removeRecipes(<pyrotech:material:16> * 2);
+IroncladAnvil.removeRecipes(<pyrotech:material:16> * 2);
+GraniteAnvil.addRecipe("masonry_brick", <pyrotech:material:16> * 4, <ore:slabStoneBricks>, 4, "pickaxe", true);
+
 // for steam we need iron, copper, tin
 // for LV we need redstone, rubber, lead, antimony
 
 // sand pile in granite extract -> redstone. 96s per 8 redstone makes it line up nicely 
 // (5/min and 250 granite/min). same consumption rate as copper, can rebalance how you want.
 SoakingPot.addRecipe("sand_pile_to_redstone",
-    <minecraft:redstone>, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
+    <minecraft:redstone> * 2, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
 
-// sand pile in limestone ext -> sulfur
+// sand pile in limestone ext -> sulfur (had heat here but then you can't extract sulfur, and campfire ash)
 SoakingPot.addRecipe("sand_pile_to_sulfur",
-    <metaitem:dustSulfur>, <liquid:limestone_extract> * 50, <pyrotech:rock:5>, true, 2 * 60 * 20);
+    <metaitem:dustSulfur>, <liquid:limestone_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
 
 // gravel in stone ext -> magnetite
 SoakingPot.addRecipe("gravel_to_iron",
@@ -181,72 +186,72 @@ SoakingPot.addRecipe("gravel_to_dirt",
 
 // leaves in dirt ext barrel -> nature extract
 Barrel.addRecipe("nature_extract", <liquid:nature_extract> * 1000, <liquid:dirt_extract> * 1000, 
-    [<ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>], 5 * 60 * 20);
+    [<ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>], 4 * 60 * 20);
 
 // dirt in nature ext -> grass
 SoakingPot.addRecipe("dirt_to_grass",
-    <minecraft:grass>, <liquid:nature_extract> * 125, <minecraft:dirt>, false, 5 * 60 * 20);
+    <minecraft:grass>, <liquid:nature_extract> * 125, <minecraft:dirt>, false, 4 * 60 * 20);
 
 Bloomery.removeAllBloomeryRecipes();
 
 // Give wrought iron directly, with a chance at gold nuggets
 Bloomery.createBloomeryBuilder(
         "bloom_from_iron_ore",   // recipe name
-        <metaitem:nuggetWroughtIron> * 3, // output
+        <metaitem:ingotWroughtIron>, // output
         <ore:oreMagnetite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
-    .setBurnTimeTicks(14400)
+    .setBurnTimeTicks(7200)
     .setFailureChance(0.2)
-    .setBloomYield(12, 15)
-    .addFailureItem(<minecraft:gold_nugget> * 3, 1)
+    .setBloomYield(4, 5)
+    .addFailureItem(<minecraft:gold_ingot>, 1)
     .register();
 
 // Copper
 Bloomery.createBloomeryBuilder(
         "bloom_from_copper_ore",   // recipe name
-        <metaitem:nuggetCopper> * 3, // output
+        <metaitem:ingotCopper>, // output
         <ore:oreChalcopyrite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
-    .setBurnTimeTicks(14400)
+    .setBurnTimeTicks(7200)
     .setFailureChance(0.2)
-    .setBloomYield(12, 15)
-    .addFailureItem(<metaitem:nuggetCobalt> * 3, 1)
+    .setBloomYield(4, 5)
+    .addFailureItem(<metaitem:ingotCobalt>, 1)
     .register();
 
 // Tin
 Bloomery.createBloomeryBuilder(
         "bloom_from_tin_ore",   // recipe name
-        <metaitem:nuggetTin> * 3, // output
+        <metaitem:ingotTin>, // output
         <ore:oreCassiterite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
-    .setBurnTimeTicks(14400)
+    .setBurnTimeTicks(7200)
     .setFailureChance(0.2)
-    .setBloomYield(12, 15)
-    .addFailureItem(<metaitem:nuggetBismuth> * 3, 1)
+    .setBloomYield(4, 5)
+    .addFailureItem(<metaitem:ingotBismuth>, 1)
     .register();
 
 // Zinc
 Bloomery.createBloomeryBuilder(
         "bloom_from_zinc_ore",   // recipe name
-        <metaitem:nuggetZinc> * 3, // output
+        <metaitem:ingotZinc>, // output
         <ore:oreSphalerite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
-    .setBurnTimeTicks(14400)
+    .setBurnTimeTicks(7200)
     .setFailureChance(0.1)
-    .setBloomYield(10, 13)
-    .addFailureItem(<metaitem:nuggetGallium> * 3, 1)
+    .setBloomYield(3, 4)
+    .addFailureItem(<metaitem:ingotGallium>, 1)
     .register();
 
 // Lead with chance of silver
 Bloomery.createBloomeryBuilder(
         "bloom_from_galena_ore",   // recipe name
-        <metaitem:nuggetLead> * 3, // output
+        <metaitem:ingotLead>, // output
         <ore:oreGalena>)     // input
     .setAnvilTiers(["granite", "ironclad"])
-    .setBurnTimeTicks(14400)
+    .setBurnTimeTicks(7200)
     .setFailureChance(0.2)
-    .setBloomYield(9, 12)
-    .addFailureItem(<metaitem:nuggetSilver> * 3, 1)
+    .setBloomYield(3, 4)
+    .addFailureItem(<metaitem:ingotSilver>, 1)
     .register();
 
 // brick kiln wrought iron to iron. furnace can do this too in groovy.
@@ -254,7 +259,7 @@ BrickKiln.addRecipe('wrought_iron_to_iron', <minecraft:iron_ingot>, <metaitem:in
 
 StoneKiln.removeRecipes(<pyrotech:material:22>);
 BrickKiln.removeRecipes(<pyrotech:material:22>);
-StoneKiln.addRecipe("quicklime", <metaitem:dustQuicklime>, <pyrotech:material:28>, 4 * 60 * 20,
+StoneKiln.addRecipe("quicklime", <metaitem:dustQuicklime>, <pyrotech:material:28>, 2 * 60 * 20,
     0.05, [<pyrotech:material:0>], true);
 
 // faster refractory bricks since you need so many
@@ -263,5 +268,27 @@ BrickKiln.removeRecipes(<pyrotech:material:5>);
 StoneKiln.addRecipe("refractory_faster", <pyrotech:material:5>, <pyrotech:material:9>, 2 * 60 * 20,
     0.05, [<pyrotech:material:6>, <pyrotech:material:7>], true);
 
+SoakingPot.removeRecipes(<pyrotech:material:8>);
 SoakingPot.addRecipe("slaked_lime",
-    <pyrotech:material:8>, <liquid:water> * 125, <metaitem:dustQuicklime>, false, 4 * 60 * 20);
+    <pyrotech:material:8>, <liquid:water> * 125, <metaitem:dustQuicklime>, false, 2 * 60 * 20);
+
+// flint clay faster
+SoakingPot.removeRecipes(<pyrotech:material:3>);
+SoakingPot.addRecipe("flint_clay", <pyrotech:material:3>, <liquid:liquid_clay> * 250, <ore:dustFlint>, false, 3 * 60 * 20);
+
+// other faster things: durable twine, tarred planks, tarred board, podzol, pulp
+SoakingPot.removeRecipes(<pyrotech:material:26>);
+SoakingPot.removeRecipes(<pyrotech:planks_tarred>);
+SoakingPot.removeRecipes(<pyrotech:material:23>);
+SoakingPot.removeRecipes(<minecraft:dirt:2>);
+SoakingPot.removeRecipes(<pyrotech:material:25>);
+SoakingPot.addRecipe("durable_twine", <pyrotech:material:26>, <liquid:wood_tar> * 125, <pyrotech:material:14>, true, 90 * 20);
+SoakingPot.addRecipe("planks_tarred", <pyrotech:planks_tarred>, <liquid:wood_tar> * 125, <ore:plankWood>, true, 2 * 60 * 20);
+SoakingPot.addRecipe("board_tarred", <pyrotech:material:23>, <liquid:wood_tar> * 50, <pyrotech:material:20>, true, 60 * 20);
+SoakingPot.addRecipe("podzol", <minecraft:dirt:2>, <liquid:water> * 250, <minecraft:dirt:1>, false, 4 * 60 * 20);
+SoakingPot.addRecipe("pulp", <pyrotech:material:25>, <liquid:water> * 250, <pyrotech:rock:7>, false, 4 * 60 * 20);
+
+// speed up glass in kiln
+StoneKiln.removeRecipes(<minecraft:glass>);
+BrickKiln.removeRecipes(<minecraft:glass>);
+StoneKiln.addRecipe("glass", <minecraft:glass>, <ore:sand>, 2 * 60 * 20, 0.05, [<pyrotech:material:32> * 4], true);
