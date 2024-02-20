@@ -101,37 +101,6 @@
                     }
                 }
             ]
-        },
-        {
-            "match": {
-                "blocks": {
-                    "blocks": [
-                        "minecraft:gravel:*"
-                    ]
-                }
-            },
-            "replaceStrategy": "ADD",
-            "drops": [
-                {
-                    "selector": {
-                        "weight": {
-                            "value": 50
-                        }
-                    },
-                    "item": {
-                        "items": [
-                            "pyrotech:material:10"
-                        ]
-                    }
-                },
-                {
-                    "selector": {
-                        "weight": {
-                            "value": 50
-                        }
-                    }
-                }
-            ]
         }
     ]
 }

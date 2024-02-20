@@ -22,7 +22,7 @@ Burn.createBuilder("water_from_mud", <minecraft:clay>, "pyrotech:mud:*")
     .setBurnStages(1)
     .setTotalBurnTimeTicks(2 * 60 * 20)
     .setFluidProduced(<liquid:water> * 250)
-    .setFailureChance(0.25)
+    .setFailureChance(0.5)
     .addFailureItem(<pyrotech:rock:4>)
     .addFailureItem(<pyrotech:rock:4> * 2)
     .addFailureItem(<pyrotech:rock:4> * 4)
@@ -120,6 +120,9 @@ MechanicalCompactor.removeRecipes(<pyrotech:charcoal_block>);
 CompactingBin.addRecipe("gt_charcoal_block", <metaitem:blockCharcoal>, <minecraft:coal:1>, 9, true);
 CompactingBin.addRecipe("gt_charcoal_block_flakes", <metaitem:blockCharcoal>, <pyrotech:material:15>, 72, true);
 
+// allow limestone to be compacted
+CompactingBin.addRecipe("limestone_gravel", <minecraft:gravel>, <pyrotech:rock:8>, 8, true);
+
 // change coke recipe in anvil
 GraniteAnvil.removeRecipes(<pyrotech:material:1> * 9);
 IroncladAnvil.removeRecipes(<pyrotech:material:1> * 9);
@@ -201,7 +204,7 @@ Bloomery.createBloomeryBuilder(
         <ore:oreMagnetite>)     // input
     .setAnvilTiers(["granite", "ironclad"])
     .setBurnTimeTicks(7200)
-    .setFailureChance(0.2)
+    .setFailureChance(0.1)
     .setBloomYield(4, 5)
     .addFailureItem(<minecraft:gold_ingot>, 1)
     .register();

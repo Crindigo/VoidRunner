@@ -264,6 +264,13 @@ crafting.shapedBuilder()
     .key('s', ore('stickStone'))
     .register();
 
+// allow turning unfired refractory bricks into the small lumps, totally not because i don't have any left when testing
+crafting.shapelessBuilder()
+    .name('small_refractory_lump')
+    .output(item('pyrotech:material', 35) * 4)
+    .input(item('pyrotech:material', 9))
+    .register();
+
 // idk, make an inefficient stone rod recipe, we'll get rid of the anvil one
 crafting.shapedBuilder()
     .name('stone_rod')
