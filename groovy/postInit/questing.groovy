@@ -1,22 +1,19 @@
-import classes.Quest
+import classes.GQ
 import com.google.gson.GsonBuilder
+import com.google.gson.JsonObject
 //import groovy.json.JsonGenerator
 //import groovy.json.JsonOutput
 
 
-Quest quest(int id, String name, @DelegatesTo(Quest) Closure cl) {
-    def quest = new Quest(id, name)
-    def code = cl.rehydrate(quest, this, this)
-    code.resolveStrategy = Closure.DELEGATE_ONLY
-    code()
-    return quest
-}
+
 
 def gson = new GsonBuilder().setPrettyPrinting().create()
 
-def c1_intro = quest(1, "Intro") {}
+GQ.reset()
 
-def c1_dirt_scavenge = quest(2, "Digging Around") {
+def c1_intro = GQ.quest(1, "Intro") {}
+
+def c1_dirt_scavenge = GQ.quest(2, "Digging Around") {
     prereqs = [c1_intro]
     icon = item("minecraft:dirt")
     desc = "Only have my bare hands to work with here. All the gear I took with me is gone.\n\n" +
@@ -30,5 +27,16 @@ def c1_dirt_scavenge = quest(2, "Digging Around") {
 
     requirements = [metaitem("plateStainlessSteel")]
 }
+
+
+def bq = new JsonObject()
+bq.addProperty("build:8", "4.1.0")
+bq.addProperty("format:8", "2.0.0")
+
+def questDatabase = JsonObject()
+GQ.allQuests.eachWithIndex { GQ.Quest q, int i ->
+    questDatabase.add("$i:10", q.toJson())
+}
+bq.add("questDatabase:9", questDatabase)
 
 log.info(gson.toJson(c1_dirt_scavenge.toJson()));
