@@ -41,4 +41,12 @@ class Ch1 {
         task item('waterstrainer:strainer_fisherman')
         task item('waterstrainer:worm')
     }
+
+    static def leatherchain = quest(5, "Leather Chain") {
+        prereqs << Ch1.strainerfish
+        desc = "The animal hide caught in the net can be further processed into leather and durable leather, then cut into sheets and cords.\n\n" + 
+            "Create tannin by filling a barrel with water and 4 leaves, then cover it with a lid."
+        icon = item('minecraft:leather')
+        task item('minecraft:leather')
+    }
 }

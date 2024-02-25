@@ -19,6 +19,7 @@ eventManager.listen { RequestReloadEvent event ->
         add Ch1.fiberone
         add Ch1.waterstrainer
         add Ch1.strainerfish
+        add Ch1.leatherchain
     }
 
     def questbook = book {
