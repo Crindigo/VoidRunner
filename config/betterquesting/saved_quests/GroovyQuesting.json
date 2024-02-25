@@ -1,5 +1,5 @@
 {
-  "build:8": "0.7.3",
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -12,8 +12,8 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:writable_book"
+            "id:8": "minecraft:writable_book",
+            "OreDict:8": ""
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -41,6 +41,58 @@
     },
     "1:10": {
       "preRequisites:11": [
+        1
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Instead of letting all the leaves fall on their own, let\u0027s see if breaking them apart by hand will give me anything better.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 12,
+            "id:8": "pyrotech:material",
+            "OreDict:8": ""
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Daily Source of Fiber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 2,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 13,
+              "id:8": "pyrotech:material",
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "2:10": {
+      "preRequisites:11": [
         0
       ],
       "properties:10": {
@@ -51,8 +103,8 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:dirt"
+            "id:8": "minecraft:dirt",
+            "OreDict:8": ""
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -78,78 +130,26 @@
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:sapling"
+              "id:8": "minecraft:sapling",
+              "OreDict:8": ""
             }
           }
         }
       },
       "tasks:9": {
         "0:10": {
+          "index:3": 0,
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "minecraft:sapling"
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "2:10": {
-      "preRequisites:11": [
-        1
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Instead of letting all the leaves fall on their own, let\u0027s see if breaking them apart by hand will give me anything better.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 12,
-            "OreDict:8": "",
-            "id:8": "pyrotech:material"
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Daily Source of Fiber",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 2,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 13,
-              "OreDict:8": "",
-              "id:8": "pyrotech:material"
+              "id:8": "minecraft:sapling",
+              "OreDict:8": ""
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -168,8 +168,8 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "waterstrainer:strainer_base"
+            "id:8": "waterstrainer:strainer_base",
+            "OreDict:8": ""
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -190,18 +190,18 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "index:3": 0,
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "waterstrainer:strainer_base"
+              "id:8": "waterstrainer:strainer_base",
+              "OreDict:8": ""
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -220,8 +220,8 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "waterstrainer:worm"
+            "id:8": "waterstrainer:worm",
+            "OreDict:8": ""
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
@@ -242,18 +242,18 @@
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "index:3": 0,
           "autoConsume:1": 0,
           "consume:1": 0,
           "groupDetect:1": 0,
           "ignoreNBT:1": 0,
-          "index:3": 0,
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "waterstrainer:worm"
+              "id:8": "waterstrainer:worm",
+              "OreDict:8": ""
             }
           },
           "taskID:8": "bq_standard:retrieval"
@@ -273,8 +273,8 @@
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
-            "OreDict:8": "",
-            "id:8": "minecraft:book"
+            "id:8": "minecraft:book",
+            "OreDict:8": ""
           },
           "name:8": "Earth \u0026 Stone",
           "visibility:8": "NORMAL"
@@ -313,8 +313,8 @@
           "id:3": 4,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 108,
-          "y:3": -36
+          "x:3": 672,
+          "y:3": -240
         }
       }
     }

@@ -6,7 +6,7 @@ import com.google.gson.JsonObject
 
 
 
-
+/*
 def gson = new GsonBuilder().setPrettyPrinting().create()
 
 GQ.reset()
@@ -33,10 +33,11 @@ def bq = new JsonObject()
 bq.addProperty("build:8", "4.1.0")
 bq.addProperty("format:8", "2.0.0")
 
-def questDatabase = JsonObject()
+def questDatabase = new JsonObject()
 GQ.allQuests.eachWithIndex { GQ.Quest q, int i ->
     questDatabase.add("$i:10", q.toJson())
 }
 bq.add("questDatabase:9", questDatabase)
 
 log.info(gson.toJson(c1_dirt_scavenge.toJson()));
+*/
