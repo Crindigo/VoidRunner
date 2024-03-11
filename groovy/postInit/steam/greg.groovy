@@ -65,6 +65,13 @@ recipemap('crude_mixer').recipeBuilder()
 mods.gregtech.rock_breaker.removeByInput(7, [item('minecraft:stone')], null);
 
 mods.gregtech.rock_breaker.recipeBuilder()
+    .notConsumable(item('minecraft:stone'))
+    .outputs(item('minecraft:stone'))
+    .duration(16)
+    .EUt(60)
+    .buildAndRegister();
+
+mods.gregtech.rock_breaker.recipeBuilder()
     .notConsumable(item('pyrotech:limestone'))
     .outputs(item('pyrotech:limestone'))
     .duration(16)
@@ -79,6 +86,13 @@ mods.gregtech.forge_hammer.recipeBuilder()
     .EUt(2)
     .buildAndRegister();
 
+mods.gregtech.forge_hammer.recipeBuilder()
+    .inputs(item('minecraft:obsidian'))
+    .outputs(item('pyrotech:material', 33) * 4)
+    .duration(160)
+    .EUt(16)
+    .buildAndRegister();
+
 mods.gregtech.sifter.recipeBuilder()
     .notConsumable(item('minecraft:dirt'))
     .outputs(item('pyrotech:material', 17)) // clay
@@ -90,7 +104,7 @@ mods.gregtech.sifter.recipeBuilder()
     //.chancedOutput(item('minecraft:bone'), 5000, 0)
     //.chancedOutput(item('randomthings:grassseeds'), 1500, 0)
     //.chancedOutput(item('gregtech:rubber_sapling'), 1500, 0)
-    .duration(40)
+    .duration(50)
     .EUt(4)
     .buildAndRegister();
 
@@ -188,20 +202,23 @@ addFilterRecipe('fluid_filter_lapis', ore('plateLapis'), metaitem('fluid_filter'
 addFilterRecipe('fluid_filter_lazurite', ore('plateLazurite'), metaitem('fluid_filter') * 2);
 addFilterRecipe('fluid_filter_sodalite', ore('plateSodalite'), metaitem('fluid_filter') * 2);
 
+def circuitConfig(number) {
+    return metaitem('circuit.integrated').withNbt(["Configuration": number]);
+}
 
 // allow for ulv and lv hatches and buses to have standard crafting recipes instead of assembler only
 def removeULVHatchBus(chestOrGlass, configuration) {
     mods.gregtech.assembler.removeByInput(7, 
-        [metaitem('hull.ulv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.ulv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('glue') * 250])
     mods.gregtech.assembler.removeByInput(7,
-        [metaitem('hull.ulv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.ulv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('plastic') * 72])
     mods.gregtech.assembler.removeByInput(7, 
-        [metaitem('hull.ulv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])],
+        [metaitem('hull.ulv'), item(chestOrGlass), circuitConfig(configuration)],
         [fluid('polytetrafluoroethylene') * 36])
     mods.gregtech.assembler.removeByInput(7, 
-        [metaitem('hull.ulv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.ulv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('polybenzimidazole') * 4])
 }
 
@@ -212,16 +229,16 @@ removeULVHatchBus('minecraft:glass', 2);
 
 def removeLVHatchBus(chestOrGlass, configuration) {
     mods.gregtech.assembler.removeByInput(30, 
-        [metaitem('hull.lv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.lv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('glue') * 500])
     mods.gregtech.assembler.removeByInput(30,
-        [metaitem('hull.lv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.lv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('plastic') * 144])
     mods.gregtech.assembler.removeByInput(30, 
-        [metaitem('hull.lv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])],
+        [metaitem('hull.lv'), item(chestOrGlass), circuitConfig(configuration)],
         [fluid('polytetrafluoroethylene') * 72])
     mods.gregtech.assembler.removeByInput(30, 
-        [metaitem('hull.lv'), item(chestOrGlass), metaitem('circuit.integrated').withNbt(["Configuration": configuration])], 
+        [metaitem('hull.lv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('polybenzimidazole') * 9])
 }
 
@@ -416,6 +433,19 @@ createBlastBlooming('oreChalcopyrite', 'crafttweaker:bloom_from_copper_ore');
 createBlastBlooming('oreCassiterite', 'crafttweaker:bloom_from_tin_ore');
 createBlastBlooming('oreSphalerite', 'crafttweaker:bloom_from_zinc_ore');
 createBlastBlooming('oreGalena', 'crafttweaker:bloom_from_galena_ore');
+
+// change diamond in steam rock breaker to gearSmallBronze
+crafting.remove('gregtech:steam_rock_breaker_bronze');
+crafting.shapedBuilder()
+    .name('steam_rock_breaker_bronze')
+    .output(metaitem('steam_rock_breaker_bronze'))
+    .shape('PpP', 'pcp', 'gpg')
+    .key('P', ore('craftingPiston'))
+    .key('p', ore('pipeSmallFluidBronze'))
+    .key('c', item('gregtech:steam_casing'))
+    .key('g', ore('gearSmallBronze'))
+    .register();
+
 
 recipemap('evap_pool').recipeBuilder()
     .fluidInputs(fluid('water') * 1000)

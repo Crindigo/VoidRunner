@@ -45,6 +45,18 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
+              "Damage:2": 12,
+              "id:8": "pyrotech:material",
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "id:8": "pyrotech:drying_rack",
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "Count:3": 1,
               "Damage:2": 13,
               "id:8": "pyrotech:material",
               "OreDict:8": ""
@@ -108,147 +120,6 @@
     },
     "2:10": {
       "preRequisites:11": [
-        2
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\nÂ§bOther strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "id:8": "waterstrainer:strainer_base",
-            "OreDict:8": ""
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Something in the Water",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 3,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "id:8": "waterstrainer:strainer_base",
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "3:10": {
-      "preRequisites:11": [],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Hmm, not sure what I was expecting.\n\nAt least I can breathe.\n\nNo obvious way back, but that\u0027s fine. Figured it was a one-way trip.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "id:8": "minecraft:writable_book",
-            "OreDict:8": ""
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "Across the Rift",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 0,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
-        }
-      }
-    },
-    "4:10": {
-      "preRequisites:11": [
-        3
-      ],
-      "properties:10": {
-        "betterquesting:10": {
-          "autoclaim:1": 0,
-          "desc:8": "Some other things exist in the water besides rocks and dirt. Worms are required to gather them, however.",
-          "globalshare:1": 0,
-          "icon:10": {
-            "Count:3": 1,
-            "Damage:2": 0,
-            "id:8": "waterstrainer:worm",
-            "OreDict:8": ""
-          },
-          "ignoresview:1": 0,
-          "ismain:1": 0,
-          "issilent:1": 0,
-          "lockedprogress:1": 0,
-          "name:8": "There\u0027s Fish Too",
-          "questlogic:8": "AND",
-          "repeat_relative:1": 1,
-          "repeattime:3": -1,
-          "simultaneous:1": 0,
-          "snd_complete:8": "minecraft:entity.player.levelup",
-          "snd_update:8": "minecraft:entity.player.levelup",
-          "tasklogic:8": "AND",
-          "visibility:8": "NORMAL"
-        }
-      },
-      "questID:3": 4,
-      "rewards:9": {},
-      "tasks:9": {
-        "0:10": {
-          "index:3": 0,
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
-            "0:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "id:8": "waterstrainer:worm",
-              "OreDict:8": ""
-            }
-          },
-          "taskID:8": "bq_standard:retrieval"
-        }
-      }
-    },
-    "5:10": {
-      "preRequisites:11": [
         0
       ],
       "properties:10": {
@@ -309,6 +180,171 @@
             }
           },
           "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "3:10": {
+      "preRequisites:11": [
+        3
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Some other things exist in the water besides rocks and dirt. Worms are required to gather them, however.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "id:8": "waterstrainer:worm",
+            "OreDict:8": ""
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "There\u0027s Fish Too",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 4,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "id:8": "waterstrainer:strainer_fisherman",
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "id:8": "waterstrainer:worm",
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "4:10": {
+      "preRequisites:11": [
+        2
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\n§bOther strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source. Strainers are also finicky and can only have items auto-extracted via hoppers.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "id:8": "waterstrainer:strainer_base",
+            "OreDict:8": ""
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Something in the Water",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 3,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14,
+              "id:8": "pyrotech:material",
+              "OreDict:8": ""
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "id:8": "waterstrainer:net",
+              "OreDict:8": ""
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "id:8": "waterstrainer:net",
+              "OreDict:8": ""
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "id:8": "waterstrainer:strainer_base",
+              "OreDict:8": ""
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "5:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Hmm, not sure what I was expecting.\n\nAt least I can breathe.\n\nNo obvious way back, but that\u0027s fine. Figured it was a one-way trip.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "id:8": "minecraft:writable_book",
+            "OreDict:8": ""
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Across the Rift",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 0,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     }
@@ -372,8 +408,8 @@
           "id:3": 5,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 720,
-          "y:3": -240
+          "x:3": 108,
+          "y:3": -72
         }
       }
     }

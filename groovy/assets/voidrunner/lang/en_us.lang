@@ -7,6 +7,10 @@ voidrunner.material.dirt_extract=Dirt Extract
 voidrunner.material.nature_extract=Nature Extract
 voidrunner.material.salt_evaporate=Salt Evaporate
 
+voidrunner.material.potassium_hydroxide=Potassium Hydroxide
+voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
+voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
+
 item.voidrunner.shiny_stone_chunk.name=Shiny Stone Chunk
 item.voidrunner.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.shiny_stone_chunk.name=Shiny Stone Chunk

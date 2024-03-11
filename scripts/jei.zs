@@ -13,7 +13,7 @@ JEI.removeAndHide(<pyrotech:tongs_bone>);
 JEI.removeAndHide(<pyrotech:material:22>);
 
 JEI.removeAndHide(<pyrotech:cog_diamond>);
-JEI.removeAndHide(<pyrotech:cog_obsidian>);
+//JEI.removeAndHide(<pyrotech:cog_obsidian>);
 JEI.removeAndHide(<pyrotech:cog_gold>);
 JEI.removeAndHide(<pyrotech:cog_bone>);
 

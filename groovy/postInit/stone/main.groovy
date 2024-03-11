@@ -315,3 +315,15 @@ crafting.addShapeless("granite_to_std", item('minecraft:cobblestone'), [item('py
 crafting.addShapeless("limestone_to_std", item('minecraft:cobblestone'), [item('pyrotech:cobblestone', 3)]);
 
 crafting.addShapeless("sand_to_piles", item('pyrotech:rock', 5) * 8, [item('minecraft:sand')]);
+
+crafting.addShapeless("early_fertilizer", metaitem('fertilizer'), [item('pyrotech:rock', 5), ore('dustWood'), ore('dustAsh')]);
+
+crafting.remove("minecraft:white_carpet");
+crafting.shapedBuilder()
+    .name('white_carpet')
+    .output(item('minecraft:carpet', 0) * 6)
+    .shape('ww ')
+    .key('w', item('minecraft:wool', 0))
+    .register();
+
+crafting.addShapeless("clay_ball", item('minecraft:clay_ball') * 4, [item('minecraft:clay')]);

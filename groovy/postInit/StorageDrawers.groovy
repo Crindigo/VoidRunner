@@ -24,3 +24,5 @@ for ( index in 0..4 ) {
         [stick, stick, stick],
     ]);
 }
+
+crafting.replaceShapeless(item('storagedrawers:upgrade_void'), [template, item('trashcans:item_trash_can')]);

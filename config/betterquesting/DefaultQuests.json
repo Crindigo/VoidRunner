@@ -1,5 +1,5 @@
 {
-  "build:8": "0.7.3",
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -147,6 +147,18 @@
           "requiredItems:9": {
             "0:10": {
               "Count:3": 1,
+              "Damage:2": 12,
+              "OreDict:8": "",
+              "id:8": "pyrotech:material"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "pyrotech:drying_rack"
+            },
+            "2:10": {
+              "Count:3": 1,
               "Damage:2": 13,
               "OreDict:8": "",
               "id:8": "pyrotech:material"
@@ -163,7 +175,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\n§bOther strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source.",
+          "desc:8": "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\n�bOther strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source. Strainers are also finicky and can only have items auto-extracted via hoppers.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -198,6 +210,24 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
+              "Count:3": 1,
+              "Damage:2": 14,
+              "OreDict:8": "",
+              "id:8": "pyrotech:material"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "waterstrainer:net"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "waterstrainer:net"
+            },
+            "3:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
@@ -250,6 +280,12 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "waterstrainer:strainer_fisherman"
+            },
+            "1:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",

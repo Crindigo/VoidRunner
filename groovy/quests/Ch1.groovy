@@ -26,7 +26,7 @@ class Ch1 {
 
     static def waterstrainer = quest(3, "Something in the Water") {
         prereqs << Ch1.fiberone
-        desc = "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\n§bOther strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source."
+        desc = "This water doesn\u0027t look very clear. There\u0027s probably a lot of stuff that can be filtered out of it.\n\n<aqua>Other strainers should not be placed in the surrounding 8 blocks of one strainer. You can dig an H shape and place down 4 strainers in a square, sharing the same water source.\n\nStrainers are also finicky and can only have items auto-extracted via hoppers."
         icon = item('waterstrainer:strainer_base')
         task item('pyrotech:material', 14)
         task item('waterstrainer:net', 0)

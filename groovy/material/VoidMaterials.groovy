@@ -6,6 +6,7 @@ import com.crindigo.voidrunnercore.util.GSUtil;
 
 class VoidMaterials
 {
+    // ore proc
     public static Material StoneExtract;
     public static Material GraniteExtract;
     public static Material DioriteExtract;
@@ -14,10 +15,19 @@ class VoidMaterials
     public static Material DirtExtract;
     public static Material NatureExtract;
     public static Material SaltEvaporate;
+
+    // first degree
+    public static Material PotassiumHydroxide;
+
+    // second degree
+    public static Material PotassiumChlorideSolution;
+    public static Material PotassiumHydroxideSolution;
     
     public static void init()
     {
         OreProcMaterials.init();
+        FirstDegreeMaterials.init();
+        SecondDegreeMaterials.init();
     }
 
     public static ResourceLocation voidId(String name) {
