@@ -289,7 +289,7 @@ SoakingPot.addRecipe("durable_twine", <pyrotech:material:26>, <liquid:wood_tar> 
 SoakingPot.addRecipe("planks_tarred", <pyrotech:planks_tarred>, <liquid:wood_tar> * 125, <ore:plankWood>, true, 2 * 60 * 20);
 SoakingPot.addRecipe("board_tarred", <pyrotech:material:23>, <liquid:wood_tar> * 50, <pyrotech:material:20>, true, 60 * 20);
 SoakingPot.addRecipe("podzol", <minecraft:dirt:2>, <liquid:water> * 250, <minecraft:dirt:1>, false, 4 * 60 * 20);
-SoakingPot.addRecipe("pulp", <pyrotech:material:25>, <liquid:water> * 250, <pyrotech:rock:7>, false, 4 * 60 * 20);
+SoakingPot.addRecipe("pulp", <pyrotech:material:25>, <liquid:water> * 125, <pyrotech:rock:7>, false, 2 * 60 * 20);
 
 // speed up glass in kiln
 StoneKiln.removeRecipes(<minecraft:glass>);

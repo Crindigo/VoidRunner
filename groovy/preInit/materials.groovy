@@ -4,6 +4,8 @@ import gregtech.api.unification.material.event.MaterialRegistryEvent
 import gregtech.api.unification.material.Material
 import gregtech.api.unification.material.properties.ToolProperty
 import material.VoidMaterials;
+import gregtech.api.unification.material.Materials;
+import static gregtech.api.unification.material.info.MaterialFlags.*;
 
 event_manager.listen { MaterialRegistryEvent event ->
     // created in core
@@ -11,5 +13,6 @@ event_manager.listen { MaterialRegistryEvent event ->
 }
 
 event_manager.listen { MaterialEvent event -> 
+    Materials.Carbon.addFlags(GENERATE_PLATE);
     VoidMaterials.init();
 }

@@ -47,6 +47,30 @@ crafting.shapedBuilder()
     .key('S', ore('craftingPiston'))
     .register();
 
+// change diamond in steam rock breaker to gearSmallBronze
+crafting.remove('gregtech:steam_rock_breaker_bronze');
+crafting.shapedBuilder()
+    .name('steam_rock_breaker_bronze')
+    .output(metaitem('steam_rock_breaker_bronze'))
+    .shape('PpP', 'pcp', 'gpg')
+    .key('P', ore('craftingPiston'))
+    .key('p', ore('pipeSmallFluidBronze'))
+    .key('c', item('gregtech:steam_casing'))
+    .key('g', ore('gearSmallBronze'))
+    .register();
+
+// change invar gear in steam oven to iron gear
+crafting.remove('gregtech:steam_oven');
+crafting.shapedBuilder()
+    .name('steam_oven')
+    .output(metaitem('steam_oven'))
+    .shape('cgc', 'fmf', 'cgc')
+    .key('c', item('gregtech:metal_casing'))
+    .key('g', ore('gearIron'))
+    .key('f', item('gregtech:boiler_firebox_casing'))
+    .key('m', metaitem('steam_furnace_bronze'))
+    .register();
+
 /*
 recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustStone'))
@@ -147,7 +171,7 @@ for ( rockRecipe in rockCompression ) {
     mods.gregtech.compressor.recipeBuilder()
         .outputs(rockRecipe[0])
         .inputs(rockRecipe[1])
-        .duration(20 * rockRecipe[1].getCount())
+        .duration(10 * rockRecipe[1].getCount())
         .EUt(2)
         .buildAndRegister();
 }
@@ -433,18 +457,6 @@ createBlastBlooming('oreChalcopyrite', 'crafttweaker:bloom_from_copper_ore');
 createBlastBlooming('oreCassiterite', 'crafttweaker:bloom_from_tin_ore');
 createBlastBlooming('oreSphalerite', 'crafttweaker:bloom_from_zinc_ore');
 createBlastBlooming('oreGalena', 'crafttweaker:bloom_from_galena_ore');
-
-// change diamond in steam rock breaker to gearSmallBronze
-crafting.remove('gregtech:steam_rock_breaker_bronze');
-crafting.shapedBuilder()
-    .name('steam_rock_breaker_bronze')
-    .output(metaitem('steam_rock_breaker_bronze'))
-    .shape('PpP', 'pcp', 'gpg')
-    .key('P', ore('craftingPiston'))
-    .key('p', ore('pipeSmallFluidBronze'))
-    .key('c', item('gregtech:steam_casing'))
-    .key('g', ore('gearSmallBronze'))
-    .register();
 
 
 recipemap('evap_pool').recipeBuilder()

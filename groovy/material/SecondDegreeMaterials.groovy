@@ -14,6 +14,7 @@ class SecondDegreeMaterials
             .liquid(new FluidBuilder().temperature(293)) // liquid, acid, gas, plasma
             .components(RockSalt, 1, Water, 1)
             .colorAverage()
+            .flags("disable_decomposition")
             .build();
         
         PotassiumHydroxideSolution = newBuilder(2001, "potassium_hydroxide_solution")

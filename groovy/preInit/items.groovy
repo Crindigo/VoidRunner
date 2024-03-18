@@ -1,6 +1,9 @@
 import gregtech.api.unification.material.event.PostMaterialEvent;
 import gregtech.api.items.metaitem.StandardMetaItem;
+import gregtech.api.items.metaitem.MetaOreDictItem;
 import com.bartz24.skyresources.alchemy.item.ItemOreAlchDust;
+import gregtech.api.unification.material.info.MaterialIconSet;
+import gregtech.api.unification.ore.OrePrefix;
 
 eventManager.listen { PostMaterialEvent event ->
     
@@ -9,6 +12,13 @@ eventManager.listen { PostMaterialEvent event ->
 
     m.addItem(1, "shiny_stone_chunk");
     m.addItem(2, "shiny_magma_chunk");
+    m.addItem(3, "leyden_jar");
+
+    MetaOreDictItem d = new MetaOreDictItem((short) 0);
+    d.setRegistryName("voidrunner:ore_dict_item");
+
+    // id, name, color, iconset, oreprefix, [formula]
+    d.addOreDictItem(1, "cork", 0xd08757, MaterialIconSet.WOOD, OrePrefix.crushed);
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

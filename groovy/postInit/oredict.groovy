@@ -12,3 +12,5 @@ oreDict.remove("toolHammer", item('pyrotech:flint_hammer_durable'));
 
 oreDict.add('dustAsh', item('pyrotech:material', 0));
 oreDict.add('dustWood', item('pyrotech:rock', 7));
+
+oreDict.add('dyeBlue', metaitem('dustCobalt'));
