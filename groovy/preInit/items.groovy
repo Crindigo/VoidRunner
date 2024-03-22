@@ -19,6 +19,9 @@ eventManager.listen { PostMaterialEvent event ->
 
     // id, name, color, iconset, oreprefix, [formula]
     d.addOreDictItem(1, "cork", 0xd08757, MaterialIconSet.WOOD, OrePrefix.crushed);
+    d.addOreDictItem(2, "carbon_clay_compound", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.dust);
+    d.addOreDictItem(3, "carbon_resistor_core", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.bolt);
+
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

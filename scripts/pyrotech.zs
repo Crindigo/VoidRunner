@@ -295,3 +295,6 @@ SoakingPot.addRecipe("pulp", <pyrotech:material:25>, <liquid:water> * 125, <pyro
 StoneKiln.removeRecipes(<minecraft:glass>);
 BrickKiln.removeRecipes(<minecraft:glass>);
 StoneKiln.addRecipe("glass", <minecraft:glass>, <ore:sand>, 2 * 60 * 20, 0.05, [<pyrotech:material:32> * 4], true);
+
+StoneCrucible.addRecipe("glue_from_sticky_resin", <liquid:glue> * 125, <metaitem:rubber_drop>, 600, true);
+SoakingPot.addRecipe("basic_circuit_board", <metaitem:board.coated>, <liquid:glue> * 250, <ore:plateWood>, false, 1200);

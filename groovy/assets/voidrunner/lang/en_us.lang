@@ -18,5 +18,7 @@ metaitem.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.leyden_jar.name=Leyden Jar
 
 metaitem.cork_crushed.name=Cork
+metaitem.carbon_clay_compound_dust.name=Carbon-Clay Compound
+metaitem.carbon_resistor_core_bolt.name=Carbon Resistor Core
 
 tile.chemical_dissolver.name=Physical Dissolver

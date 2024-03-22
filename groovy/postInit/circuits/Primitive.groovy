@@ -54,5 +54,51 @@ crafting.shapedBuilder()
     .key('r', ore('ringIron'))
     .register();
 
+// carbon-clay compound
+crafting.addShapeless("carbon_clay_compound1", metaitem("voidrunner:carbon_clay_compound_dust"),
+    [ore('dustCoal'), ore('dustClay')]);
+crafting.addShapeless("carbon_clay_compound2", metaitem("voidrunner:carbon_clay_compound_dust"),
+    [ore('dustCharcoal'), ore('dustClay')]);
+crafting.addShapeless("carbon_clay_compound3", metaitem("voidrunner:carbon_clay_compound_dust") * 2,
+    [ore('dustCoke'), ore('dustClay')]);
+crafting.addShapeless("carbon_clay_compound4", metaitem("voidrunner:carbon_clay_compound_dust") * 2,
+    [ore('dustCarbon'), ore('dustClay')]);
+
+furnace.add(metaitem('voidrunner:carbon_clay_compound_dust'), metaitem('voidrunner:carbon_resistor_core_bolt'));
+
+// resistor - 2 wires, 2 paper, core in middle. crafts 2.
+crafting.removeByOutput(metaitem('component.resistor'));
+crafting.shapedBuilder()
+    .name('resistor_primitive')
+    .output(metaitem('component.resistor') * 2)
+    .shape(' w ', 'pcp', ' w ')
+    .key('w', ore('wireGtSingleCopper') | ore('wireGtSingleTin'))
+    .key('p', ore('paper'))
+    .key('c', metaitem('voidrunner:carbon_resistor_core_bolt'))
+    .register();
+
+// made in soaking pot
+crafting.remove('gregtech:coated_board');
+crafting.remove('gregtech:coated_board_1x');
+// make basic board only need 4 wire
+crafting.remove('gregtech:basic_circuit_board');
+crafting.shapedBuilder()
+    .name('basic_board')
+    .shape(' w ', 'wbw', ' w ')
+    .key('w', ore('wireGtSingleCopper'))
+    .key('b', metaitem('board.coated'))
+    .register();
 
 // Final circuit - leyden jar(s), vacuum tube(s), resistor(s), on a board?
+crafting.remove('gregtech:electronic_circuit_lv');
+crafting.shapedBuilder()
+    .name('circuit_primitive')
+    .output(metaitem('circuit.electronic'))
+    .shape('wjw', 'rbr', 'vcv')
+    .key('w', ore('wireFineCopper'))
+    .key('j', metaitem('voidrunner:leyden_jar'))
+    .key('r', metaitem('component.resistor'))
+    .key('b', metaitem('circuit_board.basic'))
+    .key('v', metaitem('circuit.vacuum_tube'))
+    .key('c', ore('toolWireCutter'))
+    .register();
