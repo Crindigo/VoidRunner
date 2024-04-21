@@ -1,0 +1,16 @@
+{
+    "name": "04. Stone Upgrade",
+    "icon": "pyrotech:material:4",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "With masonry brick machines and a pit burning setup, you are ready for the next step: creating $(item)refractory clay/$ and $(item)refractory bricks/$.$(p)To speed this up, you may want to invest in multiple stone kilns and soaking pots."
+        },
+        {
+            "type": "crafting",
+            "recipe": "voidrunner:refractory_clay"
+        }
+    ]
+}

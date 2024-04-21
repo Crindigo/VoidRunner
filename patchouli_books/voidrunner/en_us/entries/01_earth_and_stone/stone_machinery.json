@@ -1,0 +1,69 @@
+{
+    "name": "03. Stone Machinery",
+    "icon": "pyrotech:masonry_brick_block",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "With masonry bricks, several machines open up to you: The $(item)Stone Sawmill, Oven, Kiln, and Crucible/$.$(p)The Stone Kiln is required for $(item)glass/$, while also having a higher success rate and faster speed than the pit kiln.$(p)The sawmill is required for $(item)boards/$, and the crucible is required for $(item)liquid clay/$."
+        },
+        {
+            "type": "text",
+            "text": "Each of these needs fuel inserted into the bottom, which is ignited with a fire-starting item like $(item)flint and tinder/$ or a $(item)bow drill/$.$(p)Another very important thing to build is a $(thing)pit burning setup/$, not to be confused with the pit kiln. See the next page for construction."
+        },
+        {
+            "type": "multiblock",
+            "name": "Pit Burning",
+            "text": "2x2x2 example. Can be any size up to 27 interior blocks.",
+            "multiblock": {
+                "pattern": [
+                    ["    ",
+                     " DD ",
+                     " DD ", 
+                     "    ", 
+                     "    "],
+                    [" DD ",
+                     "D  D",
+                     "D  D",
+                     " 2D ",
+                     "    "],
+                    [" DD ",
+                     "D  D",
+                     "D  D",
+                     " 1D ",
+                     "    "],
+                    ["    ",
+                     " CC ",
+                     " CC ",
+                     " DR ",
+                     "  F "],
+                    ["    ",
+                     " DD ",
+                     " D0 ",
+                     "    ",
+                     " DT "]
+                ],
+                "mapping": {
+                    "D": "minecraft:dirt",
+                    "0": "minecraft:dirt",
+                    "1": "pyrotech:stone_door[facing=east,half=lower,hinge=left]",
+                    "2": "pyrotech:stone_door[facing=east,half=upper,hinge=left]",
+                    "R": "pyrotech:tar_drain[facing=east]",
+                    "C": "pyrotech:tar_collector",
+                    "F": "pyrotech:faucet_stone[facing=east]",
+                    "T": "pyrotech:stone_tank"
+                },
+                "symmetrical": true
+            }
+        },
+        {
+            "type": "text",
+            "text": "Fill the entire structure with valid blocks (like $(item)log piles/$), then light one of the inner blocks on fire and close the door. The structure $(bold)must/$ be filled, or it will fail. Right click the faucet to extract fluids into a tank.$(br)$(br)$(li)4 Stone Collectors$(li)1 Stone Drain$(li)1 Stone Faucet$(li)1 Stone Tank$(li)1 Stone Door$(li)Some $(thing)non-flammable/$ blocks, like dirt."
+        },
+        {
+            "type": "text",
+            "text": "The two recipes of interest for pit burning involve $(item)log piles/$ and $(item)mud blocks/$.$(p)Log piles will give $(item)charcoal and wood tar/$, and mud blocks will give $(item)clay blocks and water/$.$(p)Only fill it with one block type at a time. Harvest the result with a shovel."
+        }
+    ]
+}

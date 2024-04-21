@@ -1,0 +1,21 @@
+{
+    "name": "02. Stone Age",
+    "icon": "minecraft:stone",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "Combine the $(item)rocks/$ and $(item)lumps of clay/$ you get from the water strainers into various types of cobblestone.$(p)Using a $(item)Pit Kiln/$, the cobble can be smelted into its smooth equivalent. You can smelt a stack of up to 8 items at a time."
+        },
+        {
+            "type": "text",
+            "text": "$(item)Stone/$ and $(item)granite/$ are important right now, to allow the creation of the $(item)Granite Anvil/$ and $(item)masonry bricks/$.$(p)Excess rocks can be converted into $(item)gravel/$ in a $(item)Compacting Bin/$, by right clicking it while holding rocks, then right clicking the bin with a shovel."
+        },
+        {
+            "type": "crafting",
+            "recipe": "pyrotech:tech/basic/kiln_pit",
+            "recipe2": "pyrotech:tech/basic/anvil_granite"
+        }
+    ]
+}

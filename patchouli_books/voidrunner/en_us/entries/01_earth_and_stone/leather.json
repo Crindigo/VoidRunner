@@ -1,0 +1,21 @@
+{
+    "name": "Leatherworking",
+    "icon": "minecraft:leather",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "The $(item)Fisherman's Strainer/$ can sometimes pick up $(item)washed hide/$, which you can process into leather products.$(p)To create $(item)tannin/$, place a bucket of water into a barrel with 4 leaves, then cover it with a lid.$(p)The hide can be soaked in the tannin, then left to dry in the sun on a $(item)tanning rack/$."
+        },
+        {
+            "type": "crafting",
+            "recipe": "pyrotech:tech/basic/barrel",
+            "recipe2": "pyrotech:tech/basic/barrel_lid"
+        },
+        {
+            "type": "crafting",
+            "recipe": "pyrotech:tech/basic/tanning_rack"
+        }
+    ]
+}
