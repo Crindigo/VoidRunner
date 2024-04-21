@@ -1,0 +1,24 @@
+{
+    "name": "10. First Metals",
+    "icon": "pyrotech:bloomery",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "By soaking some gravel in various stone extracts, the extract will infuse the gravel and transform it into different types of ore.$(br2)Place up to 8 ore of the same type in the top of a Bloomery, followed by fuel like coal or charcoal, then ignite it."
+        },
+        {
+            "type": "text",
+            "text": "Adding more fuel, fuel with higher burn times, or fuel blocks will decrease the processing time.$(br2)The process can also be sped up by placing Bellows next to the Bloomery, and standing on it to force air into the fire.$(br2)After your first ingots, you can upgrade this to a Mechanical Bellows."
+        },
+        {
+            "type": "text",
+            "text": "Once the process is done, remove the ash with a shovel, then pull out the bloom. It's not as hot as it looks.$(br2)Place the bloom onto a Granite Anvil, and use a hammer on it to get several ingots of metals, depending on how much ore you added to the Bloomery.$(br2)The Granite Anvil will break over time, so upgrading to an Ironclad Anvil is recommended."
+        },
+        {
+            "type": "text",
+            "text": "With iron, copper, and tin, you can now make some tools, make a furnace, and enter the Steam Age.$(br2)Magnetite Ore gives iron & gold.$(br2)Chalcopyrite Ore gives copper & cobalt.$(br2)Cassiterite ore gives tin & bismuth."
+        }
+    ]
+}

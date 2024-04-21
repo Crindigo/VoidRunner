@@ -165,6 +165,7 @@ def rockCompression = [
     [item('pyrotech:cobblestone', 2), item('pyrotech:rock', 1) * 8],
     [item('pyrotech:cobblestone', 3), item('pyrotech:rock', 8) * 8],
     [item('minecraft:clay_ball'), item('pyrotech:material', 17) * 4],
+    [item('minecraft:flint'), item('pyrotech:material', 10) * 4],
     // add mud and dirt
 ];
 for ( rockRecipe in rockCompression ) {
@@ -458,6 +459,15 @@ createBlastBlooming('oreCassiterite', 'crafttweaker:bloom_from_tin_ore');
 createBlastBlooming('oreSphalerite', 'crafttweaker:bloom_from_zinc_ore');
 createBlastBlooming('oreGalena', 'crafttweaker:bloom_from_galena_ore');
 
+// this is fucking bugged as hell, just use the compressor to make flint from small flint
+/*
+mods.gregtech.macerator.recipeBuilder()
+    .inputs(item('pyrotech:material', 10) * 4)
+    .outputs(metaitem('dustFlint'))
+    .duration(20) // 5 ticks bugs out large grinder
+    .EUt(2)
+    .buildAndRegister();
+*/
 
 recipemap('evap_pool').recipeBuilder()
     .fluidInputs(fluid('water') * 1000)

@@ -41,7 +41,7 @@ crafting.shapedBuilder()
     .key('W', ore('slabWood'))
     .register();
 
-crafting.remove('pyrotech:tech/machine/bellows');
+/*crafting.remove('pyrotech:tech/machine/bellows');
 crafting.shapedBuilder()
     .name('bellows')
     .output(item('pyrotech:bellows'))
@@ -53,7 +53,7 @@ crafting.shapedBuilder()
     .key('C', item('minecraft:carpet'))
     .key('R', ore('stickStone'))
     .key('S', item('pyrotech:masonry_brick_block'))
-    .register();
+    .register();*/
 
 // pyrotech brick machines use iron plates, except for kiln which uses wrought iron.
 crafting.remove('pyrotech:tech/machine/brick_crucible');

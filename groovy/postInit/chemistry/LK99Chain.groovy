@@ -1,7 +1,7 @@
 import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 
-// mixer: 288L lead + 2000L oxygen => 2PbO
-
+// mixer: 144L lead + 1000L oxygen => 2PbO
+// or reactor or arc furnace: 2 PbS + 3000L O => 2 PbO + 1000L SO2 (from galena dust)
 
 // lead(ii) sulfate = PbSO4
 // 2PbO + 1000L H2SO4 => 6PbSO4 + 1000L water
@@ -11,6 +11,9 @@ import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 
 // 3Cu + P => 4Cu3P
 
+// total 10 lead, 5 sulfur, 18 copper, 6 phosphorus
+// excess returns 17 copper, 5 sulfur, 1 lead
+// so 9 lead, 1 copper, 6 phosphorus in the mixture (plus 25 oxygen)
 
 // 40 Pb2(SO4)O + 24 Cu3P => 41 Pb9Cu(PO4)6O + 15 Cu2S + 7 Cu + Pb
 // maybe we make one LK99 Mixture Dust and centrifuge. don't know if we can do either-or on output for good/bad lk99.

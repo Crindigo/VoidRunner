@@ -1,0 +1,27 @@
+{
+    "name": "01. Water Straining",
+    "icon": "waterstrainer:strainer_base",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "The water here has a lot of junk in it. It never seems to run out. Make something to strain items out of flowing water, and get as much as you can.$(br2)More durable strainers can be made later on, but wood and twine have to do at first."
+        },
+        {
+            "type": "crafting",
+            "recipe": "voidrunner:strainer_base",
+            "recipe2": "voidrunner:strainer_net"
+        },
+        {
+            "type": "crafting",
+            "recipe": "voidrunner:strainer_net_dense",
+            "recipe2": "waterstrainer:strainer_survivalist"
+        },
+        {
+            "type": "crafting",
+            "recipe": "waterstrainer:strainer_survivalist_dense",
+            "recipe2": "waterstrainer:strainer_fisherman"
+        }
+    ]
+}

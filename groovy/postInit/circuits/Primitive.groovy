@@ -50,7 +50,7 @@ crafting.shapedBuilder()
     .shape(' g ', ' f ', 'wrw')
     .key('f', ore('foilZinc'))
     .key('g', metaitem('component.glass.tube'))
-    .key('w', ore('wireGtSingleCopper'))
+    .key('w', ore('wireGtSingleCopper') | ore('wireGtSingleTin'))
     .key('r', ore('ringIron'))
     .register();
 
@@ -84,6 +84,7 @@ crafting.remove('gregtech:coated_board_1x');
 crafting.remove('gregtech:basic_circuit_board');
 crafting.shapedBuilder()
     .name('basic_board')
+    .output(metaitem('circuit_board.basic'))
     .shape(' w ', 'wbw', ' w ')
     .key('w', ore('wireGtSingleCopper'))
     .key('b', metaitem('board.coated'))

@@ -1,0 +1,7 @@
+{
+    "name": "Worn Notebook",
+    "subtitle": "Lost notes from the past",
+    "landing_text": "To whomever reads this in the future. I don't know how long I have left. I am hoping these notes will get you further than I could.",
+    "book_texture": "patchouli:textures/gui/book_purple.png",
+    "model": "patchouli:book_purple"
+}

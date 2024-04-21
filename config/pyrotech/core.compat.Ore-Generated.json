@@ -58,10 +58,13 @@
       "slagColor": "ffaa1c",
       "langKey": [
         "gregtech:tile.ore_block",
+        "mysticalworld:tile.copper_ore",
+        "nuclearcraft:tile.nuclearcraft.ore.copper",
         "thermalfoundation:tile.thermalfoundation.ore.copper"
       ],
       "output": [
         "gregtech:meta_nugget:25",
+        "mysticalworld:copper_nugget:0",
         "thermalfoundation:material:192"
       ],
       "bloomYieldMinMax": [
@@ -131,6 +134,7 @@
       "slagColor": "95afee",
       "langKey": [
         "gregtech:tile.ore_block",
+        "nuclearcraft:tile.nuclearcraft.ore.lead",
         "thermalfoundation:tile.thermalfoundation.ore.lead"
       ],
       "output": [
@@ -205,10 +209,12 @@
       "slagColor": "e8f6fd",
       "langKey": [
         "gregtech:tile.ore_block",
+        "mysticalworld:tile.silver_ore",
         "thermalfoundation:tile.thermalfoundation.ore.silver"
       ],
       "output": [
         "gregtech:meta_nugget:100",
+        "mysticalworld:silver_nugget:0",
         "thermalfoundation:material:194"
       ],
       "bloomYieldMinMax": [
@@ -224,11 +230,29 @@
       "slagColor": "c3e9ff",
       "langKey": [
         "gregtech:tile.ore_block",
+        "nuclearcraft:tile.nuclearcraft.ore.tin",
         "thermalfoundation:tile.thermalfoundation.ore.tin"
       ],
       "output": [
         "gregtech:meta_nugget:112",
         "thermalfoundation:material:193"
+      ],
+      "bloomYieldMinMax": [
+        12,
+        15
+      ],
+      "slagBloomYieldMinMax": [
+        12,
+        15
+      ]
+    },
+    "oreUranium": {
+      "slagColor": "5c734b",
+      "langKey": [
+        "nuclearcraft:tile.nuclearcraft.ore.uranium"
+      ],
+      "output": [
+        "gregtech:meta_nugget:116"
       ],
       "bloomYieldMinMax": [
         12,

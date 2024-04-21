@@ -1,0 +1,20 @@
+{
+    "name": "09. Refractory Extracts",
+    "icon": "pyrotech:refractory_brick_block",
+    "category": "01_earth_and_stone",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "With refractory bricks available, you can upgrade your Pit Burning setup to become Refractory Burning, which increases your success chance and unlocks new recipes.$(br2)Of particular interest are the recipes that turn Stone, Granite, Diorite, Andesite, and Limestone into their extract form."
+        },
+        {
+            "type": "text",
+            "text": "Like with pit burning, the blocks you want to process need to be fully enclosed, but this time they can only be enclosed using refractory brick blocks, refractory glass, and refractory doors, with refractory collectors on the bottom.$(br2)A valid and efficient setup could have a 2x2 of collectors on the bottom, a 2x2 of brick blocks on top, and 8 doors on the sides, properly aligned so they are flush with no gaps."
+        },
+        {
+            "type": "text",
+            "text": "Likewise, to extract the fluids, use a refractory drain, faucet, and tank.$(br2)For stone extracts, this setup will give you 2,000L each process, enough for 16 ore blocks."
+        }
+    ]
+}
