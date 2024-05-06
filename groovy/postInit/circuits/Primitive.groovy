@@ -28,7 +28,7 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 // Vacuum Tube * 4
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
 
-// no iron ring for assembler
+// no iron ring for assembler (unless i make it extrudable in LV)
 mods.gregtech.assembler.recipeBuilder()
     .inputs(metaitem('component.glass.tube'), ore('foilZinc'), ore('wireGtSingleCopper') * 2)
     .outputs(metaitem('circuit.vacuum_tube') * 2)
@@ -51,7 +51,7 @@ crafting.shapedBuilder()
     .key('f', ore('foilZinc'))
     .key('g', metaitem('component.glass.tube'))
     .key('w', ore('wireGtSingleCopper') | ore('wireGtSingleTin'))
-    .key('r', ore('ringIron'))
+    .key('r', ore('ringIron') | ore('ringSteel') | ore('ringWroughtIron'))
     .register();
 
 // carbon-clay compound
@@ -63,6 +63,35 @@ crafting.addShapeless("carbon_clay_compound3", metaitem("voidrunner:carbon_clay_
     [ore('dustCoke'), ore('dustClay')]);
 crafting.addShapeless("carbon_clay_compound4", metaitem("voidrunner:carbon_clay_compound_dust") * 2,
     [ore('dustCarbon'), ore('dustClay')]);
+
+// add mixer recipes for carbon-clay compound too
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustCoal'), ore('dustClay'))
+    .outputs(metaitem('voidrunner:carbon_clay_compound_dust') * 2)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustCharcoal'), ore('dustClay'))
+    .outputs(metaitem('voidrunner:carbon_clay_compound_dust') * 2)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustCoke'), ore('dustClay'))
+    .outputs(metaitem('voidrunner:carbon_clay_compound_dust') * 4)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustCarbon'), ore('dustClay'))
+    .outputs(metaitem('voidrunner:carbon_clay_compound_dust') * 4)
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
 
 furnace.add(metaitem('voidrunner:carbon_clay_compound_dust'), metaitem('voidrunner:carbon_resistor_core_bolt'));
 

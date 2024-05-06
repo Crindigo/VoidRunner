@@ -1,0 +1,20 @@
+{
+    "name": "02. Steel Production",
+    "icon": "gregtech:meta_ingot:324",
+    "category": "02_steam_and_steel",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "To produce steel, create a $(item)Primitive Blast Furnace/$ or four. You'll need 33 $(item)Firebricks/$ for the first one.$(p)If you wall-share on one side, you need 21 Firebricks. On two sides, 13. A square of four PBFs would need 88 total. A line of four is 96."
+        },
+        {
+            "type": "text",
+            "text": "A $(item)steam macerator/$ and $(item)steam compressor/$ are necessary to create the component bricks.$(p)Once you have steel, look into upgrading your boilers and steam machines for more steam production and faster processing."
+        },
+        {
+            "type": "text",
+            "text": "The Primitive Blast Furnace can also be used to convert basic ores into blooms instead of needing to manage a bloomery. A $(item)Trip Hammer/$ can automate the hammering of blooms into items."
+        }
+    ]
+}

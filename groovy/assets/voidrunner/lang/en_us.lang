@@ -11,6 +11,9 @@ voidrunner.material.potassium_hydroxide=Potassium Hydroxide
 voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
 
+voidrunner.material.formaldehyde=Formaldehyde
+voidrunner.material.bakelite=Bakelite
+
 item.voidrunner.shiny_stone_chunk.name=Shiny Stone Chunk
 item.voidrunner.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.shiny_stone_chunk.name=Shiny Stone Chunk

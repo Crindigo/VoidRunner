@@ -22,12 +22,17 @@ class VoidMaterials
     // second degree
     public static Material PotassiumChlorideSolution;
     public static Material PotassiumHydroxideSolution;
+
+    // ochem
+    public static Material Formaldehyde;
+    public static Material Bakelite;
     
     public static void init()
     {
         OreProcMaterials.init();
         FirstDegreeMaterials.init();
         SecondDegreeMaterials.init();
+        OchemMaterials.init();
     }
 
     public static ResourceLocation voidId(String name) {
@@ -37,5 +42,13 @@ class VoidMaterials
     public static Material.Builder newBuilder(int id, String name) {
         //return GSUtil.newMaterialBuilder(id, voidId(name));
         return new Material.Builder(id, voidId(name));
+    }
+
+    public static Material material(int id, String name, @DelegatesTo(Material.Builder) Closure cl) {
+        def mb = new Material.Builder(id, voidId(name))
+        def code = cl.rehydrate(mb, this, this)
+        code.resolveStrategy = Closure.DELEGATE_ONLY
+        code()
+        return mb.build()
     }
 }

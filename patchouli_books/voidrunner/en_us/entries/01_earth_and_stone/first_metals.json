@@ -18,7 +18,7 @@
         },
         {
             "type": "text",
-            "text": "With iron, copper, and tin, you can now make some tools, make a furnace, and enter the Steam Age.$(br2)Magnetite Ore gives iron & gold.$(br2)Chalcopyrite Ore gives copper & cobalt.$(br2)Cassiterite Ore gives tin & bismuth."
+            "text": "With iron, copper, and tin, you can now make some tools, iron buckets, some furnaces, and enter the Steam Age.$(br2)Magnetite Ore gives wrought iron & gold.$(br2)Chalcopyrite Ore gives copper & cobalt.$(br2)Cassiterite Ore gives tin & bismuth.$(p)A $(item)Refractory Kiln/$ can be used to turn your first wrought iron into normal iron."
         }
     ]
 }

@@ -1,0 +1,21 @@
+{
+    "name": "01. Beginning Steam",
+    "icon": "gregtech:machine:5",
+    "category": "02_steam_and_steel",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "A good source of steam to start is the $(item)Small Steam Liquid Boiler/$. You can fuel it with lava, which is easily generated from cobblestone in a $(item)Refractory Crucible/$.$(p)The first machine you need is a $(item)Steam Alloy Smelter/$, which lets you make $(item)coke bricks/$ for the $(item)Coke Oven/$, and easier $(item)bronze/$."
+        },
+        {
+            "type": "text",
+            "text": "All steam boilers must be kept supplied with water at all times. Water going into an empty hot boiler will $(bold)explode/$. A $(item)Primitive Water Pump/$ will help immensely, as it generates 250L of water per second for free.$(p)It just needs treated wood, created from creosote, which is made either in a Refractory Burn setup (with charcoal blocks) or a Coke Oven."
+        },
+        {
+            "type": "crafting",
+            "recipe": "gregtech:steam_boiler_lava_bronze",
+            "recipe2": "gregtech:steam_alloy_smelter_bronze"
+        }
+    ]
+}

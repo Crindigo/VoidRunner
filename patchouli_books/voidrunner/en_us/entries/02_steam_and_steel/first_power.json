@@ -1,0 +1,21 @@
+{
+    "name": "03. Electricity at Last",
+    "icon": "gregtech:machine:950",
+    "category": "02_steam_and_steel",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "With a handful of steam processing capability, you can now move on to making circuits and steam turbines.$(p)The $(item)Primitive Circuit/$ is the first and only one you can make right now. It's rather expensive, requiring several components, but will get easier later on."
+        },
+        {
+            "type": "crafting",
+            "recipe": "voidrunner:circuit_primitive",
+            "recipe2": "gregtech:steam_turbine_lv"
+        },
+        {
+            "type": "text",
+            "text": "The first machines you should look at are the $(item)Wiremill/$, $(item)Bending Machine/$, and $(item)Lathe/$, which will make basic materials more efficiently.$(p)After that, an $(item)Assembler/$ will help with circuit components and other components, as it's more precise than your hands."
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Basic Automation",
+    "icon": "gregtech:machine:5",
+    "category": "02_steam_and_steel",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "Even during the steam age, you can start automating your basic ore resources.$(p)Using a sifter, compressor, multiple coke ovens, several soaking pots, a rock breaker, and two forge hammers, you can automate all the current ore types.$(p)Use all the cobalt from copper production for easy item pipes."
+        },
+        {
+            "type": "text",
+            "text": "Power can also be automated by using a steam botany grower and coke oven for charcoal, feeding a refractory crucible supplied with cobblestone from a rock breaker.$(p)The refractory igniter can start the fire in the crucible when given a redstone signal."
+        }
+    ]
+}

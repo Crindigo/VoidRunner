@@ -1,0 +1,12 @@
+{
+    "name": "Steam Multiblocks",
+    "icon": "gregtech:machine:1025",
+    "category": "02_steam_and_steel",
+    "read_by_default": true,
+    "pages": [
+        {
+            "type": "text",
+            "text": "It's $(bold)very/$ worth looking into the multiblock $(item)Steam Grinder/$ and $(item)Steam Oven/$. While they take 50% longer to process recipes compared to the high pressure singleblocks, they can do 8 at a time, and only consume small amounts of steam.$(p)They also auto-input and auto-output to inventories."
+        }
+    ]
+}

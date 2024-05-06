@@ -49,7 +49,7 @@ class OreProcMaterials
             .iconSet("fine")
             .components(Salt, 1, RockSalt, 1)
             .colorAverage()
-            .flags("decomposition_by_electrolyzing")
+            .flags("decomposition_by_centrifuging")
             .build();
     }
 }
