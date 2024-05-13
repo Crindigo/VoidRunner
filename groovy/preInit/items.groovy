@@ -13,6 +13,7 @@ eventManager.listen { PostMaterialEvent event ->
     m.addItem(1, "shiny_stone_chunk");
     m.addItem(2, "shiny_magma_chunk");
     m.addItem(3, "leyden_jar");
+    m.addItem(4, "resistor_carbon_pile");
 
     MetaOreDictItem d = new MetaOreDictItem((short) 0);
     d.setRegistryName("voidrunner:ore_dict_item");
@@ -21,7 +22,6 @@ eventManager.listen { PostMaterialEvent event ->
     d.addOreDictItem(1, "cork", 0xd08757, MaterialIconSet.WOOD, OrePrefix.crushed);
     d.addOreDictItem(2, "carbon_clay_compound", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(3, "carbon_resistor_core", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.bolt);
-
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

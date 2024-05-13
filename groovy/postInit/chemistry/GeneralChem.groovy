@@ -1,3 +1,5 @@
+// Potassium Hydroxide
+
 // mixer: 2 rock salt + 1000L water -> 1000L potassium chloride solution
 mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('dustRockSalt') * 2)

@@ -187,6 +187,10 @@ SoakingPot.addRecipe("gravel_to_lead",
 SoakingPot.addRecipe("gravel_to_dirt",
     <minecraft:dirt>, <liquid:dirt_extract> * 250, <minecraft:gravel>, false, 2 * 60 * 20);
 
+// gravel in ultramafic ext -> pentlandite
+SoakingPot.addRecipe("gravel_to_nickel",
+    <gregtech:ore_pentlandite_0:0>, <liquid:ultramafic_extract> * 125, <minecraft:gravel>, false, 4 * 60 * 20);
+
 // leaves in dirt ext barrel -> nature extract
 Barrel.addRecipe("nature_extract", <liquid:nature_extract> * 1000, <liquid:dirt_extract> * 1000, 
     [<ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>, <ore:treeLeaves>], 4 * 60 * 20);

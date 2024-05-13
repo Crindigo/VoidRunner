@@ -132,3 +132,22 @@ crafting.shapedBuilder()
     .key('v', metaitem('circuit.vacuum_tube'))
     .key('c', ore('toolWireCutter'))
     .register();
+
+// assembler recipe
+
+
+
+//
+// PRIMITIVE ARRAY
+//
+
+// williams tube
+
+
+// wire-spring relay
+
+
+// crafting recipe
+
+
+// assembler recipe

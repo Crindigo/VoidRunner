@@ -4,6 +4,7 @@ import gregtech.api.unification.material.Material;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.fluids.attribute.FluidAttributes;
 
 class OreProcMaterials
 {
@@ -50,6 +51,16 @@ class OreProcMaterials
             .components(Salt, 1, RockSalt, 1)
             .colorAverage()
             .flags("decomposition_by_centrifuging")
+            .build();
+        
+        AcidicDirtExtract = newBuilder(9, "acidic_dirt_extract")
+            .liquid(new FluidBuilder().temperature(293).attribute(FluidAttributes.ACID))
+            .color(0x8A5125)
+            .build();
+
+        UltramaficExtract = newBuilder(10, "ultramafic_extract")
+            .liquid(293)
+            .color(0xA59605)
             .build();
     }
 }

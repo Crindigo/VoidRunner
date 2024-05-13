@@ -6,10 +6,21 @@ voidrunner.material.limestone_extract=Limestone Extract
 voidrunner.material.dirt_extract=Dirt Extract
 voidrunner.material.nature_extract=Nature Extract
 voidrunner.material.salt_evaporate=Salt Evaporate
+voidrunner.material.acidic_dirt_extract=Acidic Dirt Extract
+voidrunner.material.ultramafic_extract=Ultramafic Extract
 
 voidrunner.material.potassium_hydroxide=Potassium Hydroxide
+voidrunner.material.lead_oxide=Lead Oxide
+voidrunner.material.lead_sulfate=Lead Sulfate
+voidrunner.material.lanarkite=Lanarkite
+voidrunner.material.copper_phosphide=Copper Phosphide
+voidrunner.material.copper_sulfide=Copper Sulfide
+
 voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
+voidrunner.material.lk_99_good=LK99
+
+voidrunner.material.lk_99_mixture=LK99 Mixture
 
 voidrunner.material.formaldehyde=Formaldehyde
 voidrunner.material.bakelite=Bakelite
@@ -19,6 +30,7 @@ item.voidrunner.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.shiny_stone_chunk.name=Shiny Stone Chunk
 metaitem.shiny_magma_chunk.name=Shiny Magma Chunk
 metaitem.leyden_jar.name=Leyden Jar
+metaitem.resistor_carbon_pile.name=Carbon Pile Resistor
 
 metaitem.cork_crushed.name=Cork
 metaitem.carbon_clay_compound_dust.name=Carbon-Clay Compound

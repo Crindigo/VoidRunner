@@ -15,13 +15,25 @@ class VoidMaterials
     public static Material DirtExtract;
     public static Material NatureExtract;
     public static Material SaltEvaporate;
+    public static Material AcidicDirtExtract;
+    public static Material UltramaficExtract;
 
     // first degree
     public static Material PotassiumHydroxide;
+    public static Material LeadOxide;
+    public static Material LeadSulfate;
+    public static Material Lanarkite;
+    public static Material CopperPhosphide;
+    public static Material CopperSulfide;
+    public static Material SodiumSulfate;
 
     // second degree
     public static Material PotassiumChlorideSolution;
     public static Material PotassiumHydroxideSolution;
+    public static Material LK99Good;
+
+    // third degree
+    public static Material LK99Mixture;
 
     // ochem
     public static Material Formaldehyde;
@@ -32,6 +44,7 @@ class VoidMaterials
         OreProcMaterials.init();
         FirstDegreeMaterials.init();
         SecondDegreeMaterials.init();
+        ThirdDegreeMaterials.init();
         OchemMaterials.init();
     }
 

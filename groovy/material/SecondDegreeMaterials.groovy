@@ -22,5 +22,17 @@ class SecondDegreeMaterials
             .components(PotassiumHydroxide, 1, Water, 1)
             .colorAverage()
             .build();
+
+        // Pb9Cu(PO4)6O
+        // EBF generated recipes always 120eu/t unless override given.
+        // EBF duration default is mass * temperature / 50
+        LK99Good = material(2002, "lk_99_good") {
+            ingot()
+            cableProperties 128, 4, 0, true, 78
+            components Lead, 9, Copper, 1, Phosphate, 6, Oxygen, 1
+            flags 'disable_decomposition'
+            blastTemp 1700, "LOW", 120, 900
+            colorAverage()
+        }
     }
 }
