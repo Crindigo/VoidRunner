@@ -106,9 +106,19 @@ crafting.shapedBuilder()
     .key('c', metaitem('voidrunner:carbon_resistor_core_bolt'))
     .register();
 
-// made in soaking pot
+// made in soaking pot or chem bath
 crafting.remove('gregtech:coated_board');
 crafting.remove('gregtech:coated_board_1x');
+
+// SoakingPot.addRecipe("basic_circuit_board", <metaitem:board.coated>, <liquid:glue> * 250, <ore:plateWood>, false, 1200);
+mods.gregtech.chemical_bath.recipeBuilder()
+    .inputs(ore('plateWood'))
+    .fluidInputs(fluid('glue') * 250)
+    .outputs(metaitem('board.coated'))
+    .duration(60)
+    .EUt(16)
+    .buildAndRegister();
+
 // make basic board only need 4 wire
 crafting.remove('gregtech:basic_circuit_board');
 crafting.shapedBuilder()
@@ -119,17 +129,41 @@ crafting.shapedBuilder()
     .key('b', metaitem('board.coated'))
     .register();
 
+// relay - fine copper wire, fine silver wire, magnetic iron rod
+crafting.shapedBuilder()
+    .name('relay')
+    .output(metaitem('voidrunner:relay') * 2)
+    .shape('p  ', 'wb ', 'wr ')
+    .key('p', ore('plateIron'))
+    .key('w', ore('wireFineCopper'))
+    .key('b', ore('boltIron'))
+    .key('r', ore('stickIronMagnetic'))
+    .register();
+
+// williams tube
+crafting.shapedBuilder()
+    .name('williams_tube')
+    .output(metaitem('voidrunner:williams_tube'))
+    .shape(' f ', 'ptp', ' e ')
+    .key('f', ore('foilIron'))
+    .key('p', ore('dustSmallSphalerite'))
+    .key('t', metaitem('circuit.vacuum_tube'))
+    .key('e', ore('stickCopper'))
+    .register();
+
 // Final circuit - leyden jar(s), vacuum tube(s), resistor(s), on a board?
 crafting.remove('gregtech:electronic_circuit_lv');
 crafting.shapedBuilder()
     .name('circuit_primitive')
-    .output(metaitem('circuit.electronic'))
-    .shape('wjw', 'rbr', 'vcv')
+    .output(metaitem('voidrunner:circuit_primitive'))
+    .shape('wjw', 'rbR', 'vcW')
     .key('w', ore('wireFineCopper'))
     .key('j', metaitem('voidrunner:leyden_jar'))
     .key('r', metaitem('component.resistor'))
+    .key('R', metaitem('voidrunner:relay'))
     .key('b', metaitem('circuit_board.basic'))
     .key('v', metaitem('circuit.vacuum_tube'))
+    .key('W', metaitem('voidrunner:williams_tube'))
     .key('c', ore('toolWireCutter'))
     .register();
 
@@ -138,16 +172,46 @@ crafting.shapedBuilder()
 
 
 //
-// PRIMITIVE ARRAY
+// PRIMITIVE COMPUTER
 //
 
-// williams tube
 
+// casing = steel plate
+// storage = drum memory
+// cooling = just bronze rotor
 
-// wire-spring relay
+crafting.shapedBuilder()
+    .name('drum_memory')
+    .output(metaitem('voidrunner:drum_memory'))
+    .shape(' p ', 'rp ', 'mp ')
+    .key('p', ore('plateIron'))
+    .key('r', ore('stickIronMagnetic'))
+    .key('m', metaitem('electric.motor.lv'))
+    .register();
 
 
 // crafting recipe
+// PRP
+// WCW
+// PSP
+// 4 plate, rotor, 2 wire, circuit, storage
 
+crafting.shapedBuilder()
+    .name('computer_primitive')
+    .output(metaitem('voidrunner:computer_primitive'))
+    .shape('prp', 'wcw', 'psp')
+    .key('p', ore('plateSteel'))
+    .key('r', ore('rotorTin'))
+    .key('w', ore('wireGtSingleCopper'))
+    .key('c', metaitem('voidrunner:circuit_primitive'))
+    .key('s', metaitem('voidrunner:drum_memory'))
+    .register();
 
 // assembler recipe
+
+
+
+// remove GT circuits
+mods.jei.yeet(metaitem('circuit.electronic'));
+mods.jei.yeet(metaitem('circuit.basic_integrated'));
+mods.jei.yeet(metaitem('circuit.microprocessor'));

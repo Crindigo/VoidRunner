@@ -20,7 +20,7 @@ class OchemMaterials
         // needs a liquid, solid chunk, dust, plate
         Bakelite = material(5001, 'bakelite') {
             gem()
-            liquid()
+            liquid(new FluidBuilder().temperature(393))
             flags("no_unification", "generate_plate")
             color(0xeb6942)
             iconSet("QUARTZ")

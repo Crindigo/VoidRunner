@@ -36,7 +36,7 @@ mods.gregtech.chemical_bath.recipeBuilder()
 mods.gregtech.extractor.recipeBuilder()
     .inputs(ore('dirt'))
     .outputs(item('minecraft:dirt', 1))
-    .fluidOutputs(fluid('dirt_extract'), 1000)
+    .fluidOutputs(fluid('dirt_extract') * 1000)
     .duration(480)
     .EUt(10)
     .buildAndRegister();

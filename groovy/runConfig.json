@@ -12,6 +12,7 @@
       "preInit/"
     ],
     "postInit": [
+      "prePostInit/",
       "postInit/"
     ]
   }

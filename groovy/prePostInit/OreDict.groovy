@@ -14,3 +14,9 @@ oreDict.add('dustAsh', item('pyrotech:material', 0));
 oreDict.add('dustWood', item('pyrotech:rock', 7));
 
 oreDict.add('dyeBlue', metaitem('dustCobalt'));
+
+// New circuits
+oreDict.add('circuitLv', metaitem('voidrunner:computer_primitive'));
+oreDict.add('circuitMv', metaitem('voidrunner:computer_retro'));
+oreDict.add('circuitHv', metaitem('voidrunner:computer_standard'));
+oreDict.add('circuitEv', metaitem('voidrunner:computer_reliable'));

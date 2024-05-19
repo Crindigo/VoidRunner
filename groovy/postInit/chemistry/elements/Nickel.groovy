@@ -34,13 +34,13 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(200)
     .buildAndRegister();
 
-// may want to organize all these xxx + extract chem bath recipes somewhere
+// may want to organize all these xxx + extract chem bath recipes somewhere. 10x faster at hv. 2.5x faster at lv.
 mods.gregtech.chemical_bath.recipeBuilder()
     .inputs(item('minecraft:gravel'))
     .fluidInputs(fluid('ultramafic_extract') * 125)
     .outputs(item('gregtech:ore_pentlandite_0:0'))
-    .EUt(240)
-    .duration(60)
+    .EUt(60)
+    .duration(120)
     .buildAndRegister();
 
 // Mond proc for pure nickel
