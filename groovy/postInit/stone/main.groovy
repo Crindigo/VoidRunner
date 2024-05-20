@@ -1,3 +1,5 @@
+package stone;
+
 crafting.remove('pyrotech:clay');
 
 // remove extra hopper recipes, one with no ID, have to re-add GT one (unless it's just a JEI/GS bug)
@@ -18,7 +20,7 @@ furnace.removeByInput(item('minecraft:clay_ball'));
 
 
 // remove crude drying rack and make the normal one only use fiber instead of twine
-mods.jei.yeet(item('pyrotech:drying_rack', 0));
+mods.jei.ingredient.yeet(item('pyrotech:drying_rack', 0));
 crafting.remove('pyrotech:tech/basic/drying_rack');
 crafting.shapedBuilder()
     .name('drying_rack')

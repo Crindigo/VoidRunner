@@ -1,3 +1,5 @@
+package circuits;
+
 // cork - alloy smelt sticky resin + wood dust
 mods.gregtech.alloy_smelter.recipeBuilder()
     .inputs(ore('dustWood'), metaitem('rubber_drop'))
@@ -212,6 +214,6 @@ crafting.shapedBuilder()
 
 
 // remove GT circuits
-mods.jei.yeet(metaitem('circuit.electronic'));
-mods.jei.yeet(metaitem('circuit.basic_integrated'));
-mods.jei.yeet(metaitem('circuit.microprocessor'));
+mods.jei.ingredient.yeet(metaitem('circuit.electronic'));
+mods.jei.ingredient.yeet(metaitem('circuit.basic_integrated'));
+mods.jei.ingredient.yeet(metaitem('circuit.microprocessor'));

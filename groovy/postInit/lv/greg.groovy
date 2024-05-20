@@ -1,3 +1,5 @@
+package lv;
+
 crafting.remove('minecraft:clock');
 
 
@@ -31,6 +33,25 @@ mods.gregtech.chemical_bath.recipeBuilder()
     .outputs(item('minecraft:dirt'))
     .duration(120)
     .EUt(15)
+    .buildAndRegister();
+
+// chem bath twine + 125 wood tar => durable twine (soaking pot is 225t each)
+// chem bath durable twine + 125 water => string
+mods.gregtech.chemical_bath.recipeBuilder()
+    .inputs(item('pyrotech:material', 14))
+    .fluidInputs(fluid('wood_tar') * 125)
+    .outputs(item('pyrotech:material', 26))
+    .duration(90)
+    .EUt(7)
+    .buildAndRegister();
+
+// technically ore washer better here?
+mods.gregtech.ore_washer.recipeBuilder()
+    .inputs(item('pyrotech:material', 26))
+    .fluidInputs(fluid('water') * 100)
+    .outputs(item('minecraft:string'))
+    .duration(8)
+    .EUt(4)
     .buildAndRegister();
 
 mods.gregtech.extractor.recipeBuilder()

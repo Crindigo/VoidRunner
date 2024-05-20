@@ -48,7 +48,7 @@ class OreProcMaterials
         SaltEvaporate = newBuilder(8, "salt_evaporate")
             .dust()
             .iconSet("fine")
-            .components(Salt, 1, RockSalt, 1)
+            .components(Salt, RockSalt)
             .colorAverage()
             .flags("decomposition_by_centrifuging")
             .build();

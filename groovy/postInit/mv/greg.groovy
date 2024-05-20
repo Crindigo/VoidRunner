@@ -1,3 +1,5 @@
+package mv;
+
 // Infinite Water Cover * 1
 mods.gregtech.assembler.removeByInput(480, 
     [metaitem('electric.pump.hv') * 2, item('minecraft:cauldron'), metaitem('circuit.advanced_integrated')], null)

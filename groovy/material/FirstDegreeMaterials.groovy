@@ -12,27 +12,27 @@ class FirstDegreeMaterials
     {
         PotassiumHydroxide = newBuilder(1000, "potassium_hydroxide")
             .dust()
-            .components(Potassium, 1, Oxygen, 1, Hydrogen, 1)
+            .components(Potassium, Oxygen, Hydrogen)
             .colorAverage()
             .build();
 
         LeadOxide = material(1001, "lead_oxide") {
             dust()
-            components Lead, 1, Oxygen, 1
+            components Lead, Oxygen
             flags 'disable_decomposition'
             colorAverage()
         }
 
         LeadSulfate = material(1002, "lead_sulfate") {
             dust()
-            components Lead, 1, Sulfur, 1, Oxygen, 4
+            components Lead, Sulfur, Oxygen * 4
             flags 'disable_decomposition'
             colorAverage()
         }
 
         Lanarkite = material(1003, "lanarkite") {
             dust()
-            components Lead, 2, Sulfur, 1, Oxygen, 5
+            components Lead * 2, Sulfur, Oxygen * 5
             flags 'disable_decomposition'
             colorAverage()
         }
@@ -40,14 +40,14 @@ class FirstDegreeMaterials
 
         CopperPhosphide = material(1004, "copper_phosphide") {
             dust()
-            components Copper, 3, Phosphorus, 1
+            components Copper * 3, Phosphorus
             flags 'disable_decomposition'
             colorAverage()
         }
 
         CopperSulfide = material(1005, "copper_sulfide") {
             dust()
-            components Copper, 2, Sulfur, 1
+            components Copper * 2, Sulfur
             flags 'decomposition_by_centrifuging'
             colorAverage()
         }
@@ -55,7 +55,7 @@ class FirstDegreeMaterials
         // in GTFO
         /*SodiumSulfate = material(1006, "sodium_sulfate") {
             dust()
-            components(Sodium, 2, Sulfur, 1, Oxygen, 4)
+            components(Sodium * 2, Sulfur, Oxygen * 4)
             flags 'disable_decomposition'
             color(0xefefef)
         }*/

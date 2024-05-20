@@ -1,3 +1,5 @@
+package steam;
+
 println('Hello World!')
 
 def stoneTypes = [

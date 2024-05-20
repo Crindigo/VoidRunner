@@ -1,3 +1,5 @@
+package chemistry;
+
 import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 
 // mixer: 144L lead + 1000L oxygen => 2PbO

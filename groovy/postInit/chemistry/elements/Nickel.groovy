@@ -1,3 +1,5 @@
+package chemistry.elements;
+
 // Ultramafic extract using stone extract and sulfur compound (small sodium sulfide?)  
 
 // 7 NaHSO4 + 2 NaCl -> HCl + 7 Na2SO4

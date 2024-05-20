@@ -10,20 +10,20 @@ class OchemMaterials
 {
     public static void init()
     {
-        Formaldehyde = material(5000, 'formaldehyde') {
-            gas()
-            components(Carbon, 1, Hydrogen, 2, Oxygen, 1)
-            flags("disable_decomposition")
-            colorAverage()
-        }
+        Formaldehyde = newBuilder(5000, 'formaldehyde')
+            .gas()
+            .components(Carbon, Hydrogen * 2, Oxygen)
+            .flags("disable_decomposition")
+            .colorAverage()
+            .build();
         
         // needs a liquid, solid chunk, dust, plate
-        Bakelite = material(5001, 'bakelite') {
-            gem()
-            liquid(new FluidBuilder().temperature(393))
-            flags("no_unification", "generate_plate")
-            color(0xeb6942)
-            iconSet("QUARTZ")
-        }
+        Bakelite = newBuilder(5001, 'bakelite')
+            .gem()
+            .liquid(new FluidBuilder().temperature(393))
+            .flags("no_unification", "generate_plate")
+            .color(0xeb6942)
+            .iconSet("QUARTZ")
+            .build();
     }
 }

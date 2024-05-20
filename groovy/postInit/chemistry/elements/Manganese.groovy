@@ -1,3 +1,5 @@
+package chemistry.elements;
+
 /*
 dirt extract + Hcl = acidic dirt extract  
 electrolyze acidic dirt extract for H, Cl, small Mn dust  
@@ -21,7 +23,7 @@ mods.gregtech.electrolyzer.recipeBuilder()
     .buildAndRegister();
 
 mods.gregtech.electrolyzer.recipeBuilder()
-    .fluidInputs(fluid('acidic_dirt_extract') * 1000)
+    .fluidInputs(fluid('acidic_dirt_extract') * 2000)
     .notConsumable(ore('stickLongManganese'))
     .fluidOutputs(fluid('hydrogen') * 1000, fluid('chlorine') * 1000)
     .outputs(metaitem('dustManganese') * 8)

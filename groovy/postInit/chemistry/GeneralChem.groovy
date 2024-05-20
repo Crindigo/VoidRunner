@@ -1,3 +1,5 @@
+package chemistry;
+
 // Potassium Hydroxide
 
 // mixer: 2 rock salt + 1000L water -> 1000L potassium chloride solution

@@ -2,16 +2,17 @@
 
 def uivHull = metaitem('hull.uiv');
 
-mods.jei.yeet(item('alchemistry:evaporator'));
-mods.jei.yeet(item('alchemistry:electrolyzer'));
-mods.jei.yeet(item('alchemistry:atomizer'));
-mods.jei.yeet(item('alchemistry:liquifier'));
-mods.jei.yeet(item('alchemistry:fission_casing'));
-mods.jei.yeet(item('alchemistry:fission_core'));
-mods.jei.yeet(item('alchemistry:fission_controller'));
-mods.jei.yeet(item('alchemistry:fusion_casing'));
-mods.jei.yeet(item('alchemistry:fusion_core'));
-mods.jei.yeet(item('alchemistry:fusion_controller'));
+/*
+mods.jei.ingredient.yeet(item('alchemistry:evaporator'));
+mods.jei.ingredient.yeet(item('alchemistry:electrolyzer'));
+mods.jei.ingredient.yeet(item('alchemistry:atomizer'));
+mods.jei.ingredient.yeet(item('alchemistry:liquifier'));
+mods.jei.ingredient.yeet(item('alchemistry:fission_casing'));
+mods.jei.ingredient.yeet(item('alchemistry:fission_core'));
+mods.jei.ingredient.yeet(item('alchemistry:fission_controller'));
+mods.jei.ingredient.yeet(item('alchemistry:fusion_casing'));
+mods.jei.ingredient.yeet(item('alchemistry:fusion_core'));
+mods.jei.ingredient.yeet(item('alchemistry:fusion_controller'));
 
 crafting.remove('alchemistry:chemical_dissolver');
 crafting.remove('alchemistry:chemical_combiner');
@@ -35,4 +36,4 @@ crafting.shapedBuilder()
     .key('d', ore('gemDiamond'))
     .key('p', ore('craftingPiston'))
     .key('h', uivHull)
-    .register();
+    .register();*/

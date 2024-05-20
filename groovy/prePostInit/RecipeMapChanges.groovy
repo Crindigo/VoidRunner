@@ -1,3 +1,4 @@
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.RecipeMaps;
 
-GTRecipeHandler.removeAllRecipes(mods.gregtech.circuit_assembler);
+//GTRecipeHandler.removeAllRecipes(RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES);

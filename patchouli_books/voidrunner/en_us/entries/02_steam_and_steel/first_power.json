@@ -6,7 +6,7 @@
     "pages": [
         {
             "type": "text",
-            "text": "With a handful of steam processing capability, you can now move on to making circuits and steam turbines.$(p)The $(item)Primitive Circuit/$ is the first and only one you can make right now. It's rather expensive, requiring several components, but will get easier later on."
+            "text": "With a handful of steam processing capability, you can now move on to making circuits, computers, and steam turbines.$(p)The $(item)Primitive Computer/$ is the first tier you can craft. It's rather expensive, requiring several components, but will get easier later on."
         },
         {
             "type": "crafting",

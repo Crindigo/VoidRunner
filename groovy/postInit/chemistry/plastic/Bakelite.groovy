@@ -1,3 +1,5 @@
+package chemistry.plastic;
+
 def chemReactor = mods.gregtech.chemical_reactor;
 def distillery = mods.gregtech.distillery;
 

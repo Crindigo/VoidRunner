@@ -20,3 +20,8 @@ oreDict.add('circuitLv', metaitem('voidrunner:computer_primitive'));
 oreDict.add('circuitMv', metaitem('voidrunner:computer_retro'));
 oreDict.add('circuitHv', metaitem('voidrunner:computer_standard'));
 oreDict.add('circuitEv', metaitem('voidrunner:computer_reliable'));
+
+oreDict.add('chip.lv', metaitem('voidrunner:circuit_primitive'));
+oreDict.add('chip.mv', metaitem('voidrunner:circuit_retro'));
+oreDict.add('chip.hv', metaitem('voidrunner:circuit_standard'));
+oreDict.add('chip.ev', metaitem('voidrunner:circuit_reliable'));

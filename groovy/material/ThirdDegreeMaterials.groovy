@@ -11,11 +11,11 @@ class ThirdDegreeMaterials
     public static void init()
     {
         //  41 Pb9Cu(PO4)6O + 15 Cu2S + 7 Cu + Pb
-        LK99Mixture = material(3000, "lk_99_mixture") {
-            dust()
-            components LK99Good, 41, CopperSulfide, 15, Copper, 7, Lead, 1
-            flags 'no_unification', 'disable_decomposition'
-            colorAverage()
-        }
+        LK99Mixture = newBuilder(3000, "lk_99_mixture")
+            .dust()
+            .components(LK99Good * 41, CopperSulfide * 15, Copper * 7, Lead)
+            .flags('no_unification', 'disable_decomposition')
+            .colorAverage()
+            .build();
     }
 }
