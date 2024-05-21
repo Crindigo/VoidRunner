@@ -36,7 +36,10 @@ eventManager.listen { PostMaterialEvent event ->
     d.addOreDictItem(1, "cork", 0xd08757, MaterialIconSet.WOOD, OrePrefix.crushed);
     d.addOreDictItem(2, "carbon_clay_compound", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(3, "carbon_resistor_core", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.bolt);
-
+    d.addOreDictItem(4, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.gemChipped);
+    d.addOreDictItem(5, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.crushed);
+    d.addOreDictItem(6, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.dustImpure);
+    d.addOreDictItem(7, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.dustPure);
 
 
     

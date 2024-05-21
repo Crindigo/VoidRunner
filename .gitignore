@@ -25,3 +25,4 @@ hei_bookmarks.ini
 flowcharts/*.bkp
 flowcharts/*.dtmp
 groovy/lib/
+cache/groovy/

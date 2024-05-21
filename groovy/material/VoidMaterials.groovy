@@ -26,6 +26,7 @@ class VoidMaterials
     public static Material CopperPhosphide;
     public static Material CopperSulfide;
     public static Material SodiumSulfate;
+    public static Material ZincChloride;
 
     // second degree
     public static Material PotassiumChlorideSolution;

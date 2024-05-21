@@ -69,4 +69,10 @@ metaitem.cork_crushed.name=Cork
 metaitem.carbon_clay_compound_dust.name=Carbon-Clay Compound
 metaitem.carbon_resistor_core_bolt.name=Carbon Resistor Core
 
+metaitem.aluminium_scrap_gem_chipped.name=Aluminium Scrap
+metaitem.aluminium_scrap_crushed.name=Crushed Aluminium Scrap
+metaitem.aluminium_scrap_dust_impure.name=Separated Aluminium Scrap Dust
+metaitem.aluminium_scrap_dust_pure.name=Clean Aluminium Scrap Dust
+
+
 tile.chemical_dissolver.name=Physical Dissolver

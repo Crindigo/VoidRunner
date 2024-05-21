@@ -13,14 +13,19 @@
       "lm": 1716165216620
     },
     {
+      "name": "chisel",
+      "path": "postInit\\chisel.groovy",
+      "lm": 1707433178657
+    },
+    {
       "name": "material.VoidMaterials",
       "path": "material\\VoidMaterials.groovy",
       "lm": 0
     },
     {
-      "name": "chisel",
-      "path": "postInit\\chisel.groovy",
-      "lm": 1707433178657
+      "name": "RecipeMapChanges",
+      "path": "prePostInit\\RecipeMapChanges.groovy",
+      "lm": 1716161931892
     },
     {
       "name": "material.SecondDegreeMaterials",
@@ -28,9 +33,9 @@
       "lm": 0
     },
     {
-      "name": "RecipeMapChanges",
-      "path": "prePostInit\\RecipeMapChanges.groovy",
-      "lm": 1716161931892
+      "name": "TrashCollector",
+      "path": "postInit\\TrashCollector.groovy",
+      "lm": 1716264211434
     },
     {
       "name": "OreDict",
@@ -109,7 +114,7 @@
     {
       "name": "chemistry.elements.Aluminium",
       "path": "postInit\\chemistry\\elements\\Aluminium.groovy",
-      "lm": 1716165946329
+      "lm": 1716266191307
     },
     {
       "name": "mv.greg",
@@ -127,9 +132,9 @@
       "lm": 1716165231626
     },
     {
-      "name": "Items",
-      "path": "classes\\Items.groovy",
-      "lm": 1707433178500
+      "name": "chemistry.elements.Nickel",
+      "path": "postInit\\chemistry\\elements\\Nickel.groovy",
+      "lm": 1716165965667
     },
     {
       "name": "material.FirstDegreeMaterials",
@@ -144,17 +149,14 @@
       ]
     },
     {
-      "name": "chemistry.elements.Nickel",
-      "path": "postInit\\chemistry\\elements\\Nickel.groovy",
-      "lm": 1716165965667
+      "name": "Items",
+      "path": "classes\\Items.groovy",
+      "lm": 1707433178500
     },
     {
       "name": "mod.gregtech.ComponentRecipes",
       "path": "postInit\\mod\\gregtech\\ComponentRecipes.groovy",
-      "lm": 1716172814352,
-      "inner": [
-        "mod.gregtech.ComponentRecipes$_run_closure1"
-      ]
+      "lm": 1716229608410
     },
     {
       "name": "StorageDrawers",
@@ -169,7 +171,7 @@
     {
       "name": "items",
       "path": "preInit\\items.groovy",
-      "lm": 1716066726822,
+      "lm": 1716263444394,
       "inner": [
         "items$_run_closure1"
       ]

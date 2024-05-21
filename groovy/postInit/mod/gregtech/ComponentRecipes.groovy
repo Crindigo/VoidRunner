@@ -24,6 +24,17 @@ def robotArmRod = [
     metaitem('stickTungstenSteel'),
 ];
 
+def fieldGenWires = [
+    metaitem('wireGtDoubleManganesePhosphide'),
+];
+def fieldGenPearl = [
+
+];
+def emitterRod = [
+
+];
+
+
 // circuit.electronic, circuit.good_electronic
 def assemblerCircuits = ['electronic', 'good_electronic', 'advanced_integrated', 'workstation', 'mainframe'];
 

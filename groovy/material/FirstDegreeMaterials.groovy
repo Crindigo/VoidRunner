@@ -60,5 +60,11 @@ class FirstDegreeMaterials
             color(0xefefef)
         }*/
 
+        ZincChloride = material(1007, "zinc_chloride") {
+            dust()
+            components(Zinc, Chlorine * 2)
+            flags("disable_decomposition")
+            colorAverage()
+        }
     }
 }
