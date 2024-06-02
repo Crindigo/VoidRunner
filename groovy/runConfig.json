@@ -5,7 +5,8 @@
   "debug": false,
   "classes": [
     "classes/",
-    "quests/"
+    "quests/",
+    "material/"
   ],
   "loaders": {
     "preInit": [

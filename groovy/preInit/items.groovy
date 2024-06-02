@@ -17,6 +17,9 @@ eventManager.listen { PostMaterialEvent event ->
     m.addItem(5, "williams_tube");
     m.addItem(6, "relay");
     m.addItem(7, "drum_memory");
+    m.addItem(8, "large_hdd_platter");
+    m.addItem(9, "retro_hdd");
+    m.addItem(10, "basic_air_cooler");
 
     // Circuits
     m.addItem(501, "circuit_primitive");
@@ -36,13 +39,16 @@ eventManager.listen { PostMaterialEvent event ->
     d.addOreDictItem(1, "cork", 0xd08757, MaterialIconSet.WOOD, OrePrefix.crushed);
     d.addOreDictItem(2, "carbon_clay_compound", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(3, "carbon_resistor_core", 0x4e4e4e, MaterialIconSet.DULL, OrePrefix.bolt);
-    d.addOreDictItem(4, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.gemChipped);
-    d.addOreDictItem(5, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.crushed);
-    d.addOreDictItem(6, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.dustImpure);
-    d.addOreDictItem(7, "aluminium_scrap", 0x80C8F0, MaterialIconSet.FINE, OrePrefix.dustPure);
-
-
-    
+    // al recycling
+    d.addOreDictItem(4, "aluminium_scrap", 0x80C8F8, MaterialIconSet.FINE, OrePrefix.gemChipped);
+    d.addOreDictItem(5, "aluminium_scrap", 0x80C8F8, MaterialIconSet.FINE, OrePrefix.crushed);
+    d.addOreDictItem(6, "aluminium_scrap", 0x80C8F8, MaterialIconSet.FINE, OrePrefix.dustImpure);
+    d.addOreDictItem(7, "aluminium_scrap", 0x80C8F8, MaterialIconSet.FINE, OrePrefix.dustPure);
+    // kraft paper chain
+    d.addOreDictItem(8, "impregnated_wood_pulp", 0x703818, MaterialIconSet.DULL, OrePrefix.dust);
+    d.addOreDictItem(9, "brownstock", 0x2b1508, MaterialIconSet.DULL, OrePrefix.dust);
+    d.addOreDictItem(10, "kraft_pulp", 0xa6530f, MaterialIconSet.DULL, OrePrefix.dust);
+    d.addOreDictItem(11, "kraft_paper", 0xa6530f, MaterialIconSet.DULL, OrePrefix.foil);
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

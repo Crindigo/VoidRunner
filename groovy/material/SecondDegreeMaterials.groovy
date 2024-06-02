@@ -34,5 +34,12 @@ class SecondDegreeMaterials
             .blastTemp(1700, "LOW", 120, 900)
             .colorAverage()
             .build();
+        
+        WhiteLiquor = newBuilder(2003, "white_liquor")
+            .liquid(new FluidBuilder().temperature(343))
+            .components(Water, SodiumSulfide, SodiumHydroxide)
+            .color(0xf8f8f8)
+            .flags('disable_decomposition')
+            .build();
     }
 }

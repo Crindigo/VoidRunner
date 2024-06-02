@@ -18,6 +18,8 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustSodiumSulfate') * 7]
 // replace sodium sulfide recipe
 // Sodium Sulfide Dust * 3
 mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('dustSodium') * 2, metaitem('dustSulfur')], null);
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('dustSodium') * 2, metaitem('dustSulfur')], null)
+
 
 // 7 Na2SO4 + 2 C -> 3 Na2S + 2000L CO2
 mods.gregtech.chemical_reactor.recipeBuilder()

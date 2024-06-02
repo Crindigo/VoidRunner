@@ -35,3 +35,14 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(40)
     .EUt(7)
     .buildAndRegister();
+
+// Zinc Chloride
+
+mods.gregtech.chemical_reactor.recipeBuilder()
+    .inputs(ore('dustZinc'))
+    .fluidInputs(fluid('hydrochloric_acid') * 2000)
+    .outputs(metaitem('voidrunner:dustZincChloride') * 3)
+    .fluidOutputs(fluid('hydrogen') * 2000)
+    .duration(300)
+    .EUt(30)
+    .buildAndRegister();

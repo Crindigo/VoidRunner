@@ -15,12 +15,17 @@ voidrunner.material.lead_sulfate=Lead Sulfate
 voidrunner.material.lanarkite=Lanarkite
 voidrunner.material.copper_phosphide=Copper Phosphide
 voidrunner.material.copper_sulfide=Copper Sulfide
+voidrunner.material.zinc_chloride=Zinc Chloride
 
 voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
 voidrunner.material.lk_99_good=LK99
+voidrunner.material.white_liquor=White Liquor
 
 voidrunner.material.lk_99_mixture=LK99 Mixture
+
+voidrunner.material.weak_black_liquor=Weak Black Liquor
+voidrunner.material.strong_black_liquor=Strong Black Liquor
 
 voidrunner.material.formaldehyde=Formaldehyde
 voidrunner.material.bakelite=Bakelite
@@ -34,6 +39,9 @@ metaitem.resistor_carbon_pile.name=Carbon Pile Resistor
 metaitem.drum_memory.name=Drum Memory
 metaitem.relay.name=Relay
 metaitem.williams_tube.name=Williams Tube
+metaitem.large_hdd_platter.name=Large HDD Platter
+metaitem.retro_hdd.name=Retro HDD
+metaitem.basic_air_cooler.name=Basic Air Cooler
 
 metaitem.circuit_primitive.name=Primitive Circuit
 metaitem.circuit_retro.name=Retro Circuit
@@ -74,5 +82,9 @@ metaitem.aluminium_scrap_crushed.name=Crushed Aluminium Scrap
 metaitem.aluminium_scrap_dust_impure.name=Separated Aluminium Scrap Dust
 metaitem.aluminium_scrap_dust_pure.name=Clean Aluminium Scrap Dust
 
+metaitem.impregnated_wood_pulp_dust.name=Impregnated Wood Pulp
+metaitem.brownstock_dust.name=Brownstock
+metaitem.kraft_pulp_dust.name=Kraft Pulp
+metaitem.kraft_paper_foil.name=Kraft Paper
 
 tile.chemical_dissolver.name=Physical Dissolver

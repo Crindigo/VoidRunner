@@ -74,8 +74,8 @@ EBF.recipeBuilder()
     .buildAndRegister();
 
 EBF.recipeBuilder()
-    .inputs(scrapCleaned)
-    .notConsumable(ore('dustZincChloride'))
+    .inputs(scrapCleaned, ore('dustSmallZincChloride'))
+    //.notConsumable(ore('dustZincChloride'))
     .fluidInputs(fluid('nitrogen') * 1000)
     .circuitMeta(3)
     .fluidOutputs(fluid('aluminium') * 144)

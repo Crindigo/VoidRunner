@@ -1,5 +1,14 @@
 package circuits;
 
+// capacitor: leyden jar
+// transistor: vacuum tube
+// resistor: carbon-core resistor
+// cpu: wire-spring relay
+// ram: williams tube
+// storage: drum memory
+// cooling: tin rotor
+// casing: steel plate
+
 // cork - alloy smelt sticky resin + wood dust
 mods.gregtech.alloy_smelter.recipeBuilder()
     .inputs(ore('dustWood'), metaitem('rubber_drop'))
@@ -158,19 +167,29 @@ crafting.remove('gregtech:electronic_circuit_lv');
 crafting.shapedBuilder()
     .name('circuit_primitive')
     .output(metaitem('voidrunner:circuit_primitive'))
-    .shape('wjw', 'rbR', 'vcW')
+    .shape('wjw', 'rbr', 'RcW')
     .key('w', ore('wireFineCopper'))
     .key('j', metaitem('voidrunner:leyden_jar'))
     .key('r', metaitem('component.resistor'))
     .key('R', metaitem('voidrunner:relay'))
     .key('b', metaitem('circuit_board.basic'))
-    .key('v', metaitem('circuit.vacuum_tube'))
     .key('W', metaitem('voidrunner:williams_tube'))
     .key('c', ore('toolWireCutter'))
     .register();
 
-// assembler recipe
+// for cpu/transistor rework - maybe drop vac tube, add 2nd resistor here.
+// williams tube recipe change to not include vacuum tube.
+// Retro gets advanced vac tube with purified nickel tubing (?) (change vac tube recipe).
 
+// assembler recipe
+mods.gregtech.circuit_assembler.recipeBuilder()
+    .inputs(metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
+            metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireFineCopper') * 2)
+    // fluids auto added?
+    .outputs(metaitem('voidrunner:circuit_primitive') * 2)
+    .duration(200)
+    .EUt(30)
+    .buildAndRegister();
 
 
 //

@@ -32,9 +32,14 @@ class VoidMaterials
     public static Material PotassiumChlorideSolution;
     public static Material PotassiumHydroxideSolution;
     public static Material LK99Good;
+    public static Material WhiteLiquor;
 
     // third degree
     public static Material LK99Mixture;
+
+    // unknown
+    public static Material WeakBlackLiquor;
+    public static Material StrongBlackLiquor;
 
     // ochem
     public static Material Formaldehyde;
@@ -46,6 +51,7 @@ class VoidMaterials
         FirstDegreeMaterials.init();
         SecondDegreeMaterials.init();
         ThirdDegreeMaterials.init();
+        UnknownDegreeMaterials.init();
         OchemMaterials.init();
     }
 
