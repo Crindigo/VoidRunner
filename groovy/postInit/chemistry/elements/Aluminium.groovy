@@ -22,12 +22,14 @@ EBF.removeByInput(120, [metaitem('dustAluminium'), metaitem('circuit.integrated'
 EBF.recipeBuilder()
     .inputs(metaitem('dustAluminium')).circuitMeta(1)
     .outputs(metaitem('ingotAluminium'))
+    .blastFurnaceTemp(1700)
     .duration(900).EUt(480)
     .buildAndRegister();
 
 EBF.recipeBuilder()
     .inputs(metaitem('dustAluminium')).fluidInputs(fluid('nitrogen') * 1000).circuitMeta(2)
     .outputs(metaitem('ingotAluminium'))
+    .blastFurnaceTemp(1700)
     .duration(600).EUt(480)
     .buildAndRegister();
 
@@ -60,6 +62,7 @@ EBF.recipeBuilder()
     .inputs(scrapCleaned)
     .circuitMeta(1)
     .fluidOutputs(fluid('aluminium') * 144)
+    .blastFurnaceTemp(1700)
     .duration(600)
     .EUt(60)
     .buildAndRegister();
@@ -69,6 +72,7 @@ EBF.recipeBuilder()
     .fluidInputs(fluid('nitrogen') * 1000)
     .circuitMeta(2)
     .fluidOutputs(fluid('aluminium') * 144)
+    .blastFurnaceTemp(1700)
     .duration(400)
     .EUt(60)
     .buildAndRegister();
@@ -79,6 +83,7 @@ EBF.recipeBuilder()
     .fluidInputs(fluid('nitrogen') * 1000)
     .circuitMeta(3)
     .fluidOutputs(fluid('aluminium') * 144)
+    .blastFurnaceTemp(1700)
     .duration(300)
     .EUt(60)
     .buildAndRegister();

@@ -88,3 +88,6 @@ metaitem.kraft_pulp_dust.name=Kraft Pulp
 metaitem.kraft_paper_foil.name=Kraft Paper
 
 tile.chemical_dissolver.name=Physical Dissolver
+
+tile.advgenerators.turbine_manyullyn.name=Black Bronze Turbine
+tile.advgenerators.turbine_iron.name=Stainless Steel Turbine

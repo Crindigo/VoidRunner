@@ -47,8 +47,8 @@ eventManager.listen { PostMaterialEvent event ->
     // kraft paper chain
     d.addOreDictItem(8, "impregnated_wood_pulp", 0x703818, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(9, "brownstock", 0x2b1508, MaterialIconSet.DULL, OrePrefix.dust);
-    d.addOreDictItem(10, "kraft_pulp", 0xa6530f, MaterialIconSet.DULL, OrePrefix.dust);
-    d.addOreDictItem(11, "kraft_paper", 0xa6530f, MaterialIconSet.DULL, OrePrefix.foil);
+    d.addOreDictItem(10, "kraft_pulp", 0x99673f, MaterialIconSet.DULL, OrePrefix.dust);
+    d.addOreDictItem(11, "kraft_paper", 0x99673f, MaterialIconSet.DULL, OrePrefix.foil);
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);
