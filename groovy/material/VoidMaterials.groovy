@@ -27,12 +27,15 @@ class VoidMaterials
     public static Material CopperSulfide;
     public static Material SodiumSulfate;
     public static Material ZincChloride;
+    public static Material Permalloy;
+    public static Material NickelPure;
 
     // second degree
     public static Material PotassiumChlorideSolution;
     public static Material PotassiumHydroxideSolution;
     public static Material LK99Good;
     public static Material WhiteLiquor;
+    public static Material NickelCarbonyl;
 
     // third degree
     public static Material LK99Mixture;

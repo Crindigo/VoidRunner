@@ -48,3 +48,18 @@ mods.gregtech.chemical_bath.recipeBuilder()
     .buildAndRegister();
 
 // Mond proc for pure nickel
+mods.gregtech.chemical_reactor.recipeBuilder()
+    .inputs(ore('dustNickel'))
+    .fluidInputs(fluid('carbon_monoxide') * 4000)
+    .fluidOutputs(fluid('nickel_carbonyl') * 1000)
+    .EUt(16)
+    .duration(200)
+    .buildAndRegister();
+
+mods.gregtech.chemical_reactor.recipeBuilder()
+    .fluidInputs(fluid('nickel_carbonyl') * 1000)
+    .outputs(metaitem('voidrunner:dustNickelPure'))
+    .fluidOutputs(fluid('carbon_monoxide') * 4000)
+    .EUt(30)
+    .duration(200)
+    .buildAndRegister();

@@ -41,5 +41,11 @@ class SecondDegreeMaterials
             .color(0xf8f8f8)
             .flags('disable_decomposition')
             .build();
+        
+        NickelCarbonyl = newBuilder(2004, "nickel_carbonyl")
+            .gas(new FluidBuilder().temperature(328))
+            .components(Nickel, CarbonMonoxide * 4)
+            .colorAverage()
+            .build();
     }
 }

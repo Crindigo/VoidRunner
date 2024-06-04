@@ -20,6 +20,8 @@ eventManager.listen { PostMaterialEvent event ->
     m.addItem(8, "large_hdd_platter");
     m.addItem(9, "retro_hdd");
     m.addItem(10, "basic_air_cooler");
+    m.addItem(11, "retro_capacitor");
+    m.addItem(12, "plated_wire_memory");
 
     // Circuits
     m.addItem(501, "circuit_primitive");
@@ -49,6 +51,8 @@ eventManager.listen { PostMaterialEvent event ->
     d.addOreDictItem(9, "brownstock", 0x2b1508, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(10, "kraft_pulp", 0x99673f, MaterialIconSet.DULL, OrePrefix.dust);
     d.addOreDictItem(11, "kraft_paper", 0x99673f, MaterialIconSet.DULL, OrePrefix.foil);
+    
+    d.addOreDictItem(12, "soy_wax", 0xefede2, MaterialIconSet.DULL, OrePrefix.crushedCentrifuged);
 }
 
 //ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);

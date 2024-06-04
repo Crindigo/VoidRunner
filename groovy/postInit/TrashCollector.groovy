@@ -18,3 +18,5 @@ TC.recipeBuilder()
     .EUt(24)
     .duration(100)
     .buildAndRegister();
+
+// water recipe for some of the water strainer items?

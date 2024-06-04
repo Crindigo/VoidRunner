@@ -66,5 +66,21 @@ class FirstDegreeMaterials
             flags("disable_decomposition")
             colorAverage()
         }
+
+        Permalloy = material(1008, "permalloy") {
+            dust()
+            ingot()
+            components(Iron, Nickel * 4)
+            flags("disable_decomposition", "generate_foil")
+            colorAverage()
+        }
+
+        NickelPure = material(1009, "nickel_pure") { // _pure at end so it doesn't conflict with dustPure
+            dust()
+            iconSet("SHINY")
+            color(Nickel.materialRGB)
+            flags("disable_decomposition")
+            components(Nickel)
+        }
     }
 }

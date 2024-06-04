@@ -39,32 +39,6 @@ mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), meta
 // Vacuum Tube * 4
 mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
 
-// no iron ring for assembler (unless i make it extrudable in LV)
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(metaitem('component.glass.tube'), ore('foilZinc'), ore('wireGtSingleCopper') * 2)
-    .outputs(metaitem('circuit.vacuum_tube') * 2)
-    .duration(160)
-    .EUt(7)
-    .buildAndRegister();
-
-mods.gregtech.assembler.recipeBuilder()
-    .inputs(metaitem('component.glass.tube'), ore('foilZinc'), ore('wireGtSingleAnnealedCopper') * 2)
-    .outputs(metaitem('circuit.vacuum_tube') * 3)
-    .duration(160)
-    .EUt(7)
-    .buildAndRegister();
-
-crafting.remove('gregtech:vacuum_tube');
-crafting.shapedBuilder()
-    .name('vacuum_tube')
-    .output(metaitem('circuit.vacuum_tube'))
-    .shape(' g ', ' f ', 'wrw')
-    .key('f', ore('foilZinc'))
-    .key('g', metaitem('component.glass.tube'))
-    .key('w', ore('wireGtSingleCopper') | ore('wireGtSingleTin'))
-    .key('r', ore('ringIron') | ore('ringSteel') | ore('ringWroughtIron'))
-    .register();
-
 // carbon-clay compound
 crafting.addShapeless("carbon_clay_compound1", metaitem("voidrunner:carbon_clay_compound_dust"),
     [ore('dustCoal'), ore('dustClay')]);
@@ -182,10 +156,12 @@ crafting.shapedBuilder()
 // Retro gets advanced vac tube with purified nickel tubing (?) (change vac tube recipe).
 
 // assembler recipe
+// wondering if we don't give x2 by default, but instead upgrading components w/ same board gives 2x or more.
+// like tier 2 cpu+ram gives x2, maybe tier 2 all gives x3 or x4, perhaps requiring next power tier.
 mods.gregtech.circuit_assembler.recipeBuilder()
     .inputs(metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
             metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireFineCopper') * 2)
-    // fluids auto added?
+    // fluids auto added
     .outputs(metaitem('voidrunner:circuit_primitive') * 2)
     .duration(200)
     .EUt(30)

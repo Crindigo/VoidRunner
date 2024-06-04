@@ -42,6 +42,7 @@ metaitem.williams_tube.name=Williams Tube
 metaitem.large_hdd_platter.name=Large HDD Platter
 metaitem.retro_hdd.name=Retro HDD
 metaitem.basic_air_cooler.name=Basic Air Cooler
+metaitem.retro_capacitor.name=Retro Capacitor
 
 metaitem.circuit_primitive.name=Primitive Circuit
 metaitem.circuit_retro.name=Retro Circuit
@@ -86,6 +87,7 @@ metaitem.impregnated_wood_pulp_dust.name=Impregnated Wood Pulp
 metaitem.brownstock_dust.name=Brownstock
 metaitem.kraft_pulp_dust.name=Kraft Pulp
 metaitem.kraft_paper_foil.name=Kraft Paper
+metaitem.soy_wax_crushed_centrifuged.name=Lump of Soy Wax
 
 tile.chemical_dissolver.name=Physical Dissolver
 
