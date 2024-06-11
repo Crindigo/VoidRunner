@@ -3,6 +3,18 @@ package chemistry.plastic;
 def chemReactor = mods.gregtech.chemical_reactor;
 def distillery = mods.gregtech.distillery;
 
+// move wood tar distillation to LV to help out with phenol, instead of only having coal tar
+// Creosote Oil * 30
+mods.gregtech.distillery.removeByInput(64, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('wood_tar') * 1000]);
+mods.gregtech.distillery.recipeBuilder()
+    .circuitMeta(2)
+    .fluidInputs(fluid('wood_tar') * 1000)
+    .fluidOutputs(fluid('phenol') * 75)
+    .EUt(16)
+    .duration(80)
+    .buildAndRegister();
+
+
 // 1000L methanol + 1000L oxygen + silver rod (nc) = 1000L formaldehyde + 1000L water
 chemReactor.recipeBuilder()
     .fluidInputs(fluid('methanol') * 1000, fluid('oxygen') * 1000)
@@ -14,17 +26,17 @@ chemReactor.recipeBuilder()
 
 // 750L phenol + 500L formaldehyde + 100L H2SO4 = 820L Bakelite Resin Solution
 chemReactor.recipeBuilder()
-    .fluidInputs(fluid('phenol') * 750, fluid('formaldehyde') * 500, fluid('sulfuric_acid') * 100)
-    .fluidOutputs(fluid('bakelite') * 820)
+    .fluidInputs(fluid('phenol') * 750, fluid('formaldehyde') * 500, fluid('sulfuric_acid') * 250)
+    .fluidOutputs(fluid('bakelite') * 1540)
     .duration(600)
     .EUt(24)
     .buildAndRegister();
 
 // 820L Bakelite Resin Solution => 5 bakelite resin + 100L H2SO4
 distillery.recipeBuilder()
-    .fluidInputs(fluid('bakelite') * 820)
-    .outputs(metaitem('voidrunner:gemBakelite') * 5)
-    .fluidOutputs(fluid('sulfuric_acid') * 100)
+    .fluidInputs(fluid('bakelite') * 1540)
+    .outputs(metaitem('voidrunner:gemBakelite') * 10)
+    .fluidOutputs(fluid('sulfuric_acid') * 250)
     .duration(300)
     .EUt(30)
     .buildAndRegister();

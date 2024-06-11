@@ -15,6 +15,16 @@ package circuits;
 
 // phenolic board
 
+// Methanol * 30
+mods.gregtech.distillery.removeByInput(64, [metaitem('circuit.integrated').withNbt(["Configuration": 4])], [fluid('wood_vinegar') * 100])
+mods.gregtech.distillery.recipeBuilder()
+    .circuitMeta(4)
+    .fluidInputs(fluid('wood_vinegar') * 100)
+    .fluidOutputs(fluid('methanol') * 30)
+    .EUt(16)
+    .duration(16)
+    .buildAndRegister();
+
 // Phenolic Circuit Board * 1
 mods.gregtech.assembler.removeByInput(30, [metaitem('dustWood'), metaitem('circuit.integrated').withNbt(["Configuration": 1])], [fluid('glue') * 50]);
 
@@ -26,6 +36,8 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(30)
     .buildAndRegister();
 
+// iirc getting the final board is either 8 silver wire or 2/4 foil + sodium persulfate/iron(iii)cl
+// we could just require the latter since in base GT silver is rareish but here not really, so no incentive.
 
 // carbon pile resistor - 4 carbon plates + 2 copper plates = 4 resistors
 mods.gregtech.assembler.recipeBuilder()
@@ -38,8 +50,15 @@ mods.gregtech.assembler.recipeBuilder()
 // capacitor: kraft paper, soy wax, aluminium foil
 
 mods.gregtech.mixer.recipeBuilder()
-    .fluidInputs(fluid('soybean_oil') * 500, fluid('hydrogen') * 1000)
+    .fluidInputs(fluid('gtfo_raw_soybean_oil') * 500, fluid('hydrogen') * 1000)
     .outputs(metaitem('voidrunner:soy_wax_crushed_centrifuged'))
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.mixer.recipeBuilder()
+    .fluidInputs(fluid('gtfo_soybean_oil') * 500, fluid('hydrogen') * 1000)
+    .outputs(metaitem('voidrunner:soy_wax_crushed_centrifuged') * 2)
     .duration(200)
     .EUt(7)
     .buildAndRegister();
@@ -79,13 +98,13 @@ crafting.shapedBuilder()
     .key('j', metaitem('voidrunner:retro_capacitor'))
     .key('r', metaitem('voidrunner:resistor_carbon_pile'))
     .key('R', metaitem('circuit.vacuum_tube'))
-    .key('b', metaitem('circuit_board.phenolic'))
+    .key('b', metaitem('circuit_board.good'))
     .key('W', metaitem('voidrunner:plated_wire_memory'))
     .key('c', ore('toolWireCutter'))
     .register();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(metaitem('circuit_board.phenolic'), metaitem('voidrunner:resistor_carbon_pile') * 2, 
+    .inputs(metaitem('circuit_board.good'), metaitem('voidrunner:resistor_carbon_pile') * 2, 
             metaitem('voidrunner:retro_capacitor'), metaitem('circuit.vacuum_tube'), 
             metaitem('voidrunner:plated_wire_memory'), ore('wireFineAnnealedCopper') * 2)
     .outputs(metaitem('voidrunner:circuit_retro'))

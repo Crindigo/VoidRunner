@@ -129,14 +129,15 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .name('williams_tube')
     .output(metaitem('voidrunner:williams_tube'))
-    .shape(' f ', 'ptp', ' e ')
+    .shape(' f ', 'ptp', 'wew')
     .key('f', ore('foilIron'))
     .key('p', ore('dustSmallSphalerite'))
-    .key('t', metaitem('circuit.vacuum_tube'))
+    .key('t', metaitem('component.glass.tube'))
     .key('e', ore('stickCopper'))
+    .key('w', ore('wireGtSingleTin'))
     .register();
 
-// Final circuit - leyden jar(s), vacuum tube(s), resistor(s), on a board?
+// Final circuit
 crafting.remove('gregtech:electronic_circuit_lv');
 crafting.shapedBuilder()
     .name('circuit_primitive')

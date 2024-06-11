@@ -16,11 +16,13 @@ voidrunner.material.lanarkite=Lanarkite
 voidrunner.material.copper_phosphide=Copper Phosphide
 voidrunner.material.copper_sulfide=Copper Sulfide
 voidrunner.material.zinc_chloride=Zinc Chloride
+voidrunner.material.nickel_pure=Pure Nickel
 
 voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
 voidrunner.material.lk_99_good=LK99
 voidrunner.material.white_liquor=White Liquor
+voidrunner.material.permalloy=Permalloy
 
 voidrunner.material.lk_99_mixture=LK99 Mixture
 
@@ -43,6 +45,7 @@ metaitem.large_hdd_platter.name=Large HDD Platter
 metaitem.retro_hdd.name=Retro HDD
 metaitem.basic_air_cooler.name=Basic Air Cooler
 metaitem.retro_capacitor.name=Retro Capacitor
+metaitem.plated_wire_memory.name=Plated-wire Memory
 
 metaitem.circuit_primitive.name=Primitive Circuit
 metaitem.circuit_retro.name=Retro Circuit
