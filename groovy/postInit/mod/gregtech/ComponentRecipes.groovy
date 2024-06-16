@@ -43,6 +43,11 @@ def assemblerCircuits = ['electronic', 'good_electronic', 'advanced_integrated',
 
 def tiers = ['lv', 'mv', 'hv', 'ev'];
 
+// todo change ULV robot arm to use metaitem('voidrunner:relay')
+crafting.replaceShaped("ulv_covers:robot_arm_ulv_easy", metaitem('ulv_covers:robot.arm.ulv'), [
+    [metaitem('ulv_covers:electric.motor.ulv'), ore('stickBronze')],
+    [metaitem('ulv_covers:electric.piston.ulv'), metaitem('voidrunner:relay')]
+]);
 
 int i = 0;
 for ( tier in tiers ) {

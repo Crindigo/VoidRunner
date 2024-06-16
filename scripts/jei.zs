@@ -41,7 +41,3 @@ JEI.hideCategory('pyrotech.worktable');
 //JEI.hideCategory('pyrotech.compost.bin');
 //JEI.hideCategory('pyrotech.barrel');
 JEI.hideCategory('pyrotech.wither.forge');
-
-JEI.hideCategory('skyresources:rockgrinder');
-JEI.hideCategory('skyresources:infusion');
-JEI.hideCategory('skyresources:waterextractor');

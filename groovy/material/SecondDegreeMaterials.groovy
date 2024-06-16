@@ -46,6 +46,7 @@ class SecondDegreeMaterials
             .gas(new FluidBuilder().temperature(328))
             .components(Nickel, CarbonMonoxide * 4)
             .colorAverage()
+            .flags('disable_decomposition')
             .build();
     }
 }

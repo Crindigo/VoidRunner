@@ -38,7 +38,6 @@
     "mysticalworld:charred_planks:0": "mysticalworld:charred_slab:0",
     "randomthings:spectrelog:0": "randomthings:spectreplank:0",
     "roots:wildwood_log:0": "roots:wildwood_planks:0",
-    "roots:wildwood_planks:0": "roots:wildwood_slab:0",
-    "skyresources:petrifiedwood:0": "skyresources:petrifiedplanks:0"
+    "roots:wildwood_planks:0": "roots:wildwood_slab:0"
   }
 }

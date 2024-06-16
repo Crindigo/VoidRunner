@@ -9,6 +9,8 @@ package circuits;
 // cooling: tin rotor
 // casing: steel plate
 
+def assembler = mods.gregtech.assembler;
+
 // cork - alloy smelt sticky resin + wood dust
 mods.gregtech.alloy_smelter.recipeBuilder()
     .inputs(ore('dustWood'), metaitem('rubber_drop'))
@@ -29,15 +31,15 @@ crafting.shapedBuilder()
     .register();
 
 
-// vacuum tube
-// 2 copper wire and zinc foil
+assembler.recipeBuilder()
+    .inputs(ore('stickCopper'), metaitem('voidrunner:cork_crushed'), item('minecraft:glass_bottle'))
+    .fluidInputs(fluid('zinc') * 72)
+    .outputs(metaitem('voidrunner:leyden_jar') * 2)
+    .EUt(7)
+    .duration(160)
+    .buildAndRegister();
 
-// Vacuum Tube * 2
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
-// Vacuum Tube * 3
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('red_alloy') * 18])
-// Vacuum Tube * 4
-mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
+// vacuum tubes moved to be an mv component
 
 // carbon-clay compound
 crafting.addShapeless("carbon_clay_compound1", metaitem("voidrunner:carbon_clay_compound_dust"),
@@ -91,6 +93,30 @@ crafting.shapedBuilder()
     .key('c', metaitem('voidrunner:carbon_resistor_core_bolt'))
     .register();
 
+// Resistor * 2
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100]);
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100]);
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineCopper') * 4], [fluid('glue') * 100]);
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100]);
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCharcoal'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100]);
+mods.gregtech.assembler.removeByInput(6, [metaitem('dustCarbon'), metaitem('wireFineAnnealedCopper') * 4], [fluid('glue') * 100]);
+
+assembler.recipeBuilder()
+    .inputs(ore('wireFineCopper') * 4, metaitem('voidrunner:carbon_resistor_core_bolt'))
+    .fluidInputs(fluid('glue') * 100)
+    .outputs(metaitem('component.resistor') * 2)
+    .EUt(6)
+    .duration(160)
+    .buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(ore('wireFineAnnealedCopper') * 4, metaitem('voidrunner:carbon_resistor_core_bolt'))
+    .fluidInputs(fluid('glue') * 100)
+    .outputs(metaitem('component.resistor') * 4)
+    .EUt(6)
+    .duration(160)
+    .buildAndRegister();
+
 // made in soaking pot or chem bath
 crafting.remove('gregtech:coated_board');
 crafting.remove('gregtech:coated_board_1x');
@@ -114,16 +140,40 @@ crafting.shapedBuilder()
     .key('b', metaitem('board.coated'))
     .register();
 
+// Circuit Board * 1
+mods.gregtech.assembler.removeByInput(7, [metaitem('foilCopper') * 4, metaitem('plateWood')], [fluid('glue') * 100])
+assembler.recipeBuilder()
+    .inputs(ore('foilCopper') * 4, ore('plateWood'))
+    .fluidInputs(fluid('glue') * 125)
+    .outputs(metaitem('circuit_board.basic'))
+    .EUt(7)
+    .duration(200)
+    .buildAndRegister();
+
 // relay - fine copper wire, fine silver wire, magnetic iron rod
 crafting.shapedBuilder()
     .name('relay')
-    .output(metaitem('voidrunner:relay') * 2)
+    .output(metaitem('voidrunner:relay'))
     .shape('p  ', 'wb ', 'wr ')
     .key('p', ore('plateIron'))
     .key('w', ore('wireFineCopper'))
     .key('b', ore('boltIron'))
     .key('r', ore('stickIronMagnetic'))
     .register();
+
+assembler.recipeBuilder()
+    .inputs(ore('plateIron'), ore('wireFineCopper') * 2, ore('boltIron'), ore('stickIronMagnetic'))
+    .outputs(metaitem('voidrunner:relay'))
+    .EUt(7)
+    .duration(160)
+    .buildAndRegister();
+
+assembler.recipeBuilder()
+    .inputs(ore('plateIron'), ore('wireFineAnnealedCopper') * 2, ore('boltIron'), ore('stickIronMagnetic'))
+    .outputs(metaitem('voidrunner:relay') * 2)
+    .EUt(7)
+    .duration(160)
+    .buildAndRegister();
 
 // williams tube
 crafting.shapedBuilder()
@@ -136,6 +186,14 @@ crafting.shapedBuilder()
     .key('e', ore('stickCopper'))
     .key('w', ore('wireGtSingleTin'))
     .register();
+
+assembler.recipeBuilder()
+    .inputs(ore('dustSmallSphalerite') * 2, metaitem('component.glass.tube'), ore('stickCopper'), ore('wireGtSingleTin') * 2)
+    .fluidInputs(fluid('iron') * 36)
+    .outputs(metaitem('voidrunner:williams_tube') * 2)
+    .EUt(7)
+    .duration(200)
+    .buildAndRegister();
 
 // Final circuit
 crafting.remove('gregtech:electronic_circuit_lv');
@@ -159,8 +217,10 @@ crafting.shapedBuilder()
 // assembler recipe
 // wondering if we don't give x2 by default, but instead upgrading components w/ same board gives 2x or more.
 // like tier 2 cpu+ram gives x2, maybe tier 2 all gives x3 or x4, perhaps requiring next power tier.
+// don't know about that either, since circuit progression here doesn't require previous tiers, so less reason to make old ones.
+// maybe due to "less clumsy crafting" we can make 2 circuits with 2 boards but the same # of components.
 mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
+    .inputs(metaitem('circuit_board.basic') * 2, metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
             metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireFineCopper') * 2)
     // fluids auto added
     .outputs(metaitem('voidrunner:circuit_primitive') * 2)
@@ -187,6 +247,12 @@ crafting.shapedBuilder()
     .key('m', metaitem('electric.motor.lv'))
     .register();
 
+assembler.recipeBuilder()
+    .inputs(ore('plateIron') * 3, ore('stickIronMagnetic'), metaitem('electric.motor.lv'))
+    .outputs(metaitem('voidrunner:drum_memory'))
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();
 
 // crafting recipe
 // PRP
@@ -205,9 +271,14 @@ crafting.shapedBuilder()
     .key('s', metaitem('voidrunner:drum_memory'))
     .register();
 
-// assembler recipe
-
-
+// assembler recipe (not circuit assembler)
+assembler.recipeBuilder()
+    .inputs(ore('plateSteel') * 2, ore('rotorTin'), ore('wireGtSingleCopper') * 2, 
+        metaitem('voidrunner:circuit_primitive'), metaitem('voidrunner:drum_memory'))
+    .outputs(metaitem('voidrunner:computer_primitive'))
+    .EUt(16)
+    .duration(200)
+    .buildAndRegister();
 
 // remove GT circuits
 mods.jei.ingredient.yeet(metaitem('circuit.electronic'));

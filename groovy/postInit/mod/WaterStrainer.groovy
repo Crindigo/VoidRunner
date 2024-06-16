@@ -1,3 +1,5 @@
+package mod;
+
 def removals = ['net', 'net_1', 'strainer_base',
     'strainer_survivalist_solid', 'strainer_survivalist_dense_solid',
     'strainer_survivalist_reinforced', 'strainer_survivalist_dense_reinforced',

@@ -4,7 +4,6 @@ def chemReactor = mods.gregtech.chemical_reactor;
 def distillery = mods.gregtech.distillery;
 
 // move wood tar distillation to LV to help out with phenol, instead of only having coal tar
-// Creosote Oil * 30
 mods.gregtech.distillery.removeByInput(64, [metaitem('circuit.integrated').withNbt(["Configuration": 2])], [fluid('wood_tar') * 1000]);
 mods.gregtech.distillery.recipeBuilder()
     .circuitMeta(2)

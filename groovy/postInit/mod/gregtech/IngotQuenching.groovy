@@ -1,17 +1,23 @@
 package mod.gregtech;
 
-mods.gregtech.chemical_bath.recipeBuilder()
-    .inputs(ore('ingotHotBlackBronze'))
-    .fluidInputs(fluid('water') * 100)
-    .outputs(metaitem('ingotBlackBronze'))
-    .duration(300)
-    .EUt(120)
-    .buildAndRegister();
+def quenchingList = [
+    'ingotHotBlackBronze': 'ingotBlackBronze',
+];
 
-mods.gregtech.chemical_bath.recipeBuilder()
-    .inputs(ore('ingotHotBlackBronze'))
-    .fluidInputs(fluid('distilled_water') * 100)
-    .outputs(metaitem('ingotBlackBronze'))
-    .duration(200)
-    .EUt(120)
-    .buildAndRegister();
+for (entry in quenchingList) {
+    mods.gregtech.chemical_bath.recipeBuilder()
+        .inputs(ore(entry.key))
+        .fluidInputs(fluid('water') * 100)
+        .outputs(metaitem(entry.value))
+        .duration(300)
+        .EUt(120)
+        .buildAndRegister();
+
+    mods.gregtech.chemical_bath.recipeBuilder()
+        .inputs(ore(entry.key))
+        .fluidInputs(fluid('distilled_water') * 100)
+        .outputs(metaitem(entry.value))
+        .duration(200)
+        .EUt(120)
+        .buildAndRegister();
+}

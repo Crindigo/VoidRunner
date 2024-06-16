@@ -16,13 +16,14 @@ voidrunner.material.lanarkite=Lanarkite
 voidrunner.material.copper_phosphide=Copper Phosphide
 voidrunner.material.copper_sulfide=Copper Sulfide
 voidrunner.material.zinc_chloride=Zinc Chloride
+voidrunner.material.permalloy=Permalloy
 voidrunner.material.nickel_pure=Pure Nickel
 
 voidrunner.material.potassium_hydroxide_solution=Potassium Hydroxide Solution
 voidrunner.material.potassium_chloride_solution=Potassium Chloride Solution
 voidrunner.material.lk_99_good=LK99
 voidrunner.material.white_liquor=White Liquor
-voidrunner.material.permalloy=Permalloy
+voidrunner.material.nickel_carbonyl=Nickel Carbonyl
 
 voidrunner.material.lk_99_mixture=LK99 Mixture
 

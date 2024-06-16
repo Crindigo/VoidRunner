@@ -71,6 +71,13 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister();
 
 
+// Vacuum Tube * 2
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2, metaitem('circuit.integrated').withNbt(["Configuration": 1])], null)
+// Vacuum Tube * 3
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('red_alloy') * 18])
+// Vacuum Tube * 4
+mods.gregtech.assembler.removeByInput(7, [metaitem('component.glass.tube'), metaitem('boltSteel') * 2, metaitem('wireGtSingleAnnealedCopper') * 2], [fluid('red_alloy') * 18])
+
 // enhanced vacuum tube
 mods.gregtech.assembler.recipeBuilder()
     .inputs(metaitem('component.glass.tube'), ore('foilZinc'), ore('wireGtSingleAnnealedCopper') * 2, ore('dustNickelPure'))
