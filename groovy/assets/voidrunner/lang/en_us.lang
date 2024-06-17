@@ -78,6 +78,8 @@ metaitem.computer_infinity.name=Infinity Computer
 metaitem.computer_omega.name=Omega Computer
 metaitem.computer_void.name=Void Computer
 
+metaitem.battery.lv.lead_acid.name=Small Lead-Acid Battery
+
 metaitem.cork_crushed.name=Cork
 metaitem.carbon_clay_compound_dust.name=Carbon-Clay Compound
 metaitem.carbon_resistor_core_bolt.name=Carbon Resistor Core
@@ -92,6 +94,7 @@ metaitem.brownstock_dust.name=Brownstock
 metaitem.kraft_pulp_dust.name=Kraft Pulp
 metaitem.kraft_paper_foil.name=Kraft Paper
 metaitem.soy_wax_crushed_centrifuged.name=Lump of Soy Wax
+metaitem.sulfuric_lead_paste_crushed_centrifuged.name=Sulfuric Lead Paste
 
 tile.chemical_dissolver.name=Physical Dissolver
 

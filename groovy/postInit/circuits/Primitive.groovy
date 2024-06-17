@@ -11,12 +11,12 @@ package circuits;
 
 def assembler = mods.gregtech.assembler;
 
-// cork - alloy smelt sticky resin + wood dust
-mods.gregtech.alloy_smelter.recipeBuilder()
+// cork - mix sticky resin + wood dust
+recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustWood'), metaitem('rubber_drop'))
     .outputs(metaitem('voidrunner:cork_crushed') * 2)
-    .duration(80)
-    .EUt(16)
+    .duration(160)
+    .EUt(7)
     .buildAndRegister();
 
 // leyden jar - glass bottle + 2 zn foil + 1 cu rod + 1 cork

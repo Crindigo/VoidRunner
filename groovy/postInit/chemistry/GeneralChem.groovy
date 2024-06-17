@@ -46,3 +46,34 @@ mods.gregtech.chemical_reactor.recipeBuilder()
     .duration(300)
     .EUt(30)
     .buildAndRegister();
+
+// shitty early way to get sulfuric acid
+
+mods.gregtech.coke_oven.recipeBuilder()
+    .inputs(ore('dustSulfur'))
+    .fluidOutputs(fluid('sulfur_dioxide') * 500)
+    .duration(1200)
+    .buildAndRegister();
+
+mods.gregtech.coke_oven.recipeBuilder()
+    .notConsumable(ore('sapling') * 16)
+    .fluidOutputs(fluid('oxygen') * 100)
+    .duration(240)
+    .buildAndRegister();
+
+recipemap('crude_mixer').recipeBuilder()
+    .fluidInputs(fluid('sulfur_dioxide') * 1000)
+    .fluidInputs(fluid('oxygen') * 1000)
+    .fluidOutputs(fluid('sulfur_trioxide') * 1000)
+    .duration(600)
+    .EUt(7)
+    .buildAndRegister();
+
+recipemap('crude_mixer').recipeBuilder()
+    .fluidInputs(fluid('sulfur_trioxide') * 1000)
+    .fluidInputs(fluid('water') * 1000)
+    .fluidOutputs(fluid('sulfuric_acid') * 1000)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();
+

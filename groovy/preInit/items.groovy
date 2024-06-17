@@ -1,9 +1,10 @@
 import gregtech.api.unification.material.event.PostMaterialEvent;
-import gregtech.api.items.metaitem.StandardMetaItem;
-import gregtech.api.items.metaitem.MetaOreDictItem;
-import com.bartz24.skyresources.alchemy.item.ItemOreAlchDust;
+import gregtech.api.items.metaitem.*;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.material.MarkerMaterials;
+import gregtech.api.GTValues;
+import gregtech.api.GregTechAPI;
 
 eventManager.listen { PostMaterialEvent event ->
     
@@ -34,6 +35,13 @@ eventManager.listen { PostMaterialEvent event ->
     m.addItem(553, "computer_standard");
     m.addItem(554, "computer_reliable");
 
+    // Batteries
+    m.addItem(1000, "battery.lv.lead_acid")
+        .addComponents(ElectricStats.createRechargeableBattery(100000, GTValues.LV))
+        .setUnificationData(OrePrefix.battery, MarkerMaterials.Tier.LV)
+        .setModelAmount(8)
+        .setCreativeTabs(GregTechAPI.TAB_GREGTECH_TOOLS);
+
     MetaOreDictItem d = new MetaOreDictItem((short) 0);
     d.setRegistryName("voidrunner:ore_dict_item");
 
@@ -53,9 +61,8 @@ eventManager.listen { PostMaterialEvent event ->
     d.addOreDictItem(11, "kraft_paper", 0x99673f, MaterialIconSet.DULL, OrePrefix.foil);
     
     d.addOreDictItem(12, "soy_wax", 0xefede2, MaterialIconSet.DULL, OrePrefix.crushedCentrifuged);
+    d.addOreDictItem(13, "sulfuric_lead_paste", 0x6436ad, MaterialIconSet.DULL, OrePrefix.crushedCentrifuged);
 }
-
-//ItemOreAlchDust.addOreInfo("naquadah", 0xFF222324i);
 
 //content.createItem("shiny_stone_chunk").register();
 //content.createItem("shiny_magma_chunk").register();
