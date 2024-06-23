@@ -56,7 +56,7 @@ mods.gregtech.coke_oven.recipeBuilder()
     .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
-    .notConsumable(ore('sapling') * 16)
+    .notConsumable(ore('treeLeaves') * 64)
     .fluidOutputs(fluid('oxygen') * 100)
     .duration(240)
     .buildAndRegister();
