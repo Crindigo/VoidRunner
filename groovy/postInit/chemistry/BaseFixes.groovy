@@ -17,3 +17,10 @@ mods.gregtech.extractor.recipeBuilder()
     .EUt(480)
     .duration(200)
     .buildAndRegister();
+
+// make pyro oven use LV components
+crafting.replaceShaped('gregtech:pyrolyse_oven', metaitem('pyrolyse_oven'), [
+    [metaitem('electric.piston.lv'), ore('circuitLv'), ore('wireGtQuadrupleCupronickel')],
+    [ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
+    [metaitem('electric.piston.lv'), metaitem('electric.pump.lv'), ore('wireGtQuadrupleCupronickel')]
+]);

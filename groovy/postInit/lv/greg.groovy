@@ -18,14 +18,6 @@ mods.gregtech.assembler.recipeBuilder()
     .EUt(4)
     .buildAndRegister();
 
-crafting.remove('randomthings:timeinabottle');
-mods.gregtech.canner.recipeBuilder()
-    .inputs(item('minecraft:clock'), item('minecraft:glass_bottle'))
-    .outputs(item('randomthings:timeinabottle').withNbt(["timeData": ["storedTime": 0]]))
-    .duration(6000)
-    .EUt(4)
-    .buildAndRegister();
-
 
 mods.gregtech.chemical_bath.recipeBuilder()
     .inputs(ore('gravel'))

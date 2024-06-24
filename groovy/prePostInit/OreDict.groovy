@@ -15,6 +15,8 @@ oreDict.add('dustWood', item('pyrotech:rock', 7));
 
 oreDict.add('dyeBlue', metaitem('dustCobalt'));
 
+oreDict.add('paper', metaitem('voidrunner:kraft_paper_foil'));
+
 // New circuits
 oreDict.add('circuitLv', metaitem('voidrunner:computer_primitive'));
 oreDict.add('circuitMv', metaitem('voidrunner:computer_retro'));
