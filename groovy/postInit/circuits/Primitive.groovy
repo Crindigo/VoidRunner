@@ -1,4 +1,4 @@
-package circuits;
+package postInit.circuits;
 
 // capacitor: leyden jar
 // transistor: vacuum tube

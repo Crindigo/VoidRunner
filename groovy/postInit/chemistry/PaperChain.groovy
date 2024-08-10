@@ -1,4 +1,4 @@
-package chemistry;
+package postInit.chemistry;
 
 // white liquor is hot water, NaOH, Na2S
 // Heated Water * 1000

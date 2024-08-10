@@ -25,5 +25,5 @@ eventManager.listen { RequestReloadEvent event ->
     def questbook = book {
         add chapter1
     }
-    questbook.save()
+    //questbook.save()
 }

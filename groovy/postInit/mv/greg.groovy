@@ -1,4 +1,4 @@
-package mv;
+package postInit.mv;
 
 // Infinite Water Cover * 1
 mods.gregtech.assembler.removeByInput(480, 

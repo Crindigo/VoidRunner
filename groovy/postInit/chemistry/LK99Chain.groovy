@@ -1,4 +1,4 @@
-package chemistry;
+package postInit.chemistry;
 
 import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 

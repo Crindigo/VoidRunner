@@ -1,4 +1,4 @@
-package chemistry.elements;
+package postInit.chemistry.elements;
 
 // Ultramafic extract using stone extract and sulfur compound (small sodium sulfide?)  
 

@@ -1,4 +1,4 @@
-package chemistry;
+package postInit.chemistry;
 
 // Potassium Hydroxide
 

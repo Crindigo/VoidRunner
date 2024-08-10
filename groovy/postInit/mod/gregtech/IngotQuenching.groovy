@@ -1,4 +1,4 @@
-package mod.gregtech;
+package postInit.mod.gregtech;
 
 def quenchingList = [
     'ingotHotBlackBronze': 'ingotBlackBronze',

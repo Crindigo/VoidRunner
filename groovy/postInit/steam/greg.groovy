@@ -1,4 +1,4 @@
-package steam;
+package postInit.steam;
 
 import gregtech.api.GTValues;
 import gregtech.common.metatileentities.steam.boiler.SteamLavaBoiler

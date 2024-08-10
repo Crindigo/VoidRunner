@@ -1,4 +1,4 @@
-package steam;
+package postInit.steam;
 
 println('Hello World!')
 

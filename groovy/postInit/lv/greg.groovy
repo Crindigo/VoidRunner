@@ -1,4 +1,4 @@
-package lv;
+package postInit.lv;
 
 crafting.remove('minecraft:clock');
 

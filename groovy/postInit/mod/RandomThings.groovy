@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 // ender bridge, ender anchor
 

@@ -1,4 +1,4 @@
-package mod.gregtech;
+package postInit.mod.gregtech;
 import gregtech.api.GTValues;
 
 // Make components like robot arms, fluid regulators, field generators, sensors, emitters, programmed circuit,

@@ -1,4 +1,4 @@
-package chemistry;
+package postInit.chemistry;
 
 // why is it only LV to *melt carbon*
 mods.gregtech.extractor.removeByInput(30, [metaitem('plateCarbon')], null)

@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 // fluix in-world crafting disabled
 recipemap('mixer').recipeBuilder()

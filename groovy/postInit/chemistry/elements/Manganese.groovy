@@ -1,4 +1,4 @@
-package chemistry.elements;
+package postInit.chemistry.elements;
 
 /*
 dirt extract + Hcl = acidic dirt extract  

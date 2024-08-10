@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 def removals = ['net', 'net_1', 'strainer_base',
     'strainer_survivalist_solid', 'strainer_survivalist_dense_solid',

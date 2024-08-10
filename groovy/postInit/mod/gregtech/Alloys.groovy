@@ -1,3 +1,5 @@
+package postInit.mod.gregtech;
+
 mods.gregtech.mixer.recipeBuilder()
     .circuitMeta(4)
     .inputs(ore('dustIron'), ore('dustNickel') * 4)

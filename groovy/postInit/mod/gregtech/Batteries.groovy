@@ -1,4 +1,4 @@
-package mod.gregtech;
+package postInit.mod.gregtech;
 
 recipemap('crude_mixer').recipeBuilder()
     .inputs(ore('dustLead'))

@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import static classes.Helpers.*;

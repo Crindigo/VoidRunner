@@ -1,4 +1,4 @@
-package stone;
+package postInit.stone;
 
 crafting.remove('pyrotech:clay');
 

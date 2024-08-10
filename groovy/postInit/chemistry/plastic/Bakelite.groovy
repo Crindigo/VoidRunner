@@ -1,4 +1,4 @@
-package chemistry.plastic;
+package postInit.chemistry.plastic;
 
 def chemReactor = mods.gregtech.chemical_reactor;
 def distillery = mods.gregtech.distillery;

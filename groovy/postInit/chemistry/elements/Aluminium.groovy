@@ -1,4 +1,4 @@
-package chemistry.elements;
+package postInit.chemistry.elements;
 
 /*
 aluminium line based on recycling collected trash and purifying out the Al? [https://en.wikipedia.org/wiki/Aluminium\_recycling](https://en.wikipedia.org/wiki/Aluminium_recycling) grind, magnetic separate, thermal centrifuge.  

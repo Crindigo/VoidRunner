@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 def assembler = mods.gregtech.assembler;
 

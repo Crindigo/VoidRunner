@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 
 def removals = [
     'white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'silver', 'cyan', 'purple', 'blue',

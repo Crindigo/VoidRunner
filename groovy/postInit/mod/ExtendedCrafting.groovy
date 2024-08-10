@@ -1,4 +1,4 @@
-package mod;
+package postInit.mod;
 import static classes.Helpers.*;
 
 crafting.remove('extendedcrafting:black_iron_ingot');
