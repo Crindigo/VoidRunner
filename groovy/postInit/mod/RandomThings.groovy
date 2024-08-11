@@ -41,8 +41,10 @@ crafting.remove('randomthings:spectrecoil_ender');
 crafting.remove('randomthings:blazeandsteel');
 
 // debatable - GT has one but this does things like teleport instead of move entities around
-crafting.remove('randomthings:itemcollector');
-crafting.remove('randomthings:advanceditemcollector');
+// GT one kinda sucks
+//crafting.remove('randomthings:itemcollector');
+//crafting.remove('randomthings:advanceditemcollector');
+
 
 crafting.remove('randomthings:timeinabottle');
 /*

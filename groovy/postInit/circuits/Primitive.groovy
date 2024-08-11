@@ -199,9 +199,10 @@ assembler.recipeBuilder()
 crafting.remove('gregtech:electronic_circuit_lv');
 crafting.shapedBuilder()
     .name('circuit_primitive')
-    .output(metaitem('voidrunner:circuit_primitive'))
+    //.output(metaitem('voidrunner:circuit_primitive'))
+    .output(metaitem('circuit.electronic'))
     .shape('wjw', 'rbr', 'RcW')
-    .key('w', ore('wireFineCopper'))
+    .key('w', ore('wireGtSingleCopper'))
     .key('j', metaitem('voidrunner:leyden_jar'))
     .key('r', metaitem('component.resistor'))
     .key('R', metaitem('voidrunner:relay'))
@@ -220,10 +221,10 @@ crafting.shapedBuilder()
 // don't know about that either, since circuit progression here doesn't require previous tiers, so less reason to make old ones.
 // maybe due to "less clumsy crafting" we can make 2 circuits with 2 boards but the same # of components.
 mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(metaitem('circuit_board.basic') * 2, metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
-            metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireFineCopper') * 2)
+    .inputs(metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
+            metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireGtSingleCopper') * 2)
     // fluids auto added
-    .outputs(metaitem('voidrunner:circuit_primitive') * 2)
+    .outputs(metaitem('circuit.electronic') * 2)
     .duration(200)
     .EUt(30)
     .buildAndRegister();
@@ -238,7 +239,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
 // storage = drum memory
 // cooling = just bronze rotor
 
-crafting.shapedBuilder()
+/*crafting.shapedBuilder()
     .name('drum_memory')
     .output(metaitem('voidrunner:drum_memory'))
     .shape(' p ', 'rp ', 'mp ')
@@ -252,7 +253,7 @@ assembler.recipeBuilder()
     .outputs(metaitem('voidrunner:drum_memory'))
     .duration(200)
     .EUt(7)
-    .buildAndRegister();
+    .buildAndRegister();*/
 
 // crafting recipe
 // PRP
@@ -260,7 +261,7 @@ assembler.recipeBuilder()
 // PSP
 // 4 plate, rotor, 2 wire, circuit, storage
 
-crafting.shapedBuilder()
+/*crafting.shapedBuilder()
     .name('computer_primitive')
     .output(metaitem('voidrunner:computer_primitive'))
     .shape('prp', 'wcw', 'psp')
@@ -278,9 +279,9 @@ assembler.recipeBuilder()
     .outputs(metaitem('voidrunner:computer_primitive'))
     .EUt(16)
     .duration(200)
-    .buildAndRegister();
+    .buildAndRegister();*/
 
 // remove GT circuits
-mods.jei.ingredient.yeet(metaitem('circuit.electronic'));
-mods.jei.ingredient.yeet(metaitem('circuit.basic_integrated'));
-mods.jei.ingredient.yeet(metaitem('circuit.microprocessor'));
+//mods.jei.ingredient.yeet(metaitem('circuit.electronic'));
+//mods.jei.ingredient.yeet(metaitem('circuit.basic_integrated'));
+//mods.jei.ingredient.yeet(metaitem('circuit.microprocessor'));

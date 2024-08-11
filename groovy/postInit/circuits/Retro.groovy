@@ -97,30 +97,33 @@ mods.gregtech.assembler.recipeBuilder()
     .buildAndRegister();
 
 // retro circuit recipe
+crafting.remove('gregtech:electronic_circuit_mv'); // 3 circuit, 2 wires, 2 diodes, steel plate, board
 crafting.shapedBuilder()
     .name('circuit_retro')
-    .output(metaitem('voidrunner:circuit_retro'))
-    .shape('wjw', 'rbr', 'RcW')
-    .key('w', ore('wireFineAnnealedCopper'))
-    .key('j', metaitem('voidrunner:retro_capacitor'))
-    .key('r', metaitem('voidrunner:resistor_carbon_pile'))
-    .key('R', metaitem('circuit.vacuum_tube'))
-    .key('b', metaitem('circuit_board.good'))
-    .key('W', metaitem('voidrunner:plated_wire_memory'))
-    .key('c', ore('toolWireCutter'))
+    //.output(metaitem('voidrunner:circuit_retro'))
+    .output(metaitem('circuit.good_electronic'))
+    .shape('wjw', 'cbc', 'WcW')
+    .key('w', ore('wireGtSingleAnnealedCopper'))
+    .key('j', metaitem('voidrunner:retro_capacitor')) // kraft paper
+    //.key('r', metaitem('voidrunner:resistor_carbon_pile'))
+    .key('c', metaitem('circuit.electronic'))
+    //.key('R', metaitem('circuit.vacuum_tube')) // pure nickel
+    .key('b', metaitem('circuit_board.good')) // bakelite
+    .key('W', metaitem('voidrunner:plated_wire_memory')) // permalloy
+    //.key('c', ore('toolWireCutter'))
     .register();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(metaitem('circuit_board.good'), metaitem('voidrunner:resistor_carbon_pile') * 2, 
-            metaitem('voidrunner:retro_capacitor'), metaitem('circuit.vacuum_tube'), 
-            metaitem('voidrunner:plated_wire_memory'), ore('wireFineAnnealedCopper') * 2)
-    .outputs(metaitem('voidrunner:circuit_retro'))
+    .inputs(metaitem('circuit_board.good'), metaitem('circuit.good_electronic') * 2, 
+            metaitem('voidrunner:retro_capacitor'), metaitem('voidrunner:plated_wire_memory') * 2, 
+            ore('wireGtSingleAnnealedCopper') * 2)
+    .outputs(metaitem('circuit.good_electronic'))
     .duration(300)
-    .EUt(30)
+    .EUt(16)
     .buildAndRegister();
 
 // disk platter
-mods.gregtech.assembler.recipeBuilder()
+/*mods.gregtech.assembler.recipeBuilder()
     .inputs(ore('plateGlass'), ore('dustTinyIron'), ore('dustTinyCarbon'))
     .outputs(metaitem('voidrunner:large_hdd_platter'))
     .duration(100)
@@ -153,4 +156,4 @@ crafting.shapedBuilder()
     .key('w', ore('wireGtSingleAnnealedCopper'))
     .key('c', metaitem('voidrunner:circuit_retro'))
     .key('s', metaitem('voidrunner:retro_hdd'))
-    .register();
+    .register();*/

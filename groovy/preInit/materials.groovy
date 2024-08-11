@@ -29,4 +29,6 @@ event_manager.listen { PostMaterialEvent event ->
     material('black_bronze').addFlags(GENERATE_ROTOR);
     // over 1750 generates ingotHot
     material('black_bronze').addBlastProperty(1800, "LOW", 600, 120);
+
+    material('tungsten').addFlags(GENERATE_FINE_WIRE);
 }
