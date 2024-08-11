@@ -64,7 +64,7 @@ EBF.recipeBuilder()
     .fluidOutputs(fluid('aluminium') * 144)
     .blastFurnaceTemp(1700)
     .duration(600)
-    .EUt(60)
+    .EUt(40)
     .buildAndRegister();
 
 EBF.recipeBuilder()
@@ -74,7 +74,7 @@ EBF.recipeBuilder()
     .fluidOutputs(fluid('aluminium') * 144)
     .blastFurnaceTemp(1700)
     .duration(400)
-    .EUt(60)
+    .EUt(40)
     .buildAndRegister();
 
 EBF.recipeBuilder()
@@ -85,5 +85,5 @@ EBF.recipeBuilder()
     .fluidOutputs(fluid('aluminium') * 144)
     .blastFurnaceTemp(1700)
     .duration(300)
-    .EUt(60)
+    .EUt(40)
     .buildAndRegister();

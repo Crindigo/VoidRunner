@@ -229,6 +229,12 @@ mods.gregtech.circuit_assembler.recipeBuilder()
     .EUt(30)
     .buildAndRegister();
 
+// Electronic Circuit * 2
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('wireGtSingleRedAlloy') * 2, metaitem('circuit.vacuum_tube') * 2], [fluid('soldering_alloy') * 72])
+// Electronic Circuit * 2
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('wireGtSingleRedAlloy') * 2, metaitem('circuit.vacuum_tube') * 2], [fluid('tin') * 144])
+
+
 
 //
 // PRIMITIVE COMPUTER

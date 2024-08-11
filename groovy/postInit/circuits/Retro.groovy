@@ -114,13 +114,19 @@ crafting.shapedBuilder()
     .register();
 
 mods.gregtech.circuit_assembler.recipeBuilder()
-    .inputs(metaitem('circuit_board.good'), metaitem('circuit.good_electronic') * 2, 
+    .inputs(metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, 
             metaitem('voidrunner:retro_capacitor'), metaitem('voidrunner:plated_wire_memory') * 2, 
             ore('wireGtSingleAnnealedCopper') * 2)
     .outputs(metaitem('circuit.good_electronic'))
     .duration(300)
     .EUt(16)
     .buildAndRegister();
+
+// Good Electronic Circuit * 1
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('soldering_alloy') * 72]);
+// Good Electronic Circuit * 1
+mods.gregtech.circuit_assembler.removeByInput(16, [metaitem('circuit_board.good'), metaitem('circuit.electronic') * 2, metaitem('component.diode') * 2, metaitem('wireGtSingleCopper') * 2], [fluid('tin') * 144]);
+
 
 // disk platter
 /*mods.gregtech.assembler.recipeBuilder()
