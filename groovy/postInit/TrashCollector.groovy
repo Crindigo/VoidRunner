@@ -25,6 +25,7 @@ def denseStrainer = item('waterstrainer:strainer_survivalist_dense_reinforced', 
 
 // averages to 4 seconds in water strainer block. we keep at 4s but double chances.
 // maybe it should output clean/filtered/junk-free water and that distills faster.
+// this is 2x faster and 2x more output than base strainer, so 4x better (and lasts forever).
 
 TC.recipeBuilder()
     .fluidInputs(fluid('water') * 1000)
