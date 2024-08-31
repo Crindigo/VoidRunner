@@ -135,11 +135,10 @@ mods.gregtech.sifter.recipeBuilder()
     .buildAndRegister();
 
 // coarse dirt sifting for... bonemeal and other things?
+// reminder: centrifuge bonemeal for CaO (quicklime) and P4O10 (phosphorus pentoxide). maybe nerf calcite/phosphate
 mods.gregtech.sifter.recipeBuilder()
     .inputs(item('minecraft:dirt', 1))
-    .chancedOutput(item('minecraft:dye', 15), 3000, 750)
-    .chancedOutput(metaitem('dustCalcite'), 3000, 750)
-    .chancedOutput(metaitem('dustPhosphate'), 3000, 750)
+    .chancedOutput(item('minecraft:dye', 15), 5000, 750)
     .chancedOutput(metaitem('dustApatite'), 3000, 750)
     .chancedOutput(metaitem('dustPotash'), 3000, 750)
     .duration(100)
@@ -419,88 +418,6 @@ mods.gregtech.compressor.recipeBuilder()
     .outputs(metaitem('compressed.fireclay'))
     .EUt(4)
     .duration(40)
-    .buildAndRegister();
-
-def createBloom(integrity, recipeId) {
-    return item('pyrotech:bloom').withNbt([
-        "BlockEntityTag": [
-            "maxIntegrity": integrity, 
-            "integrity": integrity,
-            "experiencePerComplete": 0.0F, 
-            "recipeId": recipeId, 
-            "langKey": "tile.ore_block"
-        ]
-    ]);
-}
-
-def createBlastBlooming(oreKey, recipeId) {
-    def cokes = ['gemCoke', 'dustCoke'];
-    for ( coke in cokes ) {
-        recipemap('bloomery').recipeBuilder()
-            .inputs(ore(oreKey) * 4)
-            .inputs(ore(coke) * 2)
-            .outputs(createBloom(20, recipeId))
-            .duration(600)
-            .buildAndRegister();
-    }
-
-    def coals = ['gemCoal', 'gemCharcoal', 'dustCoal', 'dustCharcoal'];
-    for (coal in coals) {
-        recipemap('bloomery').recipeBuilder()
-            .inputs(ore(oreKey) * 4)
-            .inputs(ore(coal) * 4)
-            .outputs(createBloom(20, recipeId))
-            .duration(800)
-            .buildAndRegister();
-    }
-
-    recipemap('electric_bloomery').recipeBuilder()
-        .inputs(ore(oreKey) * 4)
-        .outputs(createBloom(20, recipeId))
-        .duration(300)
-        .EUt(30)
-        .buildAndRegister();
-}
-
-createBlastBlooming('oreMagnetite', 'crafttweaker:bloom_from_iron_ore');
-createBlastBlooming('oreChalcopyrite', 'crafttweaker:bloom_from_copper_ore');
-createBlastBlooming('oreCassiterite', 'crafttweaker:bloom_from_tin_ore');
-createBlastBlooming('oreSphalerite', 'crafttweaker:bloom_from_zinc_ore');
-createBlastBlooming('oreGalena', 'crafttweaker:bloom_from_galena_ore');
-
-mods.gregtech.forge_hammer.recipeBuilder()
-    .inputs(createBloom(20, 'crafttweaker:bloom_from_iron_ore'))
-    .outputs(metaitem('ingotWroughtIron') * 18, item('minecraft:gold_ingot') * 2)
-    .EUt(16)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.forge_hammer.recipeBuilder()
-    .inputs(createBloom(20, 'crafttweaker:bloom_from_copper_ore'))
-    .outputs(metaitem('ingotCopper') * 16, metaitem('ingotCobalt') * 4)
-    .EUt(16)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.forge_hammer.recipeBuilder()
-    .inputs(createBloom(20, 'crafttweaker:bloom_from_tin_ore'))
-    .outputs(metaitem('ingotTin') * 18, metaitem('ingotBismuth') * 2)
-    .EUt(16)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.forge_hammer.recipeBuilder()
-    .inputs(createBloom(20, 'crafttweaker:bloom_from_zinc_ore'))
-    .outputs(metaitem('ingotZinc') * 18, metaitem('ingotGallium') * 2)
-    .EUt(16)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.forge_hammer.recipeBuilder()
-    .inputs(createBloom(20, 'crafttweaker:bloom_from_galena_ore'))
-    .outputs(metaitem('ingotLead') * 17, metaitem('ingotSilver') * 3)
-    .EUt(16)
-    .duration(300)
     .buildAndRegister();
 
 // this is fucking bugged as hell, just use the compressor to make flint from small flint
