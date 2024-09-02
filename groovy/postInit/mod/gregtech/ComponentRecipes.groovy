@@ -53,7 +53,7 @@ int i = 0;
 for ( tier in tiers ) {
     // Robot Arms
 
-    crafting.replaceShaped("gregtech:robot_arm_$tier", metaitem("robot.arm.$tier"), [
+    /*crafting.replaceShaped("gregtech:robot_arm_$tier", metaitem("robot.arm.$tier"), [
         [robotArmWires[i], robotArmWires[i], robotArmWires[i]],
         [metaitem("electric.motor.$tier"), robotArmRod[i], metaitem("electric.motor.$tier")],
         [metaitem("electric.piston.$tier"), ore("chip.$tier"), robotArmRod[i]]
@@ -70,11 +70,11 @@ for ( tier in tiers ) {
         .outputs(metaitem("robot.arm.$tier"))
         .duration(100)
         .EUt(30)
-        .buildAndRegister();
+        .buildAndRegister();*/
 
     // Fluid regulators
 
-    mods.gregtech.assembler.removeByInput(GTValues.VA[i + 1], [
+    /*mods.gregtech.assembler.removeByInput(GTValues.VA[i + 1], [
         metaitem("electric.pump.$tier"), metaitem('circuit.' + assemblerCircuits[i]) * 2, 
         metaitem('circuit.integrated').withNbt(["Configuration": 1])
     ], null)
@@ -85,7 +85,7 @@ for ( tier in tiers ) {
         .outputs(metaitem("fluid.regulator.$tier"))
         .EUt(GTValues.VA[i + 1])
         .duration(400 - (i * 50)) // 400 ticks, 350 ticks, etc.
-        .buildAndRegister();
+        .buildAndRegister();*/
     
     i++;
 }

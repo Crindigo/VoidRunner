@@ -24,3 +24,12 @@ crafting.replaceShaped('gregtech:pyrolyse_oven', metaitem('pyrolyse_oven'), [
     [ore('circuitLv'), metaitem('hull.lv'), ore('circuitLv')],
     [metaitem('electric.piston.lv'), metaitem('electric.pump.lv'), ore('wireGtQuadrupleCupronickel')]
 ]);
+
+mods.gregtech.centrifuge.recipeBuilder()
+    //.inputs(item('minecraft:dye', 15))
+    .inputs(ore('dustBoneAsh')) // may need "gregtechfoodoption" prefix
+    .outputs(metaitem('dustQuicklime'))
+    .outputs(metaitem('dustPhosphorusPentoxide') * 2)
+    .EUt(30)
+    .duration(100)
+    .buildAndRegister();

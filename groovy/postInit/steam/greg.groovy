@@ -135,10 +135,9 @@ mods.gregtech.sifter.recipeBuilder()
     .buildAndRegister();
 
 // coarse dirt sifting for... bonemeal and other things?
-// reminder: centrifuge bonemeal for CaO (quicklime) and P4O10 (phosphorus pentoxide). maybe nerf calcite/phosphate
 mods.gregtech.sifter.recipeBuilder()
     .inputs(item('minecraft:dirt', 1))
-    .chancedOutput(item('minecraft:dye', 15), 5000, 750)
+    .chancedOutput(item('minecraft:dye', 15), 5000, 750) // smelt to bone ash, centrifuge for CaO and P4O10
     .chancedOutput(metaitem('dustApatite'), 3000, 750)
     .chancedOutput(metaitem('dustPotash'), 3000, 750)
     .duration(100)
@@ -201,6 +200,11 @@ crafting.remove('ulv_covers:pump_ulv_easy');
 crafting.addShaped('ulv_pump', metaitem('ulv_covers:electric.pump.ulv') * 4, [
     [ore('pipeNormalFluidCopper'), ore('rotorBronze')],
     [metaitem('ulv_covers:electric.motor.ulv'), ore('ringIron')]
+]);
+
+crafting.addShaped('ulv_pump_rubber', metaitem('ulv_covers:electric.pump.ulv') * 4, [
+    [ore('pipeNormalFluidCopper'), ore('rotorBronze')],
+    [metaitem('ulv_covers:electric.motor.ulv'), ore('ringRubber')]
 ]);
 
 // update basic item and fluid filters, make them output 2x and add an iron variant instead of steel,
@@ -303,55 +307,6 @@ crafting.addShaped('wooden_crate', metaitem('crate.wood'), [
     [ore('plankWood'), ore('toolSaw'), ore('plankWood')],
     [ore('plankWood'), ore('plankWood'), ore('plankWood')]
 ]);
-
-// Charcoal * 1
-mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:log', 32767)], null)
-// Coke * 1
-mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:coal')], null)
-// Block of Coke * 1
-mods.gregtech.coke_oven.removeByInput(1, [item('minecraft:coal_block')], null)
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(ore('logWood'))
-    .outputs(item('minecraft:coal', 1))
-    .fluidOutputs(fluid('wood_tar') * 100)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(item('pyrotech:log_pile'))
-    .outputs(metaitem('blockCharcoal'))
-    .fluidOutputs(fluid('wood_tar') * 900)
-    .duration(2700)
-    .buildAndRegister();
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(item('minecraft:coal', 1))
-    .outputs(item('minecraft:coal'))
-    .fluidOutputs(fluid('creosote') * 150)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(ore('blockCharcoal'))
-    .outputs(item('minecraft:coal_block'))
-    .fluidOutputs(fluid('creosote') * 1350)
-    .duration(2700)
-    .buildAndRegister();
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(item('minecraft:coal'))
-    .outputs(metaitem('gemCoke'))
-    .fluidOutputs(fluid('creosote') * 200)
-    .duration(300)
-    .buildAndRegister();
-
-mods.gregtech.coke_oven.recipeBuilder()
-    .inputs(item('minecraft:coal_block'))
-    .outputs(metaitem('blockCoke'))
-    .fluidOutputs(fluid('creosote') * 1800)
-    .duration(2700)
-    .buildAndRegister();
 
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stone'))

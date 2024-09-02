@@ -7,3 +7,11 @@ mods.gregtech.mixer.recipeBuilder()
     .EUt(7)
     .duration(500)
     .buildAndRegister();
+
+// alternate soldering alloy so bismuth has a use (rose metal)
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore('dustBismuth') * 2, ore('dustLead'), ore('dustTin'))
+    .outputs(metaitem('dustSolderingAlloy') * 4)
+    .EUt(7)
+    .duration(200)
+    .buildAndRegister();
