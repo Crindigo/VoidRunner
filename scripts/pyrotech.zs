@@ -80,6 +80,16 @@ Burn.createBuilder("extract_from_limestone", <pyrotech:rock:8>, "pyrotech:limest
     .setFluidLevelAffectsFailureChance(false)
     .register();
 
+Burn.createBuilder("extract_from_dirt", <minecraft:dirt:1>, "minecraft:dirt")
+    .setBurnStages(5)
+    .setTotalBurnTimeTicks(5 * 60 * 20)
+    .setFluidProduced(<liquid:dirt_extract> * 50)
+    .setFailureChance(0.25)
+    .addFailureItem(<pyrotech:rock:4>)
+    .setRequiresRefractoryBlocks(true)
+    .setFluidLevelAffectsFailureChance(false)
+    .register();
+
 Burn.createBuilder("charcoal_to_coal", <minecraft:coal:0>, "gregtech:meta_block_compressed_16:10")
     .setBurnStages(10)
     .setTotalBurnTimeTicks(8 * 60 * 20)
@@ -156,12 +166,12 @@ GraniteAnvil.addRecipe("masonry_brick", <pyrotech:material:16> * 4, <ore:slabSto
 
 // sand pile in granite extract -> redstone. 96s per 8 redstone makes it line up nicely 
 // (5/min and 250 granite/min). same consumption rate as copper, can rebalance how you want.
-SoakingPot.addRecipe("sand_pile_to_redstone",
-    <minecraft:redstone> * 2, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
+//SoakingPot.addRecipe("sand_pile_to_redstone",
+//    <minecraft:redstone> * 2, <liquid:granite_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
 
 // sand pile in limestone ext -> sulfur (had heat here but then you can't extract sulfur, and campfire ash)
-SoakingPot.addRecipe("sand_pile_to_sulfur",
-    <metaitem:dustSulfur>, <liquid:limestone_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
+//SoakingPot.addRecipe("sand_pile_to_sulfur",
+//    <metaitem:dustSulfur>, <liquid:limestone_extract> * 50, <pyrotech:rock:5>, false, 96 * 20);
 
 // gravel in stone ext -> magnetite
 SoakingPot.addRecipe("gravel_to_iron",

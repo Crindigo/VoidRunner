@@ -34,6 +34,21 @@ mods.gregtech.compressor.recipeBuilder()
     .EUt(2)
     .buildAndRegister()
 
+// plant grinding for redstone and sulfur
+mods.gregtech.macerator.recipeBuilder()
+    .inputs(item('plants2:cosmetic_0', 8))
+    .outputs(item('minecraft:redstone') * 2)
+    .duration(200)
+    .EUt(2)
+    .buildAndRegister();
+
+mods.gregtech.macerator.recipeBuilder()
+    .inputs(item('plants2:cosmetic_3', 4))
+    .outputs(metaitem('dustSulfur') * 2)
+    .duration(200)
+    .EUt(2)
+    .buildAndRegister();
+
 
 // change macerator recipe to avoid diamonds, same with rock breaker
 crafting.remove('gregtech:steam_macerator_bronze');

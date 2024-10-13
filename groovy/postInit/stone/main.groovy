@@ -18,6 +18,16 @@ crafting.shapedBuilder()
 
 furnace.removeByInput(item('minecraft:clay_ball'));
 
+// remove plant balls
+crafting.remove('plants2:recipe185');
+crafting.remove('plants2:recipe186');
+crafting.remove('plants2:recipe183'); // magic cauldron
+
+crafting.addShapeless('mortar_redstone', item('minecraft:redstone'), [ore('craftingToolMortar'), item('plants2:cosmetic_0', 8)]);
+crafting.addShapeless('mortar_sulfur', metaitem('dustSulfur'), [ore('craftingToolMortar'), item('plants2:cosmetic_3', 4)]);
+
+mods.pyrotech.soaking_pot.add('redstone_flower', item('pyrotech:material', 12), fluid('nature_extract') * 125,
+    item('plants2:cosmetic_0', 8), 2400);
 
 // remove crude drying rack and make the normal one only use fiber instead of twine
 mods.jei.ingredient.yeet(item('pyrotech:drying_rack', 0));

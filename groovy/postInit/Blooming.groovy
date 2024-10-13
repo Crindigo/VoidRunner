@@ -7,9 +7,9 @@ crafting.addShaped("bloomery_primitive", metaitem('voidrunnercore:bloomery'), [
 
 def invarCasing = item('gregtech:metal_casing', 2);
 crafting.addShaped('bloomery_electric', metaitem('voidrunnercore:electric_bloomery'), [
-    [refractoryBlock, ore('cableGtSingleTin'), refractoryBlock],
-    [ore('circuitLv'), invarCasing, ore('circuitLv')],
-    [refractoryBlock, ore('cableGtSingleTin'), refractoryBlock]
+    [refractoryBlock, ore('cableGtDoubleCopper'), refractoryBlock],
+    [ore('circuitMv'), invarCasing, ore('circuitMv')],
+    [refractoryBlock, ore('cableGtDoubleCopper'), refractoryBlock]
 ]);
 
 def createBloom(integrity, recipeId) {
@@ -24,14 +24,21 @@ def createBloom(integrity, recipeId) {
     ]);
 }
 
+// 6 coke ovens making 10 coke / 75s, for 5 bloomeries you'd consume 1 per 37.5s.
+// making it 40s for a bit of coke overflow, nice round number.
+// alternative is 6 coke ovens = 24 charcoal / 60s
+// 5 bloomeries on charcoal is 10cc / 60s which can be done with 2.5 coke ovens.
+// so 50% less coke ovens but it takes 1.5x longer to process ores.
+// 10 bloomeries + 5 coke ovens for charcoal for 0.75x duration.
+// i think this is balanced? so there are reasons to go either way.
 def createBlastBlooming(oreKey, recipeId) {
     def cokes = ['gemCoke', 'dustCoke'];
     for ( coke in cokes ) {
         recipemap('bloomery').recipeBuilder()
             .inputs(ore(oreKey) * 4)
-            .inputs(ore(coke) * 2)
+            .inputs(ore(coke) * 1)
             .outputs(createBloom(20, recipeId))
-            .duration(600)
+            .duration(800)
             .buildAndRegister();
     }
 
@@ -39,17 +46,25 @@ def createBlastBlooming(oreKey, recipeId) {
     for (coal in coals) {
         recipemap('bloomery').recipeBuilder()
             .inputs(ore(oreKey) * 4)
-            .inputs(ore(coal) * 4)
+            .inputs(ore(coal) * 2)
             .outputs(createBloom(20, recipeId))
-            .duration(800)
+            .duration(1200)
             .buildAndRegister();
     }
 
     recipemap('electric_bloomery').recipeBuilder()
         .inputs(ore(oreKey) * 4)
         .outputs(createBloom(20, recipeId))
+        .duration(600)
+        .EUt(60)
+        .buildAndRegister();
+
+    recipemap('electric_bloomery').recipeBuilder()
+        .inputs(ore(oreKey) * 4)
+        .fluidInputs(fluid('nitrogen') * 2000)
+        .outputs(createBloom(20, recipeId))
         .duration(300)
-        .EUt(30)
+        .EUt(60)
         .buildAndRegister();
 }
 
