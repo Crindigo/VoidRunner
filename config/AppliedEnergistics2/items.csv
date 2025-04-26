@@ -1227,6 +1227,18 @@ nuclearcraft:ingot_block:12, Aluminum Block
 nuclearcraft:ingot_block:13, Silver Block
 nuclearcraft:ingot_block:14, Manganese Oxide Block
 nuclearcraft:ingot_block:15, Manganese Dioxide Block
+nuclearcraft:ingot_block2:0, Zirconia Block
+nuclearcraft:ingot_block2:1, Palladium Block
+nuclearcraft:ingot_block2:2, Tin Oxide Block
+nuclearcraft:ingot_block2:3, Nickel Oxide Block
+nuclearcraft:ingot_block2:4, Cobalt Oxide Block
+nuclearcraft:ingot_block2:5, Ruthenium Oxide Block
+nuclearcraft:ingot_block2:6, Iridium Oxide Block
+nuclearcraft:material_block:0, Molybdenum Block
+nuclearcraft:material_block:1, Copper Oxide Block
+nuclearcraft:material_block:2, Cobalt Block
+nuclearcraft:material_block:3, Nickel Block
+nuclearcraft:material_block:4, Platinum Block
 nuclearcraft:fertile_isotope:0, Uranium-238 Block
 nuclearcraft:fertile_isotope:1, Neptunium-237 Block
 nuclearcraft:fertile_isotope:2, Plutonium-242 Block
@@ -1258,6 +1270,30 @@ nuclearcraft:centrifuge, Centrifuge
 nuclearcraft:rock_crusher, Rock Crusher
 nuclearcraft:electric_furnace, Electric Furnace
 nuclearcraft:machine_interface, Machine Interface
+nuclearcraft:machine_frame, Large Machine Casing
+nuclearcraft:machine_glass, Large Machine Glass
+nuclearcraft:machine_power_port, Large Machine Power Port
+nuclearcraft:machine_process_port, Large Machine Process Port
+nuclearcraft:machine_reservoir_port, Large Machine Reservoir Port
+nuclearcraft:machine_redstone_port, Large Machine Redstone Port
+nuclearcraft:machine_computer_port, Large Machine Computer Port
+nuclearcraft:machine_diaphragm:0, Sintered Steel Diaphragm
+nuclearcraft:machine_diaphragm:1, Polyethersulfone Diaphragm
+nuclearcraft:machine_diaphragm:2, Zirfon Diaphragm
+nuclearcraft:machine_sieve_assembly:0, Steel Sieve Assembly
+nuclearcraft:machine_sieve_assembly:1, Polytetrafluoroethene Sieve Assembly
+nuclearcraft:machine_sieve_assembly:2, Hastelloy Sieve Assembly
+nuclearcraft:electrolyzer_controller, Electrolyzer Controller
+nuclearcraft:electrolyzer_cathode_terminal, Electrolyzer Cathode Terminal
+nuclearcraft:electrolyzer_anode_terminal, Electrolyzer Anode Terminal
+nuclearcraft:distiller_controller, Distiller Controller
+nuclearcraft:distiller_sieve_tray, Distiller Sieve Tray
+nuclearcraft:distiller_reflux_unit, Distiller Reflux Unit
+nuclearcraft:distiller_reboiling_unit, Distiller Reboiling Unit
+nuclearcraft:distiller_liquid_distributor, Distiller Liquid Distributor
+nuclearcraft:infiltrator_controller, Infiltrator Controller
+nuclearcraft:infiltrator_pressure_chamber, Infiltrator Pressure Chamber
+nuclearcraft:infiltrator_heating_unit, Infiltrator Heating Unit
 nuclearcraft:rtg_uranium, Uranium RTG
 nuclearcraft:rtg_plutonium, Plutonium RTG
 nuclearcraft:rtg_americium, Americium RTG
@@ -1395,15 +1431,16 @@ nuclearcraft:salt_fission_heater2:12, Liquid Nitrogen Fission Coolant Heater
 nuclearcraft:salt_fission_heater2:13, Liquid Helium Fission Coolant Heater
 nuclearcraft:salt_fission_heater2:14, Enderium Fission Coolant Heater
 nuclearcraft:salt_fission_heater2:15, Cryotheum Fission Coolant Heater
-nuclearcraft:heat_exchanger_controller, Heat Exchanger Controller (MULTIBLOCK BROKEN!)
-nuclearcraft:heat_exchanger_casing, Heat Exchanger Shell
+nuclearcraft:heat_exchanger_controller, Heat Exchanger Controller (WIP)
+nuclearcraft:heat_exchanger_casing, Heat Exchanger Casing
 nuclearcraft:heat_exchanger_glass, Heat Exchanger Glass
 nuclearcraft:heat_exchanger_vent, Heat Exchanger Vent
 nuclearcraft:heat_exchanger_tube_copper, Copper Heat Exchanger Tube
 nuclearcraft:heat_exchanger_tube_hard_carbon, Hard Carbon Heat Exchanger Tube
 nuclearcraft:heat_exchanger_tube_thermoconducting, Thermoconducting Alloy Heat Exchanger Tube
+nuclearcraft:heat_exchanger_redstone_port, Heat Exchanger Redstone Port
 nuclearcraft:heat_exchanger_computer_port, Heat Exchanger Computer Port
-nuclearcraft:condenser_controller, Condenser Controller (MULTIBLOCK BROKEN!)
+nuclearcraft:condenser_controller, Condenser Controller (WIP)
 nuclearcraft:condenser_tube_copper, Copper Condensation Tube
 nuclearcraft:condenser_tube_hard_carbon, Hard Carbon Condensation Tube
 nuclearcraft:condenser_tube_thermoconducting, Thermoconducting Alloy Condensation Tube
@@ -1425,6 +1462,7 @@ nuclearcraft:turbine_dynamo_coil:5, Silver Turbine Dynamo Coil
 nuclearcraft:turbine_coil_connector, Turbine Dynamo Coil Connector
 nuclearcraft:turbine_inlet, Turbine Fluid Inlet
 nuclearcraft:turbine_outlet, Turbine Fluid Outlet
+nuclearcraft:turbine_redstone_port, Turbine Redstone Port
 nuclearcraft:turbine_computer_port, Turbine Computer Port
 nuclearcraft:cobblestone_generator, Cobblestone Generator
 nuclearcraft:cobblestone_generator_compact, Compact Cobblestone Generator
@@ -1490,6 +1528,13 @@ nuclearcraft:ingot:12, Aluminum Ingot
 nuclearcraft:ingot:13, Silver Ingot
 nuclearcraft:ingot:14, Manganese Oxide Ingot
 nuclearcraft:ingot:15, Manganese Dioxide Ingot
+nuclearcraft:ingot2:0, Zirconia Ingot
+nuclearcraft:ingot2:1, Palladium Ingot
+nuclearcraft:ingot2:2, Tin Oxide Ingot
+nuclearcraft:ingot2:3, Nickel Oxide Ingot
+nuclearcraft:ingot2:4, Cobalt Oxide Ingot
+nuclearcraft:ingot2:5, Ruthenium Oxide Ingot
+nuclearcraft:ingot2:6, Iridium Oxide Ingot
 nuclearcraft:dust:0, Copper Dust
 nuclearcraft:dust:1, Tin Dust
 nuclearcraft:dust:2, Lead Dust
@@ -1506,6 +1551,13 @@ nuclearcraft:dust:12, Aluminum Dust
 nuclearcraft:dust:13, Silver Dust
 nuclearcraft:dust:14, Manganese Oxide Dust
 nuclearcraft:dust:15, Manganese Dioxide Dust
+nuclearcraft:dust2:0, Zirconia Dust
+nuclearcraft:dust2:1, Palladium Dust
+nuclearcraft:dust2:2, Tin Oxide Dust
+nuclearcraft:dust2:3, Nickel Oxide Dust
+nuclearcraft:dust2:4, Cobalt Oxide Dust
+nuclearcraft:dust2:5, Ruthenium Oxide Dust
+nuclearcraft:dust2:6, Iridium Oxide Dust
 nuclearcraft:gem:0, Rhodochrosite
 nuclearcraft:gem:1, Cubic Boron Nitride
 nuclearcraft:gem:2, Fluorite
@@ -1542,6 +1594,7 @@ nuclearcraft:alloy:13, Silicon Carbide Ingot
 nuclearcraft:alloy:14, SiC-SiC Ceramic Matrix Composite Ingot
 nuclearcraft:alloy:15, HSLA Steel Ingot
 nuclearcraft:alloy:16, Zirconium-Molybdenum Alloy Ingot
+nuclearcraft:alloy:17, Hastelloy Ingot
 nuclearcraft:compound:0, Calcium Sulfate
 nuclearcraft:compound:1, Crystal Binder
 nuclearcraft:compound:2, Energetic Blend
@@ -1554,6 +1607,12 @@ nuclearcraft:compound:8, Irradiated Borax
 nuclearcraft:compound:9, Dimensional Blend
 nuclearcraft:compound:10, Carbon-Manganese Blend
 nuclearcraft:compound:11, Alugentum Dust
+nuclearcraft:compound:12, Ammonium Sulfate
+nuclearcraft:compound:13, Ammonium Bisulfate
+nuclearcraft:compound:14, Ammonium Persulfate
+nuclearcraft:compound:15, Hydroquinone
+nuclearcraft:compound:16, Sodium Hydroquinone
+nuclearcraft:compound:17, Potassium Hydroquinone
 nuclearcraft:part:0, Basic Plating
 nuclearcraft:part:1, Advanced Plating
 nuclearcraft:part:2, DU Plating
@@ -1570,6 +1629,13 @@ nuclearcraft:part:12, Steel Chassis
 nuclearcraft:part:13, Silicon Carbide Fiber
 nuclearcraft:part:14, Empty Heat Sink
 nuclearcraft:part:15, Pyrolytic Carbon
+nuclearcraft:part:16, Sintered Steel
+nuclearcraft:part:17, Sintered Zirconia
+nuclearcraft:part:18, Polyethersulfone
+nuclearcraft:part:19, Zirfon
+nuclearcraft:part:20, Polytetrafluoroethene
+nuclearcraft:part:21, Polydimethylsilylene
+nuclearcraft:part:22, Polymethylsilylene-Methylene
 nuclearcraft:upgrade:0, Speed Upgrade
 nuclearcraft:upgrade:1, Energy Upgrade
 nuclearcraft:fission_dust:0, Bismuth Dust
@@ -2063,12 +2129,20 @@ nuclearcraft:fluid_manganese_dioxide, Molten Manganese Dioxide
 nuclearcraft:fluid_sulfur, Molten Sulfur
 nuclearcraft:fluid_liquid_helium, Liquid Helium
 nuclearcraft:fluid_liquid_nitrogen, Liquid Nitrogen
+nuclearcraft:fluid_le_water, Low Enriched Water
+nuclearcraft:fluid_he_water, Highly Enriched Water
 nuclearcraft:fluid_heavy_water, Heavy Water
+nuclearcraft:fluid_hydrogen_peroxide, Hydrogen Peroxide
 nuclearcraft:fluid_lead_platinum, Molten Lead Platinum
 nuclearcraft:fluid_enderium, Molten Enderium
 nuclearcraft:fluid_plasma, Plasma
 nuclearcraft:fluid_ethanol, Ethanol
 nuclearcraft:fluid_methanol, Methanol
+nuclearcraft:fluid_benzene, Benzene
+nuclearcraft:fluid_phenol, Phenol
+nuclearcraft:fluid_fluorobenzene, Fluorobenzene
+nuclearcraft:fluid_difluorobenzene, Difluorobenzene
+nuclearcraft:fluid_dimethyldifluorosilane, Dimethyldifluorosilane
 nuclearcraft:fluid_radaway, RadAway Fluid
 nuclearcraft:fluid_radaway_slow, Slow-Acting RadAway Fluid
 nuclearcraft:fluid_redstone_ethanol, Redstone-Infused Ethanol
@@ -2077,12 +2151,16 @@ nuclearcraft:fluid_fluorine, Fluorine
 nuclearcraft:fluid_carbon_dioxide, Carbon Dioxide
 nuclearcraft:fluid_carbon_monoxide, Carbon Monoxide
 nuclearcraft:fluid_ethene, Ethylene
+nuclearcraft:fluid_ethyne, Acetylene
 nuclearcraft:fluid_fluoromethane, Fluoromethane
 nuclearcraft:fluid_ammonia, Ammonia
 nuclearcraft:fluid_oxygen_difluoride, Oxygen Difluoride
 nuclearcraft:fluid_diborane, Diborane
 nuclearcraft:fluid_sulfur_dioxide, Sulfur Dioxide
 nuclearcraft:fluid_sulfur_trioxide, Sulfur Trioxide
+nuclearcraft:fluid_tetrafluoroethene, Tetrafluoroethylene
+nuclearcraft:fluid_hydrogen_sulfide, Hydrogen Sulfide
+nuclearcraft:fluid_depleted_hydrogen_sulfide, Depleted Hydrogen Sulfide
 nuclearcraft:fluid_hydrofluoric_acid, Hydrofluoric Acid
 nuclearcraft:fluid_boric_acid, Boric Acid
 nuclearcraft:fluid_sulfuric_acid, Sulfuric Acid
@@ -2095,6 +2173,12 @@ nuclearcraft:fluid_sodium_hydroxide_solution, Sodium Hydroxide Solution
 nuclearcraft:fluid_potassium_hydroxide_solution, Potassium Hydroxide Solution
 nuclearcraft:fluid_borax_solution, Borax Solution
 nuclearcraft:fluid_irradiated_borax_solution, Irradiated Borax Solution
+nuclearcraft:fluid_ammonium_sulfate_solution, Ammonium Sulfate Solution
+nuclearcraft:fluid_ammonium_bisulfate_solution, Ammonium Bisulfate Solution
+nuclearcraft:fluid_ammonium_persulfate_solution, Ammonium Persulfate Solution
+nuclearcraft:fluid_hydroquinone_solution, Hydroquinone Solution
+nuclearcraft:fluid_sodium_hydroquinone_solution, Sodium Hydroquinone Solution
+nuclearcraft:fluid_potassium_hydroquinone_solution, Potassium Hydroquinone Solution
 nuclearcraft:fluid_corium, Corium
 nuclearcraft:fluid_ice, Crushed Ice
 nuclearcraft:fluid_slurry_ice, Slurry Ice
@@ -2113,6 +2197,12 @@ nuclearcraft:fluid_bef2, Molten Beryllium Fluoride
 nuclearcraft:fluid_flibe, Molten FLiBe Salt Mixture
 nuclearcraft:fluid_naoh, Molten Sodium Hydroxide
 nuclearcraft:fluid_koh, Molten Potassium Hydroxide
+nuclearcraft:fluid_dfdps, Molten Difluorodiphenyl Sulfone
+nuclearcraft:fluid_polyphenylene_sulfide, Molten Polyphenylene Sulfide
+nuclearcraft:fluid_polydimethylsilylene, Molten Polydimethylsilylene
+nuclearcraft:fluid_polymethylsilylene_methylene, Molten Polymethylsilylene-Methylene
+nuclearcraft:fluid_polyethersulfone, Molten Polyethersulfone
+nuclearcraft:fluid_polytetrafluoroethene, Molten Polytetrafluoroethylene
 nuclearcraft:fluid_high_pressure_steam, High Pressure Steam
 nuclearcraft:fluid_exhaust_steam, Exhaust Steam
 nuclearcraft:fluid_low_pressure_steam, Low Pressure Steam
@@ -2121,13 +2211,16 @@ nuclearcraft:fluid_preheated_water, Preheated Water
 nuclearcraft:fluid_condensate_water, Condensate Water
 nuclearcraft:fluid_sodium, Molten Sodium
 nuclearcraft:fluid_potassium, Molten Potassium
+nuclearcraft:fluid_sodium_sulfide, Molten Sodium Sulfide
+nuclearcraft:fluid_potassium_sulfide, Molten Potassium Sulfide
 nuclearcraft:fluid_nak, Eutectic NaK Alloy
 nuclearcraft:fluid_nak_hot, Hot Eutectic NaK Alloy
 nuclearcraft:fluid_emergency_coolant, Emergency Coolant
 nuclearcraft:fluid_emergency_coolant_heated, Heated Emergency Coolant
+nuclearcraft:fluid_silicon, Molten Silicon
 nuclearcraft:fluid_arsenic, Sublimated Arsenic
 nuclearcraft:fluid_bas, Molten Boron Arsenide
-nuclearcraft:fluid_sic_vapor, Silicon Carbide Vapor
+nuclearcraft:fluid_sic_vapor, Sublimated Silicon Carbide
 nuclearcraft:fluid_alugentum, Molten Alugentum
 nuclearcraft:fluid_alumina, Molten Alumina
 nuclearcraft:fluid_strontium_90, Molten Strontium-90
@@ -2637,7 +2730,7 @@ qmd:ingot:13, Calcium Ingot
 qmd:ingot:14, Strontium Ingot
 qmd:ingot2:0, Yttrium Ingot
 qmd:ingot2:1, Neodymium Ingot
-qmd:ingot2:2, Mercury (Legacy Item)
+qmd:ingot2:2, Mercury
 qmd:ingot_alloy:0, Tungsten Carbide Ingot
 qmd:ingot_alloy:1, Niobium-Tin Ingot
 qmd:ingot_alloy:2, Stainless Steel Ingot
@@ -3194,6 +3287,12 @@ chisel:basalt2:4, Basalt
 chisel:basalt2:5, Basalt
 chisel:basalt2:6, Basalt
 chisel:basalt2:7, Basalt
+chisel:bloodmagic:0, Chiseled Blood Rune
+chisel:bloodmagic:1, Chiseled Blood Rune
+chisel:bloodmagic:2, Chiseled Blood Rune
+chisel:bloodmagic:3, Chiseled Blood Rune
+chisel:bloodmagic:4, Chiseled Blood Rune
+chisel:bloodmagic:5, Chiseled Blood Rune
 chisel:bookshelf_oak:0, Oak Bookshelf
 chisel:bookshelf_oak:1, Oak Bookshelf
 chisel:bookshelf_oak:2, Oak Bookshelf
@@ -5823,6 +5922,18 @@ appliedenergistics2:facade:0, Cable Facade - Aluminum Block
 appliedenergistics2:facade:0, Cable Facade - Silver Block
 appliedenergistics2:facade:0, Cable Facade - Manganese Oxide Block
 appliedenergistics2:facade:0, Cable Facade - Manganese Dioxide Block
+appliedenergistics2:facade:0, Cable Facade - Zirconia Block
+appliedenergistics2:facade:0, Cable Facade - Palladium Block
+appliedenergistics2:facade:0, Cable Facade - Tin Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Nickel Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Cobalt Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Ruthenium Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Iridium Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Molybdenum Block
+appliedenergistics2:facade:0, Cable Facade - Copper Oxide Block
+appliedenergistics2:facade:0, Cable Facade - Cobalt Block
+appliedenergistics2:facade:0, Cable Facade - Nickel Block
+appliedenergistics2:facade:0, Cable Facade - Platinum Block
 appliedenergistics2:facade:0, Cable Facade - Uranium-238 Block
 appliedenergistics2:facade:0, Cable Facade - Neptunium-237 Block
 appliedenergistics2:facade:0, Cable Facade - Plutonium-242 Block
@@ -5969,6 +6080,89 @@ appliedenergistics2:facade:0, Cable Facade - Sky Stone
 appliedenergistics2:facade:0, Cable Facade - Sky Stone Block
 appliedenergistics2:facade:0, Cable Facade - Sky Stone Brick
 appliedenergistics2:facade:0, Cable Facade - Sky Stone Small Brick
+appliedenergistics2:facade:0, Cable Facade - Blank Rune
+appliedenergistics2:facade:0, Cable Facade - Speed Rune
+appliedenergistics2:facade:0, Cable Facade - Efficiency Rune
+appliedenergistics2:facade:0, Cable Facade - Rune of Sacrifice
+appliedenergistics2:facade:0, Cable Facade - Rune of Self Sacrifice
+appliedenergistics2:facade:0, Cable Facade - Displacement Rune
+appliedenergistics2:facade:0, Cable Facade - Rune of Capacity
+appliedenergistics2:facade:0, Cable Facade - Rune of Augmented Capacity
+appliedenergistics2:facade:0, Cable Facade - Rune of the Orb
+appliedenergistics2:facade:0, Cable Facade - Acceleration Rune
+appliedenergistics2:facade:0, Cable Facade - Charging Rune
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Water
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Fire
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Earth
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Air
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Dusk
+appliedenergistics2:facade:0, Cable Facade - Ritual Stone of Dawn
+appliedenergistics2:facade:0, Cable Facade - Large Bloodstone Tile
+appliedenergistics2:facade:0, Cable Facade - Bloodstone Brick
+appliedenergistics2:facade:0, Cable Facade - Wooden Path
+appliedenergistics2:facade:0, Cable Facade - Tiled Wooden Path
+appliedenergistics2:facade:0, Cable Facade - Stone Brick Path
+appliedenergistics2:facade:0, Cable Facade - Tiled Stone Path
+appliedenergistics2:facade:0, Cable Facade - Worn Stone Brick Path
+appliedenergistics2:facade:0, Cable Facade - Tiled Worn Stone Path
+appliedenergistics2:facade:0, Cable Facade - Obsidian Brick Path
+appliedenergistics2:facade:0, Cable Facade - Tiled Obsidian Path
+appliedenergistics2:facade:0, Cable Facade - Raw Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Corrosive Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Destructive Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Vengeful Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Steadfast Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Small Raw Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Small Corrosive Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Small Destructive Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Small Vengeful Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Small Steadfast Stone Bricks
+appliedenergistics2:facade:0, Cable Facade - Raw Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Corrosive Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Destructive Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Vengeful Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Steadfast Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Accented Raw Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Accented Corrosive Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Accented Destructive Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Accented Vengeful Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Accented Steadfast Stone Tiles
+appliedenergistics2:facade:0, Cable Facade - Raw Stone
+appliedenergistics2:facade:0, Cable Facade - Corrosive Stone
+appliedenergistics2:facade:0, Cable Facade - Destructive Stone
+appliedenergistics2:facade:0, Cable Facade - Vengeful Stone
+appliedenergistics2:facade:0, Cable Facade - Steadfast Stone
+appliedenergistics2:facade:0, Cable Facade - Polished Raw Stone
+appliedenergistics2:facade:0, Cable Facade - Polished Corrosive Stone
+appliedenergistics2:facade:0, Cable Facade - Polished Destructive Stone
+appliedenergistics2:facade:0, Cable Facade - Polished Vengeful Stone
+appliedenergistics2:facade:0, Cable Facade - Polished Steadfast Stone
+appliedenergistics2:facade:0, Cable Facade - Raw Demon Alloy
+appliedenergistics2:facade:0, Cable Facade - Corrosive Demon Alloy
+appliedenergistics2:facade:0, Cable Facade - Destructive Demon Alloy
+appliedenergistics2:facade:0, Cable Facade - Vengeful Demon Alloy
+appliedenergistics2:facade:0, Cable Facade - Steadfast Demon Alloy
+appliedenergistics2:facade:0, Cable Facade - Raw Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Corrosive Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Destructive Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Vengeful Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Steadfast Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Accented Raw Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Accented Corrosive Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Accented Destructive Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Accented Vengeful Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Accented Steadfast Stone Pillar
+appliedenergistics2:facade:0, Cable Facade - Raw Stone Pillar Cap
+appliedenergistics2:facade:0, Cable Facade - Corrosive Stone Pillar Cap
+appliedenergistics2:facade:0, Cable Facade - Destructive Stone Pillar Cap
+appliedenergistics2:facade:0, Cable Facade - Vengeful Stone Pillar Cap
+appliedenergistics2:facade:0, Cable Facade - Steadfast Stone Pillar Cap
+appliedenergistics2:facade:0, Cable Facade - Raw Demon Eye
+appliedenergistics2:facade:0, Cable Facade - Corrosive Demon Eye
+appliedenergistics2:facade:0, Cable Facade - Destructive Demon Eye
+appliedenergistics2:facade:0, Cable Facade - Vengeful Demon Eye
+appliedenergistics2:facade:0, Cable Facade - Steadfast Demon Eye
 appliedenergistics2:facade:0, Cable Facade - Block of Smokey Quartz
 appliedenergistics2:facade:0, Cable Facade - Chiseled Smokey Quartz Block
 appliedenergistics2:facade:0, Cable Facade - Pillar Smokey Quartz Block
@@ -6189,6 +6383,12 @@ appliedenergistics2:facade:0, Cable Facade - Basalt
 appliedenergistics2:facade:0, Cable Facade - Basalt
 appliedenergistics2:facade:0, Cable Facade - Basalt
 appliedenergistics2:facade:0, Cable Facade - Basalt
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
+appliedenergistics2:facade:0, Cable Facade - Chiseled Blood Rune
 appliedenergistics2:facade:0, Cable Facade - Oak Bookshelf
 appliedenergistics2:facade:0, Cable Facade - Oak Bookshelf
 appliedenergistics2:facade:0, Cable Facade - Oak Bookshelf
@@ -9279,6 +9479,45 @@ appliedenergistics2:facade:0, Cable Facade - Zone 1
 appliedenergistics2:facade:0, Cable Facade - Zorg 1
 appliedenergistics2:facade:0, Cable Facade - Ztyl 1
 appliedenergistics2:facade:0, Cable Facade - Zyth 1
+appliedenergistics2:facade:0, Cable Facade - Rock Crystal Ore
+appliedenergistics2:facade:0, Cable Facade - Starmetal Ore
+appliedenergistics2:facade:0, Cable Facade - Aquamarine Shale
+appliedenergistics2:facade:0, Cable Facade - Marble
+appliedenergistics2:facade:0, Cable Facade - Marble Bricks
+appliedenergistics2:facade:0, Cable Facade - Marble Pillar
+appliedenergistics2:facade:0, Cable Facade - Marble Arch
+appliedenergistics2:facade:0, Cable Facade - Chiseled Marble
+appliedenergistics2:facade:0, Cable Facade - Engraved Marble
+appliedenergistics2:facade:0, Cable Facade - Runed Marble
+appliedenergistics2:facade:0, Cable Facade - Sooty Marble
+appliedenergistics2:facade:0, Cable Facade - Sooty Marble Bricks
+appliedenergistics2:facade:0, Cable Facade - Sooty Marble Pillar
+appliedenergistics2:facade:0, Cable Facade - Sooty Marble Arch
+appliedenergistics2:facade:0, Cable Facade - Chiseled Sooty Marble
+appliedenergistics2:facade:0, Cable Facade - Engraved Sooty Marble
+appliedenergistics2:facade:0, Cable Facade - Runed Sooty Marble
+appliedenergistics2:facade:0, Cable Facade - Infused Wood
+appliedenergistics2:facade:0, Cable Facade - Infused Wood Planks
+appliedenergistics2:facade:0, Cable Facade - Infused Wood Column
+appliedenergistics2:facade:0, Cable Facade - Infused Wood Arch
+appliedenergistics2:facade:0, Cable Facade - Engraved Infused Wood
+appliedenergistics2:facade:0, Cable Facade - Enriched Infused Wood
+appliedenergistics2:facade:0, Cable Facade - Vibrant Infused Wood
+appliedenergistics2:facade:0, Cable Facade - Neromantic Prime
+appliedenergistics2:facade:0, Cable Facade - Fysallidic Prime
+appliedenergistics2:facade:0, Cable Facade - Archaic Bricks
+appliedenergistics2:facade:0, Cable Facade - Archaic Edge
+appliedenergistics2:facade:0, Cable Facade - Archaic Light
+appliedenergistics2:facade:0, Cable Facade - Archaic Tile
+appliedenergistics2:facade:0, Cable Facade - Ashen Brick
+appliedenergistics2:facade:0, Cable Facade - Ashen Stone
+appliedenergistics2:facade:0, Cable Facade - Ashen Tile
+appliedenergistics2:facade:0, Cable Facade - Caminite Bricks
+appliedenergistics2:facade:0, Cable Facade - Caminite Large Brick
+appliedenergistics2:facade:0, Cable Facade - Quartz Ore
+appliedenergistics2:facade:0, Cable Facade - Sealed Planks
+appliedenergistics2:facade:0, Cable Facade - Reinforced Sealed Planks
+appliedenergistics2:facade:0, Cable Facade - Dawnstone Block
 appliedenergistics2:facade:0, Cable Facade - Ashen Wood
 appliedenergistics2:facade:0, Cable Facade - Blazing Wood
 appliedenergistics2:facade:0, Cable Facade - Ashen Leaves
@@ -9592,341 +9831,333 @@ betterquesting:guide_book, Better Questing Starter Guide
 bq_standard:loot_chest, Loot Chest
 betterquesting:quest_book, Quest Book
 betterquesting:submit_station, Object Submission Station (OSS)
-botania:lexicon, item.lexicon.name
-botania:petal:0, Mystical White Petal
-botania:petal:1, Mystical Orange Petal
-botania:petal:2, Mystical Magenta Petal
-botania:petal:3, Mystical Light Blue Petal
-botania:petal:4, Mystical Yellow Petal
-botania:petal:5, Mystical Lime Petal
-botania:petal:6, Mystical Pink Petal
-botania:petal:7, Mystical Gray Petal
-botania:petal:8, Mystical Light Gray Petal
-botania:petal:9, Mystical Cyan Petal
-botania:petal:10, Mystical Purple Petal
-botania:petal:11, Mystical Blue Petal
-botania:petal:12, Mystical Brown Petal
-botania:petal:13, Mystical Green Petal
-botania:petal:14, Mystical Red Petal
-botania:petal:15, Mystical Black Petal
-botania:dye:0, Floral White Powder
-botania:dye:1, Floral Orange Powder
-botania:dye:2, Floral Magenta Powder
-botania:dye:3, Floral Light Blue Powder
-botania:dye:4, Floral Yellow Powder
-botania:dye:5, Floral Lime Powder
-botania:dye:6, Floral Pink Powder
-botania:dye:7, Floral Gray Powder
-botania:dye:8, Floral Light Gray Powder
-botania:dye:9, Floral Cyan Powder
-botania:dye:10, Floral Purple Powder
-botania:dye:11, Floral Blue Powder
-botania:dye:12, Floral Brown Powder
-botania:dye:13, Floral Green Powder
-botania:dye:14, Floral Red Powder
-botania:dye:15, Floral Black Powder
-botania:pestleandmortar, item.pestleAndMortar.name
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:twigwand:0, Wand of the Forest
-botania:manaresource:0, Manasteel Ingot
-botania:manaresource:1, Mana Pearl
-botania:manaresource:2, Mana Diamond
-botania:manaresource:3, Livingwood Twig
-botania:manaresource:4, Terrasteel Ingot
-botania:manaresource:5, Gaia Spirit
-botania:manaresource:6, Redstone Root
-botania:manaresource:7, Elementium Ingot
-botania:manaresource:8, Pixie Dust
-botania:manaresource:9, Dragonstone
-botania:manaresource:11, Crafting Placeholder
-botania:manaresource:12, Red String
-botania:manaresource:13, Dreamwood Twig
-botania:manaresource:14, Gaia Spirit Ingot
-botania:manaresource:15, Ender Air Bottle
-botania:manaresource:16, Mana Infused String
-botania:manaresource:17, Manasteel Nugget
-botania:manaresource:18, Terrasteel Nugget
-botania:manaresource:19, Elementium Nugget
-botania:manaresource:22, Manaweave Cloth
-botania:manaresource:23, Mana Powder
-botania:lens:0, Mana Lens
-botania:lens:1, Mana Lens: Velocity
-botania:lens:2, Mana Lens: Potency
-botania:lens:3, Mana Lens: Resistance
-botania:lens:4, Mana Lens: Efficiency
-botania:lens:5, Mana Lens: Bounce
-botania:lens:6, Mana Lens: Gravity
-botania:lens:7, Mana Lens: Bore
-botania:lens:8, Mana Lens: Damaging
-botania:lens:9, Mana Lens: Phantom
-botania:lens:10, Mana Lens: Magnetizing
-botania:lens:11, Mana Lens: Entropic
-botania:lens:12, Mana Lens: Influence
-botania:lens:13, Mana Lens: Weight
-botania:lens:14, Mana Lens: Paintslinger
-botania:lens:15, Mana Lens: Kindle
-botania:lens:16, Mana Lens: Force
-botania:lens:17, Mana Lens: Flash
-botania:lens:18, Mana Lens: Warp
-botania:lens:19, Mana Lens: Redirective
-botania:lens:20, Mana Lens: Celebratory
-botania:lens:21, Mana Lens: Flare
-botania:lens:22, Mana Lens: Messenger
-botania:lens:23, Mana Lens: Tripwire
-botania:rune:0, Rune of Water
-botania:rune:1, Rune of Fire
-botania:rune:2, Rune of Earth
-botania:rune:3, Rune of Air
-botania:rune:4, Rune of Spring
-botania:rune:5, Rune of Summer
-botania:rune:6, Rune of Autumn
-botania:rune:7, Rune of Winter
-botania:rune:8, Rune of Mana
-botania:rune:9, Rune of Lust
-botania:rune:10, Rune of Gluttony
-botania:rune:11, Rune of Greed
-botania:rune:12, Rune of Sloth
-botania:rune:13, Rune of Wrath
-botania:rune:14, Rune of Envy
-botania:rune:15, Rune of Pride
-botania:manatablet, item.manaTablet.name
-botania:managun, item.manaGun.name
-botania:manacookie, item.manaCookie.name
-botania:fertilizer, item.fertilizer.name
-botania:grassseeds:0, Pasture Seeds
-botania:grassseeds:1, Boreal Seeds
-botania:grassseeds:2, Infestation Spores
-botania:grassseeds:3, Dry Pasture Seeds
-botania:grassseeds:4, Golden Pasture Seeds
-botania:grassseeds:5, Vivid Pasture Seeds
-botania:grassseeds:6, Scorched Pasture Seeds
-botania:grassseeds:7, Infused Pasture Seeds
-botania:grassseeds:8, Mutated Pasture Seeds
-botania:dirtrod, item.dirtRod.name
-botania:terraformrod, item.terraformRod.name
-botania:grasshorn:0, Horn of the Wild
-botania:grasshorn:1, Horn of the Canopy
-botania:grasshorn:2, Horn of the Covering
-botania:manamirror, item.manaMirror.name
-botania:manasteelhelm, item.manasteelHelm.name
-botania:manasteelhelmreveal, item.manasteelHelmReveal.name
-botania:manasteelchest, item.manasteelChest.name
-botania:manasteellegs, item.manasteelLegs.name
-botania:manasteelboots, item.manasteelBoots.name
-botania:manasteelpick, item.manasteelPick.name
-botania:manasteelshovel, item.manasteelShovel.name
-botania:manasteelaxe, item.manasteelAxe.name
-botania:manasteelsword, item.manasteelSword.name
-botania:manasteelshears, item.manasteelShears.name
-botania:terrasteelhelm, item.terrasteelHelm.name
-botania:terrasteelhelmreveal, item.terrasteelHelmReveal.name
-botania:terrasteelchest, item.terrasteelChest.name
-botania:terrasteellegs, item.terrasteelLegs.name
-botania:terrasteelboots, item.terrasteelBoots.name
-botania:terrasword, item.terraSword.name
-botania:tinyplanet, item.tinyPlanet.name
-botania:manaring, item.manaRing.name
-botania:auraring, item.auraRing.name
-botania:manaringgreater, item.manaRingGreater.name
-botania:auraringgreater, item.auraRingGreater.name
-botania:travelbelt, item.travelBelt.name
-botania:knockbackbelt, item.knockbackBelt.name
-botania:icependant, item.icePendant.name
-botania:lavapendant, item.lavaPendant.name
-botania:magnetring, item.magnetRing.name
-botania:waterring, item.waterRing.name
-botania:miningring, item.miningRing.name
-botania:terrapick, item.terraPick.name
-botania:divacharm, item.divaCharm.name
-botania:flighttiara:0, Flügel Tiara
-botania:flighttiara:1, Flügel Tiara
-botania:flighttiara:2, Flügel Tiara
-botania:flighttiara:3, Flügel Tiara
-botania:flighttiara:4, Flügel Tiara
-botania:flighttiara:5, Flügel Tiara
-botania:flighttiara:6, Flügel Tiara
-botania:flighttiara:7, Flügel Tiara
-botania:flighttiara:8, Flügel Tiara
-botania:enderdagger, item.enderDagger.name
-botania:quartz:0, Smokey Quartz
-botania:quartz:1, Mana Quartz
-botania:quartz:2, Blaze Quartz
-botania:quartz:3, Lavender Quartz
-botania:quartz:4, Redquartz
-botania:quartz:5, Elven Quartz
-botania:quartz:6, Sunny Quartz
-botania:waterrod, item.waterRod.name
-botania:elementiumhelm, item.elementiumHelm.name
-botania:elementiumhelmreveal, item.elementiumHelmReveal.name
-botania:elementiumchest, item.elementiumChest.name
-botania:elementiumlegs, item.elementiumLegs.name
-botania:elementiumboots, item.elementiumBoots.name
-botania:elementiumpick, item.elementiumPick.name
-botania:elementiumshovel, item.elementiumShovel.name
-botania:elementiumaxe, item.elementiumAxe.name
-botania:elementiumsword, item.elementiumSword.name
-botania:elementiumshears, item.elementiumShears.name
-botania:openbucket, item.openBucket.name
-botania:spawnermover, item.spawnerMover.name
-botania:pixiering, item.pixieRing.name
-botania:supertravelbelt, item.superTravelBelt.name
-botania:rainbowrod, item.rainbowRod.name
-botania:tornadorod, item.tornadoRod.name
-botania:firerod, item.fireRod.name
-botania:vineball, item.vineBall.name
-botania:slingshot, item.slingshot.name
-botania:manabottle, item.manaBottle.name
-botania:laputashard:0, Shard of Laputa
-botania:laputashard:4, Shard of Laputa
-botania:laputashard:9, Shard of Laputa
-botania:laputashard:14, Shard of Laputa
-botania:laputashard:19, Shard of Laputa
-botania:virus:0, Necrodermal Virus
-botania:virus:1, Nullodermal Virus
-botania:reachring, item.reachRing.name
-botania:skydirtrod, item.skyDirtRod.name
-botania:itemfinder, item.itemFinder.name
-botania:superlavapendant, item.superLavaPendant.name
-botania:enderhand, item.enderHand.name
-botania:glasspick, item.glassPick.name
-botania:spark, item.spark.name
-botania:sparkupgrade:0, Spark Augment: Dispersive
-botania:sparkupgrade:1, Spark Augment: Dominant
-botania:sparkupgrade:2, Spark Augment: Recessive
-botania:sparkupgrade:3, Spark Augment: Isolated
-botania:diviningrod, item.diviningRod.name
-botania:gravityrod, item.gravityRod.name
-botania:manainkwell, item.manaInkwell.name
-botania:vial:0, Managlass Vial
-botania:vial:1, Alfglass Flask
-botania:brewvial, item.brewVial.name
-botania:brewflask, item.brewFlask.name
-botania:bloodpendant, item.bloodPendant.name
-botania:missilerod, item.missileRod.name
-botania:holycloak, item.holyCloak.name
-botania:unholycloak, item.unholyCloak.name
-botania:balancecloak, item.balanceCloak.name
-botania:craftinghalo, item.craftingHalo.name
-botania:blacklotus:0, Black Lotus
-botania:blacklotus:1, Blacker Lotus
-botania:monocle, item.monocle.name
-botania:clip, item.clip.name
-botania:cobblerod, item.cobbleRod.name
-botania:smeltrod, item.smeltRod.name
-botania:worldseed, item.worldSeed.name
-botania:spellcloth, item.spellCloth.name
-botania:thornchakram:0, Thorn Chakram
-botania:thornchakram:1, Flare Chakram
-botania:overgrowthseed, item.overgrowthSeed.name
-botania:craftpattern:0, Crafting Pattern #1: 1x1
-botania:craftpattern:1, Crafting Pattern #2: 2x2
-botania:craftpattern:2, Crafting Pattern #3: 1x2
-botania:craftpattern:3, Crafting Pattern #4: 2x1
-botania:craftpattern:4, Crafting Pattern #5: 1x3
-botania:craftpattern:5, Crafting Pattern #6: 3x1
-botania:craftpattern:6, Crafting Pattern #7: 2x3
-botania:craftpattern:7, Crafting Pattern #8: 3x2
-botania:craftpattern:8, Crafting Pattern #9: Donut
-botania:ancientwill:0, Will of Ahrim
-botania:ancientwill:1, Will of Dharok
-botania:ancientwill:2, Will of Guthan
-botania:ancientwill:3, Will of Torag
-botania:ancientwill:4, Will of Verac
-botania:ancientwill:5, Will of Karil
-botania:corporeaspark:0, Corporea Spark
-botania:corporeaspark:1, Master Corporea Spark
-botania:livingwoodbow, item.livingwoodBow.name
-botania:crystalbow, item.crystalBow.name
-botania:cosmetic:0, Black Bowtie
-botania:cosmetic:1, Black Tie
-botania:cosmetic:2, Red Glasses
-botania:cosmetic:3, Puffy Scarf
-botania:cosmetic:4, Engineer Goggles
-botania:cosmetic:5, Eyepatch
-botania:cosmetic:6, Wicked Eyepatch
-botania:cosmetic:7, Red Ribbons
-botania:cosmetic:8, Pink Flower Bud
-botania:cosmetic:9, Polka-Dotted Bows
-botania:cosmetic:10, Blue Butterfly
-botania:cosmetic:11, Cat Ears
-botania:cosmetic:12, Witch Pin
-botania:cosmetic:13, Devil Tail
-botania:cosmetic:14, Kamui Eye
-botania:cosmetic:15, Googly Eyes
-botania:cosmetic:16, Four-Leafed Clover
-botania:cosmetic:17, Clock Eye
-botania:cosmetic:18, Unicorn Horn
-botania:cosmetic:19, Devil Horns
-botania:cosmetic:20, Hyper Plus
-botania:cosmetic:21, Botanist Emblem
-botania:cosmetic:22, Ancient Mask
-botania:cosmetic:23, Eerie Mask
-botania:cosmetic:24, Alien Antenna
-botania:cosmetic:25, Anaglyph Glasses
-botania:cosmetic:26, Orange Shades
-botania:cosmetic:27, Groucho Glasses
-botania:cosmetic:28, Thick Eyebrows
-botania:cosmetic:29, Lusitanic Shield
-botania:cosmetic:30, Tiny Potato Mask
-botania:cosmetic:31, Questgiver Mark
-botania:cosmetic:32, Thinking Hand
-botania:swapring, item.swapRing.name
-botania:flowerbag, item.flowerBag.name
-botania:phantomink, item.phantomInk.name
-botania:poolminecart, item.poolMinecart.name
-botania:pinkinator, item.pinkinator.name
-botania:infinitefruit, item.infiniteFruit.name
-botania:kingkey, item.kingKey.name
-botania:flugeleye, item.flugelEye.name
-botania:thorring, item.thorRing.name
-botania:odinring, item.odinRing.name
-botania:lokiring, item.lokiRing.name
-botania:dice, item.dice.name
-botania:keepivy, item.keepIvy.name
-botania:blackholetalisman:0, Black Hole Talisman
-botania:recordgaia1, item.recordGaia1.name
-botania:recordgaia2, item.recordGaia2.name
-botania:temperancestone:0, Stone of Temperance
-botania:incensestick, item.incenseStick.name
-botania:terraaxe, item.terraAxe.name
-botania:waterbowl, item.waterBowl.name
-botania:obediencestick, item.obedienceStick.name
-botania:cacophonium, item.cacophonium.name
-botania:slimebottle:0, Slime in a Bottle
-botania:starsword, item.starSword.name
-botania:exchangerod, item.exchangeRod.name
-botania:magnetringgreater, item.magnetRingGreater.name
-botania:thundersword, item.thunderSword.name
-botania:manaweavehelm, item.manaweaveHelm.name
-botania:manaweavechest, item.manaweaveChest.name
-botania:manaweavelegs, item.manaweaveLegs.name
-botania:manaweaveboots, item.manaweaveBoots.name
-botania:autocraftinghalo, item.autocraftingHalo.name
-botania:gaiahead, item.gaiaHead.name
-botania:sextant, item.sextant.name
-botania:speedupbelt, item.speedUpBelt.name
-botania:baublebox, item.baubleBox.name
-botania:dodgering, item.dodgeRing.name
-botania:invisibilitycloak, item.invisibilityCloak.name
-botania:cloudpendant, item.cloudPendant.name
-botania:supercloudpendant, item.superCloudPendant.name
-botania:thirdeye, item.thirdEye.name
-botania:astrolabe, item.astrolabe.name
-botania:goddesscharm, item.goddessCharm.name
+bloodmagic:altar, Blood Altar
+bloodmagic:blood_rune:0, Blank Rune
+bloodmagic:blood_rune:1, Speed Rune
+bloodmagic:blood_rune:2, Efficiency Rune
+bloodmagic:blood_rune:3, Rune of Sacrifice
+bloodmagic:blood_rune:4, Rune of Self Sacrifice
+bloodmagic:blood_rune:5, Displacement Rune
+bloodmagic:blood_rune:6, Rune of Capacity
+bloodmagic:blood_rune:7, Rune of Augmented Capacity
+bloodmagic:blood_rune:8, Rune of the Orb
+bloodmagic:blood_rune:9, Acceleration Rune
+bloodmagic:blood_rune:10, Charging Rune
+bloodmagic:ritual_controller:0, Master Ritual Stone
+bloodmagic:ritual_controller:1, Imperfect Ritual Stone
+bloodmagic:ritual_controller:2, Inverted Master Ritual Stone
+bloodmagic:ritual_stone:0, Ritual Stone
+bloodmagic:ritual_stone:1, Ritual Stone of Water
+bloodmagic:ritual_stone:2, Ritual Stone of Fire
+bloodmagic:ritual_stone:3, Ritual Stone of Earth
+bloodmagic:ritual_stone:4, Ritual Stone of Air
+bloodmagic:ritual_stone:5, Ritual Stone of Dusk
+bloodmagic:ritual_stone:6, Ritual Stone of Dawn
+bloodmagic:teleposer, Teleposer
+bloodmagic:soul_forge, Hellfire Forge
+bloodmagic:incense_altar, Incense Altar
+bloodmagic:demon_crucible, Demon Crucible
+bloodmagic:demon_pylon, Demon Pylon
+bloodmagic:demon_crystallizer, Demon Crystallizer
+bloodmagic:demon_crystal:0, Demon Will Crystal Cluster
+bloodmagic:demon_crystal:1, Corrosive Will Crystal Cluster
+bloodmagic:demon_crystal:2, Destructive Will Crystal Cluster
+bloodmagic:demon_crystal:3, Vengeful Will Crystal Cluster
+bloodmagic:demon_crystal:4, Steadfast Will Crystal Cluster
+bloodmagic:alchemy_table, Alchemy Table
+bloodmagic:decorative_brick:0, Large Bloodstone Tile
+bloodmagic:decorative_brick:1, Bloodstone Brick
+bloodmagic:path:0, Wooden Path
+bloodmagic:path:1, Tiled Wooden Path
+bloodmagic:path:2, Stone Brick Path
+bloodmagic:path:3, Tiled Stone Path
+bloodmagic:path:4, Worn Stone Brick Path
+bloodmagic:path:5, Tiled Worn Stone Path
+bloodmagic:path:6, Obsidian Brick Path
+bloodmagic:path:7, Tiled Obsidian Path
+bloodmagic:master_routing_node, Master Routing Node
+bloodmagic:input_routing_node, Input Routing Node
+bloodmagic:output_routing_node, Output Routing Node
+bloodmagic:item_routing_node, Routing Node
+bloodmagic:blood_tank:0, Blood Tank Tier 1
+bloodmagic:blood_tank:1, Blood Tank Tier 2
+bloodmagic:blood_tank:2, Blood Tank Tier 3
+bloodmagic:blood_tank:3, Blood Tank Tier 4
+bloodmagic:blood_tank:4, Blood Tank Tier 5
+bloodmagic:blood_tank:5, Blood Tank Tier 6
+bloodmagic:blood_tank:6, Blood Tank Tier 7
+bloodmagic:blood_tank:7, Blood Tank Tier 8
+bloodmagic:blood_tank:8, Blood Tank Tier 9
+bloodmagic:blood_tank:9, Blood Tank Tier 10
+bloodmagic:blood_tank:10, Blood Tank Tier 11
+bloodmagic:blood_tank:11, Blood Tank Tier 12
+bloodmagic:blood_tank:12, Blood Tank Tier 13
+bloodmagic:blood_tank:13, Blood Tank Tier 14
+bloodmagic:blood_tank:14, Blood Tank Tier 15
+bloodmagic:blood_tank:15, Blood Tank Tier 16
+bloodmagic:mimic:0, Ethereal Opaque Mimic Block
+bloodmagic:mimic:1, Opaque Mimic Block
+bloodmagic:mimic:2, Clear Mimic Block
+bloodmagic:mimic:3, Lighted Mimic Block
+bloodmagic:mimic:4, Sentient Mimic Block
+bloodmagic:demon_brick_1:0, Raw Stone Bricks
+bloodmagic:demon_brick_1:1, Corrosive Stone Bricks
+bloodmagic:demon_brick_1:2, Destructive Stone Bricks
+bloodmagic:demon_brick_1:3, Vengeful Stone Bricks
+bloodmagic:demon_brick_1:4, Steadfast Stone Bricks
+bloodmagic:demon_brick_2:0, Small Raw Stone Bricks
+bloodmagic:demon_brick_2:1, Small Corrosive Stone Bricks
+bloodmagic:demon_brick_2:2, Small Destructive Stone Bricks
+bloodmagic:demon_brick_2:3, Small Vengeful Stone Bricks
+bloodmagic:demon_brick_2:4, Small Steadfast Stone Bricks
+bloodmagic:demon_brick_2:5, Raw Stone Tiles
+bloodmagic:demon_brick_2:6, Corrosive Stone Tiles
+bloodmagic:demon_brick_2:7, Destructive Stone Tiles
+bloodmagic:demon_brick_2:8, Vengeful Stone Tiles
+bloodmagic:demon_brick_2:9, Steadfast Stone Tiles
+bloodmagic:demon_brick_2:10, Accented Raw Stone Tiles
+bloodmagic:demon_brick_2:11, Accented Corrosive Stone Tiles
+bloodmagic:demon_brick_2:12, Accented Destructive Stone Tiles
+bloodmagic:demon_brick_2:13, Accented Vengeful Stone Tiles
+bloodmagic:demon_brick_2:14, Accented Steadfast Stone Tiles
+bloodmagic:demon_extras:0, Raw Stone
+bloodmagic:demon_extras:1, Corrosive Stone
+bloodmagic:demon_extras:2, Destructive Stone
+bloodmagic:demon_extras:3, Vengeful Stone
+bloodmagic:demon_extras:4, Steadfast Stone
+bloodmagic:demon_extras:5, Polished Raw Stone
+bloodmagic:demon_extras:6, Polished Corrosive Stone
+bloodmagic:demon_extras:7, Polished Destructive Stone
+bloodmagic:demon_extras:8, Polished Vengeful Stone
+bloodmagic:demon_extras:9, Polished Steadfast Stone
+bloodmagic:demon_extras:10, Raw Demon Alloy
+bloodmagic:demon_extras:11, Corrosive Demon Alloy
+bloodmagic:demon_extras:12, Destructive Demon Alloy
+bloodmagic:demon_extras:13, Vengeful Demon Alloy
+bloodmagic:demon_extras:14, Steadfast Demon Alloy
+bloodmagic:demon_pillar_1:0, Raw Stone Pillar
+bloodmagic:demon_pillar_1:1, Corrosive Stone Pillar
+bloodmagic:demon_pillar_1:2, Destructive Stone Pillar
+bloodmagic:demon_pillar_1:3, Vengeful Stone Pillar
+bloodmagic:demon_pillar_1:4, Steadfast Stone Pillar
+bloodmagic:demon_pillar_2:0, Accented Raw Stone Pillar
+bloodmagic:demon_pillar_2:1, Accented Corrosive Stone Pillar
+bloodmagic:demon_pillar_2:2, Accented Destructive Stone Pillar
+bloodmagic:demon_pillar_2:3, Accented Vengeful Stone Pillar
+bloodmagic:demon_pillar_2:4, Accented Steadfast Stone Pillar
+bloodmagic:demon_pillar_cap_1:0, Raw Stone Pillar Cap
+bloodmagic:demon_pillar_cap_1:1, Corrosive Stone Pillar Cap
+bloodmagic:demon_pillar_cap_2:0, Destructive Stone Pillar Cap
+bloodmagic:demon_pillar_cap_2:1, Vengeful Stone Pillar Cap
+bloodmagic:demon_pillar_cap_3, tile.bloodmagic.pillarCap3..name
+bloodmagic:demon_light:0, Raw Demon Eye
+bloodmagic:demon_light:1, Corrosive Demon Eye
+bloodmagic:demon_light:2, Destructive Demon Eye
+bloodmagic:demon_light:3, Vengeful Demon Eye
+bloodmagic:demon_light:4, Steadfast Demon Eye
+bloodmagic:demon_wall_1:0, Raw Stone Brick Wall
+bloodmagic:demon_wall_1:1, Corrosive Stone Brick Wall
+bloodmagic:demon_wall_1:2, Destructive Stone Brick Wall
+bloodmagic:demon_wall_1:3, Vengeful Stone Brick Wall
+bloodmagic:demon_wall_1:4, Steadfast Stone Brick Wall
+bloodmagic:demon_wall_1:5, Raw Small Stone Brick Wall
+bloodmagic:demon_wall_1:6, Corrosive Small Stone Brick Wall
+bloodmagic:demon_wall_1:7, Destructive Small Stone Brick Wall
+bloodmagic:demon_wall_1:8, Vengeful Small Stone Brick Wall
+bloodmagic:demon_wall_1:9, Steadfast Small Stone Brick Wall
+bloodmagic:demon_wall_1:10, Raw Stone Wall
+bloodmagic:demon_wall_1:11, Corrosive Stone Wall
+bloodmagic:demon_wall_1:12, Destructive Stone Wall
+bloodmagic:demon_wall_1:13, Vengeful Stone Wall
+bloodmagic:demon_wall_1:14, Steadfast Stone Wall
+bloodmagic:demon_stairs_1:0, Raw Stone Stairs
+bloodmagic:demon_stairs_1:1, Corrosive Stone Stairs
+bloodmagic:demon_stairs_2:0, Destructive Stone Stairs
+bloodmagic:demon_stairs_2:1, Vengeful Stone Stairs
+bloodmagic:demon_stairs_3, tile.bloodmagic.stairs3..name
+bloodmagic:inversion_pillar:0, Raw Inversion Pillar
+bloodmagic:inversion_pillar:1, Corrosive Inversion Pillar
+bloodmagic:inversion_pillar:2, Destructive Inversion Pillar
+bloodmagic:inversion_pillar:3, Vengeful Inversion Pillar
+bloodmagic:inversion_pillar:4, Steadfast Inversion Pillar
+bloodmagic:inversion_pillar_end:0, Raw Inversion Pillar Base
+bloodmagic:inversion_pillar_end:1, Raw Inversion Pillar Cap
+bloodmagic:inversion_pillar_end:2, Corrosive Inversion Pillar Base
+bloodmagic:inversion_pillar_end:3, Corrosive Inversion Pillar Cap
+bloodmagic:inversion_pillar_end:4, Destructive Inversion Pillar Base
+bloodmagic:inversion_pillar_end:5, Destructive Inversion Pillar Cap
+bloodmagic:inversion_pillar_end:6, Vengeful Inversion Pillar Base
+bloodmagic:inversion_pillar_end:7, Vengeful Inversion Pillar Cap
+bloodmagic:inversion_pillar_end:8, Steadfast Inversion Pillar Base
+bloodmagic:inversion_pillar_end:9, Steadfast Inversion Pillar Cap
+bloodmagic:blood_orb:0, Weak Blood Orb
+bloodmagic:blood_orb:0, Apprentice Blood Orb
+bloodmagic:blood_orb:0, Magician Blood Orb
+bloodmagic:blood_orb:0, Master Blood Orb
+bloodmagic:blood_orb:0, Archmage Blood Orb
+bloodmagic:activation_crystal:0, Weak Activation Crystal
+bloodmagic:activation_crystal:1, Awakened Activation Crystal
+bloodmagic:activation_crystal:2, Creative Activation Crystal
+bloodmagic:slate:0, Blank Slate
+bloodmagic:slate:1, Reinforced Slate
+bloodmagic:slate:2, Imbued Slate
+bloodmagic:slate:3, Demonic Slate
+bloodmagic:slate:4, Ethereal Slate
+bloodmagic:inscription_tool:1, Elemental Inscription Tool: Water
+bloodmagic:inscription_tool:2, Elemental Inscription Tool: Fire
+bloodmagic:inscription_tool:3, Elemental Inscription Tool: Earth
+bloodmagic:inscription_tool:4, Elemental Inscription Tool: Air
+bloodmagic:inscription_tool:5, Elemental Inscription Tool: Dusk
+bloodmagic:sacrificial_dagger:0, Sacrificial Dagger
+bloodmagic:sacrificial_dagger:1, Creative Sacrificial Dagger
+bloodmagic:pack_sacrifice, Coat of Arms
+bloodmagic:pack_self_sacrifice, Blood Letter's Pack
+bloodmagic:dagger_of_sacrifice, Dagger of Sacrifice
+bloodmagic:ritual_diviner:0, Ritual Diviner
+bloodmagic:ritual_diviner:1, Ritual Diviner [Dusk]
+bloodmagic:ritual_diviner:2, Ritual Diviner [Dawn]
+bloodmagic:ritual_dismantler, Ritual Dismantler
+bloodmagic:ritual_reader, Ritual Tinkerer
+bloodmagic:lava_crystal, Lava Crystal
+bloodmagic:bound_sword, Bound Blade
+bloodmagic:bound_pickaxe, Bound Pickaxe
+bloodmagic:bound_axe, Bound Axe
+bloodmagic:bound_shovel, Bound Shovel
+bloodmagic:sigil_divination, Divination Sigil
+bloodmagic:sigil_air, Air Sigil
+bloodmagic:sigil_water, Water Sigil
+bloodmagic:sigil_lava, Lava Sigil
+bloodmagic:sigil_void, Void Sigil
+bloodmagic:sigil_green_grove, Sigil of the Green Grove
+bloodmagic:sigil_blood_light, Sigil of the Blood Lamp
+bloodmagic:sigil_elemental_affinity, Sigil of Elemental Affinity
+bloodmagic:sigil_magnetism, Sigil of Magnetism
+bloodmagic:sigil_suppression, Sigil of Suppression
+bloodmagic:sigil_haste, Sigil of Haste
+bloodmagic:sigil_fast_miner, Sigil of the Fast Miner
+bloodmagic:sigil_seer, Seer's Sigil
+bloodmagic:sigil_phantom_bridge, Sigil of the Phantom Bridge
+bloodmagic:sigil_whirlwind, Sigil of the Whirlwind
+bloodmagic:sigil_compression, Sigil of Compression
+bloodmagic:sigil_ender_severance, Sigil of Ender Severance
+bloodmagic:sigil_holding, Sigil of Holding
+bloodmagic:sigil_teleposition, Teleposition Sigil
+bloodmagic:sigil_transposition, Transposition Sigil
+bloodmagic:sigil_claw, Sigil of the Claw
+bloodmagic:sigil_bounce, Sigil of Elasticity
+bloodmagic:sigil_frost, Sigil of Winter's Breath
+bloodmagic:component:0, Water Reagent
+bloodmagic:component:1, Lava Reagent
+bloodmagic:component:2, Air Reagent
+bloodmagic:component:3, Mining Reagent
+bloodmagic:component:4, Void Reagent
+bloodmagic:component:5, Growth Reagent
+bloodmagic:component:6, Elemental Affinity Reagent
+bloodmagic:component:7, Sight Reagent
+bloodmagic:component:8, Binding Reagent
+bloodmagic:component:9, Suppression Reagent
+bloodmagic:component:10, Frame Parts
+bloodmagic:component:11, Blood Lamp Reagent
+bloodmagic:component:12, Magnetism Reagent
+bloodmagic:component:13, Haste Reagent
+bloodmagic:component:14, Compression Reagent
+bloodmagic:component:15, Phantom Bridge Reagent
+bloodmagic:component:16, Severance Reagent
+bloodmagic:component:17, Teleposition Reagent
+bloodmagic:component:18, Transposition Reagent
+bloodmagic:component:19, Iron Sand
+bloodmagic:component:20, Gold Sand
+bloodmagic:component:21, Coal Sand
+bloodmagic:component:22, Plant Oil
+bloodmagic:component:23, Sulfur
+bloodmagic:component:24, Saltpeter
+bloodmagic:component:25, Neuro Toxin
+bloodmagic:component:26, Antiseptic
+bloodmagic:component:27, Holding Reagent
+bloodmagic:component:28, Simple Lengthening Catalyst
+bloodmagic:component:29, Simple Power Catalyst
+bloodmagic:component:30, Claw Reagent
+bloodmagic:component:31, Elasticity Reagent
+bloodmagic:component:32, Frost Reagent
+bloodmagic:item_demon_crystal:0, Demon Will Crystal
+bloodmagic:item_demon_crystal:1, Corrosive Will Crystal
+bloodmagic:item_demon_crystal:2, Destructive Will Crystal
+bloodmagic:item_demon_crystal:3, Vengeful Will Crystal
+bloodmagic:item_demon_crystal:4, Steadfast Will Crystal
+bloodmagic:teleposition_focus:0, Teleposition Focus
+bloodmagic:teleposition_focus:1, Enhanced Teleposition Focus
+bloodmagic:teleposition_focus:2, Reinforced Teleposition Focus
+bloodmagic:teleposition_focus:3, Demonic Teleposition Focus
+bloodmagic:experience_tome, Tome of Peritia
+bloodmagic:blood_shard:0, Weak Blood Shard
+bloodmagic:blood_shard:1, Demon Blood Shard
+bloodmagic:living_armour_helmet, item.bloodmagic.livingArmour..name
+bloodmagic:living_armour_chest, item.bloodmagic.livingArmour..name
+bloodmagic:living_armour_leggings, item.bloodmagic.livingArmour..name
+bloodmagic:living_armour_boots, item.bloodmagic.livingArmour..name
+bloodmagic:sentient_armour_helmet, item.bloodmagic.sentientArmour..name
+bloodmagic:sentient_armour_chest, item.bloodmagic.sentientArmour..name
+bloodmagic:sentient_armour_leggings, item.bloodmagic.sentientArmour..name
+bloodmagic:sentient_armour_boots, item.bloodmagic.sentientArmour..name
+bloodmagic:altar_maker, Altar Maker
+bloodmagic:upgrade_trainer:0, Living Armour Training Bracelet
+bloodmagic:arcane_ashes, Arcane Ashes
+bloodmagic:monster_soul:0, Demonic Will
+bloodmagic:monster_soul:1, Corrosive Demonic Will
+bloodmagic:monster_soul:2, Destructive Demonic Will
+bloodmagic:monster_soul:3, Vengeful Demonic Will
+bloodmagic:monster_soul:4, Steadfast Demonic Will
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_gem:0, Petty Tartaric Gem
+bloodmagic:soul_gem:1, Lesser Tartaric Gem
+bloodmagic:soul_gem:2, Common Tartaric Gem
+bloodmagic:soul_gem:3, Greater Tartaric Gem
+bloodmagic:soul_gem:4, Grand Tartaric Gem
+bloodmagic:soul_snare:0, Rudimentary Snare
+bloodmagic:sentient_sword, Sentient Sword
+bloodmagic:sentient_bow, Sentient Bow
+bloodmagic:sentient_armour_gem, Sentient Armour Gem
+bloodmagic:sentient_axe, Sentient Axe
+bloodmagic:sentient_pickaxe, Sentient Pickaxe
+bloodmagic:sentient_shovel, Sentient Shovel
+bloodmagic:node_router, Node Router
+bloodmagic:base_item_filter:0, Precise Item Filter
+bloodmagic:base_item_filter:1, NBT Item Filter
+bloodmagic:base_item_filter:2, Mod Item Filter
+bloodmagic:base_item_filter:3, Ore Dictionary Item Filter
+bloodmagic:base_fluid_filter:0, Fluid Filter
+bloodmagic:cutting_fluid:0, Basic Cutting Fluid
+bloodmagic:cutting_fluid:1, Explosive Powder
+bloodmagic:sanguine_book, Inspectoris Scandalum
+bloodmagic:points_upgrade, item.bloodmagic.living_point_upgrade.name
+bloodmagic:demon_will_gauge, Demon Will Aura Gauge
+bloodmagic:potion_flask, Potion Flask
+bloodmagic:alchemic_vial, item.bloodmagic.alchemic_vial.name
+bloodmagic:icarus_scroll, Scroll of Icarus
 botania:livingwood0stairs, tile.livingwood0Stairs.name
 botania:livingwood0slab:0, Livingwood Slab
 botania:livingwood0wall, tile.livingwood0Wall.name
@@ -10365,7 +10596,7 @@ botania:mushroom:12, Brown Shimmering Mushroom
 botania:mushroom:13, Green Shimmering Mushroom
 botania:mushroom:14, Red Shimmering Mushroom
 botania:mushroom:15, Black Shimmering Mushroom
-botania:pump, tile.pump.name
+botania:pump, Fluid Extractor
 botania:doubleflower1:0, Tall Mystical White Flower
 botania:doubleflower1:1, Tall Mystical Orange Flower
 botania:doubleflower1:2, Tall Mystical Magenta Flower
@@ -10415,6 +10646,341 @@ botania:altgrass:3, Scorched Grass
 botania:altgrass:4, Infused Grass
 botania:altgrass:5, Mutated Grass
 botania:animatedtorch, tile.animatedTorch.name
+botania:lexicon, item.lexicon.name
+botania:petal:0, Mystical White Petal
+botania:petal:1, Mystical Orange Petal
+botania:petal:2, Mystical Magenta Petal
+botania:petal:3, Mystical Light Blue Petal
+botania:petal:4, Mystical Yellow Petal
+botania:petal:5, Mystical Lime Petal
+botania:petal:6, Mystical Pink Petal
+botania:petal:7, Mystical Gray Petal
+botania:petal:8, Mystical Light Gray Petal
+botania:petal:9, Mystical Cyan Petal
+botania:petal:10, Mystical Purple Petal
+botania:petal:11, Mystical Blue Petal
+botania:petal:12, Mystical Brown Petal
+botania:petal:13, Mystical Green Petal
+botania:petal:14, Mystical Red Petal
+botania:petal:15, Mystical Black Petal
+botania:dye:0, Floral White Powder
+botania:dye:1, Floral Orange Powder
+botania:dye:2, Floral Magenta Powder
+botania:dye:3, Floral Light Blue Powder
+botania:dye:4, Floral Yellow Powder
+botania:dye:5, Floral Lime Powder
+botania:dye:6, Floral Pink Powder
+botania:dye:7, Floral Gray Powder
+botania:dye:8, Floral Light Gray Powder
+botania:dye:9, Floral Cyan Powder
+botania:dye:10, Floral Purple Powder
+botania:dye:11, Floral Blue Powder
+botania:dye:12, Floral Brown Powder
+botania:dye:13, Floral Green Powder
+botania:dye:14, Floral Red Powder
+botania:dye:15, Floral Black Powder
+botania:pestleandmortar, item.pestleAndMortar.name
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:twigwand:0, Wand of the Forest
+botania:manaresource:0, Manasteel Ingot
+botania:manaresource:1, Mana Pearl
+botania:manaresource:2, Mana Diamond
+botania:manaresource:3, Livingwood Twig
+botania:manaresource:4, Terrasteel Ingot
+botania:manaresource:5, Gaia Spirit
+botania:manaresource:6, Redstone Root
+botania:manaresource:7, Elementium Ingot
+botania:manaresource:8, Pixie Dust
+botania:manaresource:9, Dragonstone
+botania:manaresource:11, Crafting Placeholder
+botania:manaresource:12, Red String
+botania:manaresource:13, Dreamwood Twig
+botania:manaresource:14, Gaia Spirit Ingot
+botania:manaresource:15, Ender Air Bottle
+botania:manaresource:16, Mana Infused String
+botania:manaresource:17, Manasteel Nugget
+botania:manaresource:18, Terrasteel Nugget
+botania:manaresource:19, Elementium Nugget
+botania:manaresource:22, Manaweave Cloth
+botania:manaresource:23, Mana Powder
+botania:lens:0, Mana Lens
+botania:lens:1, Mana Lens: Velocity
+botania:lens:2, Mana Lens: Potency
+botania:lens:3, Mana Lens: Resistance
+botania:lens:4, Mana Lens: Efficiency
+botania:lens:5, Mana Lens: Bounce
+botania:lens:6, Mana Lens: Gravity
+botania:lens:7, Mana Lens: Bore
+botania:lens:8, Mana Lens: Damaging
+botania:lens:9, Mana Lens: Phantom
+botania:lens:10, Mana Lens: Magnetizing
+botania:lens:11, Mana Lens: Entropic
+botania:lens:12, Mana Lens: Influence
+botania:lens:13, Mana Lens: Weight
+botania:lens:14, Mana Lens: Paintslinger
+botania:lens:15, Mana Lens: Kindle
+botania:lens:16, Mana Lens: Force
+botania:lens:17, Mana Lens: Flash
+botania:lens:18, Mana Lens: Warp
+botania:lens:19, Mana Lens: Redirective
+botania:lens:20, Mana Lens: Celebratory
+botania:lens:21, Mana Lens: Flare
+botania:lens:22, Mana Lens: Messenger
+botania:lens:23, Mana Lens: Tripwire
+botania:rune:0, Rune of Water
+botania:rune:1, Rune of Fire
+botania:rune:2, Rune of Earth
+botania:rune:3, Rune of Air
+botania:rune:4, Rune of Spring
+botania:rune:5, Rune of Summer
+botania:rune:6, Rune of Autumn
+botania:rune:7, Rune of Winter
+botania:rune:8, Rune of Mana
+botania:rune:9, Rune of Lust
+botania:rune:10, Rune of Gluttony
+botania:rune:11, Rune of Greed
+botania:rune:12, Rune of Sloth
+botania:rune:13, Rune of Wrath
+botania:rune:14, Rune of Envy
+botania:rune:15, Rune of Pride
+botania:manatablet, item.manaTablet.name
+botania:managun, item.manaGun.name
+botania:manacookie, item.manaCookie.name
+botania:fertilizer, item.fertilizer.name
+botania:grassseeds:0, Pasture Seeds
+botania:grassseeds:1, Boreal Seeds
+botania:grassseeds:2, Infestation Spores
+botania:grassseeds:3, Dry Pasture Seeds
+botania:grassseeds:4, Golden Pasture Seeds
+botania:grassseeds:5, Vivid Pasture Seeds
+botania:grassseeds:6, Scorched Pasture Seeds
+botania:grassseeds:7, Infused Pasture Seeds
+botania:grassseeds:8, Mutated Pasture Seeds
+botania:dirtrod, item.dirtRod.name
+botania:terraformrod, item.terraformRod.name
+botania:grasshorn:0, Horn of the Wild
+botania:grasshorn:1, Horn of the Canopy
+botania:grasshorn:2, Horn of the Covering
+botania:manamirror, item.manaMirror.name
+botania:manasteelhelm, item.manasteelHelm.name
+botania:manasteelhelmreveal, item.manasteelHelmReveal.name
+botania:manasteelchest, item.manasteelChest.name
+botania:manasteellegs, item.manasteelLegs.name
+botania:manasteelboots, item.manasteelBoots.name
+botania:manasteelpick, item.manasteelPick.name
+botania:manasteelshovel, item.manasteelShovel.name
+botania:manasteelaxe, item.manasteelAxe.name
+botania:manasteelsword, item.manasteelSword.name
+botania:manasteelshears, item.manasteelShears.name
+botania:terrasteelhelm, item.terrasteelHelm.name
+botania:terrasteelhelmreveal, item.terrasteelHelmReveal.name
+botania:terrasteelchest, item.terrasteelChest.name
+botania:terrasteellegs, item.terrasteelLegs.name
+botania:terrasteelboots, item.terrasteelBoots.name
+botania:terrasword, item.terraSword.name
+botania:tinyplanet, item.tinyPlanet.name
+botania:manaring, item.manaRing.name
+botania:auraring, item.auraRing.name
+botania:manaringgreater, item.manaRingGreater.name
+botania:auraringgreater, item.auraRingGreater.name
+botania:travelbelt, item.travelBelt.name
+botania:knockbackbelt, item.knockbackBelt.name
+botania:icependant, item.icePendant.name
+botania:lavapendant, item.lavaPendant.name
+botania:magnetring, item.magnetRing.name
+botania:waterring, item.waterRing.name
+botania:miningring, item.miningRing.name
+botania:terrapick, item.terraPick.name
+botania:divacharm, item.divaCharm.name
+botania:flighttiara:0, Flügel Tiara
+botania:flighttiara:1, Flügel Tiara
+botania:flighttiara:2, Flügel Tiara
+botania:flighttiara:3, Flügel Tiara
+botania:flighttiara:4, Flügel Tiara
+botania:flighttiara:5, Flügel Tiara
+botania:flighttiara:6, Flügel Tiara
+botania:flighttiara:7, Flügel Tiara
+botania:flighttiara:8, Flügel Tiara
+botania:enderdagger, item.enderDagger.name
+botania:quartz:0, Smokey Quartz
+botania:quartz:1, Mana Quartz
+botania:quartz:2, Blaze Quartz
+botania:quartz:3, Lavender Quartz
+botania:quartz:4, Redquartz
+botania:quartz:5, Elven Quartz
+botania:quartz:6, Sunny Quartz
+botania:waterrod, item.waterRod.name
+botania:elementiumhelm, item.elementiumHelm.name
+botania:elementiumhelmreveal, item.elementiumHelmReveal.name
+botania:elementiumchest, item.elementiumChest.name
+botania:elementiumlegs, item.elementiumLegs.name
+botania:elementiumboots, item.elementiumBoots.name
+botania:elementiumpick, item.elementiumPick.name
+botania:elementiumshovel, item.elementiumShovel.name
+botania:elementiumaxe, item.elementiumAxe.name
+botania:elementiumsword, item.elementiumSword.name
+botania:elementiumshears, item.elementiumShears.name
+botania:openbucket, item.openBucket.name
+botania:spawnermover, item.spawnerMover.name
+botania:pixiering, item.pixieRing.name
+botania:supertravelbelt, item.superTravelBelt.name
+botania:rainbowrod, item.rainbowRod.name
+botania:tornadorod, item.tornadoRod.name
+botania:firerod, item.fireRod.name
+botania:vineball, item.vineBall.name
+botania:slingshot, item.slingshot.name
+botania:manabottle, item.manaBottle.name
+botania:laputashard:0, Shard of Laputa
+botania:laputashard:4, Shard of Laputa
+botania:laputashard:9, Shard of Laputa
+botania:laputashard:14, Shard of Laputa
+botania:laputashard:19, Shard of Laputa
+botania:virus:0, Necrodermal Virus
+botania:virus:1, Nullodermal Virus
+botania:reachring, item.reachRing.name
+botania:skydirtrod, item.skyDirtRod.name
+botania:itemfinder, item.itemFinder.name
+botania:superlavapendant, item.superLavaPendant.name
+botania:enderhand, item.enderHand.name
+botania:glasspick, item.glassPick.name
+botania:spark, item.spark.name
+botania:sparkupgrade:0, Spark Augment: Dispersive
+botania:sparkupgrade:1, Spark Augment: Dominant
+botania:sparkupgrade:2, Spark Augment: Recessive
+botania:sparkupgrade:3, Spark Augment: Isolated
+botania:diviningrod, item.diviningRod.name
+botania:gravityrod, item.gravityRod.name
+botania:manainkwell, item.manaInkwell.name
+botania:vial:0, Managlass Vial
+botania:vial:1, Alfglass Flask
+botania:brewvial, item.brewVial.name
+botania:brewflask, item.brewFlask.name
+botania:bloodpendant, item.bloodPendant.name
+botania:missilerod, item.missileRod.name
+botania:holycloak, item.holyCloak.name
+botania:unholycloak, item.unholyCloak.name
+botania:balancecloak, item.balanceCloak.name
+botania:craftinghalo, item.craftingHalo.name
+botania:blacklotus:0, Black Lotus
+botania:blacklotus:1, Blacker Lotus
+botania:monocle, item.monocle.name
+botania:clip, item.clip.name
+botania:cobblerod, item.cobbleRod.name
+botania:smeltrod, item.smeltRod.name
+botania:worldseed, item.worldSeed.name
+botania:spellcloth, item.spellCloth.name
+botania:thornchakram:0, Thorn Chakram
+botania:thornchakram:1, Flare Chakram
+botania:overgrowthseed, item.overgrowthSeed.name
+botania:craftpattern:0, Crafting Pattern #1: 1x1
+botania:craftpattern:1, Crafting Pattern #2: 2x2
+botania:craftpattern:2, Crafting Pattern #3: 1x2
+botania:craftpattern:3, Crafting Pattern #4: 2x1
+botania:craftpattern:4, Crafting Pattern #5: 1x3
+botania:craftpattern:5, Crafting Pattern #6: 3x1
+botania:craftpattern:6, Crafting Pattern #7: 2x3
+botania:craftpattern:7, Crafting Pattern #8: 3x2
+botania:craftpattern:8, Crafting Pattern #9: Donut
+botania:ancientwill:0, Will of Ahrim
+botania:ancientwill:1, Will of Dharok
+botania:ancientwill:2, Will of Guthan
+botania:ancientwill:3, Will of Torag
+botania:ancientwill:4, Will of Verac
+botania:ancientwill:5, Will of Karil
+botania:corporeaspark:0, Corporea Spark
+botania:corporeaspark:1, Master Corporea Spark
+botania:livingwoodbow, item.livingwoodBow.name
+botania:crystalbow, item.crystalBow.name
+botania:cosmetic:0, Black Bowtie
+botania:cosmetic:1, Black Tie
+botania:cosmetic:2, Red Glasses
+botania:cosmetic:3, Puffy Scarf
+botania:cosmetic:4, Engineer Goggles
+botania:cosmetic:5, Eyepatch
+botania:cosmetic:6, Wicked Eyepatch
+botania:cosmetic:7, Red Ribbons
+botania:cosmetic:8, Pink Flower Bud
+botania:cosmetic:9, Polka-Dotted Bows
+botania:cosmetic:10, Blue Butterfly
+botania:cosmetic:11, Cat Ears
+botania:cosmetic:12, Witch Pin
+botania:cosmetic:13, Devil Tail
+botania:cosmetic:14, Kamui Eye
+botania:cosmetic:15, Googly Eyes
+botania:cosmetic:16, Four-Leafed Clover
+botania:cosmetic:17, Clock Eye
+botania:cosmetic:18, Unicorn Horn
+botania:cosmetic:19, Devil Horns
+botania:cosmetic:20, Hyper Plus
+botania:cosmetic:21, Botanist Emblem
+botania:cosmetic:22, Ancient Mask
+botania:cosmetic:23, Eerie Mask
+botania:cosmetic:24, Alien Antenna
+botania:cosmetic:25, Anaglyph Glasses
+botania:cosmetic:26, Orange Shades
+botania:cosmetic:27, Groucho Glasses
+botania:cosmetic:28, Thick Eyebrows
+botania:cosmetic:29, Lusitanic Shield
+botania:cosmetic:30, Tiny Potato Mask
+botania:cosmetic:31, Questgiver Mark
+botania:cosmetic:32, Thinking Hand
+botania:swapring, item.swapRing.name
+botania:flowerbag, item.flowerBag.name
+botania:phantomink, item.phantomInk.name
+botania:poolminecart, item.poolMinecart.name
+botania:pinkinator, item.pinkinator.name
+botania:infinitefruit, item.infiniteFruit.name
+botania:kingkey, item.kingKey.name
+botania:flugeleye, item.flugelEye.name
+botania:thorring, item.thorRing.name
+botania:odinring, item.odinRing.name
+botania:lokiring, item.lokiRing.name
+botania:dice, item.dice.name
+botania:keepivy, item.keepIvy.name
+botania:blackholetalisman:0, Black Hole Talisman
+botania:recordgaia1, item.recordGaia1.name
+botania:recordgaia2, item.recordGaia2.name
+botania:temperancestone:0, Stone of Temperance
+botania:incensestick, item.incenseStick.name
+botania:terraaxe, item.terraAxe.name
+botania:waterbowl, item.waterBowl.name
+botania:obediencestick, item.obedienceStick.name
+botania:cacophonium, item.cacophonium.name
+botania:slimebottle:0, Slime in a Bottle
+botania:starsword, item.starSword.name
+botania:exchangerod, item.exchangeRod.name
+botania:magnetringgreater, item.magnetRingGreater.name
+botania:thundersword, item.thunderSword.name
+botania:manaweavehelm, item.manaweaveHelm.name
+botania:manaweavechest, item.manaweaveChest.name
+botania:manaweavelegs, item.manaweaveLegs.name
+botania:manaweaveboots, item.manaweaveBoots.name
+botania:autocraftinghalo, item.autocraftingHalo.name
+botania:gaiahead, item.gaiaHead.name
+botania:sextant, item.sextant.name
+botania:speedupbelt, item.speedUpBelt.name
+botania:baublebox, item.baubleBox.name
+botania:dodgering, item.dodgeRing.name
+botania:invisibilitycloak, item.invisibilityCloak.name
+botania:cloudpendant, item.cloudPendant.name
+botania:supercloudpendant, item.superCloudPendant.name
+botania:thirdeye, item.thirdEye.name
+botania:astrolabe, item.astrolabe.name
+botania:goddesscharm, item.goddessCharm.name
 buildinggadgets:buildingtool, Building Gadget
 buildinggadgets:exchangertool, Exchanging Gadget
 buildinggadgets:copypastetool, Copy-Paste Gadget
@@ -10547,26 +11113,6 @@ extendedcrafting:singularity:64, Ardite Singularity
 extendedcrafting:singularity:65, Cobalt Singularity
 extendedcrafting:singularity:66, Manyullyn Singularity
 extendedcrafting:singularity_ultimate, The Ultimate Singularity
-storagedrawers:upgrade_template, Upgrade Template
-storagedrawers:upgrade_storage:0, Storage Upgrade (I)
-storagedrawers:upgrade_storage:1, Storage Upgrade (II)
-storagedrawers:upgrade_storage:2, Storage Upgrade (III)
-storagedrawers:upgrade_storage:3, Storage Upgrade (IV)
-storagedrawers:upgrade_storage:4, Storage Upgrade (V)
-storagedrawers:upgrade_one_stack, Storage Downgrade
-storagedrawers:upgrade_status:0, Status Upgrade (I)
-storagedrawers:upgrade_status:1, Status Upgrade (II)
-storagedrawers:upgrade_void, Void Upgrade
-storagedrawers:upgrade_conversion, Conversion Upgrade
-storagedrawers:upgrade_creative:0, Creative Storage Upgrade
-storagedrawers:upgrade_creative:1, Creative Vending Upgrade
-storagedrawers:upgrade_redstone:0, Redstone Upgrade
-storagedrawers:upgrade_redstone:1, Redstone Max Upgrade
-storagedrawers:upgrade_redstone:2, Redstone Min Upgrade
-storagedrawers:drawer_key, Drawer Key
-storagedrawers:shroud_key, Concealment Key
-storagedrawers:personal_key, Personal Key
-storagedrawers:quantify_key, Quantify Key
 storagedrawers:basicdrawers:0, Basic Drawer
 storagedrawers:basicdrawers:0, Basic Drawer
 storagedrawers:basicdrawers:0, Basic Drawer
@@ -10617,6 +11163,26 @@ storagedrawers:customdrawers:3, Framed Half Drawers 1x2
 storagedrawers:customdrawers:4, Framed Half Drawers 2x2
 storagedrawers:customtrim, Framed Trim
 storagedrawers:framingtable, Framing Table
+storagedrawers:upgrade_template, Upgrade Template
+storagedrawers:upgrade_storage:0, Storage Upgrade (I)
+storagedrawers:upgrade_storage:1, Storage Upgrade (II)
+storagedrawers:upgrade_storage:2, Storage Upgrade (III)
+storagedrawers:upgrade_storage:3, Storage Upgrade (IV)
+storagedrawers:upgrade_storage:4, Storage Upgrade (V)
+storagedrawers:upgrade_one_stack, Storage Downgrade
+storagedrawers:upgrade_status:0, Status Upgrade (I)
+storagedrawers:upgrade_status:1, Status Upgrade (II)
+storagedrawers:upgrade_void, Void Upgrade
+storagedrawers:upgrade_conversion, Conversion Upgrade
+storagedrawers:upgrade_creative:0, Creative Storage Upgrade
+storagedrawers:upgrade_creative:1, Creative Vending Upgrade
+storagedrawers:upgrade_redstone:0, Redstone Upgrade
+storagedrawers:upgrade_redstone:1, Redstone Max Upgrade
+storagedrawers:upgrade_redstone:2, Redstone Min Upgrade
+storagedrawers:drawer_key, Drawer Key
+storagedrawers:shroud_key, Concealment Key
+storagedrawers:personal_key, Personal Key
+storagedrawers:quantify_key, Quantify Key
 framedcompactdrawers:framed_compact_drawer, Framed Compacting Drawer
 framedcompactdrawers:framed_drawer_controller:0, Framed Drawer Controller
 framedcompactdrawers:framed_slave:0, Framed Controller Slave
@@ -12421,142 +12987,142 @@ gregtech:fluid_pipe_nonuple:115, Nonuple Tungsten Fluid Pipe
 gregtech:fluid_pipe_nonuple:396, Nonuple Tungstencarbide Fluid Pipe
 gregtech:fluid_pipe_nonuple:2013, Nonuple Tungstensteel Fluid Pipe
 gregtech:fluid_pipe_nonuple:2036, Nonuple Vanadiumsteel Fluid Pipe
-gregtech:item_pipe_small:274, Small Cupronickel Item Pipe
-gregtech:item_pipe_small:331, Small Ultimet Item Pipe
-gregtech:item_pipe_small:259, Small Brass Item Pipe
-gregtech:item_pipe_small:69, Small Nickel Item Pipe
+gregtech:item_pipe_small:302, Small Black Bronze Item Pipe
+gregtech:item_pipe_small:2014, Small Cobalt Brass Item Pipe
+gregtech:item_pipe_small:1007, Small Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_small:301, Small Rose Gold Item Pipe
 gregtech:item_pipe_small:23, Small Cobalt Item Pipe
-gregtech:item_pipe_small:290, Small Magnalium Item Pipe
-gregtech:item_pipe_small:112, Small Tin Item Pipe
-gregtech:item_pipe_small:1007, Small Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_small:277, Small Electrum Item Pipe
-gregtech:item_pipe_small:302, Small Black Bronze Item Pipe
-gregtech:item_pipe_small:80, Small Platinum Item Pipe
-gregtech:item_pipe_small:75, Small Osmium Item Pipe
-gregtech:item_pipe_small:344, Small Osmiridium Item Pipe
+gregtech:item_pipe_small:259, Small Brass Item Pipe
+gregtech:item_pipe_small:331, Small Ultimet Item Pipe
 gregtech:item_pipe_small:3, Small Americium Item Pipe
+gregtech:item_pipe_small:75, Small Osmium Item Pipe
+gregtech:item_pipe_small:277, Small Electrum Item Pipe
+gregtech:item_pipe_small:274, Small Cupronickel Item Pipe
+gregtech:item_pipe_small:344, Small Osmiridium Item Pipe
+gregtech:item_pipe_small:69, Small Nickel Item Pipe
+gregtech:item_pipe_small:112, Small Tin Item Pipe
+gregtech:item_pipe_small:80, Small Platinum Item Pipe
+gregtech:item_pipe_small:290, Small Magnalium Item Pipe
 gregtech:item_pipe_small:300, Small Sterling Silver Item Pipe
-gregtech:item_pipe_small:2014, Small Cobalt Brass Item Pipe
-gregtech:item_pipe_normal:274, Cupronickel Item Pipe
-gregtech:item_pipe_normal:331, Ultimet Item Pipe
-gregtech:item_pipe_normal:259, Brass Item Pipe
-gregtech:item_pipe_normal:69, Nickel Item Pipe
+gregtech:item_pipe_normal:302, Black Bronze Item Pipe
+gregtech:item_pipe_normal:2014, Cobalt Brass Item Pipe
+gregtech:item_pipe_normal:1007, Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_normal:301, Rose Gold Item Pipe
 gregtech:item_pipe_normal:23, Cobalt Item Pipe
-gregtech:item_pipe_normal:290, Magnalium Item Pipe
-gregtech:item_pipe_normal:112, Tin Item Pipe
-gregtech:item_pipe_normal:1007, Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_normal:277, Electrum Item Pipe
-gregtech:item_pipe_normal:302, Black Bronze Item Pipe
-gregtech:item_pipe_normal:80, Platinum Item Pipe
-gregtech:item_pipe_normal:75, Osmium Item Pipe
-gregtech:item_pipe_normal:344, Osmiridium Item Pipe
+gregtech:item_pipe_normal:259, Brass Item Pipe
+gregtech:item_pipe_normal:331, Ultimet Item Pipe
 gregtech:item_pipe_normal:3, Americium Item Pipe
+gregtech:item_pipe_normal:75, Osmium Item Pipe
+gregtech:item_pipe_normal:277, Electrum Item Pipe
+gregtech:item_pipe_normal:274, Cupronickel Item Pipe
+gregtech:item_pipe_normal:344, Osmiridium Item Pipe
+gregtech:item_pipe_normal:69, Nickel Item Pipe
+gregtech:item_pipe_normal:112, Tin Item Pipe
+gregtech:item_pipe_normal:80, Platinum Item Pipe
+gregtech:item_pipe_normal:290, Magnalium Item Pipe
 gregtech:item_pipe_normal:300, Sterling Silver Item Pipe
-gregtech:item_pipe_normal:2014, Cobalt Brass Item Pipe
-gregtech:item_pipe_large:274, Large Cupronickel Item Pipe
-gregtech:item_pipe_large:331, Large Ultimet Item Pipe
-gregtech:item_pipe_large:259, Large Brass Item Pipe
-gregtech:item_pipe_large:69, Large Nickel Item Pipe
+gregtech:item_pipe_large:302, Large Black Bronze Item Pipe
+gregtech:item_pipe_large:2014, Large Cobalt Brass Item Pipe
+gregtech:item_pipe_large:1007, Large Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_large:301, Large Rose Gold Item Pipe
 gregtech:item_pipe_large:23, Large Cobalt Item Pipe
-gregtech:item_pipe_large:290, Large Magnalium Item Pipe
-gregtech:item_pipe_large:112, Large Tin Item Pipe
-gregtech:item_pipe_large:1007, Large Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_large:277, Large Electrum Item Pipe
-gregtech:item_pipe_large:302, Large Black Bronze Item Pipe
-gregtech:item_pipe_large:80, Large Platinum Item Pipe
-gregtech:item_pipe_large:75, Large Osmium Item Pipe
-gregtech:item_pipe_large:344, Large Osmiridium Item Pipe
+gregtech:item_pipe_large:259, Large Brass Item Pipe
+gregtech:item_pipe_large:331, Large Ultimet Item Pipe
 gregtech:item_pipe_large:3, Large Americium Item Pipe
+gregtech:item_pipe_large:75, Large Osmium Item Pipe
+gregtech:item_pipe_large:277, Large Electrum Item Pipe
+gregtech:item_pipe_large:274, Large Cupronickel Item Pipe
+gregtech:item_pipe_large:344, Large Osmiridium Item Pipe
+gregtech:item_pipe_large:69, Large Nickel Item Pipe
+gregtech:item_pipe_large:112, Large Tin Item Pipe
+gregtech:item_pipe_large:80, Large Platinum Item Pipe
+gregtech:item_pipe_large:290, Large Magnalium Item Pipe
 gregtech:item_pipe_large:300, Large Sterling Silver Item Pipe
-gregtech:item_pipe_large:2014, Large Cobalt Brass Item Pipe
-gregtech:item_pipe_huge:274, Huge Cupronickel Item Pipe
-gregtech:item_pipe_huge:331, Huge Ultimet Item Pipe
-gregtech:item_pipe_huge:259, Huge Brass Item Pipe
-gregtech:item_pipe_huge:69, Huge Nickel Item Pipe
+gregtech:item_pipe_huge:302, Huge Black Bronze Item Pipe
+gregtech:item_pipe_huge:2014, Huge Cobalt Brass Item Pipe
+gregtech:item_pipe_huge:1007, Huge Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_huge:301, Huge Rose Gold Item Pipe
 gregtech:item_pipe_huge:23, Huge Cobalt Item Pipe
-gregtech:item_pipe_huge:290, Huge Magnalium Item Pipe
-gregtech:item_pipe_huge:112, Huge Tin Item Pipe
-gregtech:item_pipe_huge:1007, Huge Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_huge:277, Huge Electrum Item Pipe
-gregtech:item_pipe_huge:302, Huge Black Bronze Item Pipe
-gregtech:item_pipe_huge:80, Huge Platinum Item Pipe
-gregtech:item_pipe_huge:75, Huge Osmium Item Pipe
-gregtech:item_pipe_huge:344, Huge Osmiridium Item Pipe
+gregtech:item_pipe_huge:259, Huge Brass Item Pipe
+gregtech:item_pipe_huge:331, Huge Ultimet Item Pipe
 gregtech:item_pipe_huge:3, Huge Americium Item Pipe
+gregtech:item_pipe_huge:75, Huge Osmium Item Pipe
+gregtech:item_pipe_huge:277, Huge Electrum Item Pipe
+gregtech:item_pipe_huge:274, Huge Cupronickel Item Pipe
+gregtech:item_pipe_huge:344, Huge Osmiridium Item Pipe
+gregtech:item_pipe_huge:69, Huge Nickel Item Pipe
+gregtech:item_pipe_huge:112, Huge Tin Item Pipe
+gregtech:item_pipe_huge:80, Huge Platinum Item Pipe
+gregtech:item_pipe_huge:290, Huge Magnalium Item Pipe
 gregtech:item_pipe_huge:300, Huge Sterling Silver Item Pipe
-gregtech:item_pipe_huge:2014, Huge Cobalt Brass Item Pipe
-gregtech:item_pipe_small_restrictive:274, Small Restrictive Cupronickel Item Pipe
-gregtech:item_pipe_small_restrictive:331, Small Restrictive Ultimet Item Pipe
-gregtech:item_pipe_small_restrictive:259, Small Restrictive Brass Item Pipe
-gregtech:item_pipe_small_restrictive:69, Small Restrictive Nickel Item Pipe
+gregtech:item_pipe_small_restrictive:302, Small Restrictive Black Bronze Item Pipe
+gregtech:item_pipe_small_restrictive:2014, Small Restrictive Cobalt Brass Item Pipe
+gregtech:item_pipe_small_restrictive:1007, Small Restrictive Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_small_restrictive:301, Small Restrictive Rose Gold Item Pipe
 gregtech:item_pipe_small_restrictive:23, Small Restrictive Cobalt Item Pipe
-gregtech:item_pipe_small_restrictive:290, Small Restrictive Magnalium Item Pipe
-gregtech:item_pipe_small_restrictive:112, Small Restrictive Tin Item Pipe
-gregtech:item_pipe_small_restrictive:1007, Small Restrictive Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_small_restrictive:277, Small Restrictive Electrum Item Pipe
-gregtech:item_pipe_small_restrictive:302, Small Restrictive Black Bronze Item Pipe
-gregtech:item_pipe_small_restrictive:80, Small Restrictive Platinum Item Pipe
-gregtech:item_pipe_small_restrictive:75, Small Restrictive Osmium Item Pipe
-gregtech:item_pipe_small_restrictive:344, Small Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_small_restrictive:259, Small Restrictive Brass Item Pipe
+gregtech:item_pipe_small_restrictive:331, Small Restrictive Ultimet Item Pipe
 gregtech:item_pipe_small_restrictive:3, Small Restrictive Americium Item Pipe
+gregtech:item_pipe_small_restrictive:75, Small Restrictive Osmium Item Pipe
+gregtech:item_pipe_small_restrictive:277, Small Restrictive Electrum Item Pipe
+gregtech:item_pipe_small_restrictive:274, Small Restrictive Cupronickel Item Pipe
+gregtech:item_pipe_small_restrictive:344, Small Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_small_restrictive:69, Small Restrictive Nickel Item Pipe
+gregtech:item_pipe_small_restrictive:112, Small Restrictive Tin Item Pipe
+gregtech:item_pipe_small_restrictive:80, Small Restrictive Platinum Item Pipe
+gregtech:item_pipe_small_restrictive:290, Small Restrictive Magnalium Item Pipe
 gregtech:item_pipe_small_restrictive:300, Small Restrictive Sterling Silver Item Pipe
-gregtech:item_pipe_small_restrictive:2014, Small Restrictive Cobalt Brass Item Pipe
-gregtech:item_pipe_normal_restrictive:274, Restrictive Cupronickel Item Pipe
-gregtech:item_pipe_normal_restrictive:331, Restrictive Ultimet Item Pipe
-gregtech:item_pipe_normal_restrictive:259, Restrictive Brass Item Pipe
-gregtech:item_pipe_normal_restrictive:69, Restrictive Nickel Item Pipe
+gregtech:item_pipe_normal_restrictive:302, Restrictive Black Bronze Item Pipe
+gregtech:item_pipe_normal_restrictive:2014, Restrictive Cobalt Brass Item Pipe
+gregtech:item_pipe_normal_restrictive:1007, Restrictive Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_normal_restrictive:301, Restrictive Rose Gold Item Pipe
 gregtech:item_pipe_normal_restrictive:23, Restrictive Cobalt Item Pipe
-gregtech:item_pipe_normal_restrictive:290, Restrictive Magnalium Item Pipe
-gregtech:item_pipe_normal_restrictive:112, Restrictive Tin Item Pipe
-gregtech:item_pipe_normal_restrictive:1007, Restrictive Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_normal_restrictive:277, Restrictive Electrum Item Pipe
-gregtech:item_pipe_normal_restrictive:302, Restrictive Black Bronze Item Pipe
-gregtech:item_pipe_normal_restrictive:80, Restrictive Platinum Item Pipe
-gregtech:item_pipe_normal_restrictive:75, Restrictive Osmium Item Pipe
-gregtech:item_pipe_normal_restrictive:344, Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_normal_restrictive:259, Restrictive Brass Item Pipe
+gregtech:item_pipe_normal_restrictive:331, Restrictive Ultimet Item Pipe
 gregtech:item_pipe_normal_restrictive:3, Restrictive Americium Item Pipe
+gregtech:item_pipe_normal_restrictive:75, Restrictive Osmium Item Pipe
+gregtech:item_pipe_normal_restrictive:277, Restrictive Electrum Item Pipe
+gregtech:item_pipe_normal_restrictive:274, Restrictive Cupronickel Item Pipe
+gregtech:item_pipe_normal_restrictive:344, Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_normal_restrictive:69, Restrictive Nickel Item Pipe
+gregtech:item_pipe_normal_restrictive:112, Restrictive Tin Item Pipe
+gregtech:item_pipe_normal_restrictive:80, Restrictive Platinum Item Pipe
+gregtech:item_pipe_normal_restrictive:290, Restrictive Magnalium Item Pipe
 gregtech:item_pipe_normal_restrictive:300, Restrictive Sterling Silver Item Pipe
-gregtech:item_pipe_normal_restrictive:2014, Restrictive Cobalt Brass Item Pipe
-gregtech:item_pipe_large_restrictive:274, Large Restrictive Cupronickel Item Pipe
-gregtech:item_pipe_large_restrictive:331, Large Restrictive Ultimet Item Pipe
-gregtech:item_pipe_large_restrictive:259, Large Restrictive Brass Item Pipe
-gregtech:item_pipe_large_restrictive:69, Large Restrictive Nickel Item Pipe
+gregtech:item_pipe_large_restrictive:302, Large Restrictive Black Bronze Item Pipe
+gregtech:item_pipe_large_restrictive:2014, Large Restrictive Cobalt Brass Item Pipe
+gregtech:item_pipe_large_restrictive:1007, Large Restrictive Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_large_restrictive:301, Large Restrictive Rose Gold Item Pipe
 gregtech:item_pipe_large_restrictive:23, Large Restrictive Cobalt Item Pipe
-gregtech:item_pipe_large_restrictive:290, Large Restrictive Magnalium Item Pipe
-gregtech:item_pipe_large_restrictive:112, Large Restrictive Tin Item Pipe
-gregtech:item_pipe_large_restrictive:1007, Large Restrictive Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_large_restrictive:277, Large Restrictive Electrum Item Pipe
-gregtech:item_pipe_large_restrictive:302, Large Restrictive Black Bronze Item Pipe
-gregtech:item_pipe_large_restrictive:80, Large Restrictive Platinum Item Pipe
-gregtech:item_pipe_large_restrictive:75, Large Restrictive Osmium Item Pipe
-gregtech:item_pipe_large_restrictive:344, Large Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_large_restrictive:259, Large Restrictive Brass Item Pipe
+gregtech:item_pipe_large_restrictive:331, Large Restrictive Ultimet Item Pipe
 gregtech:item_pipe_large_restrictive:3, Large Restrictive Americium Item Pipe
+gregtech:item_pipe_large_restrictive:75, Large Restrictive Osmium Item Pipe
+gregtech:item_pipe_large_restrictive:277, Large Restrictive Electrum Item Pipe
+gregtech:item_pipe_large_restrictive:274, Large Restrictive Cupronickel Item Pipe
+gregtech:item_pipe_large_restrictive:344, Large Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_large_restrictive:69, Large Restrictive Nickel Item Pipe
+gregtech:item_pipe_large_restrictive:112, Large Restrictive Tin Item Pipe
+gregtech:item_pipe_large_restrictive:80, Large Restrictive Platinum Item Pipe
+gregtech:item_pipe_large_restrictive:290, Large Restrictive Magnalium Item Pipe
 gregtech:item_pipe_large_restrictive:300, Large Restrictive Sterling Silver Item Pipe
-gregtech:item_pipe_large_restrictive:2014, Large Restrictive Cobalt Brass Item Pipe
-gregtech:item_pipe_huge_restrictive:274, Huge Restrictive Cupronickel Item Pipe
-gregtech:item_pipe_huge_restrictive:331, Huge Restrictive Ultimet Item Pipe
-gregtech:item_pipe_huge_restrictive:259, Huge Restrictive Brass Item Pipe
-gregtech:item_pipe_huge_restrictive:69, Huge Restrictive Nickel Item Pipe
+gregtech:item_pipe_huge_restrictive:302, Huge Restrictive Black Bronze Item Pipe
+gregtech:item_pipe_huge_restrictive:2014, Huge Restrictive Cobalt Brass Item Pipe
+gregtech:item_pipe_huge_restrictive:1007, Huge Restrictive Polyvinyl Chloride (PVC) Item Pipe
 gregtech:item_pipe_huge_restrictive:301, Huge Restrictive Rose Gold Item Pipe
 gregtech:item_pipe_huge_restrictive:23, Huge Restrictive Cobalt Item Pipe
-gregtech:item_pipe_huge_restrictive:290, Huge Restrictive Magnalium Item Pipe
-gregtech:item_pipe_huge_restrictive:112, Huge Restrictive Tin Item Pipe
-gregtech:item_pipe_huge_restrictive:1007, Huge Restrictive Polyvinyl Chloride (PVC) Item Pipe
-gregtech:item_pipe_huge_restrictive:277, Huge Restrictive Electrum Item Pipe
-gregtech:item_pipe_huge_restrictive:302, Huge Restrictive Black Bronze Item Pipe
-gregtech:item_pipe_huge_restrictive:80, Huge Restrictive Platinum Item Pipe
-gregtech:item_pipe_huge_restrictive:75, Huge Restrictive Osmium Item Pipe
-gregtech:item_pipe_huge_restrictive:344, Huge Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_huge_restrictive:259, Huge Restrictive Brass Item Pipe
+gregtech:item_pipe_huge_restrictive:331, Huge Restrictive Ultimet Item Pipe
 gregtech:item_pipe_huge_restrictive:3, Huge Restrictive Americium Item Pipe
+gregtech:item_pipe_huge_restrictive:75, Huge Restrictive Osmium Item Pipe
+gregtech:item_pipe_huge_restrictive:277, Huge Restrictive Electrum Item Pipe
+gregtech:item_pipe_huge_restrictive:274, Huge Restrictive Cupronickel Item Pipe
+gregtech:item_pipe_huge_restrictive:344, Huge Restrictive Osmiridium Item Pipe
+gregtech:item_pipe_huge_restrictive:69, Huge Restrictive Nickel Item Pipe
+gregtech:item_pipe_huge_restrictive:112, Huge Restrictive Tin Item Pipe
+gregtech:item_pipe_huge_restrictive:80, Huge Restrictive Platinum Item Pipe
+gregtech:item_pipe_huge_restrictive:290, Huge Restrictive Magnalium Item Pipe
 gregtech:item_pipe_huge_restrictive:300, Huge Restrictive Sterling Silver Item Pipe
-gregtech:item_pipe_huge_restrictive:2014, Huge Restrictive Cobalt Brass Item Pipe
 gregtech:optical_pipe_normal:0, Optical Fiber Cable
 gregtech:laser_pipe_normal:0, Laser Transmitting Cable
 gregtech:ld_item_pipe, Long Distance Item Pipe
@@ -14093,12 +14659,12 @@ pyrotech:bone_tool_repair_kit, Bone Tool Repair Kit
 pyrotech:flint_tool_repair_kit, Flint Tool Repair Kit
 supersoundmuffler:sound_muffler_bauble, Super Sound Muffler
 supersoundmuffler:sound_muffler, Super Sound Muffler
+torchmaster:frozen_pearl, Frozen Pearl
 torchmaster:mega_torch:0, Mega Torch
 torchmaster:mega_torch:1, Unlit Mega Torch
 torchmaster:terrain_lighter, Terrain Lighter
 torchmaster:dread_lamp, Dread Lamp
 torchmaster:feral_flare_lantern, Feral Flare Lantern
-torchmaster:frozen_pearl, Frozen Pearl
 waterstrainer:strainer_base, Strainer Base
 waterstrainer:net:0, Net
 waterstrainer:net:1, Dense Net
@@ -14688,6 +15254,183 @@ xtones:zyth:12, Zyth 13
 xtones:zyth:13, Zyth 14
 xtones:zyth:14, Zyth 15
 xtones:zyth:15, Zyth 16
+astralsorcery:itemcraftingcomponent:0, Aquamarine
+astralsorcery:itemcraftingcomponent:1, Starmetal Ingot
+astralsorcery:itemcraftingcomponent:2, Stardust
+astralsorcery:itemcraftingcomponent:3, Glass Lens
+astralsorcery:itemcraftingcomponent:4, Resonating Gem
+astralsorcery:itemcraftingcomponent:5, Parchment
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:itemconstellationpaper:0, Constellation Paper
+astralsorcery:iteminfusedglass, Infused Glass
+astralsorcery:itemrockcrystalsimple:0, Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemtunedrockcrystal:0, Attuned Rock Crystal
+astralsorcery:itemcelestialcrystal:0, Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemtunedcelestialcrystal:0, Attuned Celestial Crystal
+astralsorcery:itemjournal, Astral Tome
+astralsorcery:itemhandtelescope, Looking Glass
+astralsorcery:itemlinkingtool, Linking Tool
+astralsorcery:itemwand, Resonating Wand
+astralsorcery:itemsextant, Sextant
+astralsorcery:itemilluminationwand, Illumination Wand
+astralsorcery:itemcoloredlens:0, Colored Lens
+astralsorcery:itemcoloredlens:1, Colored Lens
+astralsorcery:itemcoloredlens:2, Colored Lens
+astralsorcery:itemcoloredlens:3, Colored Lens
+astralsorcery:itemcoloredlens:4, Colored Lens
+astralsorcery:itemcoloredlens:5, Colored Lens
+astralsorcery:itemcoloredlens:6, Colored Lens
+astralsorcery:itemskyresonator, Fosic Resonator
+astralsorcery:itemshiftingstar, Shifting Star
+astralsorcery:itemarchitectwand, Formation Wand
+astralsorcery:itemexchangewand, Conversion Wand
+astralsorcery:itemgrapplewand, Impulsion Wand
+astralsorcery:itemusabledust:0, Illumination Powder
+astralsorcery:itemusabledust:1, Nocturnal Powder
+astralsorcery:itemknowledgeshare, Scroll of Written Expertise
+astralsorcery:itemperkseal, Sealing Sigil
+astralsorcery:itemknowledgefragment, Lucent Scroll
+astralsorcery:itemfragmentcapsule, Shining Casing
+astralsorcery:itemperkgem:0, Ourium Gem
+astralsorcery:itemperkgem:1, Ilium Gem
+astralsorcery:itemperkgem:2, Fengarum Gem
+astralsorcery:itemcrystalpickaxe, Crystal Pickaxe
+astralsorcery:itemcrystalshovel, Crystal Shovel
+astralsorcery:itemcrystalaxe, Crystal Axe
+astralsorcery:itemcrystalsword, Crystal Sword
+astralsorcery:itemchargedcrystalaxe, Infused Crystal Axe
+astralsorcery:itemchargedcrystalsword, Infused Crystal Sword
+astralsorcery:itemchargedcrystalpickaxe, Infused Crystal Pickaxe
+astralsorcery:itemchargedcrystalshovel, Infused Crystal Shovel
+astralsorcery:itemcape, Mantle of Stars
+astralsorcery:itemenchantmentamulet, Resplendent Prism
+astralsorcery:blockmarblestairs, Marble Stairs
+astralsorcery:blockflarelight, Volatile Flare
+astralsorcery:blockvanishing, tile.blockvanishing.name
+astralsorcery:blockchalice, Containment Chalice
+astralsorcery:blockbore, Evershifting Fountain
+astralsorcery:blockattunementaltar, Attunement Altar
+astralsorcery:blockattunementrelay, Spectral Relay
+astralsorcery:blockwell, Lightwell
+astralsorcery:blockworldilluminator, Cave Illuminator
+astralsorcery:blockfaketree, 
+astralsorcery:blockstarlightinfuser, Starlight Infuser
+astralsorcery:blockrituallink, Ritual Anchor
+astralsorcery:blockportalnode, 
+astralsorcery:blocktreebeacon, Tree Beacon
+astralsorcery:blocktranslucentblock, Translucent Block
+astralsorcery:blockmapdrawingtable, Stellar Refraction Table
+astralsorcery:blockcelestialgateway, Celestial Gateway
+astralsorcery:blockobservatory, Observatory
+astralsorcery:blocklens, Lens
+astralsorcery:blockprism, PrismLens
+astralsorcery:blockmarbleslab:0, Marble Slab
+astralsorcery:blockcustomore:0, Rock Crystal Ore
+astralsorcery:blockcustomore:1, Starmetal Ore
+astralsorcery:blockcustomsandore:0, Aquamarine Shale
+astralsorcery:blockcustomflower:0, Faint Amaranth
+astralsorcery:blockmarble:0, Marble
+astralsorcery:blockmarble:1, Marble Bricks
+astralsorcery:blockmarble:2, Marble Pillar
+astralsorcery:blockmarble:3, Marble Arch
+astralsorcery:blockmarble:4, Chiseled Marble
+astralsorcery:blockmarble:5, Engraved Marble
+astralsorcery:blockmarble:6, Runed Marble
+astralsorcery:blockblackmarble:0, Sooty Marble
+astralsorcery:blockblackmarble:1, Sooty Marble Bricks
+astralsorcery:blockblackmarble:2, Sooty Marble Pillar
+astralsorcery:blockblackmarble:3, Sooty Marble Arch
+astralsorcery:blockblackmarble:4, Chiseled Sooty Marble
+astralsorcery:blockblackmarble:5, Engraved Sooty Marble
+astralsorcery:blockblackmarble:6, Runed Sooty Marble
+astralsorcery:blockinfusedwood:0, Infused Wood
+astralsorcery:blockinfusedwood:1, Infused Wood Planks
+astralsorcery:blockinfusedwood:2, Infused Wood Column
+astralsorcery:blockinfusedwood:3, Infused Wood Arch
+astralsorcery:blockinfusedwood:4, Engraved Infused Wood
+astralsorcery:blockinfusedwood:5, Enriched Infused Wood
+astralsorcery:blockinfusedwood:6, Vibrant Infused Wood
+astralsorcery:blockborehead:0, Neromantic Prime
+astralsorcery:blockborehead:1, Fysallidic Prime
+astralsorcery:blockmachine:0, Telescope
+astralsorcery:blockmachine:1, Grindstone
+astralsorcery:blockcelestialcrystals:0, Celestial Crystal Cluster
+astralsorcery:blockcelestialcrystals:1, Celestial Crystal Cluster
+astralsorcery:blockcelestialcrystals:2, Celestial Crystal Cluster
+astralsorcery:blockcelestialcrystals:3, Celestial Crystal Cluster
+astralsorcery:blockcelestialcrystals:4, Celestial Crystal Cluster
+astralsorcery:blockgemcrystals:0, Gem Crystal Cluster
+astralsorcery:blockgemcrystals:1, Gem Crystal Cluster
+astralsorcery:blockgemcrystals:2, Gem Crystal Cluster
+astralsorcery:blockgemcrystals:3, Gem Crystal Cluster
+astralsorcery:blockgemcrystals:4, Gem Crystal Cluster
+astralsorcery:blockstructural:0, Telescope
+astralsorcery:blockritualpedestal, Ritual Pedestal
+astralsorcery:blockaltar:0, Luminous Crafting Table
+astralsorcery:blockaltar:1, Starlight Crafting Altar
+astralsorcery:blockaltar:2, Celestial Altar
+astralsorcery:blockaltar:3, Iridescent Altar
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
+astralsorcery:blockcelestialcollectorcrystal:0, Floating Crystal
 base:wrench, Wrench
 betterbuilderswands:wandstone, Stone Wand
 betterbuilderswands:wandiron, Iron Wand
@@ -14706,6 +15449,221 @@ botania_tweaks:basic_extended_crafty_crate, Basic Extended Crafty Crate
 botania_tweaks:advanced_extended_crafty_crate, Advanced Extended Crafty Crate
 botania_tweaks:elite_extended_crafty_crate, Elite Extended Crafty Crate
 botania_tweaks:ultimate_extended_crafty_crate, Ultimate Extended Crafty Crate
+embers:adhesive, Adhesive
+embers:alchemic_waste, Alchemical Waste
+embers:ancient_motive_core, Ancient Motive Core
+embers:anti_tinker_lens, Smoky Tinker's Lens
+embers:archaic_brick, Archaic Brick
+embers:archaic_circuit, Archaic Circuit
+embers:ashen_cloak_boots, Ashen Boots
+embers:ashen_cloak_chest, Ashen Cloak
+embers:ashen_cloak_head, Ashen Goggles
+embers:ashen_cloak_legs, Ashen Leggings
+embers:ashen_cloth, Ashen Fabric
+embers:aspectus_copper, Copper Aspectus
+embers:aspectus_dawnstone, Dawnstone Aspectus
+embers:aspectus_iron, Iron Aspectus
+embers:aspectus_lead, Lead Aspectus
+embers:aspectus_silver, Silver Aspectus
+embers:axe_clockwork, Clockwork Battleaxe
+embers:blasting_core, Blasting Core
+embers:blend_caminite, Caminite Blend
+embers:brick_caminite, Caminite Brick
+embers:caster_orb, Caster Orb
+embers:codex, Ancient Codex
+embers:crystal_ember, Ember Crystal
+embers:diffraction_barrel, Diffraction Barrel
+embers:dust_ash, Ash Pile
+embers:dust_ember, Ember Grit
+embers:dust_metallurgic, Metallurgic Dust
+embers:eldritch_insignia, Eldritch Insignia
+embers:ember_cartridge:0, Mantle Cartridge
+embers:ember_cartridge:0, Mantle Cartridge
+embers:ember_cluster, Ember Crystal Cluster
+embers:ember_detector, Atmospheric Gauge
+embers:ember_jar:0, Mantle Jar
+embers:ember_jar:0, Mantle Jar
+embers:flame_barrier, Flame Barrier
+embers:focal_lens, Focal Lens
+embers:glimmer_lamp, Glimmer Lamp
+embers:glimmer_shard, Glimmer Crystal
+embers:golems_eye, Eye of the Ancients
+embers:grandhammer, Grandhammer
+embers:ignition_cannon, Blazing Ray
+embers:inflictor_gem, Inflictor Gem
+embers:intelligent_apparatus, Intelligent Apparatus
+embers:isolated_materia, Isolated Materia
+embers:jet_augment, Cinder Jet
+embers:pickaxe_clockwork, Clockwork Pickaxe
+embers:plate_caminite, Caminite Plate
+embers:plate_caminite_raw, Raw Caminite Plate
+embers:resonating_bell, Resonating Bell
+embers:shard_ember, Ember Shard
+embers:shifting_scales, Shifting Scales
+embers:spark_plug, Spark Plug
+embers:staff_ember, Cinder Staff
+embers:stamp_bar, Bar Stamp
+embers:stamp_bar_raw, Raw Bar Stamp
+embers:stamp_flat, Flat Stamp
+embers:stamp_flat_raw, Raw Flat Stamp
+embers:stamp_gear, Gear Stamp
+embers:stamp_gear_raw, Raw Gear Stamp
+embers:stamp_plate, Plate Stamp
+embers:stamp_plate_raw, Raw Plate Stamp
+embers:stamp_rod, Rod Stamp
+embers:stamp_rod_raw, Raw Rod Stamp
+embers:stamp_round, Round Stamp
+embers:stamp_round_raw, Raw Round Stamp
+embers:superheater, Superheater
+embers:tinker_hammer, Tinker's Hammer
+embers:tinker_lens, Tinker's Lens
+embers:wildfire_core, Wildfire Core
+embers:winding_gears, Winding Gears
+embers:tyrfing, Tyrfing
+embers:pickaxe_copper, Copper Pickaxe
+embers:axe_copper, Copper Axe
+embers:shovel_copper, Copper Shovel
+embers:hoe_copper, Copper Hoe
+embers:sword_copper, Copper Sword
+embers:ingot_copper, Copper Ingot
+embers:nugget_copper, Copper Nugget
+embers:plate_copper, Copper Plate
+embers:pickaxe_dawnstone, Dawnstone Pickaxe
+embers:axe_dawnstone, Dawnstone Axe
+embers:shovel_dawnstone, Dawnstone Shovel
+embers:hoe_dawnstone, Dawnstone Hoe
+embers:sword_dawnstone, Dawnstone Sword
+embers:ingot_dawnstone, Dawnstone Ingot
+embers:nugget_dawnstone, Dawnstone Nugget
+embers:plate_dawnstone, Dawnstone Plate
+embers:pickaxe_lead, Lead Pickaxe
+embers:axe_lead, Lead Axe
+embers:shovel_lead, Lead Shovel
+embers:hoe_lead, Lead Hoe
+embers:sword_lead, Lead Sword
+embers:ingot_lead, Lead Ingot
+embers:nugget_lead, Lead Nugget
+embers:plate_lead, Lead Plate
+embers:pickaxe_silver, Silver Pickaxe
+embers:axe_silver, Silver Axe
+embers:shovel_silver, Silver Shovel
+embers:hoe_silver, Silver Hoe
+embers:sword_silver, Silver Sword
+embers:ingot_silver, Silver Ingot
+embers:nugget_silver, Silver Nugget
+embers:plate_silver, Silver Plate
+embers:block_caminite_brick_slab, Caminite Brick Slab
+embers:ashen_stone_slab, Ashen Stone Slab
+embers:ashen_brick_slab, Ashen Brick Slab
+embers:ashen_tile_slab, Ashen Tile Slab
+embers:ashen_amulet, Ashen Amulet
+embers:dawnstone_mail, Dawnstone Mail
+embers:ember_amulet, Ember Amulet
+embers:ember_belt, Ember Belt
+embers:ember_ring, Ember Ring
+embers:explosion_charm, Explosion Charm
+embers:ember_bulb:0, Mantle Bulb
+embers:ember_bulb:0, Mantle Bulb
+embers:nonbeliever_amulet, Amulet of the Heretic
+embers:alchemy_pedestal, Alchemy Pedestal
+embers:alchemy_tablet, Exchange Tablet
+embers:archaic_bricks, Archaic Bricks
+embers:archaic_edge, Archaic Edge
+embers:archaic_light, Archaic Light
+embers:archaic_tile, Archaic Tile
+embers:ashen_brick, Ashen Brick
+embers:ashen_brick_slab_double, Ashen Brick Double Slab
+embers:ashen_stone, Ashen Stone
+embers:ashen_stone_slab_double, Ashen Stone Double Slab
+embers:ashen_tile, Ashen Tile
+embers:ashen_tile_slab_double, Ashen Tile Double Slab
+embers:auto_hammer, Automatic Hammer
+embers:beam_cannon, Beam Cannon
+embers:beam_splitter, Beam Splitter
+embers:bin, Bin
+embers:block_caminite_brick, Caminite Bricks
+embers:block_caminite_brick_slab_double, Caminite Brick Double Slab
+embers:block_caminite_large_brick, Caminite Large Brick
+embers:block_furnace, Melter
+embers:block_lantern, Ember Lantern
+embers:block_tank, Fluid Vessel
+embers:boiler, Pressure Refinery
+embers:breaker, Automatic Breaker
+embers:caminite_lever, Caminite Lever
+embers:catalytic_plug, Catalytic Plug
+embers:catalyzer, Catalysis Chamber
+embers:cinder_plinth, Cinder Plinth
+embers:clockwork_attenuator, Clockwork Attenuator
+embers:combustor, Combustion Chamber
+embers:copper_cell:0, Copper Cell
+embers:copper_cell:0, Copper Cell
+embers:creative_ember_source, Creative Ember Source
+embers:crystal_cell, Crystal Cell
+embers:dawnstone_anvil, Dawnstone Anvil
+embers:ember_activator, Ember Activator
+embers:ember_bore, Ember Bore
+embers:ember_gauge, Ember Dial
+embers:ember_injector, Ember Injector
+embers:ember_relay, Ember Relay
+embers:ember_siphon, Ember Siphon
+embers:field_chart, Field Chart
+embers:fluid_dropper, Fluid Dropper
+embers:fluid_gauge, Fluid Dial
+embers:fluid_transfer, Fluid Transfer
+embers:geo_separator, Geologic Separator
+embers:heat_coil, Hearth Coil
+embers:inferno_forge, Inferno Forge
+embers:item_dropper, Item Dropper
+embers:item_gauge, Item Dial
+embers:item_pipe, Item Pipe
+embers:item_pump, Item Extractor
+embers:item_request, Item Requisition
+embers:item_transfer, Item Transfer
+embers:large_tank, Reservoir
+embers:mechanical_pump, Mechanical Pump
+embers:mech_accessor, Machine Accessor
+embers:mech_core, Mechanical Core
+embers:mini_boiler, Mini Boiler
+embers:mixer, Mixer Centrifuge
+embers:ore_quartz, Quartz Ore
+embers:pipe, Fluid Pipe
+embers:pump, Fluid Extractor
+embers:reaction_chamber, Reaction Chamber
+embers:reactor, Ignem Reactor
+embers:sealed_planks, Sealed Planks
+embers:stairs_ashen_brick, Ashen Brick Stairs
+embers:stairs_ashen_stone, Ashen Stone Stairs
+embers:stairs_ashen_tile, Ashen Tile Stairs
+embers:stairs_caminite_brick, Caminite Brick Stairs
+embers:stamper, Stamper
+embers:stamper_base, Stamp Base
+embers:stirling, Wildfire Stirling
+embers:stone_edge, Caminite Ring
+embers:stone_valve, Caminite Valve
+embers:turret, Turret
+embers:vacuum, Item Vacuum
+embers:wall_ashen_brick, Ashen Brick Wall
+embers:wall_ashen_stone, Ashen Stone Wall
+embers:wall_ashen_tile, Ashen Tile Wall
+embers:wall_caminite_brick, Caminite Brick Wall
+embers:wrapped_sealed_planks, Reinforced Sealed Planks
+embers:seed_aluminum, Aluminium Crystal Seed
+embers:seed_copper, Copper Crystal Seed
+embers:seed_dawnstone, Dawnstone Crystal Seed
+embers:block_dawnstone, Dawnstone Block
+embers:seed_gold, Gold Crystal Seed
+embers:seed_iron, Iron Crystal Seed
+embers:seed_lead, Lead Crystal Seed
+embers:seed_nickel, Nickel Crystal Seed
+embers:seed_silver, Silver Crystal Seed
+embers:seed_tin, Tin Crystal Seed
+embers:ember_emitter, Ember Emitter
+embers:ember_receiver, Ember Receptor
+embers:ember_funnel, Ember Funnel
+embers:ember_pulser, Ember Ejector
+embers:charger, Copper Charger
+embers:ember_pipe, Volatile Ember Conduit
+embers:explosion_pedestal, Explosion Charm Pedestal
 theoneprobe:probe, The One Probe
 theoneprobe:creativeprobe, The Creative Probe
 theoneprobe:probenote, The One Probe Read Me
@@ -15595,3 +16553,4 @@ trashcans:item_trash_can, trashcans.block.item_trash_can.name
 trashcans:liquid_trash_can, trashcans.block.liquid_trash_can.name
 trashcans:energy_trash_can, trashcans.block.energy_trash_can.name
 trashcans:ultimate_trash_can, trashcans.block.ultimate_trash_can.name
+guideapi:bloodmagic-guide, item.guideapi.book.bloodmagic.guide.name

@@ -26,6 +26,7 @@ crafting.remove('plants2:recipe183'); // magic cauldron
 crafting.addShapeless('mortar_redstone', item('minecraft:redstone'), [ore('craftingToolMortar'), item('plants2:cosmetic_0', 8)]);
 crafting.addShapeless('mortar_sulfur', metaitem('dustSulfur'), [ore('craftingToolMortar'), item('plants2:cosmetic_3', 4)]);
 
+// i think this was temporary in favor of some multi that turns nature extract and plant fiber into random plants
 mods.pyrotech.soaking_pot.add('redstone_flower', item('pyrotech:material', 12), fluid('nature_extract') * 125,
     item('plants2:cosmetic_0', 8), 2400);
 

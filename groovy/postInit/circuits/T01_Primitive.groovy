@@ -198,8 +198,8 @@ assembler.recipeBuilder()
 crafting.remove('gregtech:electronic_circuit_lv');
 crafting.shapedBuilder()
     .name('circuit_primitive')
-    //.output(metaitem('voidrunner:circuit_primitive'))
-    .output(metaitem('circuit.electronic'))
+    .output(metaitem('voidrunner:circuit_primitive'))
+    //.output(metaitem('circuit.electronic'))
     .shape('wjw', 'rbr', 'RcW')
     .key('w', ore('wireGtSingleCopper'))
     .key('j', metaitem('voidrunner:leyden_jar'))
@@ -223,7 +223,7 @@ mods.gregtech.circuit_assembler.recipeBuilder()
     .inputs(metaitem('circuit_board.basic'), metaitem('component.resistor') * 2, metaitem('voidrunner:leyden_jar'), 
             metaitem('voidrunner:relay'), metaitem('voidrunner:williams_tube'), ore('wireGtSingleCopper') * 2)
     // fluids auto added
-    .outputs(metaitem('circuit.electronic') * 2)
+    .outputs(metaitem('voidrunner:circuit_primitive') * 2)
     .duration(200)
     .EUt(30)
     .buildAndRegister();
