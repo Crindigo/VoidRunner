@@ -3,12 +3,10 @@
   "packId": "voidrunner",
   "version": "1.0.0",
   "debug": false,
-  "classes": [
-    "classes/",
-    "material/"
-  ],
   "loaders": {
     "preInit": [
+      "classes/",
+      "material/",
       "preInit/"
     ],
     "postInit": [

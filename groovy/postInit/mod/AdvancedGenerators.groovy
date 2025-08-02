@@ -1,3 +1,5 @@
+// mods_loaded: advgenerators
+
 package postInit.mod;
 
 def assembler = mods.gregtech.assembler;

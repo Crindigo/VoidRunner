@@ -38,7 +38,8 @@ TC.recipeBuilder()
     .chancedOutput(item('pyrotech:rock', 8) * 4, 2000, 500)
     .chancedOutput(item('pyrotech:rock', 11) * 4, 2000, 500)
     .chancedOutput(item('minecraft:clay_ball') * 2, 2000, 500)
-    .EUt(24)
+    // strained water
+    .EUt(16)
     .duration(80)
     .buildAndRegister();
 
@@ -50,9 +51,12 @@ TC.recipeBuilder()
     .chancedOutput(item('waterstrainer:worm', 0), 2000, 500)
     .chancedOutput(item('pyrotech:rock', 5) * 2, 5000, 500)
     .chancedOutput(item('minecraft:reeds'), 2000, 500)
-    .EUt(24)
+    // densely strained water
+    .EUt(16)
     .duration(80)
     .buildAndRegister();
+
+// pass densely thru strainer for clean water, same with strained water thru dense strainer.
 
 /*
 strainer_survivalist|STONE|pyrotech:rock|0|4|15

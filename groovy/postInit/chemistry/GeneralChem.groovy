@@ -77,3 +77,11 @@ recipemap('crude_mixer').recipeBuilder()
     .EUt(7)
     .buildAndRegister();
 
+/*recipemap('crude_mixer').recipeBuilder()
+    .inputs(metaitem('dustRawRubber'))
+    .fluidInputs(fluid('sulfur_dioxide') * 100) // 10% sulfur but maybe it competes with chem reactor
+    .outputs(metaittem('ingotRubber'))
+    .fluidOutputs(fluid('oxygen') * 200)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister();*/

@@ -33,3 +33,5 @@ mods.gregtech.centrifuge.recipeBuilder()
     .EUt(30)
     .duration(100)
     .buildAndRegister();
+
+// make rubber and softer materials extrudable at LV
