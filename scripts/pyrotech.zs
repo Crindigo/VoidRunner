@@ -30,6 +30,7 @@ Burn.createBuilder("water_from_mud", <minecraft:clay>, "pyrotech:mud:*")
     .setFluidLevelAffectsFailureChance(false)
     .register();
 
+/*
 Burn.createBuilder("extract_from_stone", <pyrotech:rock:0>, "minecraft:stone:0")
     .setBurnStages(5)
     .setTotalBurnTimeTicks(5 * 60 * 20)
@@ -79,6 +80,7 @@ Burn.createBuilder("extract_from_limestone", <pyrotech:rock:8>, "pyrotech:limest
     .setRequiresRefractoryBlocks(true)
     .setFluidLevelAffectsFailureChance(false)
     .register();
+*/
 
 Burn.createBuilder("extract_from_dirt", <minecraft:dirt:1>, "minecraft:dirt")
     .setBurnStages(5)

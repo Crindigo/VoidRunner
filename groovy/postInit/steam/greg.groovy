@@ -272,7 +272,7 @@ removeULVHatchBus('minecraft:chest', 2);
 removeULVHatchBus('minecraft:glass', 1);
 removeULVHatchBus('minecraft:glass', 2);
 
-def removeLVHatchBus(chestOrGlass, configuration) {
+/*def removeLVHatchBus(chestOrGlass, configuration) {
     mods.gregtech.assembler.removeByInput(30, 
         [metaitem('hull.lv'), item(chestOrGlass), circuitConfig(configuration)], 
         [fluid('glue') * 500])
@@ -290,10 +290,10 @@ def removeLVHatchBus(chestOrGlass, configuration) {
 removeLVHatchBus('minecraft:chest', 1);
 removeLVHatchBus('minecraft:chest', 2);
 removeLVHatchBus('minecraft:glass', 1);
-removeLVHatchBus('minecraft:glass', 2);
+removeLVHatchBus('minecraft:glass', 2);*/
 
 
-def tierNames = ['ulv', 'lv'];
+def tierNames = ['ulv'];//, 'lv'];
 for ( tierName in tierNames ) {
     crafting.addShaped("${tierName}_import_hatch", metaitem("fluid_hatch.import.${tierName}"), [
         [null, ore('blockGlass'), null],
@@ -323,6 +323,7 @@ crafting.addShaped('wooden_crate', metaitem('crate.wood'), [
     [ore('plankWood'), ore('plankWood'), ore('plankWood')]
 ]);
 
+/*
 mods.gregtech.coke_oven.recipeBuilder()
     .inputs(ore('stone'))
     //.outputs(item('pyrotech:rock', 0) * 4)
@@ -357,6 +358,7 @@ mods.gregtech.coke_oven.recipeBuilder()
     .fluidOutputs(fluid('limestone_extract') * 500)
     .duration(600)
     .buildAndRegister();
+*/
 
 crafting.remove('minecraft:coarse_dirt');
 

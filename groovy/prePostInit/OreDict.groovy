@@ -27,3 +27,13 @@ oreDict.add('circuitMv', metaitem('voidrunner:circuit_retro'));
 //oreDict.add('chip.mv', metaitem('voidrunner:circuit_retro'));
 //oreDict.add('chip.hv', metaitem('voidrunner:circuit_standard'));
 //oreDict.add('chip.ev', metaitem('voidrunner:circuit_reliable'));
+
+// Geology stones
+oreDict.add('stoneLimestone', item('geology:rock_sedimentary', 0));
+oreDict.add('stoneAndesite', item('geology:rock_volcanic', 2));
+oreDict.add('stoneBasalt', item('geology:rock_volcanic', 4));
+oreDict.add('obsidian', item('geology:rock_volcanic', 6));
+oreDict.add('stoneGranite', item('geology:rock_plutonic', 0));
+oreDict.add('stoneDiorite', item('geology:rock_plutonic', 2));
+oreDict.add('sandstone', item('geology:rock_sedimentary', 8));
+oreDict.add('sandstone', item('geology:rock_sedimentary', 9));
