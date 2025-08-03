@@ -24,7 +24,7 @@ mods.gregtech.chemical_bath.recipeBuilder()
     .fluidInputs(fluid('dirt_extract') * 250)
     .outputs(item('minecraft:dirt'))
     .duration(120)
-    .EUt(15)
+    .EUt(16)
     .buildAndRegister();
 
 // chem bath twine + 125 wood tar => durable twine (soaking pot is 225t each)
@@ -33,17 +33,16 @@ mods.gregtech.chemical_bath.recipeBuilder()
     .inputs(item('pyrotech:material', 14))
     .fluidInputs(fluid('wood_tar') * 125)
     .outputs(item('pyrotech:material', 26))
-    .duration(90)
+    .duration(100)
     .EUt(7)
     .buildAndRegister();
 
-// technically ore washer better here?
-mods.gregtech.ore_washer.recipeBuilder()
+mods.gregtech.chemical_bath.recipeBuilder()
     .inputs(item('pyrotech:material', 26))
-    .fluidInputs(fluid('water') * 100)
+    .fluidInputs(fluid('water') * 125)
     .outputs(item('minecraft:string'))
-    .duration(8)
-    .EUt(4)
+    .duration(100)
+    .EUt(7)
     .buildAndRegister();
 
 mods.gregtech.extractor.recipeBuilder()
@@ -54,6 +53,7 @@ mods.gregtech.extractor.recipeBuilder()
     .EUt(10)
     .buildAndRegister();
 
+// TODO: change to large barrel multi, 1000L/minute
 mods.gregtech.mixer.recipeBuilder()
     .inputs(ore('treeLeaves'))
     .fluidInputs(fluid('dirt_extract') * 250)

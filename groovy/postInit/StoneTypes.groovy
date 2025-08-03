@@ -11,11 +11,17 @@ def cobblestones = [
 ];
 
 mods.pyrotech.anvil.remove('pyrotech:cobbled_granite_to_rocks');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/cobbled_granite_to_rocks');
 mods.pyrotech.anvil.remove('pyrotech:cobbled_andesite_to_rocks');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/cobbled_andesite_to_rocks');
 mods.pyrotech.anvil.remove('pyrotech:cobbled_diorite_to_rocks');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/cobbled_diorite_to_rocks');
 mods.pyrotech.anvil.remove('pyrotech:cobbled_limestone_to_rocks');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/cobbled_limestone_to_rocks');
 mods.pyrotech.anvil.remove('pyrotech:cobblestone_to_rocks');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/cobblestone_to_rocks');
 mods.pyrotech.anvil.remove('pyrotech:limestone_rocks_to_crushed_limestone');
+mods.pyrotech.anvil.remove('pyrotech:granite_anvil/limestone_rocks_to_crushed_limestone');
 
 // replace this with standardized recipe
 mods.gregtech.macerator.removeByInput(2, [item('minecraft:cobblestone')], null)
@@ -23,8 +29,14 @@ mods.gregtech.macerator.removeByInput(2, [item('minecraft:cobblestone')], null)
 for ( r in cobblestones ) {
     mods.pyrotech.anvil.recipeBuilder()
         .input(r[0]).output(r[1])
-        .hits(2).typeHammer().tierGranite()
+        .hits(3).typeHammer().tierGranite()
         .name(r[2])
+        .register();
+    
+    mods.pyrotech.anvil.recipeBuilder()
+        .input(r[0]).output(r[1])
+        .hits(3).typeHammer().tierIronclad()
+        .name("ironclad_" + r[2])
         .register();
 
     mods.gregtech.macerator.recipeBuilder()
