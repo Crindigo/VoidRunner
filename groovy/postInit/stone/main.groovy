@@ -68,54 +68,7 @@ crafting.shapedBuilder()
     .key('S', item('pyrotech:masonry_brick_block'))
     .register();*/
 
-// pyrotech brick machines use iron plates, except for kiln which uses wrought iron.
-crafting.remove('pyrotech:tech/machine/brick_crucible');
-crafting.shapedBuilder()
-    .name('brick_crucible')
-    .output(item('pyrotech:brick_crucible'))
-    .shape('PBP',
-           'BMB',
-           'PBP')
-    .key('P', ore('plateWroughtIron'))
-    .key('B', item('pyrotech:refractory_brick_block'))
-    .key('M', item('pyrotech:stone_crucible'))
-    .register();
 
-crafting.remove('pyrotech:tech/machine/brick_sawmill');
-crafting.shapedBuilder()
-    .name('brick_sawmill')
-    .output(item('pyrotech:brick_sawmill'))
-    .shape('PBP',
-           'BMB',
-           'PBP')
-    .key('P', ore('plateWroughtIron'))
-    .key('B', item('pyrotech:refractory_brick_block'))
-    .key('M', item('pyrotech:stone_sawmill'))
-    .register();
-
-crafting.remove('pyrotech:tech/machine/brick_oven');
-crafting.shapedBuilder()
-    .name('brick_oven')
-    .output(item('pyrotech:brick_oven'))
-    .shape('PBP',
-           'BMB',
-           'PBP')
-    .key('P', ore('plateWroughtIron'))
-    .key('B', item('pyrotech:refractory_brick_block'))
-    .key('M', item('pyrotech:stone_oven'))
-    .register();
-
-crafting.remove('pyrotech:tech/machine/brick_kiln');
-crafting.shapedBuilder()
-    .name('brick_kiln')
-    .output(item('pyrotech:brick_kiln'))
-    .shape('PBP',
-           'BMB',
-           'PBP')
-    .key('P', ore('plateWroughtIron'))
-    .key('B', item('pyrotech:refractory_brick_block'))
-    .key('M', item('pyrotech:stone_kiln'))
-    .register();
 
 crafting.remove('thermalfoundation:storage_resource_1');
 crafting.remove('thermalfoundation:clay_ball');
@@ -216,7 +169,7 @@ crafting.shapedBuilder()
     .shape('iii', 'ggg', 'sss')
     .key('i', ore('plateIron'))
     .key('g', item('minecraft:stone', 2))
-    .key('s', ore('slabStone'))
+    .key('s', item('minecraft:stone_slab'))
     .register();
 
 // allow stickStone to be used for all pyrotech recipes

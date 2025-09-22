@@ -27,11 +27,19 @@ mods.gregtech.chemical_bath.recipeBuilder()
     .EUt(16)
     .buildAndRegister();
 
-// chem bath twine + 125 wood tar => durable twine (soaking pot is 225t each)
+// chem bath twine (or silk) + 125 wood tar => durable twine (soaking pot is 225t each)
 // chem bath durable twine + 125 water => string
 mods.gregtech.chemical_bath.recipeBuilder()
     .inputs(item('pyrotech:material', 14))
     .fluidInputs(fluid('wood_tar') * 125)
+    .outputs(item('pyrotech:material', 26))
+    .duration(100)
+    .EUt(7)
+    .buildAndRegister();
+
+mods.gregtech.chemical_bath.recipeBuilder()
+    .inputs(item('mysticalworld:silk_thread'))
+    .fluidInputs(fluid('water') * 125)
     .outputs(item('pyrotech:material', 26))
     .duration(100)
     .EUt(7)

@@ -41,3 +41,5 @@ JEI.hideCategory('pyrotech.worktable');
 //JEI.hideCategory('pyrotech.compost.bin');
 //JEI.hideCategory('pyrotech.barrel');
 JEI.hideCategory('pyrotech.wither.forge');
+JEI.hideCategory('pyrotech.stone.crucible');
+JEI.hideCategory('pyrotech.brick.crucible');

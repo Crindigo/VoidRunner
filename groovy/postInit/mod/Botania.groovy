@@ -1,3 +1,5 @@
+// mods_loaded: botania
+
 package postInit.mod;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;

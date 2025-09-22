@@ -37,3 +37,6 @@ oreDict.add('stoneGranite', item('geology:rock_plutonic', 0));
 oreDict.add('stoneDiorite', item('geology:rock_plutonic', 2));
 oreDict.add('sandstone', item('geology:rock_sedimentary', 8));
 oreDict.add('sandstone', item('geology:rock_sedimentary', 9));
+
+oreDict.remove('string', item('mysticalworld:silk_thread'));
+oreDict.add('twine', item('mysticalworld:silk_thread'));

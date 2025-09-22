@@ -82,6 +82,9 @@ Burn.createBuilder("extract_from_limestone", <pyrotech:rock:8>, "pyrotech:limest
     .register();
 */
 
+// this causes problems in thunderstorms :D :D :D
+// infinite spreading fire underground that kills the server.
+/*
 Burn.createBuilder("extract_from_dirt", <minecraft:dirt:1>, "minecraft:dirt")
     .setBurnStages(5)
     .setTotalBurnTimeTicks(5 * 60 * 20)
@@ -91,6 +94,7 @@ Burn.createBuilder("extract_from_dirt", <minecraft:dirt:1>, "minecraft:dirt")
     .setRequiresRefractoryBlocks(true)
     .setFluidLevelAffectsFailureChance(false)
     .register();
+*/
 
 Burn.createBuilder("charcoal_to_coal", <minecraft:coal:0>, "gregtech:meta_block_compressed_16:10")
     .setBurnStages(10)
@@ -161,7 +165,7 @@ IroncladAnvil.addRecipe("iron_to_wrought", <metaitem:ingotWroughtIron>, <ore:ing
 // double masonry brick output
 GraniteAnvil.removeRecipes(<pyrotech:material:16> * 2);
 IroncladAnvil.removeRecipes(<pyrotech:material:16> * 2);
-GraniteAnvil.addRecipe("masonry_brick", <pyrotech:material:16> * 4, <ore:slabStoneBricks>, 4, "pickaxe", true);
+GraniteAnvil.addRecipe("masonry_brick", <pyrotech:material:16> * 4, <minecraft:stone_slab:5>, 4, "pickaxe", true);
 
 // for steam we need iron, copper, tin
 // for LV we need redstone, rubber, lead, antimony
